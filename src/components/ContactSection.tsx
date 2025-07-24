@@ -226,63 +226,62 @@ const ContactSection = () => {
             </Card>
           </div>
 
-          {/* Contact Info & Quick Actions */}
-          <div className="space-y-8">
-            {/* Contact Info Cards */}
-            <div className="space-y-4">
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="card-luxury hover-lift transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start">
-                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
-                        <info.icon className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
-                        <div className="text-primary font-medium mb-1">{info.details}</div>
-                        <div className="text-sm text-muted-foreground">{info.description}</div>
-                      </div>
+          {/* Contact Info Cards */}
+          <div className="space-y-4">
+            {contactInfo.map((info, index) => (
+              <Card key={index} className="card-luxury hover-lift transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
+                      <info.icon className="w-6 h-6 text-primary" />
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Quick Action Cards */}
-            <Card className="bg-primary/5 border-primary/20">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Clock className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
-                  Free 30-Minute Consultation
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  Book a free consultation to discuss your transportation technology needs.
-                </p>
-                <Button className="btn-luxury w-full">
-                  Schedule Call
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-secondary/5 border-border/50">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
-                  Emergency Support
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  Need immediate help with your existing systems? We're here 24/7.
-                </p>
-                <Button variant="outline" className="btn-outline-luxury w-full">
-                  Get Support
-                </Button>
-              </CardContent>
-            </Card>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
+                      <div className="text-primary font-medium mb-1">{info.details}</div>
+                      <div className="text-sm text-muted-foreground">{info.description}</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
+        </div>
+
+        {/* Quick Action Cards - Now below the form */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          <Card className="bg-primary/5 border-primary/20">
+            <CardContent className="p-8 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Free 30-Minute Consultation
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Book a free consultation to discuss your transportation technology needs.
+              </p>
+              <Button className="btn-luxury w-full">
+                Schedule Call
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-secondary/5 border-border/50">
+            <CardContent className="p-8 text-center">
+              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Emergency Support
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Need immediate help with your existing systems? We're here 24/7.
+              </p>
+              <Button variant="outline" className="btn-outline-luxury w-full">
+                Get Support
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Bottom Trust Indicators */}
