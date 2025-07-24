@@ -16,22 +16,22 @@ All colors MUST be HSL.
     --popover: 222 47% 11%;
     --popover-foreground: 60 30% 96%;
     
-    /* Gold & Premium Accents */
-    --primary: 43 96% 56%;
+    /* Luxury Blue & Teal Accents */
+    --primary: 193 95% 68%;
     --primary-foreground: 222 47% 11%;
     --secondary: 222 47% 15%;
     --secondary-foreground: 60 30% 96%;
     --muted: 222 47% 15%;
     --muted-foreground: 215 20% 65%;
-    --accent: 43 96% 56%;
+    --accent: 193 95% 68%;
     --accent-foreground: 222 47% 11%;
-    
+
     /* Supporting Colors */
     --destructive: 0 84% 60%;
     --destructive-foreground: 60 30% 96%;
     --border: 222 47% 20%;
     --input: 222 47% 15%;
-    --ring: 43 96% 56%;
+    --ring: 193 95% 68%;
     
     /* Premium Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(43 96% 56%), hsl(45 100% 64%));
