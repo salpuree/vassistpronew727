@@ -174,45 +174,58 @@ const TeamSection = () => {
         </div>
 
         {/* Team Members */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {teamMembers.map((member, index) => (
-            <Card 
-              key={index} 
-              className="card-luxury text-center group hover:scale-105 transition-all duration-300"
+            <div
+              key={index}
+              className="group cursor-pointer"
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              <CardContent className="p-8">
-                <div className="relative mb-6">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-primary/20 group-hover:border-primary/40 transition-colors"
-                  />
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <div className="w-3 h-3 bg-primary-foreground rounded-full" />
+              <div className="relative bg-card/40 backdrop-blur-xl border border-border/20 rounded-3xl p-8 hover:border-primary/30 transition-all duration-500 hover:bg-card/60 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10">
+                {/* Animated background gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${member.bgColor} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                {/* Content */}
+                <div className="relative z-10 text-center">
+                  {/* Avatar with modern design */}
+                  <div className="relative mb-6 mx-auto w-fit">
+                    <div className={`w-20 h-20 bg-gradient-to-br ${member.bgColor} rounded-2xl flex items-center justify-center text-3xl border ${member.borderColor} group-hover:rotate-3 transition-transform duration-300`}>
+                      {member.avatar}
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-primary rounded-lg flex items-center justify-center shadow-lg">
+                      <div className="w-2 h-2 bg-background rounded-full animate-pulse" />
+                    </div>
+                  </div>
+
+                  {/* Text content with improved contrast */}
+                  <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                    {member.name}
+                  </h4>
+                  <div className="text-primary font-semibold mb-2 text-base">
+                    {member.role}
+                  </div>
+                  <div className="text-primary/90 text-sm font-medium mb-4 px-3 py-1 bg-primary/10 rounded-full inline-block">
+                    {member.specialization}
+                  </div>
+                  <p className="text-foreground/80 text-sm leading-relaxed mb-6 font-medium">
+                    {member.description}
+                  </p>
+
+                  {/* Social links with modern design */}
+                  <div className="flex justify-center space-x-3">
+                    <button className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-3">
+                      <Linkedin className="w-4 h-4" />
+                    </button>
+                    <button className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-3">
+                      <Github className="w-4 h-4" />
+                    </button>
+                    <button className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-3">
+                      <Mail className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
-                
-                <h4 className="text-xl font-semibold text-foreground mb-1">{member.name}</h4>
-                <div className="text-primary font-medium mb-1">{member.role}</div>
-                <div className="text-sm text-primary/80 mb-4">{member.specialization}</div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                  {member.description}
-                </p>
-                
-                <div className="flex justify-center space-x-3">
-                  <button className="w-8 h-8 bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors rounded-full flex items-center justify-center">
-                    <Linkedin className="w-4 h-4" />
-                  </button>
-                  <button className="w-8 h-8 bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors rounded-full flex items-center justify-center">
-                    <Github className="w-4 h-4" />
-                  </button>
-                  <button className="w-8 h-8 bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors rounded-full flex items-center justify-center">
-                    <Mail className="w-4 h-4" />
-                  </button>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
