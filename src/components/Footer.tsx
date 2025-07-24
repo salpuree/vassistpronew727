@@ -70,16 +70,12 @@ const Footer = () => {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-1">
-              <div className="flex items-center space-x-3 mb-6">
-                <img 
+              <div className="flex justify-start mb-6">
+                <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F88da141a3a504a51b2a3ca3584f907d1%2Ff34b048caef549548e025a9d389e4e6d?format=webp&width=800"
-                  alt="Business Logo" 
+                  alt="Business Logo"
                   className="h-12 w-auto"
                 />
-                <div>
-                  <h3 className="text-xl font-bold text-foreground">VAssist Pro</h3>
-                  <p className="text-sm text-muted-foreground">Your Strategic Partner</p>
-                </div>
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 We provide premium technology solutions and comprehensive back-office support 
