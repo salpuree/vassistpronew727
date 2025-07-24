@@ -32,14 +32,14 @@ const Footer = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@vassistpro.com",
-      href: "mailto:hello@vassistpro.com"
+      value: "info@virtualassistancepro.com",
+      href: "mailto:info@virtualassistancepro.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "(555) 123-4567",
-      href: "tel:+1555123467"
+      value: "(941) 623-4590",
+      href: "tel:+19416234590"
     },
     {
       icon: MapPin,
