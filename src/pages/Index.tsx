@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ServicePackagesSection from "@/components/ServicePackagesSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import TeamSection from "@/components/TeamSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
@@ -24,6 +25,9 @@ const Index = () => {
         </section>
         <section id="team">
           <TeamSection />
+        </section>
+        <section id="testimonials">
+          <TestimonialsSection />
         </section>
         <section id="contact">
           <ContactSection />
