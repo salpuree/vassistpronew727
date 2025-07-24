@@ -98,6 +98,29 @@ All colors MUST be HSL.
     max-width: 100%;
     overflow-x: hidden;
   }
+
+  /* Mobile-specific fixes */
+  @media (max-width: 768px) {
+    body {
+      overflow-x: hidden !important;
+    }
+
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* Ensure no elements overflow on mobile */
+    * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Fix potential floating element issues */
+    section {
+      overflow-x: hidden;
+    }
+  }
   
   /* Premium Typography */
   h1, h2, h3, h4, h5, h6 {
