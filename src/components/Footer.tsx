@@ -78,7 +78,7 @@ const Footer = () => {
                 />
                 <div>
                   <h3 className="text-xl font-bold text-foreground">VAssist Pro</h3>
-                  <p className="text-sm text-muted-foreground">Your Invisible Team</p>
+                  <p className="text-sm text-muted-foreground">Your Strategic Partner</p>
                 </div>
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
