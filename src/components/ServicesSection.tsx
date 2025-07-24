@@ -113,7 +113,7 @@ const ServicesSection = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We provide both cutting-edge technology solutions and comprehensive back-office support services.
-            From Limo Anywhere integrations to 24/7 call answering - we handle it all so you can focus on growth.
+            From Limo Anywhere integrations to specialized email handling for bookings, quotes, updates, and inquiries - we handle it all so you can focus on growth.
           </p>
         </div>
 
