@@ -39,7 +39,7 @@ const TeamSection = () => {
       description: "10+ years specializing in Limo Anywhere integrations and custom development."
     },
     {
-      name: "Sarah Kim",
+      name: "Linta T.",
       role: "Operations Director",
       specialization: "Back-Office Operations",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
@@ -53,7 +53,7 @@ const TeamSection = () => {
       description: "Expert in GNet systems and mobile app development for transportation."
     },
     {
-      name: "Emily Johnson",
+      name: "Emaan A.",
       role: "Customer Service Manager",
       specialization: "Luxury Customer Experience",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
