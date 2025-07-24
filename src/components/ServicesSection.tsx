@@ -40,8 +40,8 @@ const ServicesSection = () => {
     {
       icon: Mail,
       title: "Email Support & Management",
-      description: "Complete email support handling customer communications, booking confirmations, and administrative correspondence.",
-      features: ["Email Processing", "Booking Confirmations", "Customer Communications", "Administrative Support"]
+      description: "Specialized email handling for booking requests, quote inquiries, schedule updates, and customer support. We manage your entire email workflow seamlessly.",
+      features: ["Booking Email Processing", "Quote Request Handling", "Schedule Update Management", "Customer Inquiry Response", "Administrative Correspondence"]
     },
     {
       icon: Settings,
