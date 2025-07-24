@@ -6,8 +6,8 @@ const ServicePackagesSection = () => {
   const packages = [
     {
       name: "Essential Package",
-      price: "$2,500",
-      period: "/month",
+      price: "Contact for",
+      period: "Custom Pricing",
       description: "Perfect for growing transportation companies",
       icon: Clock,
       features: [
@@ -24,9 +24,9 @@ const ServicePackagesSection = () => {
       savings: "vs $8,000/month in-house team"
     },
     {
-      name: "Business Package", 
-      price: "$4,200",
-      period: "/month",
+      name: "Business Package",
+      price: "Contact for",
+      period: "Custom Pricing",
       description: "Comprehensive support for established companies",
       icon: Users,
       features: [
@@ -44,8 +44,8 @@ const ServicePackagesSection = () => {
     },
     {
       name: "Premium 24/7 Package",
-      price: "$6,800", 
-      period: "/month",
+      price: "Contact for",
+      period: "Custom Pricing",
       description: "Round-the-clock premium support",
       icon: Headphones,
       features: [
