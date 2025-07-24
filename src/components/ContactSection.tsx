@@ -305,7 +305,7 @@ const ContactSection = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <div className="text-3xl font-bold text-gradient mb-2">&lt; 24hrs</div>
+                <div className="text-3xl font-bold text-gradient mb-2">&lt; 15min</div>
                 <div className="text-muted-foreground">Response Time</div>
               </div>
               <div>
