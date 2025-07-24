@@ -46,12 +46,12 @@ All colors MUST be HSL.
     --radius: 0.75rem;
     --sidebar-background: 222 47% 8%;
     --sidebar-foreground: 60 30% 96%;
-    --sidebar-primary: 43 96% 56%;
+    --sidebar-primary: 193 95% 68%;
     --sidebar-primary-foreground: 222 47% 11%;
     --sidebar-accent: 222 47% 15%;
     --sidebar-accent-foreground: 60 30% 96%;
     --sidebar-border: 222 47% 20%;
-    --sidebar-ring: 43 96% 56%;
+    --sidebar-ring: 193 95% 68%;
   }
 
   .light {
