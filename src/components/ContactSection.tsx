@@ -50,13 +50,13 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "hello@vassistpro.com",
+      details: "info@virtualassistancepro.com",
       description: "Get a response within 2 hours"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
+      details: "+1 (941) 623-4590",
       description: "Mon-Fri 8AM-8PM EST"
     },
     {
@@ -95,7 +95,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="card-luxury">
+            <Card className="card-luxury hover-glow">
               <CardHeader>
                 <CardTitle className="text-3xl text-foreground">
                   Tell Us About Your Project
@@ -180,10 +180,11 @@ const ContactSection = () => {
                           <SelectValue placeholder="Select budget range" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="10k-25k">$10K - $25K</SelectItem>
-                          <SelectItem value="25k-50k">$25K - $50K</SelectItem>
-                          <SelectItem value="50k-100k">$50K - $100K</SelectItem>
-                          <SelectItem value="100k+">$100K+</SelectItem>
+                          <SelectItem value="small-business">Small Business Budget</SelectItem>
+                          <SelectItem value="medium-business">Medium Business Budget</SelectItem>
+                          <SelectItem value="large-business">Large Business Budget</SelectItem>
+                          <SelectItem value="enterprise">Enterprise Budget</SelectItem>
+                          <SelectItem value="custom">Custom Quote Needed</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -226,62 +227,73 @@ const ContactSection = () => {
             </Card>
           </div>
 
-          {/* Contact Info & Quick Actions */}
-          <div className="space-y-8">
-            {/* Contact Info Cards */}
-            <div className="space-y-4">
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="card-luxury">
-                  <CardContent className="p-6">
-                    <div className="flex items-start">
-                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
-                        <info.icon className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
-                        <div className="text-primary font-medium mb-1">{info.details}</div>
-                        <div className="text-sm text-muted-foreground">{info.description}</div>
-                      </div>
+          {/* Contact Info Cards */}
+          <div className="space-y-4">
+            {contactInfo.map((info, index) => (
+              <Card key={index} className="card-luxury hover-lift transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
+                      <info.icon className="w-6 h-6 text-primary" />
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
+                      <div className="text-primary font-medium mb-1">{info.details}</div>
+                      <div className="text-sm text-muted-foreground">{info.description}</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
 
-            {/* Quick Action Cards */}
-            <Card className="bg-primary/5 border-primary/20">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Clock className="w-8 h-8 text-primary" />
+        {/* Quick Action Cards - Now below the form */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-12">
+          <div className="group cursor-pointer">
+            <div className="relative bg-card/60 backdrop-blur-xl border border-primary/30 rounded-3xl p-8 text-center hover:border-primary/50 transition-all duration-500 hover:bg-card/80 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/20 overflow-hidden">
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-primary/30 group-hover:rotate-3 transition-transform duration-300">
+                  <Clock className="w-10 h-10 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                   Free 30-Minute Consultation
                 </h3>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-foreground/80 mb-6 font-medium leading-relaxed">
                   Book a free consultation to discuss your transportation technology needs.
                 </p>
-                <Button className="btn-luxury w-full">
+                <Button className="btn-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
                   Schedule Call
                 </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+          </div>
 
-            <Card className="bg-secondary/5 border-border/50">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-8 h-8 text-primary" />
+          <div className="group cursor-pointer">
+            <div className="relative bg-card/60 backdrop-blur-xl border border-border/30 rounded-3xl p-8 text-center hover:border-primary/50 transition-all duration-500 hover:bg-card/80 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/20 overflow-hidden">
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-purple-500/30 group-hover:rotate-3 transition-transform duration-300">
+                  <Zap className="w-10 h-10 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                   Emergency Support
                 </h3>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-foreground/80 mb-6 font-medium leading-relaxed">
                   Need immediate help with your existing systems? We're here 24/7.
                 </p>
-                <Button variant="outline" className="btn-outline-luxury w-full">
+                <Button variant="outline" className="btn-outline-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
                   Get Support
                 </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -293,7 +305,7 @@ const ContactSection = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <div className="text-3xl font-bold text-gradient mb-2">&lt; 24hrs</div>
+                <div className="text-3xl font-bold text-gradient mb-2">&lt; 15min</div>
                 <div className="text-muted-foreground">Response Time</div>
               </div>
               <div>

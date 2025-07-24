@@ -32,32 +32,40 @@ const TeamSection = () => {
 
   const teamMembers = [
     {
-      name: "Alex Rodriguez",
-      role: "Lead Developer",
-      specialization: "Limo Anywhere Expert",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      description: "10+ years specializing in Limo Anywhere integrations and custom development."
+      name: "Noor M.",
+      role: "Social Media & Marketing",
+      specialization: "Digital Marketing Expert",
+      avatar: "👩‍💼",
+      bgColor: "from-blue-500/20 to-purple-500/20",
+      borderColor: "border-blue-500/30",
+      description: "Manages our social media presence and digital marketing strategies for luxury transportation."
     },
     {
-      name: "Sarah Kim",
-      role: "Operations Director",
-      specialization: "Back-Office Operations",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
-      description: "Manages our 24/7 call center and back-office operations team."
+      name: "Linta T.",
+      role: "Chief Operations Director",
+      specialization: "Business Operations Excellence",
+      avatar: "👑",
+      bgColor: "from-amber-500/20 to-yellow-500/20",
+      borderColor: "border-amber-500/30",
+      description: "Linta manages the operations. Personally oversees all client relationships and ensures 24/7 operational excellence. The strategic mind behind our seamless service delivery."
     },
     {
-      name: "Michael Chen",
-      role: "Senior Developer",
-      specialization: "GNet & Mobile Apps",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      description: "Expert in GNet systems and mobile app development for transportation."
+      name: "Gia K.",
+      role: "Reservations Team Lead",
+      specialization: "Booking Management",
+      avatar: "👩‍🏢",
+      bgColor: "from-pink-500/20 to-rose-500/20",
+      borderColor: "border-pink-500/30",
+      description: "Leads our reservations team ensuring seamless booking experiences for luxury transportation."
     },
     {
-      name: "Emily Johnson",
-      role: "Customer Service Manager",
-      specialization: "Luxury Customer Experience",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      description: "Ensures all customer interactions meet luxury transportation standards."
+      name: "Emaan A.",
+      role: "Client Onboarding Executive",
+      specialization: "Client Success",
+      avatar: "👩‍🎓",
+      bgColor: "from-indigo-500/20 to-blue-500/20",
+      borderColor: "border-indigo-500/30",
+      description: "Ensures smooth client onboarding and maintains exceptional client relationships."
     }
   ];
 
@@ -75,8 +83,8 @@ const TeamSection = () => {
             <span className="block text-foreground">Dedicated to Your Success</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our specialized team combines technical expertise with operational excellence for luxury transportation. 
-            From developers to customer service professionals - we're your complete invisible team.
+            Our specialized team combines technical expertise with operational excellence for luxury transportation.
+            From developers to customer service professionals - we're your complete strategic partner for business success.
           </p>
         </div>
 
@@ -137,8 +145,8 @@ const TeamSection = () => {
                   <div className="w-2 h-2 bg-primary-foreground rounded-full" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold text-foreground mb-2">Your Invisible Team</h4>
-                  <p className="text-muted-foreground">We seamlessly integrate with your business, acting as your in-house team without the overhead costs.</p>
+                  <h4 className="text-xl font-semibold text-foreground mb-2">Your Strategic Partner</h4>
+                  <p className="text-muted-foreground">We seamlessly integrate with your business as a trusted strategic partner, delivering enterprise-level expertise without the overhead costs.</p>
                 </div>
               </div>
               
@@ -166,45 +174,58 @@ const TeamSection = () => {
         </div>
 
         {/* Team Members */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {teamMembers.map((member, index) => (
-            <Card 
-              key={index} 
-              className="card-luxury text-center group hover:scale-105 transition-all duration-300"
+            <div
+              key={index}
+              className="group cursor-pointer"
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              <CardContent className="p-8">
-                <div className="relative mb-6">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-primary/20 group-hover:border-primary/40 transition-colors"
-                  />
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <div className="w-3 h-3 bg-primary-foreground rounded-full" />
+              <div className="relative bg-card/40 backdrop-blur-xl border border-border/20 rounded-3xl p-8 hover:border-primary/30 transition-all duration-500 hover:bg-card/60 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10">
+                {/* Animated background gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${member.bgColor} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                {/* Content */}
+                <div className="relative z-10 text-center">
+                  {/* Avatar with modern design */}
+                  <div className="relative mb-6 mx-auto w-fit">
+                    <div className={`w-20 h-20 bg-gradient-to-br ${member.bgColor} rounded-2xl flex items-center justify-center text-3xl border ${member.borderColor} group-hover:rotate-3 transition-transform duration-300`}>
+                      {member.avatar}
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-primary rounded-lg flex items-center justify-center shadow-lg">
+                      <div className="w-2 h-2 bg-background rounded-full animate-pulse" />
+                    </div>
+                  </div>
+
+                  {/* Text content with improved contrast */}
+                  <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                    {member.name}
+                  </h4>
+                  <div className="text-primary font-semibold mb-2 text-base">
+                    {member.role}
+                  </div>
+                  <div className="text-primary/90 text-sm font-medium mb-4 px-3 py-1 bg-primary/10 rounded-full inline-block">
+                    {member.specialization}
+                  </div>
+                  <p className="text-foreground/80 text-sm leading-relaxed mb-6 font-medium">
+                    {member.description}
+                  </p>
+
+                  {/* Social links with modern design */}
+                  <div className="flex justify-center space-x-3">
+                    <button className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-3">
+                      <Linkedin className="w-4 h-4" />
+                    </button>
+                    <button className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-3">
+                      <Github className="w-4 h-4" />
+                    </button>
+                    <button className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-3">
+                      <Mail className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
-                
-                <h4 className="text-xl font-semibold text-foreground mb-1">{member.name}</h4>
-                <div className="text-primary font-medium mb-1">{member.role}</div>
-                <div className="text-sm text-primary/80 mb-4">{member.specialization}</div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                  {member.description}
-                </p>
-                
-                <div className="flex justify-center space-x-3">
-                  <button className="w-8 h-8 bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors rounded-full flex items-center justify-center">
-                    <Linkedin className="w-4 h-4" />
-                  </button>
-                  <button className="w-8 h-8 bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors rounded-full flex items-center justify-center">
-                    <Github className="w-4 h-4" />
-                  </button>
-                  <button className="w-8 h-8 bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors rounded-full flex items-center justify-center">
-                    <Mail className="w-4 h-4" />
-                  </button>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

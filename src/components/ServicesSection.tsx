@@ -40,8 +40,8 @@ const ServicesSection = () => {
     {
       icon: Mail,
       title: "Email Support & Management",
-      description: "Complete email support handling customer communications, booking confirmations, and administrative correspondence.",
-      features: ["Email Processing", "Booking Confirmations", "Customer Communications", "Administrative Support"]
+      description: "Specialized email handling for booking requests, quote inquiries, schedule updates, and customer support. We manage your entire email workflow seamlessly.",
+      features: ["Booking Email Processing", "Quote Request Handling", "Schedule Update Management", "Customer Inquiry Response", "Administrative Correspondence"]
     },
     {
       icon: Settings,
@@ -60,7 +60,7 @@ const ServicesSection = () => {
   const packages = [
     {
       name: "Essential Package",
-      price: "Starting at $2,500/month",
+      price: "Contact for Custom Pricing",
       description: "Perfect for growing transportation companies",
       features: [
         "Business Hours Coverage (8AM-6PM)",
@@ -72,11 +72,11 @@ const ServicesSection = () => {
     },
     {
       name: "Business Package",
-      price: "Starting at $4,200/month",
+      price: "Contact for Custom Pricing",
       description: "Comprehensive support for established companies",
       features: [
         "Extended Hours (7AM-10PM, 7 days)",
-        "Full Call & Email Support", 
+        "Full Call & Email Support",
         "Advanced Booking Management",
         "Customer Service Excellence",
         "Real-time Reporting"
@@ -85,7 +85,7 @@ const ServicesSection = () => {
     },
     {
       name: "Premium 24/7 Package",
-      price: "Starting at $6,800/month",
+      price: "Contact for Custom Pricing",
       description: "Round-the-clock premium support",
       features: [
         "24/7 Coverage - Never Miss a Call",
@@ -113,7 +113,7 @@ const ServicesSection = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We provide both cutting-edge technology solutions and comprehensive back-office support services.
-            From Limo Anywhere integrations to 24/7 call answering - we handle it all so you can focus on growth.
+            From Limo Anywhere integrations to specialized email handling for bookings, quotes, updates, and inquiries - we handle it all so you can focus on growth.
           </p>
         </div>
 
@@ -130,9 +130,9 @@ const ServicesSection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {techServices.map((service, index) => (
-              <Card 
-                key={index} 
-                className="card-luxury group hover:scale-105 transition-all duration-300"
+              <Card
+                key={index}
+                className="card-luxury group hover-lift hover-glow transition-all duration-300"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
                 <CardHeader>
@@ -168,15 +168,15 @@ const ServicesSection = () => {
               <span className="text-gradient">Back-Office Support Services</span>
             </h3>
             <p className="text-lg text-muted-foreground">
-              Your invisible team handling calls, emails, and customer service
+              Your strategic partner specializing in email handling for bookings, quotes, updates, inquiries, calls, and customer service
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {backOfficeServices.map((service, index) => (
-              <Card 
-                key={index} 
-                className="card-luxury group hover:scale-105 transition-all duration-300"
+              <Card
+                key={index}
+                className="card-luxury group hover-lift hover-glow transition-all duration-300"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
                 <CardHeader>
@@ -218,9 +218,9 @@ const ServicesSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {packages.map((pkg, index) => (
-              <Card 
-                key={index} 
-                className={`card-luxury relative group hover:scale-105 transition-all duration-300 ${
+              <Card
+                key={index}
+                className={`card-luxury relative group hover-lift hover-glow transition-all duration-300 ${
                   pkg.popular ? 'ring-2 ring-primary ring-opacity-50' : ''
                 }`}
               >
@@ -266,8 +266,8 @@ const ServicesSection = () => {
               Ready to Transform Your Transportation Business?
             </h3>
             <p className="text-xl text-muted-foreground mb-8">
-              Get both premium technology solutions and comprehensive back-office support. 
-              Let's discuss how we can become your invisible team behind the curtains.
+              Get both premium technology solutions and comprehensive back-office support.
+              Let's discuss how we can become your trusted strategic partner for business excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="btn-luxury">

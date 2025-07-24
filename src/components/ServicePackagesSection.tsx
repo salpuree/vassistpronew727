@@ -6,8 +6,8 @@ const ServicePackagesSection = () => {
   const packages = [
     {
       name: "Essential Package",
-      price: "$2,500",
-      period: "/month",
+      price: "Contact for",
+      period: "Custom Pricing",
       description: "Perfect for growing transportation companies",
       icon: Clock,
       features: [
@@ -21,12 +21,12 @@ const ServicePackagesSection = () => {
         "Standard Response Times"
       ],
       popular: false,
-      savings: "vs $8,000/month in-house team"
+      savings: "Significant savings vs in-house team"
     },
     {
-      name: "Business Package", 
-      price: "$4,200",
-      period: "/month",
+      name: "Business Package",
+      price: "Contact for",
+      period: "Custom Pricing",
       description: "Comprehensive support for established companies",
       icon: Users,
       features: [
@@ -40,12 +40,12 @@ const ServicePackagesSection = () => {
         "Faster Response Times"
       ],
       popular: true,
-      savings: "vs $15,000/month in-house team"
+      savings: "Significant savings vs in-house team"
     },
     {
       name: "Premium 24/7 Package",
-      price: "$6,800", 
-      period: "/month",
+      price: "Contact for",
+      period: "Custom Pricing",
       description: "Round-the-clock premium support",
       icon: Headphones,
       features: [
@@ -59,7 +59,7 @@ const ServicePackagesSection = () => {
         "Instant Response Guarantees"
       ],
       popular: false,
-      savings: "vs $25,000/month in-house team"
+      savings: "Significant savings vs in-house team"
     }
   ];
 
