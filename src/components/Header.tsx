@@ -30,15 +30,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
+            <img
               src="https://cdn.builder.io/api/v1/image/assets%2F88da141a3a504a51b2a3ca3584f907d1%2Ff34b048caef549548e025a9d389e4e6d?format=webp&width=800"
-              alt="Business Logo" 
+              alt="Business Logo"
               className="h-12 w-auto hover:scale-105 transition-transform duration-300"
             />
-            <div className="hidden sm:block">
-              <h3 className="text-xl font-bold text-foreground">VAssist Pro</h3>
-              <p className="text-sm text-muted-foreground">Your Invisible Team</p>
-            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -78,13 +74,13 @@ const Header = () => {
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-6">
             <div className="flex items-center space-x-4 text-sm">
-              <a href="tel:+1555123467" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+19416234590" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="w-4 h-4 mr-2" />
-                (555) 123-4567
+                (941) 623-4590
               </a>
-              <a href="mailto:hello@vassistpro.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:info@virtualassistancepro.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="w-4 h-4 mr-2" />
-                hello@vassistpro.com
+                info@virtualassistancepro.com
               </a>
             </div>
             <Button 
