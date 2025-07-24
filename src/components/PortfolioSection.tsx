@@ -7,27 +7,27 @@ const PortfolioSection = () => {
   const projects = [
     {
       title: "Elite Limousine Services",
-      category: "Limo Anywhere Integration",
-      description: "Complete Limo Anywhere customization with advanced booking system, real-time tracking, and automated dispatch optimization.",
+      category: "Technology + Back-Office",
+      description: "Complete Limo Anywhere integration plus 24/7 call answering service. Handled 2,000+ monthly calls while optimizing their booking system.",
       image: softwareMockup,
-      results: ["300% booking increase", "50% faster dispatch", "95% customer satisfaction"],
-      technologies: ["Limo Anywhere", "React", "Node.js", "Real-time APIs"]
+      results: ["300% booking increase", "Eliminated missed calls", "Reduced operational costs by 40%"],
+      technologies: ["Limo Anywhere", "24/7 Call Center", "React", "Real-time APIs"]
     },
     {
       title: "Metropolitan Transportation",
-      category: "GNet Custom Development", 
-      description: "Advanced GNet integration with custom driver management system, route optimization, and comprehensive reporting dashboard.",
+      category: "GNet + Customer Service", 
+      description: "Advanced GNet integration with dedicated back-office team managing customer communications, scheduling changes, and support.",
       image: softwareMockup,
-      results: ["40% operational efficiency", "60% reduced response time", "Streamlined operations"],
-      technologies: ["GNet", "Vue.js", "Python", "Machine Learning"]
+      results: ["60% faster customer response", "Streamlined operations", "99.8% customer satisfaction"],
+      technologies: ["GNet", "Email Support", "Vue.js", "Customer Service"]
     },
     {
       title: "Luxury Fleet Management",
-      category: "Full-Stack Solution",
-      description: "End-to-end transportation management platform with mobile apps, web dashboard, and integrated payment processing.",
+      category: "Complete Business Solution",
+      description: "Full technology platform with comprehensive back-office support including call answering, booking management, and customer service.",
       image: softwareMockup,
-      results: ["500% ROI in 6 months", "Automated 80% of processes", "24/7 operations capability"],
-      technologies: ["React Native", "Laravel", "PostgreSQL", "AWS"]
+      results: ["500% ROI in 6 months", "24/7 operations capability", "Zero missed bookings"],
+      technologies: ["React Native", "24/7 Support", "Laravel", "Back-Office Team"]
     }
   ];
 
@@ -36,21 +36,21 @@ const PortfolioSection = () => {
       name: "Michael Thompson",
       company: "Elite Transportation Group",
       role: "CEO",
-      text: "Their expertise in Limo Anywhere transformed our entire operation. The custom features they developed increased our bookings by 300% in just 6 months.",
+      text: "They're not just our tech team, they're our invisible back-office. The 24/7 call service plus Limo Anywhere integration increased our bookings by 300% while reducing our operational costs by 40%.",
       rating: 5
     },
     {
       name: "Sarah Williams",
       company: "Metropolitan Limousines",
       role: "Operations Director", 
-      text: "The GNet integration was seamless. Their team understood our complex requirements and delivered a solution that exceeded our expectations.",
+      text: "Having them handle our calls and emails while managing our GNet system was a game-changer. We can focus on operations while they handle everything else seamlessly.",
       rating: 5
     },
     {
       name: "David Chen",
       company: "Luxury Transport Solutions",
       role: "Founder",
-      text: "From concept to deployment, they delivered a world-class solution. Our clients love the new booking experience and our efficiency has improved dramatically.",
+      text: "They're like having a 50-person team without the overhead. From technology development to answering calls at 3 AM - they do it all with luxury-level service standards.",
       rating: 5
     }
   ];
@@ -66,11 +66,11 @@ const PortfolioSection = () => {
           </div>
           <h2 className="mb-6">
             <span className="text-gradient">Proven Results</span>
-            <span className="block text-foreground">for Transportation Leaders</span>
+            <span className="block text-foreground">Technology + Operations Excellence</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            See how we've transformed luxury transportation businesses with our specialized expertise in 
-            Limo Anywhere, GNet, and custom development solutions.
+            See how we've transformed luxury transportation businesses with our dual expertise in 
+            technology solutions AND comprehensive back-office support services.
           </p>
         </div>
 

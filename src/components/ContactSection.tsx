@@ -87,8 +87,8 @@ const ContactSection = () => {
             <span className="block text-foreground">Your Transportation Business?</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Get a free consultation with our luxury transportation technology experts. 
-            Let's discuss how we can transform your operations with premium solutions.
+            Get a free consultation with our luxury transportation experts. 
+            Let's discuss how we can provide both premium technology solutions and comprehensive back-office support.
           </p>
         </div>
 
@@ -166,7 +166,10 @@ const ContactSection = () => {
                           <SelectItem value="custom-addons">Custom Add-ons</SelectItem>
                           <SelectItem value="website">Premium Website</SelectItem>
                           <SelectItem value="mobile-app">Mobile App Development</SelectItem>
-                          <SelectItem value="full-solution">Complete Solution</SelectItem>
+                          <SelectItem value="back-office-support">24/7 Back-Office Support</SelectItem>
+                          <SelectItem value="call-answering">Call Answering Service</SelectItem>
+                          <SelectItem value="email-support">Email Support Management</SelectItem>
+                          <SelectItem value="complete-solution">Complete Tech + Operations Solution</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>

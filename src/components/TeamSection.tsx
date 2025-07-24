@@ -6,27 +6,27 @@ const TeamSection = () => {
   const stats = [
     {
       icon: Users,
-      number: "50+",
-      label: "Expert Developers",
-      description: "Specialized in transportation software"
+      number: "75+",
+      label: "Team Members",
+      description: "Developers + Back-office professionals"
     },
     {
       icon: Award,
       number: "15+",
       label: "Years Experience",
-      description: "Deep industry knowledge"
+      description: "Technology + Operations expertise"
     },
     {
       icon: Clock,
       number: "24/7",
-      label: "Support Available",
-      description: "Always here when you need us"
+      label: "Operations",
+      description: "Never miss a call or opportunity"
     },
     {
       icon: Globe,
-      number: "Global",
-      label: "Client Base",
-      description: "Serving clients worldwide"
+      number: "500K+",
+      label: "Calls Handled",
+      description: "Professional customer interactions"
     }
   ];
 
@@ -36,28 +36,28 @@ const TeamSection = () => {
       role: "Lead Developer",
       specialization: "Limo Anywhere Expert",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      description: "10+ years specializing in Limo Anywhere integrations and customizations."
+      description: "10+ years specializing in Limo Anywhere integrations and custom development."
     },
     {
       name: "Sarah Kim",
-      role: "Senior Developer",
-      specialization: "GNet Specialist",
+      role: "Operations Director",
+      specialization: "Back-Office Operations",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
-      description: "Expert in GNet systems and transportation workflow automation."
+      description: "Manages our 24/7 call center and back-office operations team."
     },
     {
       name: "Michael Chen",
-      role: "Full-Stack Developer",
-      specialization: "Mobile & Web Apps",
+      role: "Senior Developer",
+      specialization: "GNet & Mobile Apps",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      description: "Specializes in premium web and mobile app development for luxury brands."
+      description: "Expert in GNet systems and mobile app development for transportation."
     },
     {
       name: "Emily Johnson",
-      role: "UI/UX Designer",
-      specialization: "Luxury Brand Design",
+      role: "Customer Service Manager",
+      specialization: "Luxury Customer Experience",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      description: "Creates sophisticated user experiences for high-end transportation companies."
+      description: "Ensures all customer interactions meet luxury transportation standards."
     }
   ];
 
@@ -75,8 +75,8 @@ const TeamSection = () => {
             <span className="block text-foreground">Dedicated to Your Success</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our specialized team combines deep technical expertise with extensive experience in the luxury transportation industry. 
-            We understand your challenges and deliver solutions that drive results.
+            Our specialized team combines technical expertise with operational excellence for luxury transportation. 
+            From developers to customer service professionals - we're your complete invisible team.
           </p>
         </div>
 
@@ -127,8 +127,8 @@ const TeamSection = () => {
                   <div className="w-2 h-2 bg-primary-foreground rounded-full" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold text-foreground mb-2">Transportation Industry Specialists</h4>
-                  <p className="text-muted-foreground">Deep understanding of luxury transportation business models, challenges, and opportunities.</p>
+                  <h4 className="text-xl font-semibold text-foreground mb-2">Technology + Operations Excellence</h4>
+                  <p className="text-muted-foreground">Unique combination of technical expertise and professional back-office operations for complete solutions.</p>
                 </div>
               </div>
               
@@ -137,8 +137,8 @@ const TeamSection = () => {
                   <div className="w-2 h-2 bg-primary-foreground rounded-full" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold text-foreground mb-2">Certified Platform Experts</h4>
-                  <p className="text-muted-foreground">Certified developers in Limo Anywhere, GNet, and other leading transportation platforms.</p>
+                  <h4 className="text-xl font-semibold text-foreground mb-2">Your Invisible Team</h4>
+                  <p className="text-muted-foreground">We seamlessly integrate with your business, acting as your in-house team without the overhead costs.</p>
                 </div>
               </div>
               
@@ -147,8 +147,8 @@ const TeamSection = () => {
                   <div className="w-2 h-2 bg-primary-foreground rounded-full" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold text-foreground mb-2">Proven Track Record</h4>
-                  <p className="text-muted-foreground">500+ successful projects with measurable business impact and client satisfaction.</p>
+                  <h4 className="text-xl font-semibold text-foreground mb-2">Luxury Transportation Specialists</h4>
+                  <p className="text-muted-foreground">Deep understanding of Limo Anywhere, GNet, and the unique needs of luxury transportation companies.</p>
                 </div>
               </div>
               
@@ -157,8 +157,8 @@ const TeamSection = () => {
                   <div className="w-2 h-2 bg-primary-foreground rounded-full" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold text-foreground mb-2">24/7 Dedicated Support</h4>
-                  <p className="text-muted-foreground">Round-the-clock support to ensure your systems run smoothly and your business never stops.</p>
+                  <h4 className="text-xl font-semibold text-foreground mb-2">24/7 Operations Capability</h4>
+                  <p className="text-muted-foreground">Never miss a booking or customer inquiry with our round-the-clock professional support team.</p>
                 </div>
               </div>
             </div>

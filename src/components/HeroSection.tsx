@@ -26,35 +26,35 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
             <Zap className="w-5 h-5 text-primary mr-2" />
-            <span className="text-primary font-semibold">Premium Web Development for Luxury Transportation</span>
+            <span className="text-primary font-semibold">Complete Business Solutions for Luxury Transportation</span>
           </div>
           
           {/* Main Headline */}
           <h1 className="mb-8 animate-slide-up">
-            <span className="block text-foreground mb-2">Elevating</span>
-            <span className="text-gradient text-glow">Luxury Transportation</span>
-            <span className="block text-foreground">Through Premium Technology</span>
+            <span className="block text-foreground mb-2">Your</span>
+            <span className="text-gradient text-glow">Invisible Team</span>
+            <span className="block text-foreground">Behind the Curtains</span>
           </h1>
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: "0.2s"}}>
-            Specialized in designing and developing premium websites and applications for luxury transportation companies. 
-            Expert integration with <span className="text-primary font-semibold">Limo Anywhere</span>, <span className="text-primary font-semibold">GNet</span>, and custom add-ons.
+            We provide both <span className="text-primary font-semibold">premium technology solutions</span> and <span className="text-primary font-semibold">24/7 back-office support</span> for luxury transportation companies. 
+            Specialists in <span className="text-primary font-semibold">Limo Anywhere</span>, <span className="text-primary font-semibold">GNet</span>, and comprehensive business operations.
           </p>
           
           {/* Feature Pills */}
           <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in" style={{animationDelay: "0.4s"}}>
             <div className="flex items-center px-6 py-3 bg-card/30 backdrop-blur-sm rounded-full border border-border/50">
               <Code className="w-5 h-5 text-primary mr-2" />
-              <span className="text-foreground">Limo Anywhere Experts</span>
+              <span className="text-foreground">Technology Solutions</span>
             </div>
             <div className="flex items-center px-6 py-3 bg-card/30 backdrop-blur-sm rounded-full border border-border/50">
               <Globe className="w-5 h-5 text-primary mr-2" />
-              <span className="text-foreground">GNet Integration</span>
+              <span className="text-foreground">24/7 Back-Office Support</span>
             </div>
             <div className="flex items-center px-6 py-3 bg-card/30 backdrop-blur-sm rounded-full border border-border/50">
               <Zap className="w-5 h-5 text-primary mr-2" />
-              <span className="text-foreground">Custom Add-ons</span>
+              <span className="text-foreground">Limo Anywhere & GNet</span>
             </div>
           </div>
           
