@@ -248,40 +248,52 @@ const ContactSection = () => {
         </div>
 
         {/* Quick Action Cards - Now below the form */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          <Card className="bg-primary/5 border-primary/20">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
-                Free 30-Minute Consultation
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Book a free consultation to discuss your transportation technology needs.
-              </p>
-              <Button className="btn-luxury w-full">
-                Schedule Call
-              </Button>
-            </CardContent>
-          </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-12">
+          <div className="group cursor-pointer">
+            <div className="relative bg-card/60 backdrop-blur-xl border border-primary/30 rounded-3xl p-8 text-center hover:border-primary/50 transition-all duration-500 hover:bg-card/80 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/20 overflow-hidden">
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-          <Card className="bg-secondary/5 border-border/50">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-primary" />
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-primary/30 group-hover:rotate-3 transition-transform duration-300">
+                  <Clock className="w-10 h-10 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                  Free 30-Minute Consultation
+                </h3>
+                <p className="text-foreground/80 mb-6 font-medium leading-relaxed">
+                  Book a free consultation to discuss your transportation technology needs.
+                </p>
+                <Button className="btn-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
+                  Schedule Call
+                </Button>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
-                Emergency Support
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Need immediate help with your existing systems? We're here 24/7.
-              </p>
-              <Button variant="outline" className="btn-outline-luxury w-full">
-                Get Support
-              </Button>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
+
+          <div className="group cursor-pointer">
+            <div className="relative bg-card/60 backdrop-blur-xl border border-border/30 rounded-3xl p-8 text-center hover:border-primary/50 transition-all duration-500 hover:bg-card/80 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/20 overflow-hidden">
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-purple-500/30 group-hover:rotate-3 transition-transform duration-300">
+                  <Zap className="w-10 h-10 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                  Emergency Support
+                </h3>
+                <p className="text-foreground/80 mb-6 font-medium leading-relaxed">
+                  Need immediate help with your existing systems? We're here 24/7.
+                </p>
+                <Button variant="outline" className="btn-outline-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
+                  Get Support
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Trust Indicators */}
