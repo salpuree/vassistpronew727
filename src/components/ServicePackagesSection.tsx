@@ -21,7 +21,7 @@ const ServicePackagesSection = () => {
         "Standard Response Times"
       ],
       popular: false,
-      savings: "vs $8,000/month in-house team"
+      savings: "Significant savings vs in-house team"
     },
     {
       name: "Business Package",
@@ -40,7 +40,7 @@ const ServicePackagesSection = () => {
         "Faster Response Times"
       ],
       popular: true,
-      savings: "vs $15,000/month in-house team"
+      savings: "Significant savings vs in-house team"
     },
     {
       name: "Premium 24/7 Package",
@@ -59,7 +59,7 @@ const ServicePackagesSection = () => {
         "Instant Response Guarantees"
       ],
       popular: false,
-      savings: "vs $25,000/month in-house team"
+      savings: "Significant savings vs in-house team"
     }
   ];
 
