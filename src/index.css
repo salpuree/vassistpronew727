@@ -61,17 +61,17 @@ All colors MUST be HSL.
     --card-foreground: 222 47% 11%;
     --popover: 60 30% 98%;
     --popover-foreground: 222 47% 11%;
-    --primary: 43 96% 56%;
+    --primary: 193 95% 68%;
     --primary-foreground: 222 47% 11%;
     --secondary: 60 30% 95%;
     --secondary-foreground: 222 47% 11%;
     --muted: 60 30% 95%;
     --muted-foreground: 215 20% 45%;
-    --accent: 43 96% 56%;
+    --accent: 193 95% 68%;
     --accent-foreground: 222 47% 11%;
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 43 96% 56%;
+    --ring: 193 95% 68%;
   }
 }
 
