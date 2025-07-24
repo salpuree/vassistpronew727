@@ -34,8 +34,8 @@ const HeroSection = () => {
           {/* Main Headline */}
           <h1 className="mb-8 animate-slide-up">
             <span className="block text-foreground mb-2">Your</span>
-            <span className="text-gradient text-glow">Invisible Team</span>
-            <span className="block text-foreground">Behind the Curtains</span>
+            <span className="text-gradient text-glow">Strategic Partner</span>
+            <span className="block text-foreground">for Business Excellence</span>
           </h1>
           
           {/* Subheadline */}
