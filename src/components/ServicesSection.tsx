@@ -60,7 +60,7 @@ const ServicesSection = () => {
   const packages = [
     {
       name: "Essential Package",
-      price: "Starting at $2,500/month",
+      price: "Contact for Custom Pricing",
       description: "Perfect for growing transportation companies",
       features: [
         "Business Hours Coverage (8AM-6PM)",
@@ -72,11 +72,11 @@ const ServicesSection = () => {
     },
     {
       name: "Business Package",
-      price: "Starting at $4,200/month",
+      price: "Contact for Custom Pricing",
       description: "Comprehensive support for established companies",
       features: [
         "Extended Hours (7AM-10PM, 7 days)",
-        "Full Call & Email Support", 
+        "Full Call & Email Support",
         "Advanced Booking Management",
         "Customer Service Excellence",
         "Real-time Reporting"
@@ -85,7 +85,7 @@ const ServicesSection = () => {
     },
     {
       name: "Premium 24/7 Package",
-      price: "Starting at $6,800/month",
+      price: "Contact for Custom Pricing",
       description: "Round-the-clock premium support",
       features: [
         "24/7 Coverage - Never Miss a Call",
