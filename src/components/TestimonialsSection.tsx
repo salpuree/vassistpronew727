@@ -112,9 +112,9 @@ const TestimonialsSection = () => {
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
                   <div className="group cursor-default">
-                    <div className={`relative bg-card/60 backdrop-blur-xl border border-border/30 rounded-3xl p-12 hover:border-primary/30 transition-all duration-500 overflow-hidden`}>
-                      {/* Animated background gradient */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                    <div className={`relative bg-card/60 backdrop-blur-xl border border-border/30 rounded-3xl p-12 hover:border-primary/30 transition-all duration-500 overflow-hidden hover:shadow-2xl hover:shadow-primary/20`}>
+                      {/* Default background gradient */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.bgColor} opacity-50 group-hover:opacity-70 transition-opacity duration-500`} />
                       
                       {/* Content */}
                       <div className="relative z-10">
