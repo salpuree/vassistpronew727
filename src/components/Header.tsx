@@ -38,36 +38,48 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            <button 
+          <nav className="hidden lg:flex items-center space-x-1">
+            <button
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
               Services
+              <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('packages')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
               Packages
+              <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('portfolio')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
               Portfolio
+              <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('team')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
               Team
+              <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
-            <button 
+            <button
+              onClick={() => scrollToSection('testimonials')}
+              className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
+            >
+              Reviews
+              <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+            </button>
+            <button
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
               Contact
+              <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
           </nav>
 
