@@ -50,13 +50,13 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "hello@vassistpro.com",
+      details: "info@virtualassistancepro.com",
       description: "Get a response within 2 hours"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
+      details: "+1 (941) 623-4590",
       description: "Mon-Fri 8AM-8PM EST"
     },
     {
