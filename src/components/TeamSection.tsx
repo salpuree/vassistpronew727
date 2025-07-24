@@ -42,12 +42,12 @@ const TeamSection = () => {
     },
     {
       name: "Linta T.",
-      role: "Operations Director",
-      specialization: "Back-Office Operations",
-      avatar: "👩‍💻",
-      bgColor: "from-teal-500/20 to-cyan-500/20",
-      borderColor: "border-teal-500/30",
-      description: "Manages our 24/7 call center and back-office operations team."
+      role: "Chief Operations Director",
+      specialization: "Business Operations Excellence",
+      avatar: "👑",
+      bgColor: "from-amber-500/20 to-yellow-500/20",
+      borderColor: "border-amber-500/30",
+      description: "Our most experienced leader with 12+ years managing luxury transportation operations. Personally oversees all client relationships and ensures 24/7 operational excellence. The strategic mind behind our seamless service delivery."
     },
     {
       name: "Gia K.",
@@ -83,8 +83,8 @@ const TeamSection = () => {
             <span className="block text-foreground">Dedicated to Your Success</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our specialized team combines technical expertise with operational excellence for luxury transportation. 
-            From developers to customer service professionals - we're your complete invisible team.
+            Our specialized team combines technical expertise with operational excellence for luxury transportation.
+            From developers to customer service professionals - we're your complete strategic partner for business success.
           </p>
         </div>
 
@@ -145,8 +145,8 @@ const TeamSection = () => {
                   <div className="w-2 h-2 bg-primary-foreground rounded-full" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold text-foreground mb-2">Your Invisible Team</h4>
-                  <p className="text-muted-foreground">We seamlessly integrate with your business, acting as your in-house team without the overhead costs.</p>
+                  <h4 className="text-xl font-semibold text-foreground mb-2">Your Strategic Partner</h4>
+                  <p className="text-muted-foreground">We seamlessly integrate with your business as a trusted strategic partner, delivering enterprise-level expertise without the overhead costs.</p>
                 </div>
               </div>
               
