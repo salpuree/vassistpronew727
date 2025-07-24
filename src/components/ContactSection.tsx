@@ -95,7 +95,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="card-luxury">
+            <Card className="card-luxury hover-glow">
               <CardHeader>
                 <CardTitle className="text-3xl text-foreground">
                   Tell Us About Your Project
