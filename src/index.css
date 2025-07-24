@@ -107,21 +107,21 @@ All colors MUST be HSL.
 @layer components {
   /* Premium Button Styles */
   .btn-luxury {
-    @apply bg-gradient-to-r from-primary to-yellow-400 text-primary-foreground px-8 py-4 rounded-xl font-semibold shadow-luxury hover:shadow-gold transition-all duration-300 hover:scale-105;
+    @apply bg-gradient-to-r from-primary via-blue-500 to-purple-500 text-primary-foreground px-8 py-4 rounded-xl font-semibold shadow-luxury hover:shadow-primary transition-all duration-300 hover:scale-105;
   }
-  
+
   .btn-outline-luxury {
     @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-xl font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300;
   }
-  
+
   /* Premium Card Styles */
   .card-luxury {
-    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 shadow-luxury hover:shadow-gold transition-all duration-300 hover:border-primary/50;
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 shadow-luxury hover:shadow-primary transition-all duration-300 hover:border-primary/50;
   }
-  
+
   /* Premium Text Effects */
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent;
   }
   
   .text-glow {
