@@ -168,7 +168,7 @@ const ServicesSection = () => {
               <span className="text-gradient">Back-Office Support Services</span>
             </h3>
             <p className="text-lg text-muted-foreground">
-              Your invisible team specializing in email handling for bookings, quotes, updates, inquiries, calls, and customer service
+              Your strategic partner specializing in email handling for bookings, quotes, updates, inquiries, calls, and customer service
             </p>
           </div>
           
@@ -266,8 +266,8 @@ const ServicesSection = () => {
               Ready to Transform Your Transportation Business?
             </h3>
             <p className="text-xl text-muted-foreground mb-8">
-              Get both premium technology solutions and comprehensive back-office support. 
-              Let's discuss how we can become your invisible team behind the curtains.
+              Get both premium technology solutions and comprehensive back-office support.
+              Let's discuss how we can become your trusted strategic partner for business excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="btn-luxury">
