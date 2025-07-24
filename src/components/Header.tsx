@@ -116,31 +116,37 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-luxury">
             <nav className="flex flex-col space-y-4 p-6">
-              <button 
+              <button
                 onClick={() => scrollToSection('services')}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
                 Services
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('packages')}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
                 Packages
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('portfolio')}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
                 Portfolio
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('team')}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
                 Team
               </button>
-              <button 
+              <button
+                onClick={() => scrollToSection('testimonials')}
+                className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              >
+                Reviews
+              </button>
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
