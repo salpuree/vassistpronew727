@@ -168,7 +168,7 @@ const ServicesSection = () => {
               <span className="text-gradient">Back-Office Support Services</span>
             </h3>
             <p className="text-lg text-muted-foreground">
-              Your invisible team handling calls, emails, and customer service
+              Your invisible team specializing in email handling for bookings, quotes, updates, inquiries, calls, and customer service
             </p>
           </div>
           
