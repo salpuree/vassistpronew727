@@ -135,13 +135,13 @@ const Header = () => {
                 Contact
               </button>
               <div className="border-t border-border/50 pt-4">
-                <a href="tel:+1555123467" className="flex items-center text-muted-foreground hover:text-primary transition-colors mb-3">
+                <a href="tel:+19416234590" className="flex items-center text-muted-foreground hover:text-primary transition-colors mb-3">
                   <Phone className="w-4 h-4 mr-2" />
-                  (555) 123-4567
+                  (941) 623-4590
                 </a>
-                <a href="mailto:hello@vassistpro.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors mb-4">
+                <a href="mailto:info@virtualassistancepro.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors mb-4">
                   <Mail className="w-4 h-4 mr-2" />
-                  hello@vassistpro.com
+                  info@virtualassistancepro.com
                 </a>
                 <Button 
                   onClick={() => scrollToSection('contact')}
