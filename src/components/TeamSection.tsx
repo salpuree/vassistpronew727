@@ -47,7 +47,7 @@ const TeamSection = () => {
       avatar: "👑",
       bgColor: "from-amber-500/20 to-yellow-500/20",
       borderColor: "border-amber-500/30",
-      description: "Our most experienced leader with 12+ years managing luxury transportation operations. Personally oversees all client relationships and ensures 24/7 operational excellence. The strategic mind behind our seamless service delivery."
+      description: "Linta manages the operations. Personally oversees all client relationships and ensures 24/7 operational excellence. The strategic mind behind our seamless service delivery."
     },
     {
       name: "Gia K.",
