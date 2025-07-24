@@ -218,9 +218,9 @@ const ServicesSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {packages.map((pkg, index) => (
-              <Card 
-                key={index} 
-                className={`card-luxury relative group hover:scale-105 transition-all duration-300 ${
+              <Card
+                key={index}
+                className={`card-luxury relative group hover-lift hover-glow transition-all duration-300 ${
                   pkg.popular ? 'ring-2 ring-primary ring-opacity-50' : ''
                 }`}
               >
