@@ -130,9 +130,9 @@ const ServicesSection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {techServices.map((service, index) => (
-              <Card 
-                key={index} 
-                className="card-luxury group hover:scale-105 transition-all duration-300"
+              <Card
+                key={index}
+                className="card-luxury group hover-lift hover-glow transition-all duration-300"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
                 <CardHeader>
