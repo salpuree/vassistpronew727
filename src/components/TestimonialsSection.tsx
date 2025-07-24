@@ -12,7 +12,7 @@ const TestimonialsSection = () => {
       company: "Elite Transportation Services",
       location: "Miami, FL",
       rating: 5,
-      text: "Linta and her team have been absolutely phenomenal. Their 24/7 operations support has increased our booking rate by 40%. We never miss a call or opportunity anymore. The level of professionalism is unmatched.",
+      text: "The team has been absolutely phenomenal. Their 24/7 operations support has increased our booking rate by 40%. We never miss a call or opportunity anymore. The level of professionalism is unmatched.",
       avatar: "🚗",
       bgColor: "from-blue-500/20 to-cyan-500/20"
     },
@@ -21,7 +21,7 @@ const TestimonialsSection = () => {
       company: "Luxury Rides NYC",
       location: "New York, NY", 
       rating: 5,
-      text: "Working with VAssist Pro has been a game-changer. Their email handling for booking requests is flawless. Linta personally ensures every client interaction meets our luxury standards. Couldn't be happier.",
+      text: "Working with VAssist Pro has been a game-changer. Their email handling for booking requests is flawless. The team personally ensures every client interaction meets our luxury standards. Couldn't be happier.",
       avatar: "🏙️",
       bgColor: "from-purple-500/20 to-pink-500/20"
     },
@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
       company: "Executive Transport Group",
       location: "Chicago, IL",
       rating: 5,
-      text: "Linta's leadership in operations management is exceptional. Her team handles our customer service with such care and attention to detail. Our client satisfaction scores have never been higher.",
+      text: "The leadership in operations management is exceptional. The team handles our customer service with such care and attention to detail. Our client satisfaction scores have never been higher.",
       avatar: "🏆",
       bgColor: "from-amber-500/20 to-orange-500/20"
     },
@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
       company: "Prestige Transportation",
       location: "Seattle, WA",
       rating: 5,
-      text: "Their email management system for bookings is fantastic. Every inquiry is handled professionally and promptly. Linta's team truly understands the luxury transportation business.",
+      text: "Their email management system for bookings is fantastic. Every inquiry is handled professionally and promptly. The team truly understands the luxury transportation business.",
       avatar: "📧",
       bgColor: "from-teal-500/20 to-cyan-500/20"
     }
