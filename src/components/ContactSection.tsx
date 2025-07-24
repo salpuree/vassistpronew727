@@ -180,10 +180,11 @@ const ContactSection = () => {
                           <SelectValue placeholder="Select budget range" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="10k-25k">$10K - $25K</SelectItem>
-                          <SelectItem value="25k-50k">$25K - $50K</SelectItem>
-                          <SelectItem value="50k-100k">$50K - $100K</SelectItem>
-                          <SelectItem value="100k+">$100K+</SelectItem>
+                          <SelectItem value="small-business">Small Business Budget</SelectItem>
+                          <SelectItem value="medium-business">Medium Business Budget</SelectItem>
+                          <SelectItem value="large-business">Large Business Budget</SelectItem>
+                          <SelectItem value="enterprise">Enterprise Budget</SelectItem>
+                          <SelectItem value="custom">Custom Quote Needed</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
