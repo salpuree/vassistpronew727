@@ -15,12 +15,12 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/95" />
       </div>
       
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-16 h-16 bg-primary/20 rounded-full animate-float animate-pulse-soft" />
-      <div className="absolute bottom-32 right-16 w-12 h-12 bg-primary/30 rounded-full animate-bounce-soft" style={{animationDelay: "2s"}} />
-      <div className="absolute top-1/2 right-32 w-8 h-8 bg-primary/40 rounded-full animate-float animate-glow" style={{animationDelay: "4s"}} />
-      <div className="absolute top-1/3 left-1/4 w-6 h-6 bg-blue-500/30 rounded-full animate-pulse-soft" style={{animationDelay: "1s"}} />
-      <div className="absolute bottom-1/4 left-1/3 w-10 h-10 bg-purple-500/20 rounded-full animate-bounce-soft" style={{animationDelay: "3s"}} />
+      {/* Floating Elements - Mobile Safe */}
+      <div className="absolute top-20 left-4 md:left-10 w-12 md:w-16 h-12 md:h-16 bg-primary/20 rounded-full animate-float animate-pulse-soft" />
+      <div className="absolute bottom-32 right-4 md:right-16 w-10 md:w-12 h-10 md:h-12 bg-primary/30 rounded-full animate-bounce-soft" style={{animationDelay: "2s"}} />
+      <div className="absolute top-1/2 right-8 md:right-32 w-6 md:w-8 h-6 md:h-8 bg-primary/40 rounded-full animate-float animate-glow" style={{animationDelay: "4s"}} />
+      <div className="hidden md:block absolute top-1/3 left-1/4 w-6 h-6 bg-blue-500/30 rounded-full animate-pulse-soft" style={{animationDelay: "1s"}} />
+      <div className="hidden md:block absolute bottom-1/4 left-1/3 w-10 h-10 bg-purple-500/20 rounded-full animate-bounce-soft" style={{animationDelay: "3s"}} />
       
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
