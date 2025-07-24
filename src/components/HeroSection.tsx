@@ -16,9 +16,11 @@ const HeroSection = () => {
       </div>
       
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-16 h-16 bg-primary/20 rounded-full animate-float" />
-      <div className="absolute bottom-32 right-16 w-12 h-12 bg-primary/30 rounded-full animate-float" style={{animationDelay: "2s"}} />
-      <div className="absolute top-1/2 right-32 w-8 h-8 bg-primary/40 rounded-full animate-float" style={{animationDelay: "4s"}} />
+      <div className="absolute top-20 left-10 w-16 h-16 bg-primary/20 rounded-full animate-float animate-pulse-soft" />
+      <div className="absolute bottom-32 right-16 w-12 h-12 bg-primary/30 rounded-full animate-bounce-soft" style={{animationDelay: "2s"}} />
+      <div className="absolute top-1/2 right-32 w-8 h-8 bg-primary/40 rounded-full animate-float animate-glow" style={{animationDelay: "4s"}} />
+      <div className="absolute top-1/3 left-1/4 w-6 h-6 bg-blue-500/30 rounded-full animate-pulse-soft" style={{animationDelay: "1s"}} />
+      <div className="absolute bottom-1/4 left-1/3 w-10 h-10 bg-purple-500/20 rounded-full animate-bounce-soft" style={{animationDelay: "3s"}} />
       
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
