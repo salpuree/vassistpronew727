@@ -54,10 +54,10 @@ const Header = () => {
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
             <button
-              onClick={() => scrollToSection('portfolio')}
+              onClick={() => scrollToSection('testimonials')}
               className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
-              Portfolio
+              Reviews
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
             <button
@@ -65,13 +65,6 @@ const Header = () => {
               className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
               Team
-              <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-            </button>
-            <button
-              onClick={() => scrollToSection('testimonials')}
-              className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
-            >
-              Reviews
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
             <button
@@ -129,22 +122,16 @@ const Header = () => {
                 Packages
               </button>
               <button
-                onClick={() => scrollToSection('portfolio')}
+                onClick={() => scrollToSection('testimonials')}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
-                Portfolio
+                Reviews
               </button>
               <button
                 onClick={() => scrollToSection('team')}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
                 Team
-              </button>
-              <button
-                onClick={() => scrollToSection('testimonials')}
-                className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
-              >
-                Reviews
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
