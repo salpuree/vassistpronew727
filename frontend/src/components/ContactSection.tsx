@@ -299,7 +299,7 @@ const ContactSection = () => {
 
         {/* Bottom Trust Indicators */}
         <div className="mt-20 text-center">
-          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto">
+          <div className="bg-white border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto shadow-lg">
             <h3 className="text-2xl font-bold text-foreground mb-6">
               Why Transportation Companies Choose Us
             </h3>
