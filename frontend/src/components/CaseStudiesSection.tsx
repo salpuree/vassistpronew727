@@ -212,7 +212,7 @@ const CaseStudiesSection = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-white border border-primary/20 rounded-3xl p-12 w-full shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 group cursor-pointer">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">
               Ready to Achieve Similar Results?
             </h3>
             <p className="text-xl text-gray-600 mb-8">
@@ -220,7 +220,7 @@ const CaseStudiesSection = () => {
               Let's discuss your specific challenges and create a custom success plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-luxury text-lg px-8 py-3">
+              <Button className="btn-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
                 Schedule Strategy Call
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
