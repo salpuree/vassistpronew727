@@ -181,10 +181,10 @@ const CollapsibleHowWeWork = () => {
         {/* CTA */}
         <div className="text-center mt-8">
           <div className="bg-white border border-border/50 rounded-3xl p-8 max-w-3xl mx-auto shadow-lg">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Start Your Transformation?
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-gray-600 mb-6">
               Schedule a discovery call to discuss your specific needs and timeline.
             </p>
             <Button className="btn-luxury">
