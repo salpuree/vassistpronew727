@@ -262,10 +262,10 @@ const ServicesSection = () => {
         {/* Bottom CTA */}
         <div className="text-center">
           <div className="bg-white border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto shadow-lg">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Transportation Business?
             </h3>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               Get both premium technology solutions and comprehensive back-office support.
               Let's discuss how we can become your trusted strategic partner for business excellence.
             </p>
