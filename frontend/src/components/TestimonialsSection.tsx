@@ -193,7 +193,7 @@ const TestimonialsSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto">
+          <div className="bg-white border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto shadow-lg">
             <h3 className="text-3xl font-bold text-foreground mb-4">
               Ready to Join Our Success Stories?
             </h3>
