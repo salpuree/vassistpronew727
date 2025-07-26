@@ -73,7 +73,7 @@ const CaseStudiesSection = () => {
   const currentCase = caseStudies[activeCase];
 
   return (
-    <section className="py-24 bg-luxury-gradient">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-20">
