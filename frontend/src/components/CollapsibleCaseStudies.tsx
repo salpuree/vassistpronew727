@@ -170,10 +170,10 @@ const CollapsibleCaseStudies = () => {
         {/* CTA */}
         <div className="text-center">
           <div className="bg-white border border-border/50 rounded-3xl p-8 max-w-3xl mx-auto shadow-lg">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Achieve Similar Results?
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-gray-600 mb-6">
               Schedule a free consultation to discuss how we can transform your transportation business.
             </p>
             <Button className="btn-luxury">
