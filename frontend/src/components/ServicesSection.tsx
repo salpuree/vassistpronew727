@@ -261,7 +261,7 @@ const ServicesSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center">
-          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto">
+          <div className="bg-white border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto shadow-lg">
             <h3 className="text-3xl font-bold text-foreground mb-4">
               Ready to Transform Your Transportation Business?
             </h3>
