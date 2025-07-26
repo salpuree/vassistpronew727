@@ -3,12 +3,12 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import ServicePackagesSection from "@/components/ServicePackagesSection";
-import CaseStudiesSection from "@/components/CaseStudiesSection";
-import HowWeWorkSection from "@/components/HowWeWorkSection";
-import IndustryExpertiseSection from "@/components/IndustryExpertiseSection";
-import SocialProofSection from "@/components/SocialProofSection";
-import ROICalculatorSection from "@/components/ROICalculatorSection";
-import FAQSection from "@/components/FAQSection";
+import CollapsibleCaseStudies from "@/components/CollapsibleCaseStudies";
+import CollapsibleHowWeWork from "@/components/CollapsibleHowWeWork";
+import CollapsibleROICalculator from "@/components/CollapsibleROICalculator";
+import CollapsibleIndustryExpertise from "@/components/CollapsibleIndustryExpertise";
+import CollapsibleSocialProof from "@/components/CollapsibleSocialProof";
+import CollapsibleFAQ from "@/components/CollapsibleFAQ";
 import TeamSection from "@/components/TeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
@@ -23,28 +23,28 @@ const Index = () => {
           <ServicesSection />
         </section>
         <section id="case-studies">
-          <CaseStudiesSection />
+          <CollapsibleCaseStudies />
         </section>
         <section id="how-we-work">
-          <HowWeWorkSection />
+          <CollapsibleHowWeWork />
         </section>
         <section id="packages">
           <ServicePackagesSection />
         </section>
         <section id="roi-calculator">
-          <ROICalculatorSection />
+          <CollapsibleROICalculator />
         </section>
         <section id="industry-expertise">
-          <IndustryExpertiseSection />
+          <CollapsibleIndustryExpertise />
         </section>
         <section id="social-proof">
-          <SocialProofSection />
+          <CollapsibleSocialProof />
         </section>
         <section id="testimonials">
           <TestimonialsSection />
         </section>
         <section id="faq">
-          <FAQSection />
+          <CollapsibleFAQ />
         </section>
         <section id="team">
           <TeamSection />
