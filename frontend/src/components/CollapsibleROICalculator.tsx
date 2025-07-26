@@ -238,7 +238,7 @@ const CollapsibleROICalculator = () => {
 
         {/* CTA */}
         <div className="text-center mt-8">
-          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-8 max-w-3xl mx-auto">
+          <div className="bg-white border border-border/50 rounded-3xl p-8 max-w-3xl mx-auto shadow-lg">
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Ready to Start Saving?
             </h3>
