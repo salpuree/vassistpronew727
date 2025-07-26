@@ -212,10 +212,10 @@ const CaseStudiesSection = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-white border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto shadow-lg">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Ready to Achieve Similar Results?
             </h3>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               Join these successful transportation companies and transform your business operations. 
               Let's discuss your specific challenges and create a custom success plan.
             </p>
