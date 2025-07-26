@@ -176,30 +176,7 @@ const CollapsibleFAQ = () => {
               </div>
             ))}
 
-            {/* Quick Contact Options */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-              <Card className="card-luxury text-center hover-lift transition-all duration-300">
-                <CardContent className="pt-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Phone className="w-8 h-8 text-primary" />
-                  </div>
-                  <h4 className="font-bold text-foreground mb-2">Sales Questions</h4>
-                  <div className="text-primary font-semibold mb-3">(941) 623-4590</div>
-                  <p className="text-sm text-muted-foreground">Speak with our sales team about packages and pricing</p>
-                </CardContent>
-              </Card>
 
-              <Card className="card-luxury text-center hover-lift transition-all duration-300">
-                <CardContent className="pt-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Mail className="w-8 h-8 text-primary" />
-                  </div>
-                  <h4 className="font-bold text-foreground mb-2">General Inquiries</h4>
-                  <div className="text-primary font-semibold mb-3">info@virtualassistancepro.com</div>
-                  <p className="text-sm text-muted-foreground">Ask questions about our services and capabilities</p>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         )}
 
