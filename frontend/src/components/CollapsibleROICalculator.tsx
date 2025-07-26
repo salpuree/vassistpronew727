@@ -62,7 +62,7 @@ const CollapsibleROICalculator = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-luxury-gradient">
       <div className="container mx-auto px-4">
         {/* Preview Section */}
         <div className="text-center mb-12">
