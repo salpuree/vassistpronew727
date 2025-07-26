@@ -123,10 +123,16 @@ const Header = () => {
                 Services
               </button>
               <button
-                onClick={() => scrollToSection('packages')}
+                onClick={() => scrollToSection('case-studies')}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
-                Packages
+                Case Studies
+              </button>
+              <button
+                onClick={() => scrollToSection('roi-calculator')}
+                className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              >
+                ROI Calculator
               </button>
               <button
                 onClick={() => scrollToSection('testimonials')}
@@ -135,10 +141,10 @@ const Header = () => {
                 Reviews
               </button>
               <button
-                onClick={() => scrollToSection('team')}
+                onClick={() => scrollToSection('faq')}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
-                Team
+                FAQ
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
