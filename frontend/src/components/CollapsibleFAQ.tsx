@@ -182,14 +182,14 @@ const CollapsibleFAQ = () => {
 
         {/* CTA */}
         <div className="text-center mt-8">
-          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+          <div className="bg-white border border-border/50 rounded-3xl p-8 w-full shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 group cursor-pointer">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">
               Still Have Questions?
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-gray-600 mb-6">
               Schedule a free consultation to get personalized answers for your transportation business.
             </p>
-            <Button className="btn-luxury">
+            <Button className="btn-luxury group-hover:scale-105 transition-transform duration-300">
               Schedule Free Consultation
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
