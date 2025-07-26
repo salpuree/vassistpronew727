@@ -180,7 +180,7 @@ const CollapsibleHowWeWork = () => {
 
         {/* CTA */}
         <div className="text-center mt-8">
-          <div className="bg-white border border-primary/20 rounded-3xl p-8 w-full shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 group cursor-pointer">
+          <div className="bg-white border border-border/50 rounded-3xl p-8 w-full shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 group cursor-pointer">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">
               Ready to Start Your Transformation?
             </h3>
