@@ -300,7 +300,7 @@ const ContactSection = () => {
         {/* Bottom Trust Indicators */}
         <div className="mt-20 text-center">
           <div className="bg-white border border-primary/20 rounded-3xl p-12 w-full shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 group cursor-pointer">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-primary transition-colors duration-300">
               Why Transportation Companies Choose Us
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
