@@ -300,21 +300,21 @@ const ContactSection = () => {
         {/* Bottom Trust Indicators */}
         <div className="mt-20 text-center">
           <div className="bg-white border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto shadow-lg">
-            <h3 className="text-2xl font-bold text-foreground mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Why Transportation Companies Choose Us
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <div className="text-3xl font-bold text-gradient mb-2">&lt; 15min</div>
-                <div className="text-muted-foreground">Response Time</div>
+                <div className="text-gray-600">Response Time</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-gradient mb-2">100%</div>
-                <div className="text-muted-foreground">Project Success Rate</div>
+                <div className="text-gray-600">Project Success Rate</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-gradient mb-2">15+</div>
-                <div className="text-muted-foreground">Years Experience</div>
+                <div className="text-gray-600">Years Experience</div>
               </div>
             </div>
           </div>
