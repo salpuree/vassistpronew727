@@ -47,10 +47,17 @@ const Header = () => {
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
             <button
-              onClick={() => scrollToSection('packages')}
+              onClick={() => scrollToSection('case-studies')}
               className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
-              Packages
+              Case Studies
+              <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+            </button>
+            <button
+              onClick={() => scrollToSection('roi-calculator')}
+              className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
+            >
+              ROI Calculator
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
             <button
@@ -61,10 +68,10 @@ const Header = () => {
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
             <button
-              onClick={() => scrollToSection('team')}
+              onClick={() => scrollToSection('faq')}
               className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
-              Team
+              FAQ
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </button>
             <button
