@@ -182,10 +182,7 @@ const ServicePackagesSection = () => {
         </div>
 
         {/* Additional Benefits */}
-        <div className="white-section-style p-8">
-          {/* Gradient bar for consistency */}
-          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
-          
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-12 max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-foreground mb-4">
               What's Included in <span className="text-gradient">Every Package</span>
@@ -196,37 +193,45 @@ const ServicePackagesSection = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-primary" />
-              </div>
-              <h4 className="font-semibold text-foreground mb-2">Trained Professionals</h4>
-              <p className="text-sm text-muted-foreground">Your procedures, your brand standards</p>
-            </div>
+            <Card className="card-luxury text-center hover-lift transition-all duration-300">
+              <CardContent className="pt-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-primary/30">
+                  <Users className="w-8 h-8 text-primary" />
+                </div>
+                <h4 className="font-semibold text-foreground mb-2">Trained Professionals</h4>
+                <p className="text-sm text-muted-foreground">Your procedures, your brand standards</p>
+              </CardContent>
+            </Card>
             
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-6 h-6 text-primary" />
-              </div>
-              <h4 className="font-semibold text-foreground mb-2">Quick Setup</h4>
-              <p className="text-sm text-muted-foreground">Live in 48 hours or less</p>
-            </div>
+            <Card className="card-luxury text-center hover-lift transition-all duration-300">
+              <CardContent className="pt-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-primary/30">
+                  <Zap className="w-8 h-8 text-primary" />
+                </div>
+                <h4 className="font-semibold text-foreground mb-2">Quick Setup</h4>
+                <p className="text-sm text-muted-foreground">Live in 48 hours or less</p>
+              </CardContent>
+            </Card>
             
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Check className="w-6 h-6 text-primary" />
-              </div>
-              <h4 className="font-semibold text-foreground mb-2">Quality Assurance</h4>
-              <p className="text-sm text-muted-foreground">Monitored calls and performance</p>
-            </div>
+            <Card className="card-luxury text-center hover-lift transition-all duration-300">
+              <CardContent className="pt-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-primary/30">
+                  <Check className="w-8 h-8 text-primary" />
+                </div>
+                <h4 className="font-semibold text-foreground mb-2">Quality Assurance</h4>
+                <p className="text-sm text-muted-foreground">Monitored calls and performance</p>
+              </CardContent>
+            </Card>
             
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Headphones className="w-6 h-6 text-primary" />
-              </div>
-              <h4 className="font-semibold text-foreground mb-2">Luxury Standards</h4>
-              <p className="text-sm text-muted-foreground">White-glove customer service</p>
-            </div>
+            <Card className="card-luxury text-center hover-lift transition-all duration-300">
+              <CardContent className="pt-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-primary/30">
+                  <Headphones className="w-8 h-8 text-primary" />
+                </div>
+                <h4 className="font-semibold text-foreground mb-2">Luxury Standards</h4>
+                <p className="text-sm text-muted-foreground">White-glove customer service</p>
+              </CardContent>
+            </Card>
           </div>
 
           <div className="text-center mt-12">
