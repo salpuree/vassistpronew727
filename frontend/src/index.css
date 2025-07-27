@@ -232,10 +232,11 @@ All colors MUST be HSL.
 
   /* White Section Style */
   .white-section-style {
-    @apply bg-white border border-gray-200 shadow-soft-white rounded-3xl;
-    
-    /* Ensure proper text contrast on white background */
-    color: hsl(var(--foreground-on-white));
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 1.5rem;
+    color: #1f2937;
   }
   
   .white-section-style h1,
@@ -244,20 +245,20 @@ All colors MUST be HSL.
   .white-section-style h4,
   .white-section-style h5,
   .white-section-style h6 {
-    color: hsl(var(--foreground-on-white)) !important;
+    color: #1f2937 !important;
   }
   
   .white-section-style p,
   .white-section-style span:not(.text-gradient):not(.text-primary) {
-    color: hsl(var(--muted-foreground-on-white)) !important;
+    color: #6b7280 !important;
   }
   
   .white-section-style .text-muted-foreground {
-    color: hsl(var(--muted-foreground-on-white)) !important;
+    color: #6b7280 !important;
   }
   
   .white-section-style .text-foreground {
-    color: hsl(var(--foreground-on-white)) !important;
+    color: #1f2937 !important;
   }
 }
 
