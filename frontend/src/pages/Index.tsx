@@ -4,9 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import ServicePackagesSection from "@/components/ServicePackagesSection";
 import CaseStudiesPreviewSection from "@/components/CaseStudiesPreviewSection";
-import CollapsibleHowWeWork from "@/components/CollapsibleHowWeWork";
-import CollapsibleIndustryExpertise from "@/components/CollapsibleIndustryExpertise";
-import CollapsibleSocialProof from "@/components/CollapsibleSocialProof";
 import TeamSection from "@/components/TeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
@@ -36,17 +33,8 @@ const Index = () => {
         <section id="case-studies">
           <CaseStudiesPreviewSection />
         </section>
-        <section id="how-we-work">
-          <CollapsibleHowWeWork />
-        </section>
         <section id="packages">
           <ServicePackagesSection />
-        </section>
-        <section id="industry-expertise">
-          <CollapsibleIndustryExpertise />
-        </section>
-        <section id="social-proof">
-          <CollapsibleSocialProof />
         </section>
         <section id="testimonials">
           <TestimonialsSection />

@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -43,6 +49,34 @@ const Header = () => {
               Services
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group">
+                About Us
+                <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56">
+                <DropdownMenuItem asChild>
+                  <Link to="/about-us/industry-expertise" className="w-full">
+                    Industry Expertise
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/about-us/trust-recognition" className="w-full">
+                    Trust & Recognition
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/about-us/our-process" className="w-full">
+                    Our Proven Process
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/#team" className="w-full">
+                    Our Team
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Link
               to="/case-studies"
               className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
@@ -121,6 +155,39 @@ const Header = () => {
               >
                 Services
               </Link>
+              <div className="text-left">
+                <div className="text-foreground font-medium mb-2">About Us</div>
+                <div className="ml-4 space-y-2">
+                  <Link
+                    to="/about-us/industry-expertise"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block text-muted-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    Industry Expertise
+                  </Link>
+                  <Link
+                    to="/about-us/trust-recognition"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block text-muted-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    Trust & Recognition
+                  </Link>
+                  <Link
+                    to="/about-us/our-process"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block text-muted-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    Our Proven Process
+                  </Link>
+                  <Link
+                    to="/#team"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block text-muted-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    Our Team
+                  </Link>
+                </div>
+              </div>
               <Link
                 to="/case-studies"
                 onClick={() => setIsMenuOpen(false)}
