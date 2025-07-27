@@ -11,6 +11,11 @@ All colors MUST be HSL.
     /* Luxury Premium Color Scheme - Dark by Default */
     --background: 222 47% 11%;
     --foreground: 60 30% 96%;
+    
+    /* Text colors for white sections */
+    --foreground-on-white: 222 47% 11%;
+    --muted-foreground-on-white: 215 20% 45%;
+    
     --card: 222 47% 13%;
     --card-foreground: 60 30% 96%;
     --popover: 222 47% 11%;
@@ -57,6 +62,8 @@ All colors MUST be HSL.
   .light {
     --background: 60 30% 98%;
     --foreground: 222 47% 11%;
+    --foreground-on-white: 222 47% 11%;
+    --muted-foreground-on-white: 215 20% 45%;
     --card: 60 30% 98%;
     --card-foreground: 222 47% 11%;
     --popover: 60 30% 98%;
@@ -226,6 +233,31 @@ All colors MUST be HSL.
   /* White Section Style */
   .white-section-style {
     @apply bg-white border border-gray-200 shadow-soft-white rounded-3xl;
+    
+    /* Ensure proper text contrast on white background */
+    color: hsl(var(--foreground-on-white));
+  }
+  
+  .white-section-style h1,
+  .white-section-style h2,
+  .white-section-style h3,
+  .white-section-style h4,
+  .white-section-style h5,
+  .white-section-style h6 {
+    color: hsl(var(--foreground-on-white)) !important;
+  }
+  
+  .white-section-style p,
+  .white-section-style span:not(.text-gradient):not(.text-primary) {
+    color: hsl(var(--muted-foreground-on-white)) !important;
+  }
+  
+  .white-section-style .text-muted-foreground {
+    color: hsl(var(--muted-foreground-on-white)) !important;
+  }
+  
+  .white-section-style .text-foreground {
+    color: hsl(var(--foreground-on-white)) !important;
   }
 }
 
