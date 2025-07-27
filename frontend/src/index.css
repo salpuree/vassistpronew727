@@ -152,7 +152,7 @@ All colors MUST be HSL.
 
   /* Premium Card Styles */
   .card-luxury {
-    @apply bg-card/40 backdrop-blur-xl border border-border/20 rounded-3xl p-8 shadow-luxury hover:shadow-primary transition-all duration-500 hover:border-primary/30 hover:bg-card/60;
+    @apply bg-card/40 backdrop-blur-xl border border-border/20 rounded-3xl p-6 shadow-luxury hover:shadow-primary transition-all duration-500 hover:border-primary/30 hover:bg-card/60;
   }
 
   /* Modern Glassmorphism Cards */
