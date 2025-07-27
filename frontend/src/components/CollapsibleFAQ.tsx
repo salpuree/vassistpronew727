@@ -89,11 +89,11 @@ const CollapsibleFAQ = () => {
         </div>
 
         {/* Preview FAQ Items */}
-        <div className="max-w-3xl mx-auto mb-8">
+        <div className="mb-8">
           <div className="space-y-4">
             {previewFAQs.map((faq, index) => (
               <Card key={index} className="card-luxury">
-                <CardContent className="p-6">
+                <CardContent className="p-4">
                   <h4 className="text-lg font-semibold text-foreground mb-3">{faq.question}</h4>
                   <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
                 </CardContent>
@@ -125,7 +125,7 @@ const CollapsibleFAQ = () => {
 
         {/* Expanded Content */}
         {isExpanded && (
-          <div className="animate-fade-in max-w-4xl mx-auto">
+          <div className="animate-fade-in">
             {fullFAQCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="mb-8">
                 {/* Category Header */}
@@ -146,7 +146,7 @@ const CollapsibleFAQ = () => {
                       <Card key={questionIndex} className="card-luxury overflow-hidden">
                         <button
                           onClick={() => toggleItem(globalIndex)}
-                          className="w-full text-left p-6 hover:bg-card/50 transition-colors duration-200"
+                          className="w-full text-left p-4 hover:bg-card/50 transition-colors duration-200"
                         >
                           <div className="flex items-center justify-between">
                             <h4 className="text-lg font-semibold text-foreground pr-4">
@@ -161,7 +161,7 @@ const CollapsibleFAQ = () => {
                         </button>
                         
                         {isOpen && (
-                          <CardContent className="pt-0 pb-6 px-6">
+                          <CardContent className="pt-0 pb-4 px-4">
                             <div className="border-t border-border/50 pt-4">
                               <p className="text-muted-foreground leading-relaxed">
                                 {faq.answer}
