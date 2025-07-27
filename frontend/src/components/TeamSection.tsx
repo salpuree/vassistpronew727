@@ -6,7 +6,7 @@ const TeamSection = () => {
   const stats = [
     {
       icon: Users,
-      number: "75+",
+      number: "50+",
       label: "Team Members",
       description: "Developers + Back-office professionals"
     },
@@ -41,13 +41,13 @@ const TeamSection = () => {
       description: "Manages our social media presence and digital marketing strategies for luxury transportation."
     },
     {
-      name: "Linta T.",
+      name: "Linda T.",
       role: "Chief Operations Director",
       specialization: "Business Operations Excellence",
       avatar: "👑",
       bgColor: "from-amber-500/20 to-yellow-500/20",
       borderColor: "border-amber-500/30",
-      description: "Linta manages the operations. Personally oversees all client relationships and ensures 24/7 operational excellence. The strategic mind behind our seamless service delivery."
+      description: "Linda manages the operations. Personally oversees all client relationships and ensures 24/7 operational excellence. The strategic mind behind our seamless service delivery."
     },
     {
       name: "Gia K.",
@@ -96,8 +96,8 @@ const TeamSection = () => {
               className="card-luxury text-center group hover:scale-105 transition-all duration-300"
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              <CardContent className="p-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+              <CardContent className="p-4">
+                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
                   <stat.icon className="w-8 h-8 text-primary" />
                 </div>
                 <div className="text-4xl font-bold text-gradient mb-2">{stat.number}</div>
