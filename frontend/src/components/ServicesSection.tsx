@@ -205,60 +205,6 @@ const ServicesSection = () => {
           </div>
         </div>
 
-        {/* Service Packages */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
-              <span className="text-gradient">Back-Office Support Packages</span>
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              Choose the right level of support for your transportation business
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <Card
-                key={index}
-                className={`card-luxury relative group hover-lift hover-glow transition-all duration-300 ${
-                  pkg.popular ? 'ring-2 ring-primary ring-opacity-50' : ''
-                }`}
-              >
-                {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl text-foreground mb-2">{pkg.name}</CardTitle>
-                  <div className="text-3xl font-bold text-gradient mb-2">{pkg.price}</div>
-                  <p className="text-muted-foreground text-sm">{pkg.description}</p>
-                </CardHeader>
-                
-                <CardContent>
-                  <ul className="space-y-3 mb-8">
-                    {pkg.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start text-sm text-foreground">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Button 
-                    className={pkg.popular ? "btn-luxury w-full" : "btn-outline-luxury w-full"}
-                  >
-                    Get Started
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
         {/* Bottom CTA */}
         <div className="text-center">
           <div className="relative bg-white border border-border/50 rounded-3xl p-12 w-full shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 group cursor-pointer overflow-hidden">
