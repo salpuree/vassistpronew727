@@ -60,12 +60,6 @@ const ContactSection = () => {
       description: "Mon-Fri 8AM-8PM EST"
     },
     {
-      icon: MapPin,
-      title: "Visit Us",
-      details: "New York, NY",
-      description: "Schedule an in-person meeting"
-    },
-    {
       icon: Clock,
       title: "Response Time",
       details: "< 2 Hours",
