@@ -7,7 +7,9 @@ const SocialProofPage = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <CollapsibleSocialProof />
+        <div className="animate-fade-in">
+          <CollapsibleSocialProof />
+        </div>
       </main>
       <Footer />
     </div>

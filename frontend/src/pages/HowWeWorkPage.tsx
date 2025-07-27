@@ -7,7 +7,9 @@ const HowWeWorkPage = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <CollapsibleHowWeWork />
+        <div className="animate-fade-in">
+          <CollapsibleHowWeWork />
+        </div>
       </main>
       <Footer />
     </div>

@@ -7,7 +7,9 @@ const IndustryExpertisePage = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <CollapsibleIndustryExpertise />
+        <div className="animate-fade-in">
+          <CollapsibleIndustryExpertise />
+        </div>
       </main>
       <Footer />
     </div>

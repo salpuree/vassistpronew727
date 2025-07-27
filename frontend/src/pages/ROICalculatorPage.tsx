@@ -7,7 +7,9 @@ const ROICalculatorPage = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <CollapsibleROICalculator />
+        <div className="animate-fade-in">
+          <CollapsibleROICalculator />
+        </div>
       </main>
       <Footer />
     </div>

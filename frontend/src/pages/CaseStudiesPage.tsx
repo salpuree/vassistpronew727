@@ -7,7 +7,9 @@ const CaseStudiesPage = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <CaseStudiesSection />
+        <div className="animate-fade-in">
+          <CaseStudiesSection />
+        </div>
       </main>
       <Footer />
     </div>

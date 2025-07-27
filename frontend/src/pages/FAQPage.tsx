@@ -7,7 +7,9 @@ const FAQPage = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <FAQSection />
+        <div className="animate-fade-in">
+          <FAQSection />
+        </div>
       </main>
       <Footer />
     </div>

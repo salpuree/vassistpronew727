@@ -26,24 +26,38 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <HeroSection />
+        <div className="animate-fade-in">
+          <HeroSection />
+        </div>
         <section id="services">
-          <ServicesSection />
+          <div className="animate-fade-in">
+            <ServicesSection />
+          </div>
         </section>
         <section id="case-studies">
-          <CaseStudiesPreviewSection />
+          <div className="animate-fade-in">
+            <CaseStudiesPreviewSection />
+          </div>
         </section>
         <section id="packages">
-          <ServicePackagesSection />
+          <div className="animate-fade-in">
+            <ServicePackagesSection />
+          </div>
         </section>
         <section id="testimonials">
-          <TestimonialsSection />
+          <div className="animate-fade-in">
+            <TestimonialsSection />
+          </div>
         </section>
         <section id="team">
-          <TeamSection />
+          <div className="animate-fade-in">
+            <TeamSection />
+          </div>
         </section>
         <section id="contact">
-          <ContactSection />
+          <div className="animate-fade-in">
+            <ContactSection />
+          </div>
         </section>
       </main>
       <Footer />
