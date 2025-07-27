@@ -1,8 +1,14 @@
+import { useState } from "react";
 import { Monitor, Smartphone, Cog, Globe, Zap, Shield, Phone, Mail, Clock, Users, Headphones, Settings } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
 
 const ServicesSection = () => {
+  const [techExpanded, setTechExpanded] = useState(false);
+  const [backOfficeExpanded, setBackOfficeExpanded] = useState(false);
+
   const techServices = [
     {
       icon: Monitor,
@@ -78,93 +84,127 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Technology Solutions */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
-              <span className="text-gradient">Technology Solutions</span>
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              Premium web development and software integration services
-            </p>
-          </div>
+        {/* Technology Solutions - Collapsible */}
+        <Collapsible 
+          open={techExpanded} 
+          onOpenChange={setTechExpanded}
+          className="mb-12"
+        >
+          <CollapsibleTrigger className="w-full text-left p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-border/50 hover:bg-card/50 transition-all duration-300 flex items-center justify-between group">
+            <div>
+              <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <span className="text-gradient">Technology Solutions</span>
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Premium web development and software integration services
+              </p>
+            </div>
+            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              {techExpanded ? (
+                <Minus className="w-6 h-6 text-primary" />
+              ) : (
+                <Plus className="w-6 h-6 text-primary" />
+              )}
+            </div>
+          </CollapsibleTrigger>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {techServices.map((service, index) => (
-              <Card
-                key={index}
-                className="card-luxury group hover-lift hover-glow transition-all duration-300"
-                style={{animationDelay: `${index * 0.1}s`}}
-              >
-                <CardHeader>
-                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <service.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg text-foreground group-hover:text-primary transition-colors">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-1">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-xs text-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+          <CollapsibleContent>
+            <div className="mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {techServices.map((service, index) => (
+                  <Card
+                    key={index}
+                    className="card-luxury group hover-lift hover-glow transition-all duration-300"
+                    style={{animationDelay: `${index * 0.1}s`}}
+                  >
+                    <CardHeader>
+                      <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <service.icon className="w-7 h-7 text-primary" />
+                      </div>
+                      <CardTitle className="text-lg text-foreground group-hover:text-primary transition-colors">
+                        {service.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+                      <ul className="space-y-1">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-xs text-foreground">
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
 
-        {/* Back-Office Support Services */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
-              <span className="text-gradient">Back-Office Support Services</span>
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              Your strategic partner specializing in email handling for bookings, quotes, updates, inquiries, calls, and customer service
-            </p>
-          </div>
+        {/* Back-Office Support Services - Collapsible */}
+        <Collapsible 
+          open={backOfficeExpanded} 
+          onOpenChange={setBackOfficeExpanded}
+          className="mb-20"
+        >
+          <CollapsibleTrigger className="w-full text-left p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-border/50 hover:bg-card/50 transition-all duration-300 flex items-center justify-between group">
+            <div>
+              <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <span className="text-gradient">Back-Office Support Services</span>
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Your strategic partner specializing in email handling for bookings, quotes, updates, inquiries, calls, and customer service
+              </p>
+            </div>
+            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              {backOfficeExpanded ? (
+                <Minus className="w-6 h-6 text-primary" />
+              ) : (
+                <Plus className="w-6 h-6 text-primary" />
+              )}
+            </div>
+          </CollapsibleTrigger>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {backOfficeServices.map((service, index) => (
-              <Card
-                key={index}
-                className="card-luxury group hover-lift hover-glow transition-all duration-300"
-                style={{animationDelay: `${index * 0.1}s`}}
-              >
-                <CardHeader>
-                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <service.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg text-foreground group-hover:text-primary transition-colors">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-1">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-xs text-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+          <CollapsibleContent>
+            <div className="mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {backOfficeServices.map((service, index) => (
+                  <Card
+                    key={index}
+                    className="card-luxury group hover-lift hover-glow transition-all duration-300"
+                    style={{animationDelay: `${index * 0.1}s`}}
+                  >
+                    <CardHeader>
+                      <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <service.icon className="w-7 h-7 text-primary" />
+                      </div>
+                      <CardTitle className="text-lg text-foreground group-hover:text-primary transition-colors">
+                        {service.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+                      <ul className="space-y-1">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-xs text-foreground">
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
 
         {/* Bottom CTA */}
         <div className="text-center">
