@@ -145,6 +145,9 @@ const ServicePackagesSection = () => {
 
         {/* Additional Benefits */}
         <div className="white-section-style p-8">
+          {/* Gradient bar for consistency */}
+          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
+          
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-foreground mb-4">
               What's Included in <span className="text-gradient">Every Package</span>

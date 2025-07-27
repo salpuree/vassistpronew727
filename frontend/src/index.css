@@ -237,6 +237,41 @@ All colors MUST be HSL.
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
     border-radius: 1.5rem;
     color: #1f2937;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Subtle geometric shapes for depth */
+  .white-section-style::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 1;
+  }
+  
+  .white-section-style::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(45deg, #f9fafb 0%, #f3f4f6 100%);
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: 1;
+  }
+  
+  /* Ensure content stays above the shapes */
+  .white-section-style > * {
+    position: relative;
+    z-index: 2;
   }
   
   .white-section-style h1,
