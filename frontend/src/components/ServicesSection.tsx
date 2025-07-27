@@ -90,7 +90,7 @@ const ServicesSection = () => {
           onOpenChange={setTechExpanded}
           className="mb-12"
         >
-          <CollapsibleTrigger className="w-full text-left p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-border/50 hover:bg-card/50 transition-all duration-300 flex items-center justify-between group">
+          <CollapsibleTrigger className="w-full text-left p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-border/50 hover:bg-card/50 transition-all duration-300 flex items-center justify-between group subtle-default-glow hover-glow">
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                 <span className="text-gradient">Technology Solutions</span>
@@ -100,13 +100,6 @@ const ServicesSection = () => {
               </p>
             </div>
             <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              {techExpanded ? (
-                <Minus className="w-6 h-6 text-primary" />
-              ) : (
-                <Plus className="w-6 h-6 text-primary" />
-              )}
-            </div>
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-glow animate-pulse-soft">
               {techExpanded ? (
                 <Minus className="w-6 h-6 text-primary" />
               ) : (
@@ -158,7 +151,7 @@ const ServicesSection = () => {
           onOpenChange={setBackOfficeExpanded}
           className="mb-20"
         >
-          <CollapsibleTrigger className="w-full text-left p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-border/50 hover:bg-card/50 transition-all duration-300 flex items-center justify-between group">
+          <CollapsibleTrigger className="w-full text-left p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-border/50 hover:bg-card/50 transition-all duration-300 flex items-center justify-between group subtle-default-glow hover-glow">
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                 <span className="text-gradient">Back-Office Support Services</span>
@@ -168,13 +161,6 @@ const ServicesSection = () => {
               </p>
             </div>
             <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              {backOfficeExpanded ? (
-                <Minus className="w-6 h-6 text-primary" />
-              ) : (
-                <Plus className="w-6 h-6 text-primary" />
-              )}
-            </div>
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-glow animate-pulse-soft">
               {backOfficeExpanded ? (
                 <Minus className="w-6 h-6 text-primary" />
               ) : (
