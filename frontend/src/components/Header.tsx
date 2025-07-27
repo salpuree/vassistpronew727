@@ -41,7 +41,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-6">
             <Link
               to="/#services"
               className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
@@ -116,16 +116,6 @@ const Header = () => {
 
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-4 text-sm">
-              <a href="tel:+19416234590" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="w-4 h-4 mr-2" />
-                (941) 623-4590
-              </a>
-              <a href="mailto:info@virtualassistancepro.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
-                <Mail className="w-4 h-4 mr-2" />
-                info@virtualassistancepro.com
-              </a>
-            </div>
             <Button 
               as={Link}
               to="/#contact"
