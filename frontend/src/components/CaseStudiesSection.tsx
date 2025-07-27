@@ -211,16 +211,18 @@ const CaseStudiesSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
+          <div className="relative bg-white border border-border/50 rounded-3xl p-12 w-full shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 group cursor-pointer overflow-hidden">
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
+            <div className="absolute top-4 right-4 w-8 h-8 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300 relative z-10">
               Ready to Achieve Similar Results?
             </h3>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               Join these successful transportation companies and transform your business operations. 
               Let's discuss your specific challenges and create a custom success plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-luxury text-lg px-8 py-3">
+              <Button className="btn-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
                 Schedule Strategy Call
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>

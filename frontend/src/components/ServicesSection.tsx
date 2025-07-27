@@ -57,46 +57,7 @@ const ServicesSection = () => {
     }
   ];
 
-  const packages = [
-    {
-      name: "Essential Package",
-      price: "Contact for Custom Pricing",
-      description: "Perfect for growing transportation companies",
-      features: [
-        "Business Hours Coverage (8AM-6PM)",
-        "Basic Call & Email Support",
-        "Booking Management",
-        "Monthly Reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Business Package",
-      price: "Contact for Custom Pricing",
-      description: "Comprehensive support for established companies",
-      features: [
-        "Extended Hours (7AM-10PM, 7 days)",
-        "Full Call & Email Support",
-        "Advanced Booking Management",
-        "Customer Service Excellence",
-        "Real-time Reporting"
-      ],
-      popular: true
-    },
-    {
-      name: "Premium 24/7 Package",
-      price: "Contact for Custom Pricing",
-      description: "Round-the-clock premium support",
-      features: [
-        "24/7 Coverage - Never Miss a Call",
-        "Complete Business Operations",
-        "Dedicated Account Manager",
-        "Advanced Analytics & Insights",
-        "Custom Workflow Integration"
-      ],
-      popular: false
-    }
-  ];
+
 
   return (
     <section className="py-24 bg-luxury-gradient">
@@ -205,72 +166,20 @@ const ServicesSection = () => {
           </div>
         </div>
 
-        {/* Service Packages */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
-              <span className="text-gradient">Back-Office Support Packages</span>
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              Choose the right level of support for your transportation business
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <Card
-                key={index}
-                className={`card-luxury relative group hover-lift hover-glow transition-all duration-300 ${
-                  pkg.popular ? 'ring-2 ring-primary ring-opacity-50' : ''
-                }`}
-              >
-                {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl text-foreground mb-2">{pkg.name}</CardTitle>
-                  <div className="text-3xl font-bold text-gradient mb-2">{pkg.price}</div>
-                  <p className="text-muted-foreground text-sm">{pkg.description}</p>
-                </CardHeader>
-                
-                <CardContent>
-                  <ul className="space-y-3 mb-8">
-                    {pkg.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start text-sm text-foreground">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Button 
-                    className={pkg.popular ? "btn-luxury w-full" : "btn-outline-luxury w-full"}
-                  >
-                    Get Started
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
         {/* Bottom CTA */}
         <div className="text-center">
-          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
+          <div className="relative bg-white border border-border/50 rounded-3xl p-12 w-full shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 group cursor-pointer overflow-hidden">
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
+            <div className="absolute top-4 right-4 w-8 h-8 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300 relative z-10">
               Ready to Transform Your Transportation Business?
             </h3>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               Get both premium technology solutions and comprehensive back-office support.
               Let's discuss how we can become your trusted strategic partner for business excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-luxury">
+              <Button className="btn-luxury group-hover:scale-105 transition-transform duration-300">
                 Schedule Free Consultation
               </Button>
               <Button className="btn-outline-luxury">
