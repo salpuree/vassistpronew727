@@ -57,46 +57,7 @@ const ServicesSection = () => {
     }
   ];
 
-  const packages = [
-    {
-      name: "Essential Package",
-      price: "Contact for Custom Pricing",
-      description: "Perfect for growing transportation companies",
-      features: [
-        "Business Hours Coverage (8AM-6PM)",
-        "Basic Call & Email Support",
-        "Booking Management",
-        "Monthly Reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Business Package",
-      price: "Contact for Custom Pricing",
-      description: "Comprehensive support for established companies",
-      features: [
-        "Extended Hours (7AM-10PM, 7 days)",
-        "Full Call & Email Support",
-        "Advanced Booking Management",
-        "Customer Service Excellence",
-        "Real-time Reporting"
-      ],
-      popular: true
-    },
-    {
-      name: "Premium 24/7 Package",
-      price: "Contact for Custom Pricing",
-      description: "Round-the-clock premium support",
-      features: [
-        "24/7 Coverage - Never Miss a Call",
-        "Complete Business Operations",
-        "Dedicated Account Manager",
-        "Advanced Analytics & Insights",
-        "Custom Workflow Integration"
-      ],
-      popular: false
-    }
-  ];
+
 
   return (
     <section className="py-24 bg-luxury-gradient">
