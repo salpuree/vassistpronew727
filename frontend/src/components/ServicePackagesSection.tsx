@@ -1,8 +1,18 @@
-import { Check, Star, Zap, Clock, Users, Headphones } from "lucide-react";
+import { Check, Star, Zap, Clock, Users, Headphones, ChevronDown, ChevronUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
+import { useState } from "react";
 
 const ServicePackagesSection = () => {
+  const [expandedPackages, setExpandedPackages] = useState<boolean[]>([false, false, false]);
+
+  const togglePackageExpansion = (index: number) => {
+    setExpandedPackages(prev => 
+      prev.map((expanded, i) => i === index ? !expanded : expanded)
+    );
+  };
+
   const packages = [
     {
       name: "Essential Package",
@@ -120,24 +130,52 @@ const ServicePackagesSection = () => {
                   <p className="text-muted-foreground text-sm">{pkg.description}</p>
                 </CardHeader>
                 
-                <CardContent>
-                  <ul className="space-y-4 mb-8">
-                    {pkg.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start text-sm text-foreground">
-                        <div className="w-5 h-5 bg-primary/20 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                          <Check className="w-3 h-3 text-primary" />
-                        </div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Button 
-                    className={pkg.popular ? "btn-luxury w-full" : "btn-outline-luxury w-full"}
+                <div className="px-6 pb-4">
+                  <Collapsible 
+                    open={expandedPackages[index]} 
+                    onOpenChange={() => togglePackageExpansion(index)}
                   >
-                    {pkg.popular ? "Get Started Today" : "Choose Package"}
-                  </Button>
-                </CardContent>
+                    <CollapsibleTrigger asChild>
+                      <Button 
+                        variant="outline" 
+                        className="w-full mb-4 flex items-center justify-center gap-2 hover:bg-primary/10 transition-colors"
+                      >
+                        {expandedPackages[index] ? (
+                          <>
+                            <ChevronUp className="w-4 h-4" />
+                            Show Less Details
+                          </>
+                        ) : (
+                          <>
+                            <ChevronDown className="w-4 h-4" />
+                            View Full Details
+                          </>
+                        )}
+                      </Button>
+                    </CollapsibleTrigger>
+                    
+                    <CollapsibleContent>
+                      <CardContent className="pt-0">
+                        <ul className="space-y-4 mb-8">
+                          {pkg.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-start text-sm text-foreground">
+                              <div className="w-5 h-5 bg-primary/20 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                <Check className="w-3 h-3 text-primary" />
+                              </div>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                        
+                        <Button 
+                          className={pkg.popular ? "btn-luxury w-full" : "btn-outline-luxury w-full"}
+                        >
+                          {pkg.popular ? "Get Started Today" : "Choose Package"}
+                        </Button>
+                      </CardContent>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </div>
               </Card>
             );
           })}
