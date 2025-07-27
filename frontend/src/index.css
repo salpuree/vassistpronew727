@@ -239,13 +239,15 @@ All colors MUST be HSL.
 
   /* White Section Style */
   .white-section-style {
-    background-color: white;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
+    border: 1px solid #d1d5db;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
     border-radius: 1.5rem;
     color: #1f2937;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
   
   /* Subtle geometric shapes for depth */
@@ -256,9 +258,9 @@ All colors MUST be HSL.
     right: -20px;
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
     border-radius: 50%;
-    opacity: 0.8;
+    opacity: 0.6;
     z-index: 1;
   }
   
@@ -269,9 +271,9 @@ All colors MUST be HSL.
     left: -30px;
     width: 120px;
     height: 120px;
-    background: linear-gradient(45deg, #f9fafb 0%, #f3f4f6 100%);
+    background: linear-gradient(45deg, #f8fafc 0%, #f1f5f9 100%);
     border-radius: 50%;
-    opacity: 0.6;
+    opacity: 0.4;
     z-index: 1;
   }
   
