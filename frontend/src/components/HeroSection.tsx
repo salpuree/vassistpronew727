@@ -74,15 +74,15 @@ const HeroSection = () => {
           {/* Trust Indicators */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in" style={{animationDelay: "0.8s"}}>
             <div className="text-center">
-              <div className="text-4xl font-bold text-gradient mb-2">15+</div>
+              <div className="text-4xl font-bold text-gradient mb-4">15+</div>
               <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-gradient mb-2">500+</div>
+              <div className="text-4xl font-bold text-gradient mb-4">500+</div>
               <div className="text-muted-foreground">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-gradient mb-2">100%</div>
+              <div className="text-4xl font-bold text-gradient mb-4">100%</div>
               <div className="text-muted-foreground">Client Satisfaction</div>
             </div>
           </div>
