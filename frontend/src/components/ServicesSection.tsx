@@ -90,7 +90,9 @@ const ServicesSection = () => {
           onOpenChange={setTechExpanded}
           className="mb-12"
         >
-          <CollapsibleTrigger className="w-full text-left p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-border/50 hover:bg-card/50 transition-all duration-300 flex items-center justify-between group subtle-default-glow hover-glow">
+          <CollapsibleTrigger className={`w-full text-left p-6 bg-card/30 backdrop-blur-sm border border-border/50 hover:bg-card/50 transition-all duration-300 flex items-center justify-between group subtle-default-glow hover-glow ${
+            techExpanded ? 'rounded-t-2xl border-b-0' : 'rounded-2xl'
+          }`}>
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                 <span className="text-gradient">Technology Solutions</span>
@@ -99,7 +101,7 @@ const ServicesSection = () => {
                 Premium web development and software integration services
               </p>
             </div>
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-glow animate-pulse-soft">
               {techExpanded ? (
                 <Minus className="w-6 h-6 text-primary" />
               ) : (
@@ -109,7 +111,7 @@ const ServicesSection = () => {
           </CollapsibleTrigger>
           
           <CollapsibleContent>
-            <div className="mt-8">
+            <div className="bg-card/30 backdrop-blur-sm border border-border/50 border-t-0 rounded-b-2xl p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {techServices.map((service, index) => (
                   <Card
@@ -151,7 +153,9 @@ const ServicesSection = () => {
           onOpenChange={setBackOfficeExpanded}
           className="mb-20"
         >
-          <CollapsibleTrigger className="w-full text-left p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-border/50 hover:bg-card/50 transition-all duration-300 flex items-center justify-between group subtle-default-glow hover-glow">
+          <CollapsibleTrigger className={`w-full text-left p-6 bg-card/30 backdrop-blur-sm border border-border/50 hover:bg-card/50 transition-all duration-300 flex items-center justify-between group subtle-default-glow hover-glow ${
+            backOfficeExpanded ? 'rounded-t-2xl border-b-0' : 'rounded-2xl'
+          }`}>
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                 <span className="text-gradient">Back-Office Support Services</span>
@@ -160,7 +164,7 @@ const ServicesSection = () => {
                 Your strategic partner specializing in email handling for bookings, quotes, updates, inquiries, calls, and customer service
               </p>
             </div>
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-glow animate-pulse-soft">
               {backOfficeExpanded ? (
                 <Minus className="w-6 h-6 text-primary" />
               ) : (
@@ -170,7 +174,7 @@ const ServicesSection = () => {
           </CollapsibleTrigger>
           
           <CollapsibleContent>
-            <div className="mt-8">
+            <div className="bg-card/30 backdrop-blur-sm border border-border/50 border-t-0 rounded-b-2xl p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {backOfficeServices.map((service, index) => (
                   <Card
