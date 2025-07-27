@@ -3,17 +3,28 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import ServicePackagesSection from "@/components/ServicePackagesSection";
-import CollapsibleCaseStudies from "@/components/CollapsibleCaseStudies";
+import CaseStudiesPreviewSection from "@/components/CaseStudiesPreviewSection";
 import CollapsibleHowWeWork from "@/components/CollapsibleHowWeWork";
-import CollapsibleROICalculator from "@/components/CollapsibleROICalculator";
 import CollapsibleIndustryExpertise from "@/components/CollapsibleIndustryExpertise";
 import CollapsibleSocialProof from "@/components/CollapsibleSocialProof";
-import CollapsibleFAQ from "@/components/CollapsibleFAQ";
 import TeamSection from "@/components/TeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -23,16 +34,13 @@ const Index = () => {
           <ServicesSection />
         </section>
         <section id="case-studies">
-          <CollapsibleCaseStudies />
+          <CaseStudiesPreviewSection />
         </section>
         <section id="how-we-work">
           <CollapsibleHowWeWork />
         </section>
         <section id="packages">
           <ServicePackagesSection />
-        </section>
-        <section id="roi-calculator">
-          <CollapsibleROICalculator />
         </section>
         <section id="industry-expertise">
           <CollapsibleIndustryExpertise />
@@ -42,9 +50,6 @@ const Index = () => {
         </section>
         <section id="testimonials">
           <TestimonialsSection />
-        </section>
-        <section id="faq">
-          <CollapsibleFAQ />
         </section>
         <section id="team">
           <TeamSection />
