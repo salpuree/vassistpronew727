@@ -106,6 +106,13 @@ const ServicesSection = () => {
                 <Plus className="w-6 h-6 text-primary" />
               )}
             </div>
+            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-glow animate-pulse-soft">
+              {techExpanded ? (
+                <Minus className="w-6 h-6 text-primary" />
+              ) : (
+                <Plus className="w-6 h-6 text-primary" />
+              )}
+            </div>
           </CollapsibleTrigger>
           
           <CollapsibleContent>
@@ -161,6 +168,13 @@ const ServicesSection = () => {
               </p>
             </div>
             <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              {backOfficeExpanded ? (
+                <Minus className="w-6 h-6 text-primary" />
+              ) : (
+                <Plus className="w-6 h-6 text-primary" />
+              )}
+            </div>
+            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-glow animate-pulse-soft">
               {backOfficeExpanded ? (
                 <Minus className="w-6 h-6 text-primary" />
               ) : (
