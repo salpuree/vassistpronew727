@@ -155,7 +155,7 @@ const ServicePackagesSection = () => {
                     </CollapsibleTrigger>
                     
                     <CollapsibleContent>
-                      <CardContent className="pt-0">
+                      <CardContent className="pt-0 px-4">
                         <ul className="space-y-4 mb-8">
                           {pkg.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-start text-sm text-foreground">
