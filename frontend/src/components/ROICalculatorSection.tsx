@@ -336,7 +336,7 @@ const ROICalculatorSection = () => {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-12 max-w-5xl mx-auto">
+          <div className="white-section-style p-12 max-w-5xl mx-auto">
             <h3 className="text-3xl font-bold text-foreground mb-4">
               Ready to Start Saving?
             </h3>

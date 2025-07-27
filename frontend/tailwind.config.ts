@@ -76,6 +76,7 @@ export default {
 				'luxury': 'var(--shadow-luxury)',
 				'gold': 'var(--shadow-gold)',
 				'glow': 'var(--glow-primary)',
+				'soft-white': '0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05)',
 			},
 			animation: {
 				'float': 'float 6s ease-in-out infinite',

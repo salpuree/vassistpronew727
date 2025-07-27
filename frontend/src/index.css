@@ -222,6 +222,11 @@ All colors MUST be HSL.
     box-shadow: 0 0 30px hsl(var(--primary) / 0.4);
     border-color: hsl(var(--primary) / 0.6);
   }
+
+  /* White Section Style */
+  .white-section-style {
+    @apply bg-white border border-gray-200 shadow-soft-white rounded-3xl;
+  }
 }
 
 @layer utilities {

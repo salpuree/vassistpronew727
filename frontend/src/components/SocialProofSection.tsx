@@ -333,7 +333,7 @@ const SocialProofSection = () => {
 
         {/* Security & Compliance Statement */}
         <div className="text-center">
-          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto">
+          <div className="white-section-style p-12 max-w-4xl mx-auto">
             <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Shield className="w-10 h-10 text-primary" />
             </div>

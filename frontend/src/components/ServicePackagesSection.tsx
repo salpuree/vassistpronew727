@@ -144,7 +144,7 @@ const ServicePackagesSection = () => {
         </div>
 
         {/* Additional Benefits */}
-        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-8">
+        <div className="white-section-style p-8">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-foreground mb-4">
               What's Included in <span className="text-gradient">Every Package</span>
