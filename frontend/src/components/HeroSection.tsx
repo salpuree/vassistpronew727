@@ -108,7 +108,7 @@ const HeroSection = () => {
       </div>
       
       {/* Trust Indicators - Made relative and brought into flow */}
-      <div className="relative z-10 py-8 px-4 bg-gradient-to-t from-background/80 to-transparent animate-fade-in mt-2" style={{ animationDelay: "0.8s" }}> {/* changed from absolute to relative, added mt-10 */}
+      <div className="relative z-10 py-8 px-4 bg-gradient-to-t from-background/80 to-transparent animate-fade-in mt-1" style={{ animationDelay: "0.8s" }}> {/* changed from absolute to relative, added mt-10 */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* 1. Years Experience */}
           <div className="text-center">
