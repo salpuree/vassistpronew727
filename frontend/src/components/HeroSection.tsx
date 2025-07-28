@@ -74,44 +74,53 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Trust Indicators - Full Width */}
-      <div className="w-full px-2 pb-4 animate-fade-in" style={{animationDelay: "0.8s"}}>
-        <div className="glass-card py-2 px-2 rounded-2xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="text-center">
-              <div className="w-8 h-8 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
-                <Clock className="w-6 h-6 text-primary" />
-              </div>
-              <div className="text-3xl font-bold text-gradient mb-1">15+</div>
-              <div className="text-foreground font-medium mb-0">Years Experience</div>
-              <div className="text-muted-foreground text-xs">Since 2009</div>
-            </div>
-            <div className="text-center">
-              <div className="w-8 h-8 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
-                <Users className="w-6 h-6 text-primary" />
-              </div>
-              <div className="text-3xl font-bold text-gradient mb-1">500+</div>
-              <div className="text-foreground font-medium mb-0">Companies Served</div>
-              <div className="text-muted-foreground text-xs">Nationwide</div>
-            </div>
-            <div className="text-center">
-              <div className="w-14 h-14 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
-                <CheckCircle className="w-7 h-7 text-primary" />
-              </div>
-              <div className="text-3xl font-bold text-gradient mb-1">100%</div>
-              <div className="text-foreground font-medium mb-0">Client Satisfaction</div>
-              <div className="text-muted-foreground text-xs">Proven Results</div>
-            </div>
-            <div className="text-center">
-              <div className="w-14 h-14 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
-                <Shield className="w-7 h-7 text-primary" />
-              </div>
-              <div className="text-3xl font-bold text-gradient mb-1">99.9%</div>
-              <div className="text-foreground font-medium mb-0">Uptime Guarantee</div>
-              <div className="text-muted-foreground text-xs">SOC 2 Certified</div>
-            </div>
-          </div>
+     {/* Trust Indicators - Full Width */}
+<div className="w-full px-2 pb-4 mt-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+  <div className="bg-background/70 rounded-xl px-4 py-4 shadow-sm border border-border/20">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      {/* 1. Years Experience */}
+      <div className="text-center">
+        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+          <Clock className="w-5 h-5 text-primary" />
         </div>
+        <div className="text-2xl font-semibold text-gradient mb-1">15+</div>
+        <div className="text-foreground text-sm font-medium">Years Experience</div>
+        <div className="text-muted-foreground text-xs">Since 2009</div>
+      </div>
+
+      {/* 2. Companies Served */}
+      <div className="text-center">
+        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+          <Users className="w-5 h-5 text-primary" />
+        </div>
+        <div className="text-2xl font-semibold text-gradient mb-1">500+</div>
+        <div className="text-foreground text-sm font-medium">Companies Served</div>
+        <div className="text-muted-foreground text-xs">Nationwide</div>
+      </div>
+
+      {/* 3. Client Satisfaction */}
+      <div className="text-center">
+        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+          <CheckCircle className="w-5 h-5 text-primary" />
+        </div>
+        <div className="text-2xl font-semibold text-gradient mb-1">100%</div>
+        <div className="text-foreground text-sm font-medium">Client Satisfaction</div>
+        <div className="text-muted-foreground text-xs">Proven Results</div>
+      </div>
+
+      {/* 4. Uptime Guarantee */}
+      <div className="text-center">
+        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+          <Shield className="w-5 h-5 text-primary" />
+        </div>
+        <div className="text-2xl font-semibold text-gradient mb-1">99.9%</div>
+        <div className="text-foreground text-sm font-medium">Uptime Guarantee</div>
+        <div className="text-muted-foreground text-xs">SOC 2 Certified</div>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     </section>
   );
