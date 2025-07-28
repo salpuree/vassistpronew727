@@ -33,7 +33,7 @@ const HeroSection = () => {
           </div>
           
           {/* Main Headline */}
-          <h1 className="mb-8 animate-slide-up">
+          <h1 className="mb-4 animate-slide-up">
             <span className="block text-foreground mb-2">Your</span>
             <span className="text-gradient text-glow">Strategic Partner</span>
             <span className="block text-foreground">for Business Excellence</span>
