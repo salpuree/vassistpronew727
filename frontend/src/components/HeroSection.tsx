@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Zap, Globe, Clock, Users, CheckCircle, Shield } from "lucide-react";
-import heroImage from "@/assets/hero-luxury-transport.jpg";
+const heroImage = new URL('../assets/hero-luxury-transport.jpg', import.meta.url).href;
 
 const HeroSection = () => {
   return (
