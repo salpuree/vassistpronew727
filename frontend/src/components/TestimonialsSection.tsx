@@ -199,11 +199,11 @@ const TestimonialsSection = () => {
         <div className="text-center mt-16">
           {/* Video Testimonial Placeholder */}
           <div className="mb-12">
-            <div className="mx-auto">
+            <div className="max-w-1xl mx-auto">
               <div className="relative bg-card/60 backdrop-blur-xl border border-border/30 rounded-3xl p-8 hover:border-primary/30 transition-all duration-500 group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10 text-center">
-                  <div className="w-20 h-25 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                     <div className="w-0 h-0 border-l-[12px] border-l-primary border-y-[8px] border-y-transparent ml-1"></div>
                   </div>
                   <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
