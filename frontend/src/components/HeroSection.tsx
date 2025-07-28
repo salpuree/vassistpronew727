@@ -74,7 +74,7 @@ const HeroSection = () => {
       </div>
       
      {/* Trust Indicators - Full Width */}
-<div className="w-full px-4 py-4 mt-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+<section className="w-full px-4 py-4 mt-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
       {/* 1. Years Experience */}
       <div className="text-center">
