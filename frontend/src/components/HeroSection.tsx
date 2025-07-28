@@ -79,7 +79,7 @@ const HeroSection = () => {
           </p>
           
           {/* Feature Pills */}
-          <div className="flex flex-wrap justify-center gap-14 mb-8 animate-fade-in" style={{animationDelay: "0.4s"}}> {/* changed mb-5 to mb-8 */}
+          <div className="flex flex-wrap justify-center gap-4 mb-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
             <div className="flex items-center px-6 py-3 bg-card/30 backdrop-blur-sm rounded-full border border-border/50">
               <Code className="w-5 h-5 text-primary mr-2" />
               <span className="text-foreground">Technology Solutions</span>
@@ -95,7 +95,7 @@ const HeroSection = () => {
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-12 justify-center mb-10 animate-fade-in" style={{animationDelay: "0.6s"}}> {/* added mb-10 */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6 animate-fade-in" style={{animationDelay: "0.6s"}}>
             <Button size="lg" className="btn-luxury group">
               Start Your Project
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -154,7 +154,7 @@ const HeroSection = () => {
       
       {/* Scrolling Client Logos */}
       <div className="absolute bottom-10 left-0 right-0 z-10 bg-black/20 backdrop-blur-sm border-t border-white/10 py-8 overflow-hidden">
-        <div className="flex items-center space-x-12 animate-[marquee_30s_linear_infinite]">
+        <div className="flex items-center space-x-12 animate-[marquee_15s_linear_infinite]">
           {/* Duplicate the logos array for seamless loop */}
           {[...clientLogos, ...clientLogos].map((client, index) => (
             <div key={index} className="flex items-center space-x-3 whitespace-nowrap flex-shrink-0">
