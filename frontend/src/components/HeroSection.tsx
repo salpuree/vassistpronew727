@@ -75,11 +75,11 @@ const HeroSection = () => {
       </div>
       
       {/* Trust Indicators - Full Width */}
-      <div className="w-full px-4 pb-8 animate-fade-in" style={{animationDelay: "0.8s"}}>
+      <div className="w-full px-4 pb-6 animate-fade-in" style={{animationDelay: "0.8s"}}>
         <div className="glass-card py-4 px-2 rounded-2xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="text-center">
-              <div className="w-14 h-14 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
+              <div className="w-10 h-10 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
                 <Clock className="w-7 h-7 text-primary" />
               </div>
               <div className="text-3xl font-bold text-gradient mb-1">15+</div>
