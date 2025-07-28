@@ -80,44 +80,6 @@ const HeroSection = () => {
       {/* 1. Years Experience */}
       <div className="text-center">
         <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
-          <Clock className="w-5 h-5 text-primary" />
-        </div>
-        <div className="text-2xl font-semibold text-gradient mb-1">15+</div>
-        <div className="text-foreground text-sm font-medium">Years Experience</div>
-        <div className="text-muted-foreground text-xs">Since 2009</div>
-      </div>
-
-      {/* 2. Companies Served */}
-      <div className="text-center">
-        <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
-          <Users className="w-5 h-5 text-primary" />
-        </div>
-        <div className="text-2xl font-semibold text-gradient mb-1">500+</div>
-        <div className="text-foreground text-sm font-medium">Companies Served</div>
-        <div className="text-muted-foreground text-xs">Nationwide</div>
-      </div>
-
-      {/* 3. Client Satisfaction */}
-      <div className="text-center">
-        <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
-          <CheckCircle className="w-5 h-5 text-primary" />
-        </div>
-        <div className="text-2xl font-semibold text-gradient mb-1">100%</div>
-        <div className="text-foreground text-sm font-medium">Client Satisfaction</div>
-        <div className="text-muted-foreground text-xs">Proven Results</div>
-      </div>
-
-      {/* 4. Uptime Guarantee */}
-      <div className="text-center">
-        <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
-          <Shield className="w-5 h-5 text-primary" />
-        </div>
-        <div className="text-2xl font-semibold text-gradient mb-1">99.9%</div>
-        <div className="text-foreground text-sm font-medium">Uptime Guarantee</div>
-        <div className="text-muted-foreground text-xs">SOC 2 Certified</div>
-      </div>
-    </div>
-   </div>
  </section>
 );
 };
