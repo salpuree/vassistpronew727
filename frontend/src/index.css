@@ -240,42 +240,73 @@ All colors MUST be HSL.
 
   /* White Section Style */
   .white-section-style {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(148, 163, 184, 0.03) 2px,
+        rgba(148, 163, 184, 0.03) 4px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 2px,
+        rgba(148, 163, 184, 0.02) 2px,
+        rgba(148, 163, 184, 0.02) 4px
+      ),
+      linear-gradient(135deg, #ffffff 0%, #f8fafc 30%, #f1f5f9 70%, #ffffff 100%);
     border: 1px solid #d1d5db;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+    box-shadow: 
+      0 25px 50px rgba(0, 0, 0, 0.15), 
+      0 12px 24px rgba(0, 0, 0, 0.1), 
+      0 4px 8px rgba(0, 0, 0, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
     border-radius: 1.5rem;
     color: #1f2937;
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    background-attachment: fixed;
   }
   
   /* Subtle geometric shapes for depth */
   .white-section-style::before {
     content: '';
     position: absolute;
-    top: -20px;
-    right: -20px;
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    top: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(148, 163, 184, 0.08) 0%, rgba(203, 213, 225, 0.04) 70%, transparent 100%);
     border-radius: 50%;
-    opacity: 0.6;
+    opacity: 0.4;
     z-index: 1;
+    animation: float 8s ease-in-out infinite;
   }
   
   .white-section-style::after {
     content: '';
     position: absolute;
-    bottom: -30px;
-    left: -30px;
-    width: 120px;
-    height: 120px;
-    background: linear-gradient(45deg, #f8fafc 0%, #f1f5f9 100%);
+    bottom: -40px;
+    left: -40px;
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(ellipse, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.03) 50%, transparent 100%);
     border-radius: 50%;
-    opacity: 0.4;
+    opacity: 0.3;
     z-index: 1;
+    animation: float 12s ease-in-out infinite reverse;
+  }
+  
+  /* Additional decorative elements */
+  .white-section-style::before {
+    box-shadow: 0 0 60px rgba(148, 163, 184, 0.1);
+  }
+  
+  .white-section-style::after {
+    box-shadow: 0 0 80px rgba(59, 130, 246, 0.08);
   }
   
   /* Ensure content stays above the shapes */
