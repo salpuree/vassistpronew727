@@ -34,9 +34,7 @@ const Index = () => {
           <ClientLogosSection />
         </div>
         
-        {/* Services Introduction */}
         <section id="services" className="py-16 bg-luxury-gradient">
-        <section id="services" className="py-8 bg-luxury-gradient">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
                 <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
@@ -152,6 +150,3 @@ const Index = () => {
 };
 
 export default Index;
-
-  )
-}
