@@ -158,7 +158,7 @@ const HeroSection = () => {
           {/* Duplicate the logos array for seamless loop */}
           {[...clientLogos, ...clientLogos].map((client, index) => (
             <div key={index} className="flex items-center space-x-3 whitespace-nowrap flex-shrink-0">
-              <div className="w-8 h-8 flex items-center justify-center grayscale opacity-70">
+              <div className="w-10 h-10 flex items-center justify-center grayscale opacity-70">
                 <span className="text-lg">{client.logo}</span>
               </div>
               <div className="text-white/80 text-sm font-medium">
