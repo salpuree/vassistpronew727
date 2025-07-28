@@ -74,16 +74,52 @@ const HeroSection = () => {
         </div>
       </div>
       
-     {/* Trust Indicators - Full Width */}
-<div className="absolute inset-x-0 bottom-0 z-20 py-8 px-4 bg-gradient-to-t from-background/80 to-transparent animate-fade-in" style={{ animationDelay: "0.8s" }}>
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-      {/* 1. Years Experience */}
-      <div className="text-center">
-        <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
- </section>
-);
+      {/* Trust Indicators - Full Width */}
+      <div className="absolute inset-x-0 bottom-0 z-20 py-8 px-4 bg-gradient-to-t from-background/80 to-transparent animate-fade-in" style={{ animationDelay: "0.8s" }}>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          {/* 1. Years Experience */}
+          <div className="text-center">
+            <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
+              <Clock className="w-7 h-7 text-primary" />
+            </div>
+            <div className="text-2xl font-bold text-gradient">15+</div>
+            <div className="text-sm text-foreground font-medium">Years Experience</div>
+            <div className="text-xs text-muted-foreground">Since 2009</div>
+          </div>
+
+          {/* 2. Companies Served */}
+          <div className="text-center">
+            <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
+              <Users className="w-7 h-7 text-primary" />
+            </div>
+            <div className="text-2xl font-bold text-gradient">500+</div>
+            <div className="text-sm text-foreground font-medium">Companies Served</div>
+            <div className="text-xs text-muted-foreground">Nationwide</div>
+          </div>
+
+          {/* 3. Client Satisfaction */}
+          <div className="text-center">
+            <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
+              <CheckCircle className="w-7 h-7 text-primary" />
+            </div>
+            <div className="text-2xl font-bold text-gradient">100%</div>
+            <div className="text-sm text-foreground font-medium">Client Satisfaction</div>
+            <div className="text-xs text-muted-foreground">Proven Results</div>
+          </div>
+
+          {/* 4. Uptime Guarantee */}
+          <div className="text-center">
+            <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
+              <Shield className="w-7 h-7 text-primary" />
+            </div>
+            <div className="text-2xl font-bold text-gradient">99.9%</div>
+            <div className="text-sm text-foreground font-medium">Uptime Guarantee</div>
+            <div className="text-xs text-muted-foreground">SOC 2 Certified</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default HeroSection;
-  )
-}
