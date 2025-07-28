@@ -5,7 +5,6 @@ import ClientLogosSection from "@/components/ClientLogosSection";
 import CaseStudiesPreviewSection from "@/components/CaseStudiesPreviewSection";
 import TeamSection from "@/components/TeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import ContactSection from "@/components/ContactSection";
 import { Button } from "@/components/ui/button";
 import { Cog, Zap, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -143,22 +142,13 @@ const Index = () => {
                   Get a free consultation with our luxury transportation experts. 
                   Let's discuss how we can provide both premium technology solutions and comprehensive back-office support.
                 </p>
-                <Button 
-                  className="btn-luxury"
-                  onClick={() => {
-                    const contactSection = document.getElementById('contact-form');
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                >
-                  Start Your Project
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
+                <Link to="/contact-us">
+                  <Button className="btn-luxury">
+                    Start Your Project
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
               </div>
-            </div>
-            <div id="contact-form">
-              <ContactSection />
             </div>
           </div>
         </section>
