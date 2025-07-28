@@ -73,7 +73,7 @@ const CaseStudiesSection = () => {
   const currentCase = caseStudies[activeCase];
 
   return (
-    <section className="py-12 bg-luxury-gradient">
+    <section className="py-16 bg-luxury-gradient">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -226,9 +226,14 @@ const CaseStudiesSection = () => {
                 Schedule Strategy Call
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button variant="outline" className="btn-outline-luxury text-lg px-8 py-3">
-                Download Full Case Studies
+              <Button variant="outline" className="btn-outline-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
+                📄 Download Full Case Studies
               </Button>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-sm text-gray-500">
+                Get detailed PDF case studies with complete implementation details and ROI analysis
+              </p>
             </div>
           </div>
         </div>
