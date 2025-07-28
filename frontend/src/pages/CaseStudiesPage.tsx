@@ -11,7 +11,7 @@ const CaseStudiesPage = () => {
         <PageHeroSection
           title="Success Stories"
           description="Real results from real transportation companies. See how we've helped luxury transportation businesses achieve remarkable growth and operational excellence."
-          imageUrl="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          imageUrl="/Case-Studies.jpeg"
           breadcrumb="Case Studies"
         />
         <div className="animate-fade-in">
