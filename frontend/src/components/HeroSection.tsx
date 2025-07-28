@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-luxury-transport.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className="hidden md:block absolute bottom-1/4 left-1/3 w-10 h-10 bg-purple-500/20 rounded-full animate-bounce-soft" style={{animationDelay: "3s"}} />
       
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 text-center flex-grow flex flex-col justify-center">
         <div className="max-w-5xl mx-auto">
           {/* Badge */}
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
@@ -71,44 +71,44 @@ const HeroSection = () => {
               View Our Portfolio
             </Button>
           </div>
-          
-          {/* Trust Indicators */}
-          <div className="mt-12 mb-8 animate-fade-in" style={{animationDelay: "0.8s"}}>
-            <div className="glass-card p-2 rounded-2xl">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-border/30">
-                    <Clock className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="text-4xl font-bold text-gradient mb-2">15+</div>
-                  <div className="text-foreground font-medium mb-1">Years Experience</div>
-                  <div className="text-muted-foreground text-sm">Since 2009</div>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-border/30">
-                    <Users className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="text-4xl font-bold text-gradient mb-2">500+</div>
-                  <div className="text-foreground font-medium mb-1">Companies Served</div>
-                  <div className="text-muted-foreground text-sm">Nationwide</div>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-border/30">
-                    <CheckCircle className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="text-4xl font-bold text-gradient mb-2">100%</div>
-                  <div className="text-foreground font-medium mb-1">Client Satisfaction</div>
-                  <div className="text-muted-foreground text-sm">Proven Results</div>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-border/30">
-                    <Shield className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="text-4xl font-bold text-gradient mb-2">99.9%</div>
-                  <div className="text-foreground font-medium mb-1">Uptime Guarantee</div>
-                  <div className="text-muted-foreground text-sm">SOC 2 Certified</div>
-                </div>
+        </div>
+      </div>
+      
+      {/* Trust Indicators - Full Width */}
+      <div className="w-full px-4 pb-8 animate-fade-in" style={{animationDelay: "0.8s"}}>
+        <div className="glass-card py-4 px-2 rounded-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="text-center">
+              <div className="w-14 h-14 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
+                <Clock className="w-7 h-7 text-primary" />
               </div>
+              <div className="text-3xl font-bold text-gradient mb-1">15+</div>
+              <div className="text-foreground font-medium mb-0">Years Experience</div>
+              <div className="text-muted-foreground text-xs">Since 2009</div>
+            </div>
+            <div className="text-center">
+              <div className="w-14 h-14 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
+                <Users className="w-7 h-7 text-primary" />
+              </div>
+              <div className="text-3xl font-bold text-gradient mb-1">500+</div>
+              <div className="text-foreground font-medium mb-0">Companies Served</div>
+              <div className="text-muted-foreground text-xs">Nationwide</div>
+            </div>
+            <div className="text-center">
+              <div className="w-14 h-14 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
+                <CheckCircle className="w-7 h-7 text-primary" />
+              </div>
+              <div className="text-3xl font-bold text-gradient mb-1">100%</div>
+              <div className="text-foreground font-medium mb-0">Client Satisfaction</div>
+              <div className="text-muted-foreground text-xs">Proven Results</div>
+            </div>
+            <div className="text-center">
+              <div className="w-14 h-14 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
+                <Shield className="w-7 h-7 text-primary" />
+              </div>
+              <div className="text-3xl font-bold text-gradient mb-1">99.9%</div>
+              <div className="text-foreground font-medium mb-0">Uptime Guarantee</div>
+              <div className="text-muted-foreground text-xs">SOC 2 Certified</div>
             </div>
           </div>
         </div>
