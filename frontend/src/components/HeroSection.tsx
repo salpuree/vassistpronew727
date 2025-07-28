@@ -46,7 +46,7 @@ const HeroSection = () => {
           </p>
           
           {/* Feature Pills */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10 animate-fade-in" style={{animationDelay: "0.4s"}}>
+          <div className="flex flex-wrap justify-center gap-4 mb-5 animate-fade-in" style={{animationDelay: "0.4s"}}>
             <div className="flex items-center px-6 py-3 bg-card/30 backdrop-blur-sm rounded-full border border-border/50">
               <Code className="w-5 h-5 text-primary mr-2" />
               <span className="text-foreground">Technology Solutions</span>
