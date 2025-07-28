@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Zap, Globe } from "lucide-react";
+import { ArrowRight, Code, Zap, Globe, Clock, Users, CheckCircle, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-luxury-transport.jpg";
 
 const HeroSection = () => {
@@ -73,18 +73,42 @@ const HeroSection = () => {
           </div>
           
           {/* Trust Indicators */}
-          <div className="mt-12 mb-8 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in" style={{animationDelay: "0.8s"}}>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gradient mb-2">15+</div>
-              <div className="text-muted-foreground">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gradient mb-2">500+</div>
-              <div className="text-muted-foreground">Projects Delivered</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gradient mb-2">100%</div>
-              <div className="text-muted-foreground">Client Satisfaction</div>
+          <div className="mt-12 mb-8 animate-fade-in" style={{animationDelay: "0.8s"}}>
+            <div className="glass-card p-8 rounded-3xl">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-border/30">
+                    <Clock className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="text-4xl font-bold text-gradient mb-2">15+</div>
+                  <div className="text-foreground font-medium mb-1">Years Experience</div>
+                  <div className="text-muted-foreground text-sm">Since 2009</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-border/30">
+                    <Users className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="text-4xl font-bold text-gradient mb-2">500+</div>
+                  <div className="text-foreground font-medium mb-1">Companies Served</div>
+                  <div className="text-muted-foreground text-sm">Nationwide</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-border/30">
+                    <CheckCircle className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="text-4xl font-bold text-gradient mb-2">100%</div>
+                  <div className="text-foreground font-medium mb-1">Client Satisfaction</div>
+                  <div className="text-muted-foreground text-sm">Proven Results</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-border/30">
+                    <Shield className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="text-4xl font-bold text-gradient mb-2">99.9%</div>
+                  <div className="text-foreground font-medium mb-1">Uptime Guarantee</div>
+                  <div className="text-muted-foreground text-sm">SOC 2 Certified</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
