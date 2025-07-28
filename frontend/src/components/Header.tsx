@@ -30,7 +30,7 @@ const Header = () => {
   const handleDropdownMouseLeave = () => {
     setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 150);
+    }, 300);
   };
 
   return (
