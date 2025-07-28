@@ -75,7 +75,7 @@ const HeroSection = () => {
       </div>
       
       {/* Trust Indicators - Full Width */}
-      <div className="w-full px-4 pb-6 animate-fade-in" style={{animationDelay: "0.8s"}}>
+      <div className="w-full px-2 pb-6 animate-fade-in" style={{animationDelay: "0.8s"}}>
         <div className="glass-card py-4 px-2 rounded-2xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="text-center">
