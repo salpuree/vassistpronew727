@@ -75,11 +75,11 @@ const HeroSection = () => {
       </div>
       
      {/* Trust Indicators - Full Width */}
-<div className="w-full px-4 py-4 mt-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+<div className="absolute inset-x-0 bottom-0 z-20 py-8 px-4 bg-gradient-to-t from-background/80 to-transparent animate-fade-in" style={{ animationDelay: "0.8s" }}>
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
       {/* 1. Years Experience */}
       <div className="text-center">
-        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+        <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
           <Clock className="w-5 h-5 text-primary" />
         </div>
         <div className="text-2xl font-semibold text-gradient mb-1">15+</div>
@@ -89,7 +89,7 @@ const HeroSection = () => {
 
       {/* 2. Companies Served */}
       <div className="text-center">
-        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+        <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
           <Users className="w-5 h-5 text-primary" />
         </div>
         <div className="text-2xl font-semibold text-gradient mb-1">500+</div>
@@ -99,7 +99,7 @@ const HeroSection = () => {
 
       {/* 3. Client Satisfaction */}
       <div className="text-center">
-        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+        <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
           <CheckCircle className="w-5 h-5 text-primary" />
         </div>
         <div className="text-2xl font-semibold text-gradient mb-1">100%</div>
@@ -109,7 +109,7 @@ const HeroSection = () => {
 
       {/* 4. Uptime Guarantee */}
       <div className="text-center">
-        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+        <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
           <Shield className="w-5 h-5 text-primary" />
         </div>
         <div className="text-2xl font-semibold text-gradient mb-1">99.9%</div>
