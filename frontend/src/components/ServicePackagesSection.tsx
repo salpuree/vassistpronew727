@@ -84,24 +84,8 @@ const ServicePackagesSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-luxury-gradient">
+    <section className="py-16">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
-            <Zap className="w-5 h-5 text-primary mr-2" />
-            <span className="text-primary font-semibold">Service Packages</span>
-          </div>
-          <h2 className="mb-6">
-            <span className="text-gradient">Back-Office Support</span>
-            <span className="block text-foreground">Packages That Scale With You</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Choose the right level of professional back-office support for your luxury transportation business.
-            All packages include professional training on your specific procedures and brand standards.
-          </p>
-        </div>
-
         {/* Packages Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {isLoading ? (
@@ -207,69 +191,6 @@ const ServicePackagesSection = () => {
               );
             })
           )}
-        </div>
-
-        {/* Additional Benefits */}
-        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-8">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
-              What's Included in <span className="text-gradient">Every Package</span>
-            </h3>
-            <p className="text-xl text-muted-foreground">
-              Professional services that integrate seamlessly with your business
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="card-luxury text-center hover-lift transition-all duration-300">
-              <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-primary/30">
-                  <Users className="w-6 h-6 text-primary" />
-                </div>
-                <h4 className="font-semibold text-foreground mb-2">Trained Professionals</h4>
-                <p className="text-sm text-muted-foreground">Your procedures, your brand standards</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="card-luxury text-center hover-lift transition-all duration-300">
-              <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-primary/30">
-                  <Zap className="w-6 h-6 text-primary" />
-                </div>
-                <h4 className="font-semibold text-foreground mb-2">Quick Setup</h4>
-                <p className="text-sm text-muted-foreground">Live in 48 hours or less</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="card-luxury text-center hover-lift transition-all duration-300">
-              <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-primary/30">
-                  <Check className="w-6 h-6 text-primary" />
-                </div>
-                <h4 className="font-semibold text-foreground mb-2">Quality Assurance</h4>
-                <p className="text-sm text-muted-foreground">Monitored calls and performance</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="card-luxury text-center hover-lift transition-all duration-300">
-              <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-primary/30">
-                  <Headphones className="w-6 h-6 text-primary" />
-                </div>
-                <h4 className="font-semibold text-foreground mb-2">Luxury Standards</h4>
-                <p className="text-sm text-muted-foreground">White-glove customer service</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button size="lg" className="btn-luxury">
-              Schedule Free Consultation
-            </Button>
-            <p className="text-sm text-muted-foreground mt-2">
-              Discuss your specific needs and get a custom package recommendation
-            </p>
-          </div>
         </div>
       </div>
     </section>

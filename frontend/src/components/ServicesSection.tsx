@@ -66,24 +66,8 @@ const ServicesSection = () => {
 
 
   return (
-    <section className="py-16 bg-luxury-gradient">
+    <section className="py-16">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
-            <Cog className="w-5 h-5 text-primary mr-2" />
-            <span className="text-primary font-semibold">Complete Business Solutions</span>
-          </div>
-          <h2 className="mb-6">
-            <span className="text-gradient">Technology + Operations</span>
-            <span className="block text-foreground">Your Force Behind the Curtains</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We provide both cutting-edge technology solutions and comprehensive back-office support services.
-            From Limo Anywhere integrations to specialized email handling for bookings, quotes, updates, and inquiries - we handle it all so you can focus on growth.
-          </p>
-        </div>
-
         {/* Technology Solutions - Collapsible */}
         <Collapsible 
           open={techExpanded} 
@@ -209,29 +193,6 @@ const ServicesSection = () => {
             </div>
           </CollapsibleContent>
         </Collapsible>
-
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <div className="relative white-section-style p-12 w-full hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 group cursor-pointer overflow-hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
-            <div className="absolute top-4 right-4 w-8 h-8 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
-            <h3 className="text-3xl font-bold mb-4 group-hover:text-primary transition-colors duration-300 relative z-10">
-              Ready to Transform Your Transportation Business?
-            </h3>
-            <p className="text-xl mb-8">
-              Get both premium technology solutions and comprehensive back-office support.
-              Let's discuss how we can become your trusted strategic partner for business excellence.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-luxury group-hover:scale-105 transition-transform duration-300">
-                Schedule Free Consultation
-              </Button>
-              <Button className="btn-outline-luxury">
-                View Case Studies
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -12,6 +12,9 @@ import FAQPage from "./pages/FAQPage";
 import IndustryExpertisePage from "./pages/IndustryExpertisePage";
 import SocialProofPage from "./pages/SocialProofPage";
 import HowWeWorkPage from "./pages/HowWeWorkPage";
+import ServicesPage from "./pages/ServicesPage";
+import ServicePackagesPage from "./pages/ServicePackagesPage";
+import TeamPage from "./pages/TeamPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +27,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/service-packages" element={<ServicePackagesPage />} />
+          <Route path="/team" element={<TeamPage />} />
           <Route path="/roi-calculator" element={<ROICalculatorPage />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/faq" element={<FAQPage />} />
