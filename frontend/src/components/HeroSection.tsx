@@ -74,7 +74,7 @@ const HeroSection = () => {
           
           {/* Trust Indicators */}
           <div className="mt-12 mb-8 animate-fade-in" style={{animationDelay: "0.8s"}}>
-            <div className="glass-card p-8 rounded-3xl">
+            <div className="glass-card p-4 rounded-3xl">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-border/30">
