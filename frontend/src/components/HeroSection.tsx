@@ -4,7 +4,7 @@ import heroImage from "../assets/hero-luxury-transport.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20">
+    <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20 pb-48"> {/* added pb-48 */}
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -17,11 +17,11 @@ const HeroSection = () => {
       </div>
       
       {/* Floating Elements - Mobile Safe */}
-      <div className="absolute top-5 left-4 md:left-10 w-12 md:w-16 h-12 md:h-16 bg-primary/20 rounded-full animate-float animate-pulse-soft" />
-      <div className="absolute bottom-32 right-4 md:right-16 w-10 md:w-12 h-10 md:h-12 bg-primary/30 rounded-full animate-bounce-soft" style={{animationDelay: "2s"}} />
-      <div className="absolute top-1/2 right-8 md:right-32 w-6 md:w-8 h-6 md:h-8 bg-primary/40 rounded-full animate-float animate-glow" style={{animationDelay: "4s"}} />
-      <div className="hidden md:block absolute top-1/3 left-1/4 w-6 h-6 bg-blue-500/30 rounded-full animate-pulse-soft" style={{animationDelay: "1s"}} />
-      <div className="hidden md:block absolute bottom-1/4 left-1/3 w-10 h-10 bg-purple-500/20 rounded-full animate-bounce-soft" style={{animationDelay: "3s"}} />
+      <div className="absolute top-5 left-4 md:left-10 w-12 md:w-16 h-12 md:h-16 bg-primary/20 rounded-full animate-float animate-pulse-soft z-10" />
+      <div className="absolute bottom-32 right-4 md:right-16 w-10 md:w-12 h-10 md:h-12 bg-primary/30 rounded-full animate-bounce-soft z-10" style={{animationDelay: "2s"}} />
+      <div className="absolute top-1/2 right-8 md:right-32 w-6 md:w-8 h-6 md:h-8 bg-primary/40 rounded-full animate-float animate-glow z-10" style={{animationDelay: "4s"}} />
+      <div className="hidden md:block absolute top-1/3 left-1/4 w-6 h-6 bg-blue-500/30 rounded-full animate-pulse-soft z-10" style={{animationDelay: "1s"}} />
+      <div className="hidden md:block absolute bottom-1/4 left-1/3 w-10 h-10 bg-purple-500/20 rounded-full animate-bounce-soft z-10" style={{animationDelay: "3s"}} />
       
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-4 text-center flex-grow flex flex-col justify-center">
@@ -46,7 +46,7 @@ const HeroSection = () => {
           </p>
           
           {/* Feature Pills */}
-          <div className="flex flex-wrap justify-center gap-8 mb-5 animate-fade-in" style={{animationDelay: "0.4s"}}>
+          <div className="flex flex-wrap justify-center gap-8 mb-8 animate-fade-in" style={{animationDelay: "0.4s"}}> {/* changed mb-5 to mb-8 */}
             <div className="flex items-center px-6 py-3 bg-card/30 backdrop-blur-sm rounded-full border border-border/50">
               <Code className="w-5 h-5 text-primary mr-2" />
               <span className="text-foreground">Technology Solutions</span>
@@ -62,7 +62,7 @@ const HeroSection = () => {
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in" style={{animationDelay: "0.6s"}}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10 animate-fade-in" style={{animationDelay: "0.6s"}}> {/* added mb-10 */}
             <Button size="lg" className="btn-luxury group">
               Start Your Project
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -74,8 +74,8 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Trust Indicators - Full Width */}
-      <div className="absolute inset-x-0 bottom-0 z-20 py-8 px-4 bg-gradient-to-t from-background/80 to-transparent animate-fade-in" style={{ animationDelay: "0.8s" }}>
+      {/* Trust Indicators - Made relative and brought into flow */}
+      <div className="relative z-10 py-8 px-4 bg-gradient-to-t from-background/80 to-transparent animate-fade-in mt-10" style={{ animationDelay: "0.8s" }}> {/* changed from absolute to relative, added mt-10 */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* 1. Years Experience */}
           <div className="text-center">
