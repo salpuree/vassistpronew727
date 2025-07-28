@@ -8,7 +8,7 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroImage}
+          src={heroImage || ''}
           alt="Luxury Transportation"
           className="w-full h-full object-cover"
           loading="lazy"
