@@ -36,18 +36,18 @@ const Index = () => {
         
         {/* Services Introduction */}
         <section id="services" className="py-16 bg-luxury-gradient">
-          <div className="animate-fade-in">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
+        <section id="services" className="py-8 bg-luxury-gradient">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
                 <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
                   <Cog className="w-5 h-5 text-primary mr-2" />
                   <span className="text-primary font-semibold">Complete Business Solutions</span>
                 </div>
-                <h2 className="mb-6">
+                <h2 className="mb-4">
                   <span className="text-gradient">Technology + Operations</span>
                   <span className="block text-foreground">Your Force Behind the Curtains</span>
                 </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
                   We provide both cutting-edge technology solutions and comprehensive back-office support services.
                   From Limo Anywhere integrations to specialized email handling for bookings, quotes, updates, and inquiries.
                 </p>
@@ -59,7 +59,6 @@ const Index = () => {
                 </Link>
               </div>
             </div>
-          </div>
         </section>
         
         <section id="case-studies">
@@ -69,19 +68,18 @@ const Index = () => {
         </section>
         
         {/* Service Packages Introduction */}
-        <section id="packages" className="py-16 bg-luxury-gradient">
-          <div className="animate-fade-in">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
+        <section id="packages" className="py-8 bg-luxury-gradient">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
                 <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
                   <Zap className="w-5 h-5 text-primary mr-2" />
                   <span className="text-primary font-semibold">Service Packages</span>
                 </div>
-                <h2 className="mb-6">
+                <h2 className="mb-4">
                   <span className="text-gradient">Back-Office Support</span>
                   <span className="block text-foreground">Packages That Scale With You</span>
                 </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
                   Choose the right level of professional back-office support for your luxury transportation business.
                   All packages include professional training on your specific procedures and brand standards.
                 </p>
@@ -93,7 +91,6 @@ const Index = () => {
                 </Link>
               </div>
             </div>
-          </div>
         </section>
         
         <section id="testimonials">
@@ -103,42 +100,39 @@ const Index = () => {
         </section>
         
         {/* Team Introduction */}
-        <section id="team" className="py-16 bg-luxury-gradient">
-          <div className="animate-fade-in">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
+        <section id="team" className="py-8 bg-luxury-gradient">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
                 <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
                   <Users className="w-5 h-5 text-primary mr-2" />
                   <span className="text-primary font-semibold">Our Team</span>
                 </div>
-                <h2 className="mb-6">
+                <h2 className="mb-4">
                   <span className="text-gradient">Expert Team</span>
                   <span className="block text-foreground">Dedicated to Your Success</span>
                 </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
                   Our specialized team combines technical expertise with operational excellence for luxury transportation.
                   From developers to customer service professionals - we're your complete strategic partner.
                 </p>
               </div>
             </div>
             <TeamSection />
-          </div>
         </section>
         
         {/* Contact Introduction */}
-        <section id="contact" className="py-16">
-          <div className="animate-fade-in">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
+        <section id="contact" className="py-8">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
                 <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
                   <Zap className="w-5 h-5 text-primary mr-2" />
                   <span className="text-primary font-semibold">Let's Start Your Project</span>
                 </div>
-                <h2 className="mb-6">
+                <h2 className="mb-4">
                   <span className="text-gradient">Ready to Elevate</span>
                   <span className="block text-foreground">Your Transportation Business?</span>
                 </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
                   Get a free consultation with our luxury transportation experts. 
                   Let's discuss how we can provide both premium technology solutions and comprehensive back-office support.
                 </p>
@@ -150,7 +144,6 @@ const Index = () => {
                 </Link>
               </div>
             </div>
-          </div>
         </section>
       </main>
       <Footer />
@@ -159,3 +152,6 @@ const Index = () => {
 };
 
 export default Index;
+
+  )
+}
