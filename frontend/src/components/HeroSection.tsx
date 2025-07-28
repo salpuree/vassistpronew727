@@ -117,9 +117,9 @@ const HeroSection = () => {
         <div className="text-muted-foreground text-xs">SOC 2 Certified</div>
       </div>
     </div>
-    </section>
-  );
+   </div>
+ </section>
+);
 };
 
 export default HeroSection;
-  
