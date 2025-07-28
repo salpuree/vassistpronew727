@@ -37,7 +37,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20 pb-48"> {/* added pb-48 */}
+    <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20 pb-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -66,14 +66,14 @@ const HeroSection = () => {
           </div>
           
           {/* Main Headline */}
-          <h1 className="mb-4 animate-slide-up">
+          <h1 className="mb-3 animate-slide-up">
             <span className="block text-foreground mb-2">Your</span>
             <span className="text-gradient text-glow">Strategic Partner</span>
             <span className="block text-foreground">for Business Excellence</span>
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-5 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: "0.2s"}}>
+          <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: "0.2s"}}>
             We provide both <span className="text-primary font-semibold">premium technology solutions</span> and <span className="text-primary font-semibold">24/7 back-office support</span> for luxury transportation companies. 
             Specialists in <span className="text-primary font-semibold">Limo Anywhere</span>, <span className="text-primary font-semibold">GNet</span>, and comprehensive business operations.
           </p>
@@ -95,7 +95,7 @@ const HeroSection = () => {
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6 animate-fade-in" style={{animationDelay: "0.6s"}}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4 animate-fade-in" style={{animationDelay: "0.6s"}}>
             <Button size="lg" className="btn-luxury group">
               Start Your Project
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -108,7 +108,7 @@ const HeroSection = () => {
       </div>
       
       {/* Trust Indicators - Made relative and brought into flow */}
-      <div className="relative z-10 py-8 px-4 bg-gradient-to-t from-background/80 to-transparent animate-fade-in mt-1" style={{ animationDelay: "0.8s" }}> {/* changed from absolute to relative, added mt-10 */}
+      <div className="relative z-10 py-6 px-4 bg-gradient-to-t from-background/80 to-transparent animate-fade-in" style={{ animationDelay: "0.8s" }}>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* 1. Years Experience */}
           <div className="text-center">
@@ -153,7 +153,7 @@ const HeroSection = () => {
       </div>
       
       {/* Scrolling Client Logos */}
-      <div className="absolute bottom-10 left-0 right-0 z-10 bg-black/20 backdrop-blur-sm border-t border-white/10 py-8 overflow-hidden">
+      <div className="absolute bottom-6 left-0 right-0 z-10 bg-black/20 backdrop-blur-sm border-t border-white/10 py-6 overflow-hidden">
         <div className="flex items-center space-x-12 animate-[marquee_8s_linear_infinite]">
           {/* Duplicate the logos array for seamless loop */}
           {[...clientLogos, ...clientLogos].map((client, index) => (
