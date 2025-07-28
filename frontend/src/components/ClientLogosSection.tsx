@@ -87,18 +87,16 @@ const ClientLogosSection = () => {
         </div>
 
         {/* Trust Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {trustStats.map((stat, index) => (
-            <Card key={index} className="card-luxury text-center hover-lift transition-all duration-300">
-              <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <stat.icon className="w-6 h-6 text-primary" />
-                </div>
-                <div className="text-2xl font-bold text-gradient mb-1">{stat.metric}</div>
-                <div className="text-sm font-semibold text-foreground mb-1">{stat.label}</div>
-                <div className="text-xs text-muted-foreground">{stat.description}</div>
-              </CardContent>
-            </Card>
+            <div key={index} className="text-center">
+              <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">
+                <stat.icon className="w-7 h-7 text-primary" />
+              </div>
+              <div className="text-2xl font-bold text-gradient">{stat.metric}</div>
+              <div className="text-sm text-foreground font-medium">{stat.label}</div>
+              <div className="text-xs text-muted-foreground">{stat.description}</div>
+            </div>
           ))}
         </div>
 
