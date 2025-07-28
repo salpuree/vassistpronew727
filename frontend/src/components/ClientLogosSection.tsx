@@ -2,45 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Award, Shield, Users, TrendingUp } from "lucide-react";
 
 const ClientLogosSection = () => {
-  const clientLogos = [
-    {
-      name: "Elite Transportation Group",
-      logo: "🚗",
-      industry: "Luxury Ground Transportation",
-      bgGradient: "from-blue-500/20 to-cyan-500/20"
-    },
-    {
-      name: "Metropolitan Limousines",
-      logo: "🏙️",
-      industry: "Corporate Transportation",
-      bgGradient: "from-purple-500/20 to-pink-500/20"
-    },
-    {
-      name: "Premier Executive Services",
-      logo: "⭐",
-      industry: "Executive Transportation",
-      bgGradient: "from-green-500/20 to-emerald-500/20"
-    },
-    {
-      name: "Luxury Fleet Solutions",
-      logo: "💼",
-      industry: "Fleet Management",
-      bgGradient: "from-amber-500/20 to-orange-500/20"
-    },
-    {
-      name: "Black Car Network",
-      logo: "🌟",
-      industry: "Premium Transportation",
-      bgGradient: "from-indigo-500/20 to-blue-500/20"
-    },
-    {
-      name: "Prestige Transport Co.",
-      logo: "👑",
-      industry: "VIP Services",
-      bgGradient: "from-teal-500/20 to-cyan-500/20"
-    }
-  ];
-
   const trustStats = [
     {
       icon: Users,
@@ -100,50 +61,6 @@ const ClientLogosSection = () => {
           ))}
         </div>
 
-        {/* Client Logos Grid */}
-        <div className="text-center mb-8">
-          <h3 className="text-xl font-semibold text-foreground mb-6">
-            Some of Our <span className="text-gradient">Valued Clients</span>
-          </h3>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {clientLogos.map((client, index) => (
-            <div
-              key={index}
-              className="group cursor-default"
-              style={{animationDelay: `${index * 0.1}s`}}
-            >
-              <div className={`relative bg-card/40 backdrop-blur-xl border border-border/20 rounded-2xl p-4 hover:border-primary/30 transition-all duration-500 hover:bg-card/60 hover:transform hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 text-center`}>
-                {/* Animated background gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${client.bgGradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-
-                {/* Content */}
-                <div className="relative z-10">
-                  {/* Logo */}
-                  <div className={`w-12 h-12 bg-gradient-to-br ${client.bgGradient} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:rotate-3 transition-transform duration-300 border border-primary/30`}>
-                    <span className="text-xl">{client.logo}</span>
-                  </div>
-
-                  {/* Company name */}
-                  <h4 className="text-sm font-semibold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
-                    {client.name}
-                  </h4>
-                  <p className="text-xs text-muted-foreground">
-                    {client.industry}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom Note */}
-        <div className="text-center mt-8">
-          <p className="text-sm text-muted-foreground">
-            * Client names have been modified for confidentiality. References available upon request.
-          </p>
-        </div>
       </div>
     </section>
   );

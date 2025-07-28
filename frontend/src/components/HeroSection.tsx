@@ -3,6 +3,39 @@ import { ArrowRight, Code, Zap, Globe, Clock, Users, CheckCircle, Shield } from 
 import heroImage from "../assets/hero-luxury-transport.jpg";
 
 const HeroSection = () => {
+  const clientLogos = [
+    {
+      name: "Elite Transportation Group",
+      logo: "🚗",
+      industry: "Luxury Ground Transportation"
+    },
+    {
+      name: "Metropolitan Limousines",
+      logo: "🏙️",
+      industry: "Corporate Transportation"
+    },
+    {
+      name: "Premier Executive Services",
+      logo: "⭐",
+      industry: "Executive Transportation"
+    },
+    {
+      name: "Luxury Fleet Solutions",
+      logo: "💼",
+      industry: "Fleet Management"
+    },
+    {
+      name: "Black Car Network",
+      logo: "🌟",
+      industry: "Premium Transportation"
+    },
+    {
+      name: "Prestige Transport Co.",
+      logo: "👑",
+      industry: "VIP Services"
+    }
+  ];
+
   return (
     <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20 pb-48"> {/* added pb-48 */}
       {/* Background Image with Overlay */}
@@ -116,6 +149,23 @@ const HeroSection = () => {
             <div className="text-sm text-foreground font-medium">Uptime Guarantee</div>
             <div className="text-xs text-muted-foreground">SOC 2 Certified</div>
           </div>
+        </div>
+      </div>
+      
+      {/* Scrolling Client Logos */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/20 backdrop-blur-sm border-t border-white/10 py-4 overflow-hidden">
+        <div className="flex items-center space-x-12 animate-[marquee_30s_linear_infinite]">
+          {/* Duplicate the logos array for seamless loop */}
+          {[...clientLogos, ...clientLogos].map((client, index) => (
+            <div key={index} className="flex items-center space-x-3 whitespace-nowrap flex-shrink-0">
+              <div className="w-8 h-8 flex items-center justify-center grayscale opacity-70">
+                <span className="text-lg">{client.logo}</span>
+              </div>
+              <div className="text-white/80 text-sm font-medium">
+                {client.name}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
