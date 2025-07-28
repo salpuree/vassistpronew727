@@ -11,7 +11,7 @@ const IndustryExpertisePage = () => {
         <PageHeroSection
           title="Industry Expertise"
           description="15+ years of transportation industry knowledge helping you navigate regulations, optimize operations, and stay ahead of market trends."
-          imageUrl="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+          imageUrl="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           breadcrumb="About Us / Industry Expertise"
         />
         <div className="animate-fade-in">

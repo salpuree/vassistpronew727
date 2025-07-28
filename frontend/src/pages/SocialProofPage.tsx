@@ -11,7 +11,7 @@ const SocialProofPage = () => {
         <PageHeroSection
           title="Trust & Recognition"
           description="Our commitment to excellence is recognized by industry leaders and trusted by hundreds of transportation companies nationwide."
-          imageUrl="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80"
+          imageUrl="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           breadcrumb="About Us / Trust & Recognition"
         />
         <div className="animate-fade-in">

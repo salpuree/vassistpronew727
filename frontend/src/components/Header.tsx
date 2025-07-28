@@ -30,7 +30,7 @@ const Header = () => {
   const handleDropdownMouseLeave = () => {
     setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 300);
+    }, 500);
   };
 
   return (
@@ -69,7 +69,7 @@ const Header = () => {
                 <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
               </DropdownMenuTrigger>
               <DropdownMenuContent 
-                className="w-56"
+                className="w-56 p-2"
                 onMouseEnter={handleDropdownMouseEnter}
                 onMouseLeave={handleDropdownMouseLeave}
               >

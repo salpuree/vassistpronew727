@@ -37,7 +37,7 @@ const CaseStudiesPreviewSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-luxury-gradient">
+    <section className="py-12 bg-luxury-gradient">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">

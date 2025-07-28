@@ -11,7 +11,7 @@ const FAQPage = () => {
         <PageHeroSection
           title="Frequently Asked Questions"
           description="Find answers to common questions about our services, implementation, pricing, and support. Get the information you need to make an informed decision."
-          imageUrl="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+          imageUrl="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           breadcrumb="FAQ"
         />
         <div className="animate-fade-in">

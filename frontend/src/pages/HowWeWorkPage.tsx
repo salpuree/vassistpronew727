@@ -11,7 +11,7 @@ const HowWeWorkPage = () => {
         <PageHeroSection
           title="Our Proven Process"
           description="Systematic implementation ensuring seamless integration and immediate results for your transportation business."
-          imageUrl="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+          imageUrl="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           breadcrumb="About Us / Our Proven Process"
         />
         <div className="animate-fade-in">
