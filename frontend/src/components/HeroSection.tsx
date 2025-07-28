@@ -62,7 +62,7 @@ const HeroSection = () => {
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10 animate-fade-in" style={{animationDelay: "0.6s"}}> {/* added mb-10 */}
+          <div className="flex flex-col sm:flex-row gap-8 justify-center mb-10 animate-fade-in" style={{animationDelay: "0.6s"}}> {/* added mb-10 */}
             <Button size="lg" className="btn-luxury group">
               Start Your Project
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
