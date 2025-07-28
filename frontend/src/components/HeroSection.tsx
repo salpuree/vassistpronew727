@@ -79,16 +79,16 @@ const HeroSection = () => {
         <div className="glass-card py-2 px-2 rounded-2xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="text-center">
-              <div className="w-8 h-8 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/50">
-                <Clock className="w-7 h-7 text-primary" />
+              <div className="w-8 h-8 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
+                <Clock className="w-6 h-6 text-primary" />
               </div>
               <div className="text-3xl font-bold text-gradient mb-1">15+</div>
               <div className="text-foreground font-medium mb-0">Years Experience</div>
               <div className="text-muted-foreground text-xs">Since 2009</div>
             </div>
             <div className="text-center">
-              <div className="w-14 h-14 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
-                <Users className="w-7 h-7 text-primary" />
+              <div className="w-8 h-8 bg-card/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-border/30">
+                <Users className="w-6 h-6 text-primary" />
               </div>
               <div className="text-3xl font-bold text-gradient mb-1">500+</div>
               <div className="text-foreground font-medium mb-0">Companies Served</div>
