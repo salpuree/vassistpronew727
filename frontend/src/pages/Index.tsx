@@ -47,7 +47,7 @@ const Index = () => {
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
                   We provide both cutting-edge technology solutions and comprehensive back-office support services.
-                  From Limo Anywhere integrations to specialized email handling for bookings, quotes, updates, and inquiries.
+                  From Limo Anywhere integrations to specialized calls and email handling for bookings, quotes, updates, and inquiries.
                 </p>
                 <Link to="/services">
                   <Button className="btn-luxury">
@@ -121,8 +121,8 @@ const Index = () => {
         {/* Contact Introduction */}
         <section id="contact" className="py-8">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-8">
-                <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <div className="text-center mb-6">
+                <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-4">
                   <Zap className="w-5 h-5 text-primary mr-2" />
                   <span className="text-primary font-semibold">Let's Start Your Project</span>
                 </div>
