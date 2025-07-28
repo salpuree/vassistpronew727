@@ -333,7 +333,9 @@ const SocialProofSection = () => {
 
         {/* Security & Compliance Statement */}
         <div className="text-center">
-          <div className="white-section-style p-12 max-w-4xl mx-auto">
+          <div className="white-section-style p-12 max-w-4xl mx-auto relative overflow-hidden">
+            {/* Enhanced visual elements */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500"></div>
             <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Shield className="w-10 h-10 text-primary" />
             </div>
@@ -344,11 +346,24 @@ const SocialProofSection = () => {
               Your data and your clients' information are protected by enterprise-grade security measures, 
               including SOC 2 Type II compliance, encrypted communications, and comprehensive data protection protocols.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Badge className="bg-green-500/10 text-green-500 px-4 py-2">256-bit SSL Encryption</Badge>
-              <Badge className="bg-blue-500/10 text-blue-500 px-4 py-2">SOC 2 Type II Certified</Badge>
-              <Badge className="bg-purple-500/10 text-purple-500 px-4 py-2">GDPR Compliant</Badge>
-              <Badge className="bg-orange-500/10 text-orange-500 px-4 py-2">24/7 Security Monitoring</Badge>
+            <div className="flex flex-wrap justify-center gap-4 mb-6">
+              <Badge className="bg-green-500/10 text-green-500 px-6 py-3 text-sm font-semibold hover:bg-green-500/20 transition-colors cursor-default">
+                🔒 256-bit SSL Encryption
+              </Badge>
+              <Badge className="bg-blue-500/10 text-blue-500 px-6 py-3 text-sm font-semibold hover:bg-blue-500/20 transition-colors cursor-default">
+                ✅ SOC 2 Type II Certified
+              </Badge>
+              <Badge className="bg-purple-500/10 text-purple-500 px-6 py-3 text-sm font-semibold hover:bg-purple-500/20 transition-colors cursor-default">
+                🌍 GDPR Compliant
+              </Badge>
+              <Badge className="bg-orange-500/10 text-orange-500 px-6 py-3 text-sm font-semibold hover:bg-orange-500/20 transition-colors cursor-default">
+                🛡️ 24/7 Security Monitoring
+              </Badge>
+            </div>
+            <div className="text-center">
+              <p className="text-sm text-gray-500 italic">
+                Independently verified security standards protecting your business data
+              </p>
             </div>
           </div>
         </div>

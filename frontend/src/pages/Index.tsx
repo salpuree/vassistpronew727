@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import ClientLogosSection from "@/components/ClientLogosSection";
 import ServicesSection from "@/components/ServicesSection";
 import ServicePackagesSection from "@/components/ServicePackagesSection";
 import CaseStudiesPreviewSection from "@/components/CaseStudiesPreviewSection";
@@ -28,6 +29,9 @@ const Index = () => {
       <main>
         <div className="animate-fade-in">
           <HeroSection />
+        </div>
+        <div className="animate-fade-in">
+          <ClientLogosSection />
         </div>
         <section id="services">
           <div className="animate-fade-in">

@@ -193,6 +193,29 @@ const TestimonialsSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
+          {/* Video Testimonial Placeholder */}
+          <div className="mb-12">
+            <div className="max-w-2xl mx-auto">
+              <div className="relative bg-card/60 backdrop-blur-xl border border-border/30 rounded-3xl p-8 hover:border-primary/30 transition-all duration-500 group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10 text-center">
+                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <div className="w-0 h-0 border-l-[12px] border-l-primary border-y-[8px] border-y-transparent ml-1"></div>
+                  </div>
+                  <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    Watch Client Success Stories
+                  </h4>
+                  <p className="text-muted-foreground mb-4">
+                    Hear directly from transportation company owners about their experience working with VAssist Pro
+                  </p>
+                  <Badge className="bg-primary/10 text-primary px-4 py-2">
+                    Video Testimonials Coming Soon
+                  </Badge>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="relative white-section-style p-8 w-full hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-[1.02] hover:border-primary/40 group cursor-pointer overflow-hidden">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
             <div className="absolute top-4 right-4 w-8 h-8 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
