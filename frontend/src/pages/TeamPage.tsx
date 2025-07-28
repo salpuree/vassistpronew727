@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHeroSection from "@/components/PageHeroSection";
+import TeamSection from "@/components/TeamSection";
 import { Users, Linkedin, Github, Mail } from "lucide-react";
 
 const TeamPage = () => {
@@ -102,6 +103,25 @@ const TeamPage = () => {
                 </div>
               ))}
             </div>
+
+            {/* Team Introduction Section */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                <Users className="w-5 h-5 text-primary mr-2" />
+                <span className="text-primary font-semibold">Our Team</span>
+              </div>
+              <h2 className="mb-6">
+                <span className="text-gradient">Expert Team</span>
+                <span className="block text-foreground">Dedicated to Your Success</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+                Our specialized team combines technical expertise with operational excellence for luxury transportation.
+                From developers to customer service professionals - we're your complete strategic partner.
+              </p>
+            </div>
+
+            {/* Team Section Component */}
+            <TeamSection />
 
             {/* Team Members */}
             <div className="text-center mb-12">
