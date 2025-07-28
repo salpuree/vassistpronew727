@@ -27,7 +27,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center flex-grow flex flex-col justify-center">
         <div className="max-w-5xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-4 animate-fade-in">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
             <Zap className="w-5 h-5 text-primary mr-2" />
             <span className="text-primary font-semibold">Complete Business Solutions for Luxury Transportation</span>
           </div>
