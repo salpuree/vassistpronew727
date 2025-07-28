@@ -67,9 +67,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Company Info */}
-            <div className="lg:col-span-1">
+            <div>
               <div className="flex justify-start mb-6">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F88da141a3a504a51b2a3ca3584f907d1%2Ff34b048caef549548e025a9d389e4e6d?format=webp&width=800"
@@ -94,68 +94,71 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-            </div>
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-lg font-semibold text-foreground mb-6">Quick Links</h4>
-              <ul className="space-y-3">
-                {quickLinks.map((link, index) => (
-                  <li key={index}>
-                    <a
-                      href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center group"
-                    >
-                      <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Services */}
-            <div>
-              <h4 className="text-lg font-semibold text-foreground mb-6">Our Services</h4>
-              <ul className="space-y-3">
-                {services.map((service, index) => (
-                  <li key={index}>
-                    <a
-                      href={service.href}
-                      className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center group"
-                    >
-                      <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {service.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Contact Information */}
-            <div>
-              <h4 className="text-lg font-semibold text-foreground mb-6">Contact Info</h4>
-              <div className="space-y-4">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-3 mt-1">
-                      <info.icon className="w-5 h-5 text-primary" />
+              {/* Contact Information */}
+              <div className="mt-8">
+                <h4 className="text-lg font-semibold text-foreground mb-6">Contact Info</h4>
+                <div className="space-y-4">
+                  {contactInfo.map((info, index) => (
+                    <div key={index} className="flex items-start">
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-3 mt-1">
+                        <info.icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-foreground">{info.label}</p>
+                        {info.href !== "#" ? (
+                          <a 
+                            href={info.href}
+                            className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                          >
+                            {info.value}
+                          </a>
+                        ) : (
+                          <p className="text-muted-foreground">{info.value}</p>
+                        )}
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{info.label}</p>
-                      {info.href !== "#" ? (
-                        <a 
-                          href={info.href}
-                          className="text-muted-foreground hover:text-primary transition-colors duration-300"
-                        >
-                          {info.value}
-                        </a>
-                      ) : (
-                        <p className="text-muted-foreground">{info.value}</p>
-                      )}
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links & Services */}
+            <div>
+              {/* Quick Links */}
+              <div>
+                <h4 className="text-lg font-semibold text-foreground mb-6">Quick Links</h4>
+                <ul className="space-y-3">
+                  {quickLinks.map((link, index) => (
+                    <li key={index}>
+                      <a
+                        href={link.href}
+                        className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center group"
+                      >
+                        <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Services */}
+              <div className="mt-8">
+                <h4 className="text-lg font-semibold text-foreground mb-6">Our Services</h4>
+                <ul className="space-y-3">
+                  {services.map((service, index) => (
+                    <li key={index}>
+                      <a
+                        href={service.href}
+                        className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center group"
+                      >
+                        <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        {service.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

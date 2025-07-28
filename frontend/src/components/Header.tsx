@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -13,6 +14,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -24,13 +26,18 @@ const Header = () => {
   }, []);
 
   const handleDropdownMouseEnter = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
     setIsDropdownOpen(true);
   };
 
   const handleDropdownMouseLeave = () => {
-    setTimeout(() => {
+    dropdownTimeoutRef.current = setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 500);
+      dropdownTimeoutRef.current = null;
+    }, 300);
   };
 
   return (
