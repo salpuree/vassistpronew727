@@ -1,0 +1,178 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import PageHeroSection from "@/components/PageHeroSection";
+import { Users, Linkedin, Github, Mail } from "lucide-react";
+
+const TeamPage = () => {
+  const teamMembers = [
+    {
+      name: "Noor M.",
+      role: "Social Media & Marketing",
+      specialization: "Digital Marketing Expert",
+      avatar: "👩‍💼",
+      bgColor: "from-blue-500/20 to-purple-500/20",
+      borderColor: "border-blue-500/30",
+      description: "Manages our social media presence and digital marketing strategies for luxury transportation."
+    },
+    {
+      name: "Linda T.",
+      role: "Chief Operations Director",
+      specialization: "Business Operations Excellence",
+      avatar: "👑",
+      bgColor: "from-amber-500/20 to-yellow-500/20",
+      borderColor: "border-amber-500/30",
+      description: "Linda manages the operations. Personally oversees all client relationships and ensures 24/7 operational excellence. The strategic mind behind our seamless service delivery."
+    },
+    {
+      name: "Gia K.",
+      role: "Reservations Team Lead",
+      specialization: "Booking Management",
+      avatar: "👩‍🏢",
+      bgColor: "from-pink-500/20 to-rose-500/20",
+      borderColor: "border-pink-500/30",
+      description: "Leads our reservations team ensuring seamless booking experiences for luxury transportation."
+    },
+    {
+      name: "Emaan A.",
+      role: "Client Onboarding Executive",
+      specialization: "Client Success",
+      avatar: "👩‍🎓",
+      bgColor: "from-indigo-500/20 to-blue-500/20",
+      borderColor: "border-indigo-500/30",
+      description: "Ensures smooth client onboarding and maintains exceptional client relationships."
+    }
+  ];
+
+  const stats = [
+    {
+      icon: Users,
+      number: "50+",
+      label: "Team Members",
+      description: "Developers + Back-office professionals"
+    },
+    {
+      icon: Users,
+      number: "15+",
+      label: "Years Experience",
+      description: "Technology + Operations expertise"
+    },
+    {
+      icon: Users,
+      number: "24/7",
+      label: "Operations",
+      description: "Never miss a call or opportunity"
+    },
+    {
+      icon: Users,
+      number: "500K+",
+      label: "Calls Handled",
+      description: "Professional customer interactions"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main className="pt-20">
+        <PageHeroSection
+          title="Our Expert Team"
+          description="Meet the dedicated professionals who make your success possible. Our specialized team combines technical expertise with operational excellence for luxury transportation."
+          imageUrl="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          breadcrumb="Our Team"
+        />
+        
+        <section className="py-16 bg-luxury-gradient">
+          <div className="container mx-auto px-4">
+            {/* Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+              {stats.map((stat, index) => (
+                <div 
+                  key={index} 
+                  className="card-luxury text-center group hover:scale-105 transition-all duration-300"
+                  style={{animationDelay: `${index * 0.1}s`}}
+                >
+                  <div className="p-4">
+                    <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+                      <stat.icon className="w-8 h-8 text-primary" />
+                    </div>
+                    <div className="text-4xl font-bold text-gradient mb-2">{stat.number}</div>
+                    <div className="text-xl font-semibold text-foreground mb-2">{stat.label}</div>
+                    <div className="text-muted-foreground text-sm">{stat.description}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Team Members */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-foreground mb-4">
+                <span className="text-gradient">Meet Our Team</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                The dedicated professionals behind your success
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+              {teamMembers.map((member, index) => (
+                <div
+                  key={index}
+                  className="group cursor-pointer"
+                  style={{animationDelay: `${index * 0.1}s`}}
+                >
+                  <div className="relative bg-card/40 backdrop-blur-xl border border-border/20 rounded-3xl p-8 hover:border-primary/30 transition-all duration-500 hover:bg-card/60 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10">
+                    {/* Animated background gradient */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${member.bgColor} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                    {/* Content */}
+                    <div className="relative z-10 text-center">
+                      {/* Avatar with modern design */}
+                      <div className="relative mb-6 mx-auto w-fit">
+                        <div className={`w-20 h-20 bg-gradient-to-br ${member.bgColor} rounded-2xl flex items-center justify-center text-3xl border ${member.borderColor} group-hover:rotate-3 transition-transform duration-300`}>
+                          {member.avatar}
+                        </div>
+                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-primary rounded-lg flex items-center justify-center shadow-lg">
+                          <div className="w-2 h-2 bg-background rounded-full animate-pulse" />
+                        </div>
+                      </div>
+
+                      {/* Text content with improved contrast */}
+                      <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                        {member.name}
+                      </h4>
+                      <div className="text-primary font-semibold mb-2 text-base">
+                        {member.role}
+                      </div>
+                      <div className="text-primary/90 text-sm font-medium mb-4 px-3 py-1 bg-primary/10 rounded-full inline-block">
+                        {member.specialization}
+                      </div>
+                      <p className="text-foreground/80 text-sm leading-relaxed mb-6 font-medium">
+                        {member.description}
+                      </p>
+
+                      {/* Social links with modern design */}
+                      <div className="flex justify-center space-x-3">
+                        <button className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-3">
+                          <Linkedin className="w-4 h-4" />
+                        </button>
+                        <button className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-3">
+                          <Github className="w-4 h-4" />
+                        </button>
+                        <button className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-xl flex items-center justify-center hover:scale-110 hover:rotate-3">
+                          <Mail className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default TeamPage;
