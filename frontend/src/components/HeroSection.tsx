@@ -75,8 +75,7 @@ const HeroSection = () => {
       </div>
       
      {/* Trust Indicators - Full Width */}
-<div className="w-full px-2 pb-4 mt-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-  <div className="bg-background/70 rounded-xl px-4 py-4 shadow-sm border border-border/20">
+<div className="w-full px-4 py-4 mt-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
       {/* 1. Years Experience */}
       <div className="text-center">
@@ -118,8 +117,6 @@ const HeroSection = () => {
         <div className="text-muted-foreground text-xs">SOC 2 Certified</div>
       </div>
     </div>
-  </div>
-</div>
     </section>
   );
 };
