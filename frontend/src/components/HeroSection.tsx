@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Zap, Globe, Clock, Users, CheckCircle, Shield } from "lucide-react";
-import heroImage from "../../assets/hero-luxury-transport.jpg";
+import heroImage from "@/assets/hero-luxury-transport.jpg";
+
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20">
@@ -74,50 +75,52 @@ const HeroSection = () => {
       </div>
       
      {/* Trust Indicators - Full Width */}
-<section className="w-full px-4 py-4 mt-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-    {/* 1. Years Experience */}
-    <div className="text-center">
-      <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
-        <Clock className="w-5 h-5 text-primary" />
+<div className="w-full px-4 py-4 mt-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      {/* 1. Years Experience */}
+      <div className="text-center">
+        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+          <Clock className="w-5 h-5 text-primary" />
+        </div>
+        <div className="text-2xl font-semibold text-gradient mb-1">15+</div>
+        <div className="text-foreground text-sm font-medium">Years Experience</div>
+        <div className="text-muted-foreground text-xs">Since 2009</div>
       </div>
-      <div className="text-2xl font-semibold text-gradient mb-1">15+</div>
-      <div className="text-foreground text-sm font-medium">Years Experience</div>
-      <div className="text-muted-foreground text-xs">Since 2009</div>
-    </div>
 
-    {/* 2. Companies Served */}
-    <div className="text-center">
-      <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
-        <Users className="w-5 h-5 text-primary" />
+      {/* 2. Companies Served */}
+      <div className="text-center">
+        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+          <Users className="w-5 h-5 text-primary" />
+        </div>
+        <div className="text-2xl font-semibold text-gradient mb-1">500+</div>
+        <div className="text-foreground text-sm font-medium">Companies Served</div>
+        <div className="text-muted-foreground text-xs">Nationwide</div>
       </div>
-      <div className="text-2xl font-semibold text-gradient mb-1">500+</div>
-      <div className="text-foreground text-sm font-medium">Companies Served</div>
-      <div className="text-muted-foreground text-xs">Nationwide</div>
-    </div>
 
-    {/* 3. Client Satisfaction */}
-    <div className="text-center">
-      <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
-        <CheckCircle className="w-5 h-5 text-primary" />
+      {/* 3. Client Satisfaction */}
+      <div className="text-center">
+        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+          <CheckCircle className="w-5 h-5 text-primary" />
+        </div>
+        <div className="text-2xl font-semibold text-gradient mb-1">100%</div>
+        <div className="text-foreground text-sm font-medium">Client Satisfaction</div>
+        <div className="text-muted-foreground text-xs">Proven Results</div>
       </div>
-      <div className="text-2xl font-semibold text-gradient mb-1">100%</div>
-      <div className="text-foreground text-sm font-medium">Client Satisfaction</div>
-      <div className="text-muted-foreground text-xs">Proven Results</div>
-    </div>
 
-    {/* 4. Uptime Guarantee */}
-    <div className="text-center">
-      <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
-        <Shield className="w-5 h-5 text-primary" />
+      {/* 4. Uptime Guarantee */}
+      <div className="text-center">
+        <div className="w-7 h-7 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-1">
+          <Shield className="w-5 h-5 text-primary" />
+        </div>
+        <div className="text-2xl font-semibold text-gradient mb-1">99.9%</div>
+        <div className="text-foreground text-sm font-medium">Uptime Guarantee</div>
+        <div className="text-muted-foreground text-xs">SOC 2 Certified</div>
       </div>
-      <div className="text-2xl font-semibold text-gradient mb-1">99.9%</div>
-      <div className="text-foreground text-sm font-medium">Uptime Guarantee</div>
-      <div className="text-muted-foreground text-xs">SOC 2 Certified</div>
     </div>
-  </div>
-</section>
     </section>
   );
 };
+
 export default HeroSection;
+  )
+}
