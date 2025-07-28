@@ -70,22 +70,6 @@ const ContactSection = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
-            <Zap className="w-5 h-5 text-primary mr-2" />
-            <span className="text-primary font-semibold">Let's Start Your Project</span>
-          </div>
-          <h2 className="mb-6">
-            <span className="text-gradient">Ready to Elevate</span>
-            <span className="block text-foreground">Your Transportation Business?</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Get a free consultation with our luxury transportation experts. 
-            Let's discuss how we can provide both premium technology solutions and comprehensive back-office support.
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">
