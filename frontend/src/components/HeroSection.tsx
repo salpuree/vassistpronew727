@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Zap, Globe, Clock, Users, CheckCircle, Shield } from "lucide-react";
-const heroImage = new URL('../assets/hero-luxury-transport.jpg', import.meta.url).href;
+import heroImage from '../assets/hero-luxury-transport.jpg';
 
 const HeroSection = () => {
   return (
@@ -8,7 +8,7 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroImage || ''}
+          src={heroImage}
           alt="Luxury Transportation"
           className="w-full h-full object-cover"
           loading="lazy"
