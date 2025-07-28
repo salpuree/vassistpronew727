@@ -154,7 +154,7 @@ const HeroSection = () => {
       
       {/* Scrolling Client Logos */}
       <div className="absolute bottom-10 left-0 right-0 z-10 bg-black/20 backdrop-blur-sm border-t border-white/10 py-8 overflow-hidden">
-        <div className="flex items-center space-x-12 animate-[marquee_15s_linear_infinite]">
+        <div className="flex items-center space-x-12 animate-[marquee_10s_linear_infinite]">
           {/* Duplicate the logos array for seamless loop */}
           {[...clientLogos, ...clientLogos].map((client, index) => (
             <div key={index} className="flex items-center space-x-3 whitespace-nowrap flex-shrink-0">
