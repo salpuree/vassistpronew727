@@ -68,8 +68,8 @@ const TypewriterEffect = ({
       <style>
         {`
           @keyframes blink {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
+            0%, 60% { opacity: 0; }
+            40% { opacity: 1; }
           }
         `}
       </style>
