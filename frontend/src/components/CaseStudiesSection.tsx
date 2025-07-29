@@ -73,7 +73,7 @@ const CaseStudiesSection = () => {
   const currentCase = caseStudies[activeCase];
 
   return (
-    <section className="py-12">
+    <section className="py-8">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-15">
