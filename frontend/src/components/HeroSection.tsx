@@ -5,8 +5,8 @@ import TypewriterEffect from "./TypewriterEffect";
 
 const HeroSection = () => {
   const rotatingWords = [
-    "Growth Partner",
-    "Remote Team", 
+    "growth partner",
+    "remote team", 
     "Secret Weapon",
     "Remote Executive Assistants",
     "Booking Specialists",
