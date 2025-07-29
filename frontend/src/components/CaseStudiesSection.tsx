@@ -73,10 +73,10 @@ const CaseStudiesSection = () => {
   const currentCase = caseStudies[activeCase];
 
   return (
-    <section className="py-16">
+    <section className="py-12">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-15">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Award className="w-5 h-5 text-primary mr-2" />
             <span className="text-primary font-semibold">Proven Success Stories</span>
