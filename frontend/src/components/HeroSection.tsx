@@ -89,7 +89,7 @@ const HeroSection = () => {
           </p>
           
           {/* Feature Pills */}
-          <div className="flex flex-wrap justify-center gap-10 mb-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
+          <div className="flex flex-wrap justify-center gap-12 mb-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
             <div className="flex items-center px-6 py-3 bg-card/30 backdrop-blur-sm rounded-full border border-border/50">
               <Code className="w-5 h-5 text-primary mr-2" />
               <span className="text-foreground">Technology Solutions</span>
@@ -105,7 +105,7 @@ const HeroSection = () => {
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-8 justify-center mb-4 animate-fade-in" style={{animationDelay: "0.6s"}}>
+          <div className="flex flex-col sm:flex-row gap-12 justify-center mb-4 animate-fade-in" style={{animationDelay: "0.6s"}}>
             <Button size="lg" className="btn-luxury group">
               Start Your Project
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
