@@ -7,8 +7,8 @@ const HeroSection = () => {
   const rotatingWords = [
     "Growth Partner",
     "Remote Team", 
-    "Booking Specialists"
-    "Quote Specialists"
+    "Booking Specialists",
+    "Quote Specialists",
     "Secret Weapon",
     "Ops Command",
     "Virtual Edge",
