@@ -210,13 +210,13 @@ const CaseStudiesSection = () => {
           </Card>
         </div>
 
-       <section className="white-section-style py-12 text-center px-4 sm:px-8 lg:px-16">
+       <section className="white-section-style py-10 text-center px-4 sm:px-8 lg:px-16">
   <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Achieve Similar Results?</h2>
   <p className="text-lg md:text-xl mb-6 max-w-3xl mx-auto">
     Join these successful transportation companies and transform your business operations.
     Let's discuss your specific challenges and create a custom success plan.
   </p>
-  <div className="flex flex-col sm:flex-row justify-center gap-4">
+  <div className="flex flex-col sm:flex-row justify-center gap-6">
     <a href="/strategy-call" className="inline-block">
       <button className="bg-white text-black font-semibold py-3 px-6 rounded-full shadow-md hover:bg-gray-100 transition-all duration-300">
         Schedule Strategy Call
