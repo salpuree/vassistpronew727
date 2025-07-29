@@ -107,9 +107,9 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Trust Indicators - Made relative and brought into flow */}
+      {/* Trust Indicators - Mobile responsive with 2 columns */}
       <div className="relative z-10 py-6 px-4 bg-gradient-to-t from-background/80 to-transparent animate-fade-in" style={{ animationDelay: "0.8s" }}>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {/* 1. Years Experience */}
           <div className="text-center">
             <div className="w-7 h-7 flex items-center justify-center mx-auto mb-1">

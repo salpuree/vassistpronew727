@@ -96,7 +96,7 @@ const Header = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/#team" className="w-full">
+                  <Link to="/team" className="w-full">
                     Our Team
                   </Link>
                 </DropdownMenuItem>
@@ -131,7 +131,7 @@ const Header = () => {
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
             <Link
-              to="/#contact"
+              to="/contact-us"
               className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
               Contact
@@ -143,7 +143,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-6">
             <Button 
               as={Link}
-              to="/#contact"
+              to="/contact-us"
               className="btn-luxury"
             >
               Get Started
@@ -195,7 +195,7 @@ const Header = () => {
                     Our Proven Process
                   </Link>
                   <Link
-                    to="/#team"
+                    to="/team"
                     onClick={() => setIsMenuOpen(false)}
                     className="block text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
@@ -232,7 +232,7 @@ const Header = () => {
                 FAQ
               </Link>
               <Link
-                to="/#contact"
+                to="/contact-us"
                 onClick={() => setIsMenuOpen(false)}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
@@ -248,6 +248,7 @@ const Header = () => {
                   info@virtualassistancepro.com
                 </a>
                 <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/contact-us" onClick={() => setIsMenuOpen(false)}>
                   <Button 
                   className="btn-luxury w-full"
                   >

@@ -67,7 +67,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Company Info */}
             <div>
               <div className="flex justify-start mb-6">
@@ -123,67 +123,61 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Quick Links & Services */}
+            {/* Quick Links */}
             <div>
-              {/* Quick Links */}
-              <div>
-                <h4 className="text-lg font-semibold text-foreground mb-6">Quick Links</h4>
-                <ul className="space-y-3">
-                  {quickLinks.map((link, index) => (
-                    <li key={index}>
-                      <a
-                        href={link.href}
-                        className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center group"
-                      >
-                        <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <h4 className="text-lg font-semibold text-foreground mb-6">Quick Links</h4>
+              <ul className="space-y-3">
+                {quickLinks.map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href={link.href}
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center group"
+                    >
+                      <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-              {/* Services */}
-              <div className="mt-8">
-                <h4 className="text-lg font-semibold text-foreground mb-6">Our Services</h4>
-                <ul className="space-y-3">
-                  {services.map((service, index) => (
-                    <li key={index}>
-                      <a
-                        href={service.href}
-                        className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center group"
-                      >
-                        <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Services */}
+            <div>
+              <h4 className="text-lg font-semibold text-foreground mb-6">Our Services</h4>
+              <ul className="space-y-3">
+                {services.map((service, index) => (
+                  <li key={index}>
+                    <a
+                      href={service.href}
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center group"
+                    >
+                      <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {service.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-        </div>
 
-        {/* Newsletter Signup */}
-        <div className="border-t border-border/50 py-12">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Stay Updated with <span className="text-gradient">VAssist Pro</span>
-            </h3>
-            <p className="text-muted-foreground mb-8">
-              Get the latest insights on luxury transportation technology and back-office solutions. 
-              Plus, exclusive email handling tips for booking and customer inquiries.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <Button className="btn-luxury">
-                Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+          {/* Newsletter Signup - Now in third column */}
+          <div className="md:col-span-1">
+            <div className="text-center md:text-left">
+              <h4 className="text-lg font-semibold text-foreground mb-6">Stay Updated</h4>
+              <p className="text-muted-foreground mb-6 text-sm">
+                Get the latest insights on luxury transportation technology and back-office solutions.
+              </p>
+              <div className="flex flex-col gap-3">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                />
+                <Button className="btn-luxury text-sm">
+                  Subscribe
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
