@@ -93,7 +93,7 @@ const TeamPage = () => {
                   style={{animationDelay: `${index * 0.1}s`}}
                 >
                   <div className="p-4">
-                    <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
                       <stat.icon className="w-8 h-8 text-primary" />
                     </div>
                     <div className="text-4xl font-bold text-gradient mb-2">{stat.number}</div>
