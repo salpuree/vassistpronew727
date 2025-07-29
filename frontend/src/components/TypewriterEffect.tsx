@@ -53,7 +53,7 @@ const TypewriterEffect = ({
     display: "inline-block",
     marginLeft: "4px",
     width: "8px",
-    height: "0.5em",
+    height: "0.7em",
     backgroundColor: "#fff",
     boxShadow: "0 0 8px #00f0ff, 0 0 16px #00f0ff, 0 0 32px #00f0ff",
     animation: "blink 1s step-start infinite",
