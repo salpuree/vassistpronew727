@@ -2,18 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Zap, Globe, Clock, Users, CheckCircle, Shield } from "lucide-react";
 import heroImage from "../assets/hero-luxury-transport.jpg";
 import TypewriterEffect from "./TypewriterEffect";
-import TypewriterEffect from "./TypewriterEffect";
-
 const HeroSection = () => {
-  const rotatingWords = [
-    "Growth Partner",
-    "Remote Team", 
-    "Secret Weapon",
-    "Ops Command",
-    "Virtual Edge",
-    "Success Team"
-  ];
-  
   const rotatingWords = [
     "growth partner",
     "remote team", 
@@ -116,7 +105,7 @@ const HeroSection = () => {
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4 animate-fade-in" style={{animationDelay: "0.6s"}}>
+          <div className="flex flex-col sm:flex-row gap-8 justify-center mb-4 animate-fade-in" style={{animationDelay: "0.6s"}}>
             <Button size="lg" className="btn-luxury group">
               Start Your Project
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
