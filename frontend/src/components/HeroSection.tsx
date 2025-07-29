@@ -8,6 +8,9 @@ const HeroSection = () => {
     "Growth Partner",
     "Remote Team", 
     "Secret Weapon",
+    "Remote Executive Assistants",
+    "Booking Specialists",
+  "Client Coordinators",
     "Ops Command",
     "Virtual Edge",
     "Success Team"
