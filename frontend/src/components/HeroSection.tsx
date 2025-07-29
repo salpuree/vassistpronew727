@@ -7,13 +7,13 @@ const HeroSection = () => {
   const rotatingWords = [
     "growth partner",
     "remote team", 
-    "Secret Weapon",
-    "Remote Executive Assistants",
-    "Booking Specialists",
-  "Client Coordinators",
-    "Ops Command",
-    "Virtual Edge",
-    "Success Team"
+    "secret weapon",
+    "remote exec assistants",
+    "booking specialists",
+  "client coordinators",
+    "ops command",
+    "virtual edge",
+    "success team"
   ];
   const clientLogos = [
     {
