@@ -7,11 +7,11 @@ interface TypewriterEffectProps {
   pauseDuration?: number;
 }
 
-const TypewriterEffect = ({ 
-  words, 
-  typingSpeed = 150, 
-  deletingSpeed = 100, 
-  pauseDuration = 2000 
+const TypewriterEffect = ({
+  words,
+  typingSpeed = 150,
+  deletingSpeed = 100,
+  pauseDuration = 2000,
 }: TypewriterEffectProps) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
@@ -22,7 +22,7 @@ const TypewriterEffect = ({
     if (words.length === 0) return;
 
     const currentWord = words[currentWordIndex];
-    
+
     const timeout = setTimeout(() => {
       if (isPaused) {
         setIsPaused(false);
@@ -31,20 +31,16 @@ const TypewriterEffect = ({
       }
 
       if (isDeleting) {
-        // Deleting characters
         if (currentText.length > 0) {
           setCurrentText(currentText.slice(0, -1));
         } else {
-          // Move to next word
           setIsDeleting(false);
           setCurrentWordIndex((prev) => (prev + 1) % words.length);
         }
       } else {
-        // Typing characters
         if (currentText.length < currentWord.length) {
           setCurrentText(currentWord.slice(0, currentText.length + 1));
         } else {
-          // Pause before deleting
           setIsPaused(true);
         }
       }
@@ -53,10 +49,27 @@ const TypewriterEffect = ({
     return () => clearTimeout(timeout);
   }, [currentText, isDeleting, isPaused, currentWordIndex, words, typingSpeed, deletingSpeed, pauseDuration]);
 
+  const cursorStyle: React.CSSProperties = {
+    display: "inline-block",
+    marginLeft: "2px",
+    animation: "blink 1s step-end infinite",
+    color: "inherit",
+  };
+
   return (
     <span className="text-gradient text-glow">
       {currentText}
-      <span className="animate-pulse">|</span>
+      <span style={cursorStyle}>|</span>
+
+      {/* Add keyframes directly in JSX using <style> tag */}
+      <style>
+        {`
+          @keyframes blink {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+          }
+        `}
+      </style>
     </span>
   );
 };
