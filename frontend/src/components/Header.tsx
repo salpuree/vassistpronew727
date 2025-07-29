@@ -1,3 +1,5 @@
+// frontend/src/components/Header.tsx
+
 import { useState, useEffect } from "react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
@@ -21,8 +23,8 @@ const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleDropdownMouseEnter = () => {
@@ -41,9 +43,13 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/95 backdrop-blur-md shadow-luxury border-b border-border/50' : 'bg-transparent'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/95 backdrop-blur-md shadow-luxury border-b border-border/50"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -67,7 +73,7 @@ const Header = () => {
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
             <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen} modal={false}>
-              <DropdownMenuTrigger 
+              <DropdownMenuTrigger
                 className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
                 onMouseEnter={handleDropdownMouseEnter}
                 onMouseLeave={handleDropdownMouseLeave}
@@ -75,7 +81,7 @@ const Header = () => {
                 About Us
                 <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent 
+              <DropdownMenuContent
                 className="w-56 p-2"
                 onMouseEnter={handleDropdownMouseEnter}
                 onMouseLeave={handleDropdownMouseLeave}
@@ -141,11 +147,7 @@ const Header = () => {
 
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-6">
-            <Button 
-              as={Link}
-              to="/contact-us"
-              className="btn-luxury"
-            >
+            <Button as={Link} to="/contact-us" className="btn-luxury">
               Get Started
             </Button>
           </div>
@@ -161,8 +163,6 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          )
-          }
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-luxury">
             <nav className="flex flex-col space-y-4 p-6">
               <Link
@@ -241,21 +241,22 @@ const Header = () => {
                 Contact
               </Link>
               <div className="border-t border-border/50 pt-4">
-                <a href="tel:+19416234590" className="flex items-center text-muted-foreground hover:text-primary transition-colors mb-3">
+                <a
+                  href="tel:+19416234590"
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors mb-3"
+                >
                   <Phone className="w-4 h-4 mr-2" />
                   (941) 623-4590
                 </a>
-                <a href="mailto:info@virtualassistancepro.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors mb-4">
+                <a
+                  href="mailto:info@virtualassistancepro.com"
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors mb-4"
+                >
                   <Mail className="w-4 h-4 mr-2" />
                   info@virtualassistancepro.com
                 </a>
-                <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>
                 <Link to="/contact-us" onClick={() => setIsMenuOpen(false)}>
-                  <Button 
-                  className="btn-luxury w-full"
-                  >
-                    Get Started
-                  </Button>
+                  <Button className="btn-luxury w-full">Get Started</Button>
                 </Link>
               </div>
             </nav>
