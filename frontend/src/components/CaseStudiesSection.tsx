@@ -110,7 +110,8 @@ const CaseStudiesSection = () => {
 
         {/* Main Case Study Display */}
         <div className="max-w-7xl mx-auto">
-          <Card className="card-luxury overflow-hidden">
+          {/* ✅ We apply the white-section-style here */}
+          <Card className="white-section-style overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Left Side - Company Info & Challenge */}
               <div className="p-8 lg:p-12">
