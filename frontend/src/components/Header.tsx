@@ -161,6 +161,8 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
+          )
+          }
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-luxury">
             <nav className="flex flex-col space-y-4 p-6">
               <Link
