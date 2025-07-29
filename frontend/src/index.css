@@ -238,9 +238,10 @@ All colors MUST be HSL.
     transition: all 0.3s ease;
   }
 
-  .white-section-style {
+  /* Enhanced White Section Style */
+.white-section-style {
   background: 
-    /* Subtle crosshatch pattern */
+    /* Refined crosshatch pattern */
     repeating-linear-gradient(
       45deg,
       transparent,
@@ -255,21 +256,21 @@ All colors MUST be HSL.
       rgba(148, 163, 184, 0.06) 3px,
       rgba(148, 163, 184, 0.06) 6px
     ),
-    /* Premium gradient background */
+    /* Premium multi-layer gradient */
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
     linear-gradient(135deg, #fafafa 0%, #ffffff 25%, #f8fafc 50%, #ffffff 75%, #f1f5f9 100%);
   
   border: 1px solid rgba(203, 213, 225, 0.6);
   box-shadow: 
-    /* Main elevation shadow */
+    /* Enhanced layered shadows */
     0 32px 64px rgba(0, 0, 0, 0.12), 
     0 16px 32px rgba(0, 0, 0, 0.08), 
     0 8px 16px rgba(0, 0, 0, 0.04),
     0 4px 8px rgba(0, 0, 0, 0.02),
-    /* Inset light edge */
+    /* Premium inset light */
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    /* Subtle colored glow */
+    /* Subtle colored border glow */
     0 0 0 1px rgba(148, 163, 184, 0.1);
   
   border-radius: 1rem;
@@ -281,7 +282,7 @@ All colors MUST be HSL.
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Enhanced hover effect */
+/* Premium hover effect */
 .white-section-style:hover {
   transform: translateY(-2px);
   box-shadow: 
@@ -293,7 +294,7 @@ All colors MUST be HSL.
     0 0 0 1px rgba(59, 130, 246, 0.15);
 }
 
-/* Refined geometric shapes with better animations */
+/* Enhanced geometric shapes with conic gradients */
 .white-section-style::before {
   content: '';
   position: absolute;
@@ -309,6 +310,9 @@ All colors MUST be HSL.
   z-index: 1;
   filter: blur(1px);
   animation: float-gentle 12s ease-in-out infinite;
+  box-shadow: 
+    0 0 100px rgba(59, 130, 246, 0.08),
+    inset 0 0 50px rgba(147, 197, 253, 0.1);
 }
 
 .white-section-style::after {
@@ -326,35 +330,18 @@ All colors MUST be HSL.
   z-index: 1;
   filter: blur(2px);
   animation: float-gentle 16s ease-in-out infinite reverse;
-}
-
-/* Additional decorative elements */
-.white-section-style::before {
-  box-shadow: 
-    0 0 100px rgba(59, 130, 246, 0.08),
-    inset 0 0 50px rgba(147, 197, 253, 0.1);
-}
-
-.white-section-style::after {
   box-shadow: 
     0 0 120px rgba(16, 185, 129, 0.06),
     inset 0 0 60px rgba(110, 231, 183, 0.08);
 }
 
-/* Subtle dot pattern overlay */
-.white-section-style:before:not(:only-child) {
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-/* Content positioning and styling */
+/* Content positioning */
 .white-section-style > * {
   position: relative;
   z-index: 10;
 }
 
-/* Typography overrides with better contrast */
+/* Enhanced typography with text shadows */
 .white-section-style h1,
 .white-section-style h2,
 .white-section-style h3,
@@ -378,19 +365,23 @@ All colors MUST be HSL.
   color: #111827 !important;
 }
 
-/* Enhanced animations */
+/* Smooth animations */
 @keyframes float-gentle {
   0%, 100% {
     transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.6;
   }
   25% {
     transform: translateY(-10px) rotate(1deg) scale(1.02);
+    opacity: 0.4;
   }
   50% {
     transform: translateY(-5px) rotate(0deg) scale(1);
+    opacity: 0.7;
   }
   75% {
     transform: translateY(-15px) rotate(-1deg) scale(0.98);
+    opacity: 0.5;
   }
 }
 
@@ -430,53 +421,8 @@ All colors MUST be HSL.
       0 0 0 1px rgba(148, 163, 184, 0.2);
   }
 }
-
-/* Additional utility classes for enhanced styling */
-.white-section-style .gradient-border {
-  position: relative;
 }
 
-.white-section-style .gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(16, 185, 129, 0.2));
-  border-radius: inherit;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-}
-
-/* Shimmer effect for special elements */
-.white-section-style .shimmer {
-  position: relative;
-  overflow: hidden;
-}
-
-.white-section-style .shimmer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
 @layer utilities {
   .bg-luxury-gradient {
     background: var(--gradient-luxury);
@@ -498,10 +444,10 @@ All colors MUST be HSL.
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.6);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
   }
   to {
-    box-shadow: 0 0 30px hsl(var(--primary) / 0.9);
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.6);
   }
 }
 
