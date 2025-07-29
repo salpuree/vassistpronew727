@@ -477,8 +477,6 @@ All colors MUST be HSL.
   100% {
     left: 100%;
   }
-}
-
 @layer utilities {
   .bg-luxury-gradient {
     background: var(--gradient-luxury);
