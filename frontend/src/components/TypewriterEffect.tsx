@@ -51,17 +51,20 @@ const TypewriterEffect = ({
 
   const cursorStyle: React.CSSProperties = {
     display: "inline-block",
-    marginLeft: "2px",
-    animation: "blink 1s step-end infinite",
-    color: "inherit",
+    marginLeft: "4px",
+    width: "8px",
+    height: "1em",
+    backgroundColor: "#fff",
+    boxShadow: "0 0 8px #00f0ff, 0 0 16px #00f0ff, 0 0 32px #00f0ff",
+    animation: "blink 1s step-start infinite",
+    borderRadius: "2px",
   };
 
   return (
-    <span className="text-gradient text-glow">
+    <span className="text-gradient text-glow" style={{ whiteSpace: "pre" }}>
       {currentText}
-      <span style={cursorStyle}>|</span>
+      <span style={cursorStyle}></span>
 
-      {/* Add keyframes directly in JSX using <style> tag */}
       <style>
         {`
           @keyframes blink {
