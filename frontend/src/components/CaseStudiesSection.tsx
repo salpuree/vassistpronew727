@@ -116,7 +116,7 @@ const CaseStudiesSection = () => {
               {/* Left Side - Company Info & Challenge */}
               <div className="p-8 lg:p-12">
                 <div className="flex items-center mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${currentCase.bgGradient} rounded-2xl flex items-center justify-center text-2xl border border-primary/30 mr-4`}>
+                  <div className={`w-16 h-12 bg-gradient-to-br ${currentCase.bgGradient} rounded-2xl flex items-center justify-center text-2xl border border-primary/30 mr-4`}>
                     {currentCase.image}
                   </div>
                   <div>
