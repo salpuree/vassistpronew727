@@ -2,8 +2,18 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Zap, Globe, Clock, Users, CheckCircle, Shield } from "lucide-react";
 import heroImage from "../assets/hero-luxury-transport.jpg";
 import TypewriterEffect from "./TypewriterEffect";
+import TypewriterEffect from "./TypewriterEffect";
 
 const HeroSection = () => {
+  const rotatingWords = [
+    "Growth Partner",
+    "Remote Team", 
+    "Secret Weapon",
+    "Ops Command",
+    "Virtual Edge",
+    "Success Team"
+  ];
+  
   const rotatingWords = [
     "growth partner",
     "remote team", 
@@ -79,7 +89,7 @@ const HeroSection = () => {
           
           {/* Main Headline */}
           <h1 className="mb-3 animate-slide-up">
-            <span className="block text-foreground mb-2">say hello to your new</span>
+            <span className="block text-foreground mb-2">Say Hello to Your New</span>
             <TypewriterEffect words={rotatingWords} />
           </h1>
           
