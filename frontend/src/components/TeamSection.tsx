@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const TeamSection = () => {
 
   return (
-    <section className="py-16">
+    <section className="py-12">
       <div className="container mx-auto px-4">
         {/* Team Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -75,7 +75,7 @@ const TeamSection = () => {
             <div className="mt-8">
               <Link to="/team">
                 <Button className="btn-luxury">
-                  Meet Our Full Team
+                  Meet Our Core Team
                 </Button>
               </Link>
             </div>
