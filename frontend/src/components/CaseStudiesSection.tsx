@@ -218,20 +218,23 @@ const CaseStudiesSection = () => {
   </p>
   <div className="flex flex-col sm:flex-row justify-center gap-6">
     <a href="/strategy-call" className="inline-block">
-      <button className="bg-white text-black font-semibold py-3 px-6 rounded-full shadow-md hover:bg-gray-100 transition-all duration-300">
-        Schedule Strategy Call
-      </button>
-    </a>
-    <a href="/case-studies.pdf" className="inline-block">
-      <button className="border border-white text-white font-semibold py-3 px-6 rounded-full hover:bg-white hover:text-black transition-all duration-300">
-        📄 Download Full Case Studies
-      </button>
-    </a>
-  </div>
-</section>
+     <Button className="btn-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
+                Schedule Strategy Call
+                <ChevronRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button variant="outline" className="btn-outline-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
+                📄 Download Full Case Studies
+              </Button>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-sm text-gray-500">
+                Get detailed PDF case studies with complete implementation details and ROI analysis
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    
   );
 };
 
