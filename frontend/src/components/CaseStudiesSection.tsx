@@ -91,7 +91,7 @@ const CaseStudiesSection = () => {
         </div>
 
         {/* Case Study Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12 mt-6">
           {caseStudies.map((study, index) => (
             <Button
               key={study.id}
