@@ -211,28 +211,26 @@ const CaseStudiesSection = () => {
         </div>
 
        <section className="white-section-style py-10 text-center px-4 sm:px-8 lg:px-16">
-  <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Achieve Similar Results?</h2>
-  <p className="text-lg md:text-xl mb-6 max-w-3xl mx-auto">
-    Join these successful transportation companies and transform your business operations.
-    Let's discuss your specific challenges and create a custom success plan.
-  </p>
-  <div className="flex flex-col sm:flex-row justify-center gap-6">
-    <a href="/strategy-call" className="inline-block">
-     <Button className="btn-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
-                Schedule Strategy Call
-                <ChevronRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button variant="outline" className="btn-outline-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
-                📄 Download Full Case Studies
-              </Button>
-            </div>
-            <div className="mt-6 text-center">
-              <p className="text-sm text-gray-500">
-                Get detailed PDF case studies with complete implementation details and ROI analysis
-              </p>
-            </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Achieve Similar Results?</h2>
+          <p className="text-lg md:text-xl mb-6 max-w-3xl mx-auto">
+            Join these successful transportation companies and transform your business operations.
+            Let's discuss your specific challenges and create a custom success plan.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <Button className="btn-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
+              Schedule Strategy Call
+              <ChevronRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button variant="outline" className="btn-outline-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
+              📄 Download Full Case Studies
+            </Button>
           </div>
-        </div>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-gray-500">
+              Get detailed PDF case studies with complete implementation details and ROI analysis
+            </p>
+          </div>
+        </section>
       </div>
     </section>
   );
