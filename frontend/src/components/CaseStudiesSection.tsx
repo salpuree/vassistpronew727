@@ -229,6 +229,9 @@ const CaseStudiesSection = () => {
     </a>
   </div>
 </section>
+      </div>
+    </section>
+    
   );
 };
 
