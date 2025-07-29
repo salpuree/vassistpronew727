@@ -77,7 +77,7 @@ const Index = () => {
                   <span className="text-gradient">Back-Office Support</span>
                   <span className="block text-foreground">Packages That Scale With You</span>
                 </h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
                   Choose the right level of professional back-office support for your luxury transportation business.
                   All packages include professional training on your specific procedures and brand standards.
                 </p>
