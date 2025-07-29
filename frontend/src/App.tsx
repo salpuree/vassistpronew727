@@ -38,6 +38,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <div className="overflow-x-hidden">
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
@@ -46,7 +47,7 @@ const App = () => (
           <Route path="/team" element={<TeamPage />} />
           <Route path="/roi-calculator" element={<ROICalculatorPage />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />
-          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/faqs" element={<FAQPage />} />
           <Route path="/about-us/industry-expertise" element={<IndustryExpertisePage />} />
           <Route path="/about-us/trust-recognition" element={<SocialProofPage />} />
           <Route path="/about-us/our-process" element={<HowWeWorkPage />} />
@@ -66,6 +67,7 @@ const App = () => (
           >
             <MessageSquare className="w-6 h-6 text-primary-foreground" />
           </Button>
+        </div>
         </div>
       </BrowserRouter>
     </TooltipProvider>

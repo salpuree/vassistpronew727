@@ -77,10 +77,10 @@ const CollapsibleFAQ = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <HelpCircle className="w-5 h-5 text-primary mr-2" />
-            <span className="text-primary font-semibold">Frequently Asked Questions</span>
+            <span className="text-primary font-semibold">FAQs</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Get Answers</span>
+            <span className="text-gradient">FAQs</span>
             <span className="block text-foreground">To Your Questions</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">

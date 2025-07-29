@@ -9,10 +9,10 @@ const FAQPage = () => {
       <Header />
       <main className="pt-20">
         <PageHeroSection
-          title="Frequently Asked Questions"
+          title="FAQs"
           description="Find answers to common questions about our services, implementation, pricing, and support. Get the information you need to make an informed decision."
           imageUrl="/FAQs.jpeg"
-          breadcrumb="FAQ"
+          breadcrumb="FAQs"
         />
         <div className="animate-fade-in">
           <FAQSection />

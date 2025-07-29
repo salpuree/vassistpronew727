@@ -60,7 +60,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
             <Link
-              to="/#services"
+              to="/services"
               className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
               Services
@@ -124,10 +124,10 @@ const Header = () => {
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
             <Link
-              to="/faq"
+              to="/faqs"
               className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
-              FAQ
+              FAQs
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
             <Link
@@ -164,7 +164,7 @@ const Header = () => {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-luxury">
             <nav className="flex flex-col space-y-4 p-6">
               <Link
-                to="/#services"
+                to="/services"
                 onClick={() => setIsMenuOpen(false)}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
@@ -225,11 +225,11 @@ const Header = () => {
                 Reviews
               </Link>
               <Link
-                to="/faq"
+                to="/faqs"
                 onClick={() => setIsMenuOpen(false)}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
-                FAQ
+                FAQs
               </Link>
               <Link
                 to="/contact-us"

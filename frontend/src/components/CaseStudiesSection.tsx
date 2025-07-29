@@ -73,7 +73,7 @@ const CaseStudiesSection = () => {
   const currentCase = caseStudies[activeCase];
 
   return (
-    <section className="py-16 bg-luxury-gradient">
+    <section className="py-16">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -172,19 +172,19 @@ const CaseStudiesSection = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                   {currentCase.results.map((result, index) => (
-                    <div key={index} className="bg-background/50 rounded-2xl p-6 border border-border/50">
+                    <div key={index} className="bg-muted/20 rounded-2xl p-6 border border-border/50">
                       <div className="text-sm text-muted-foreground mb-2">{result.metric}</div>
                       <div className="space-y-1">
                         <div className="flex items-center justify-between text-sm">
                           <span className="text-red-400">Before:</span>
-                          <span className="font-medium">{result.before}</span>
+                          <span className="font-medium text-foreground">{result.before}</span>
                         </div>
                         <div className="flex items-center justify-between text-sm">
                           <span className="text-green-400">After:</span>
-                          <span className="font-medium">{result.after}</span>
+                          <span className="font-medium text-foreground">{result.after}</span>
                         </div>
                         <div className="text-center">
-                          <span className="text-2xl font-bold text-gradient">{result.improvement}</span>
+                          <span className="text-2xl font-bold text-primary">{result.improvement}</span>
                         </div>
                       </div>
                     </div>
