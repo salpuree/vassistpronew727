@@ -164,7 +164,7 @@ const CaseStudiesSection = () => {
               </div>
 
               {/* Right Side - Results */}
-              <div className="p-8 lg:p-12 bg-card/30">
+              <div className="p-6 lg:p-8 bg-card/30">
                 <h4 className="text-2xl font-bold text-foreground mb-8 flex items-center">
                   <DollarSign className="w-6 h-6 text-primary mr-2" />
                   Results Achieved
