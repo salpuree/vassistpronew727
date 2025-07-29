@@ -210,7 +210,7 @@ const CaseStudiesSection = () => {
           </Card>
         </div>
 
-       <section className="white-section-style py-10 text-center px-4 sm:px-8 lg:px-16">
+       <section className="white-section-style py-6 text-center px-4 sm:px-8 lg:px-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Achieve Similar Results?</h2>
           <p className="text-lg md:text-xl mb-6 max-w-3xl mx-auto">
             Join these successful transportation companies and transform your business operations.
