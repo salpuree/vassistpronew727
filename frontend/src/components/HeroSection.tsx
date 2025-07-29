@@ -79,7 +79,7 @@ const HeroSection = () => {
           
           {/* Main Headline */}
           <h1 className="mb-3 animate-slide-up">
-            <span className="block text-foreground mb-2">Say Hello to Your New</span>
+            <span className="block text-foreground mb-2">say hello to your new</span>
             <TypewriterEffect words={rotatingWords} />
           </h1>
           
