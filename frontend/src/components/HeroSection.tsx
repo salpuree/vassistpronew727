@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Zap, Globe, Clock, Users, CheckCircle, Shield } from "lucide-react";
 import heroImage from "../assets/hero-luxury-transport.jpg";
 import TypewriterEffect from "./TypewriterEffect";
-import TypewriterEffect from "./TypewriterEffect";
 
 const HeroSection = () => {
   const rotatingWords = [
