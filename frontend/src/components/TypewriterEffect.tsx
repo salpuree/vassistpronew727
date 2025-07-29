@@ -52,7 +52,7 @@ const TypewriterEffect = ({
   const cursorStyle: React.CSSProperties = {
     display: "inline-block",
     marginLeft: "4px",
-    width: "8px",
+    width: "7px",
     height: "0.8em",
     backgroundColor: "#fff",
     boxShadow: "0 0 8px #00f0ff, 0 0 16px #00f0ff, 0 0 32px #00f0ff",
