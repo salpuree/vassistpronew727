@@ -1,8 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Zap, Globe, Clock, Users, CheckCircle, Shield } from "lucide-react";
 import heroImage from "../assets/hero-luxury-transport.jpg";
+import TypewriterEffect from "./TypewriterEffect";
 
 const HeroSection = () => {
+  const rotatingWords = [
+    "Growth Partner",
+    "Remote Team", 
+    "Secret Weapon",
+    "Ops Command",
+    "Virtual Edge",
+    "Success Team"
+  ];
+
   const clientLogos = [
     {
       name: "Elite Transportation Group",
@@ -67,9 +77,8 @@ const HeroSection = () => {
           
           {/* Main Headline */}
           <h1 className="mb-3 animate-slide-up">
-            <span className="block text-foreground mb-2">Your</span>
-            <span className="text-gradient text-glow">Strategic Partner</span>
-            <span className="block text-foreground">for Business Excellence</span>
+            <span className="block text-foreground mb-2">Say Hello to Your New</span>
+            <TypewriterEffect words={rotatingWords} />
           </h1>
           
           {/* Subheadline */}

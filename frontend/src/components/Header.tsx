@@ -161,8 +161,6 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          )
-          }
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-luxury">
             <nav className="flex flex-col space-y-4 p-6">
               <Link
@@ -249,7 +247,6 @@ const Header = () => {
                   <Mail className="w-4 h-4 mr-2" />
                   info@virtualassistancepro.com
                 </a>
-                <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>
                 <Link to="/contact-us" onClick={() => setIsMenuOpen(false)}>
                   <Button 
                   className="btn-luxury w-full"
