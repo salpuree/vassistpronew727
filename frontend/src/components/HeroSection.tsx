@@ -12,18 +12,6 @@ const HeroSection = () => {
     "Virtual Edge",
     "Success Team"
   ];
-
-  const rotatingWords = [
-    "Growth Partner",
-    "Remote Team", 
-    "Booking Specialists",
-    "Quote Specialists",
-    "Secret Weapon",
-    "Ops Command",
-    "Virtual Edge",
-    "Success Team"
-  ];
-
   const clientLogos = [
     {
       name: "Elite Transportation Group",
