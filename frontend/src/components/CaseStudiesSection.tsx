@@ -1,8 +1,9 @@
+
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, Clock, DollarSign, Users, Phone, Mail, ChevronRight, Star, Award } from "lucide-react";
+import { TrendingUp, Clock, DollarSign, Users, Phone, Mail, ChevronRight, Star, Award, CheckCircle } from "lucide-react";
 
 const CaseStudiesSection = () => {
   const [activeCase, setActiveCase] = useState(0);
@@ -73,35 +74,35 @@ const CaseStudiesSection = () => {
   const currentCase = caseStudies[activeCase];
 
   return (
-    <section className="py-12">
+    <section className="py-20 bg-gradient-to-br from-background via-background to-muted/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-15">
+        <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Award className="w-5 h-5 text-primary mr-2" />
             <span className="text-primary font-semibold">Proven Success Stories</span>
           </div>
-          <h2 className="mb-6">
-            <span className="text-gradient">Real Results</span>
-            <span className="block text-foreground">From Real Transportation Companies</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Real Results</span>
+            <span className="block text-foreground mt-2">From Real Transportation Companies</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             See how luxury transportation companies across the nation have transformed their operations and achieved remarkable growth with our strategic partnership.
           </p>
         </div>
 
         {/* Case Study Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8 mt-6">
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           {caseStudies.map((study, index) => (
             <Button
               key={study.id}
               onClick={() => setActiveCase(index)}
               variant={activeCase === index ? "default" : "outline"}
-              className={`${
+              className={`px-6 py-3 text-sm font-medium transition-all duration-300 ${
                 activeCase === index 
-                  ? "btn-luxury" 
-                  : "btn-outline-luxury"
-              } transition-all duration-300`}
+                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30" 
+                  : "bg-background border-2 border-border hover:border-primary/50 hover:bg-primary/5"
+              }`}
             >
               {study.company}
             </Button>
@@ -109,81 +110,82 @@ const CaseStudiesSection = () => {
         </div>
 
         {/* Main Case Study Display */}
-        <div className="max-w-7xl mx-auto">
-          {/* ✅ We apply the white-section-style here */}
-          <Card className="white-section-style overflow-hidden">
+        <div className="max-w-7xl mx-auto mb-16">
+          <Card className="bg-white/95 backdrop-blur-sm border-2 border-border/50 shadow-2xl shadow-black/10 rounded-3xl overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Left Side - Company Info & Challenge */}
-              <div className="p-8 lg:p-12">
-                <div className="flex items-center mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${currentCase.bgGradient} rounded-2xl flex items-center justify-center text-2xl border border-primary/30 mr-4`}>
+              <div className="p-8 lg:p-12 bg-gradient-to-br from-background/50 to-muted/30">
+                <div className="flex items-center mb-8">
+                  <div className={`w-20 h-20 bg-gradient-to-br ${currentCase.bgGradient} rounded-3xl flex items-center justify-center text-3xl border-2 border-primary/30 mr-6 shadow-lg`}>
                     {currentCase.image}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground">{currentCase.company}</h3>
-                    <p className="text-primary font-semibold">{currentCase.location}</p>
-                    <p className="text-sm text-muted-foreground">{currentCase.industry}</p>
+                    <h3 className="text-3xl font-bold text-foreground mb-1">{currentCase.company}</h3>
+                    <p className="text-primary font-semibold text-lg">{currentCase.location}</p>
+                    <p className="text-muted-foreground">{currentCase.industry}</p>
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-3 mb-8">
                   {currentCase.tags.map((tag, index) => (
-                    <Badge key={index} variant="secondary" className="bg-primary/10 text-primary">
+                    <Badge key={index} variant="secondary" className="bg-primary/10 text-primary px-4 py-2 text-sm font-medium">
                       {tag}
                     </Badge>
                   ))}
                 </div>
 
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
-                      <Users className="w-5 h-5 text-primary mr-2" />
+                <div className="space-y-8">
+                  <div className="bg-red-50/50 border border-red-200 rounded-2xl p-6">
+                    <h4 className="text-xl font-semibold text-foreground mb-4 flex items-center">
+                      <Users className="w-6 h-6 text-red-500 mr-3" />
                       The Challenge
                     </h4>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed text-lg">
                       {currentCase.challenge}
                     </p>
                   </div>
 
-                  <div>
-                    <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center">
-                      <TrendingUp className="w-5 h-5 text-primary mr-2" />
+                  <div className="bg-green-50/50 border border-green-200 rounded-2xl p-6">
+                    <h4 className="text-xl font-semibold text-foreground mb-4 flex items-center">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                       Our Solution
                     </h4>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed text-lg">
                       {currentCase.solution}
                     </p>
                   </div>
 
-                  <div className="flex items-center">
-                    <Clock className="w-5 h-5 text-primary mr-2" />
-                    <span className="text-foreground font-semibold">Implementation Timeline: </span>
-                    <span className="text-primary ml-2">{currentCase.timeline}</span>
+                  <div className="bg-blue-50/50 border border-blue-200 rounded-2xl p-6">
+                    <div className="flex items-center">
+                      <Clock className="w-6 h-6 text-blue-500 mr-3" />
+                      <span className="text-foreground font-semibold text-lg">Implementation Timeline: </span>
+                      <span className="text-primary ml-2 font-bold text-lg">{currentCase.timeline}</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Right Side - Results */}
-              <div className="p-6 lg:p-8 bg-card/30">
-                <h4 className="text-2xl font-bold text-foreground mb-8 flex items-center">
-                  <DollarSign className="w-6 h-6 text-primary mr-2" />
+              <div className="p-8 lg:p-12 bg-gradient-to-br from-primary/5 to-blue-500/5">
+                <h4 className="text-3xl font-bold text-foreground mb-10 flex items-center">
+                  <TrendingUp className="w-8 h-8 text-primary mr-3" />
                   Results Achieved
                 </h4>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
                   {currentCase.results.map((result, index) => (
-                    <div key={index} className="bg-muted/20 rounded-2xl p-6 border border-border/50">
-                      <div className="text-sm text-muted-foreground mb-2">{result.metric}</div>
-                      <div className="space-y-1">
-                        <div className="flex items-center justify-between text-sm">
-                          <span className="text-red-400">Before:</span>
-                          <span className="font-medium text-foreground">{result.before}</span>
+                    <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-border/30 shadow-lg hover:shadow-xl transition-all duration-300">
+                      <div className="text-sm text-muted-foreground mb-3 font-medium uppercase tracking-wide">{result.metric}</div>
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <span className="text-red-500 font-medium">Before:</span>
+                          <span className="font-semibold text-foreground">{result.before}</span>
                         </div>
-                        <div className="flex items-center justify-between text-sm">
-                          <span className="text-green-400">After:</span>
-                          <span className="font-medium text-foreground">{result.after}</span>
+                        <div className="flex items-center justify-between">
+                          <span className="text-green-500 font-medium">After:</span>
+                          <span className="font-semibold text-foreground">{result.after}</span>
                         </div>
-                        <div className="text-center">
+                        <div className="text-center pt-2">
                           <span className="text-2xl font-bold text-primary">{result.improvement}</span>
                         </div>
                       </div>
@@ -192,16 +194,16 @@ const CaseStudiesSection = () => {
                 </div>
 
                 {/* Client Testimonial */}
-                <div className="bg-primary/5 rounded-2xl p-6 border border-primary/20">
-                  <div className="flex items-center mb-4">
+                <div className="bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-2xl p-8 border-2 border-primary/20 shadow-lg">
+                  <div className="flex items-center mb-6">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                      <Star key={i} className="w-6 h-6 fill-primary text-primary" />
                     ))}
                   </div>
-                  <blockquote className="text-foreground italic mb-4 leading-relaxed">
+                  <blockquote className="text-foreground text-lg italic mb-6 leading-relaxed">
                     "{currentCase.testimonial}"
                   </blockquote>
-                  <div className="text-primary font-semibold">
+                  <div className="text-primary font-bold text-lg">
                     — {currentCase.clientName}
                   </div>
                 </div>
@@ -210,29 +212,31 @@ const CaseStudiesSection = () => {
           </Card>
         </div>
 
-       <section className="white-section-style py-4 text-center px-4 sm:px-8 lg:px-16 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:border-primary/40 group cursor-pointer overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
-          <div className="absolute top-4 right-4 w-6 h-6 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Achieve Similar Results?</h2>
-          <p className="text-lg md:text-xl mb-4 max-w-3xl mx-auto">
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-primary/10 via-blue-500/10 to-purple-500/10 rounded-3xl p-12 text-center border-2 border-primary/20 shadow-2xl shadow-primary/10 hover:shadow-3xl hover:shadow-primary/20 transition-all duration-500 group">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-blue-500 rounded-t-3xl"></div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground group-hover:text-primary transition-colors duration-300">
+            Ready to Achieve Similar Results?
+          </h2>
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-muted-foreground leading-relaxed">
             Join these successful transportation companies and transform your business operations.
             Let's discuss your specific challenges and create a custom success plan.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Button className="btn-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-10 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
               Schedule Strategy Call
-              <ChevronRight className="w-5 h-5 ml-2" />
+              <ChevronRight className="w-6 h-6 ml-2" />
             </Button>
-            <Button variant="outline" className="btn-outline-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
+            <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-10 py-4 rounded-2xl transition-all duration-300 group-hover:scale-105">
               📄 Download Full Case Studies
             </Button>
           </div>
-          <div className="mt-6 text-center">
-            <p className="text-sm text-gray-500">
+          <div className="text-center">
+            <p className="text-muted-foreground">
               Get detailed PDF case studies with complete implementation details and ROI analysis
             </p>
           </div>
-        </section>
+        </div>
       </div>
     </section>
   );
