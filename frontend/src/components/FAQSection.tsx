@@ -234,7 +234,9 @@ const FAQSection = () => {
 
         {/* Quick Contact Options */}
         <div className="mt-20">
-          <div className="text-center mb-12">
+          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:border-primary/40 group cursor-pointer overflow-hidden">
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
+            <div className="absolute top-4 right-4 w-8 h-8 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
             <h3 className="text-3xl font-bold text-foreground mb-4">
               <span className="text-gradient">Still Have Questions?</span>
             </h3>
@@ -260,7 +262,9 @@ const FAQSection = () => {
 
           {/* Bottom CTA */}
           <div className="text-center">
-            <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto">
+            <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-12 max-w-4xl mx-auto hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:border-primary/40 group cursor-pointer overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
+              <div className="absolute top-4 right-4 w-8 h-8 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
               <h3 className="text-3xl font-bold text-foreground mb-4">
                 Ready to Get Started?
               </h3>

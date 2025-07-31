@@ -210,7 +210,9 @@ const CaseStudiesSection = () => {
           </Card>
         </div>
 
-       <section className="white-section-style py-4 text-center px-4 sm:px-8 lg:px-16">
+       <section className="white-section-style py-4 text-center px-4 sm:px-8 lg:px-16 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:border-primary/40 group cursor-pointer overflow-hidden">
+          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
+          <div className="absolute top-4 right-4 w-6 h-6 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Achieve Similar Results?</h2>
           <p className="text-lg md:text-xl mb-4 max-w-3xl mx-auto">
             Join these successful transportation companies and transform your business operations.
