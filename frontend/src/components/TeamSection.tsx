@@ -17,9 +17,9 @@ const TeamSection = () => {
                 src={teamImage} 
                 alt="Development Team"
                 className="w-full h-[500px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            </div>
+              /></div>
+            
+             
             
 
           {/* Team Content */}
