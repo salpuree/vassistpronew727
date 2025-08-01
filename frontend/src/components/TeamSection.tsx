@@ -18,11 +18,7 @@ const TeamSection = () => {
                 alt="Development Team"
                 className="w-full h-[500px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            </div>
-            <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-primary/20 rounded-full animate-float" />
-            <div className="absolute -top-8 -left-8 w-24 h-24 bg-primary/30 rounded-full animate-float" style={{animationDelay: "2s"}} />
-          </div>
+             
 
           {/* Team Content */}
           <div>
