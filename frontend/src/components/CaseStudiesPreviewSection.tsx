@@ -54,60 +54,58 @@ const CaseStudiesPreviewSection = () => {
           </p>
         </div>
 
-        {/* Preview Case Studies */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {previewCaseStudies.map((study, index) => (
-            <Card key={index} className="card-luxury hover-lift transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${study.bgGradient} rounded-xl flex items-center justify-center text-xl border border-primary/30 mr-4`}>
-                    🚗
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl text-foreground">{study.company}</CardTitle>
-                    <p className="text-primary font-semibold">{study.location}</p>
+        {/* Featured Case Study */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <Card className="card-luxury hover-lift transition-all duration-300">
+            <CardHeader>
+              <div className="flex items-center mb-4">
+                <div className={`w-12 h-12 bg-gradient-to-br ${previewCaseStudies[0].bgGradient} rounded-xl flex items-center justify-center text-xl border border-primary/30 mr-4`}>
+                  🚗
+                </div>
+                <div>
+                  <CardTitle className="text-xl text-foreground">{previewCaseStudies[0].company}</CardTitle>
+                  <p className="text-primary font-semibold">{previewCaseStudies[0].location}</p>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Challenge:</h4>
+                  <p className="text-sm text-muted-foreground">{previewCaseStudies[0].challenge}</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Solution:</h4>
+                  <p className="text-sm text-muted-foreground">{previewCaseStudies[0].solution}</p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Results:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                    {previewCaseStudies[0].results.map((result, rIndex) => (
+                      <div key={rIndex} className="flex justify-between items-center bg-primary/5 rounded-lg p-3">
+                        <span className="text-sm text-foreground">{result.metric}</span>
+                        <span className="text-sm font-bold text-gradient">{result.improvement}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Challenge:</h4>
-                    <p className="text-sm text-muted-foreground">{study.challenge}</p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Solution:</h4>
-                    <p className="text-sm text-muted-foreground">{study.solution}</p>
-                  </div>
 
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Results:</h4>
-                    <div className="grid grid-cols-1 gap-2">
-                      {study.results.map((result, rIndex) => (
-                        <div key={rIndex} className="flex justify-between items-center bg-primary/5 rounded-lg p-3">
-                          <span className="text-sm text-foreground">{result.metric}</span>
-                          <span className="text-sm font-bold text-gradient">{result.improvement}</span>
-                        </div>
-                      ))}
-                    </div>
+                <div className="bg-primary/5 rounded-xl p-4 border border-primary/20">
+                  <div className="flex items-center mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    ))}
                   </div>
-
-                  <div className="bg-primary/5 rounded-xl p-4 border border-primary/20">
-                    <div className="flex items-center mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                      ))}
-                    </div>
-                    <blockquote className="text-sm text-foreground italic mb-2">
-                      "{study.testimonial}"
-                    </blockquote>
-                    <div className="text-xs text-primary font-semibold">— {study.client}</div>
-                  </div>
+                  <blockquote className="text-sm text-foreground italic mb-2">
+                    "{previewCaseStudies[0].testimonial}"
+                  </blockquote>
+                  <div className="text-xs text-primary font-semibold">— {previewCaseStudies[0].client}</div>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* CTA to View All Case Studies */}
