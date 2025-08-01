@@ -219,16 +219,6 @@ const TestimonialsSection = () => {
               </div>
             </div>
           </div>
-
-         
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
-                Start Your Success Story
-              </Button>
-              <Button variant="outline" className="btn-outline-luxury text-lg px-8 py-3 group-hover:scale-105 transition-transform duration-300">
-                Read More Reviews
-              </Button>
-            </div>
           </div>
         </div>
       </div>
