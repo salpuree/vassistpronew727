@@ -98,10 +98,10 @@ const CaseStudiesSection = () => {
               key={study.id}
               onClick={() => setActiveCase(index)}
               variant={activeCase === index ? "default" : "outline"}
-              className={`px-6 py-3 text-sm font-medium transition-all duration-300 ${
+              className={`px-6 py-3 text-sm font-semibold transition-all duration-300 rounded-xl ${
                 activeCase === index 
-                  ? "bg-primary text-white shadow-lg shadow-primary/25 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30" 
-                  : "bg-card text-foreground border-2 border-border hover:border-primary hover:bg-primary/10 hover:text-primary"
+                  ? "bg-gradient-to-r from-primary to-blue-500 text-white shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 border-0" 
+                  : "bg-card/50 text-foreground border border-border/50 hover:border-primary/60 hover:bg-primary/10 hover:text-primary backdrop-blur-sm"
               }`}
             >
               {study.company}
@@ -111,12 +111,12 @@ const CaseStudiesSection = () => {
 
         {/* Main Case Study Display */}
         <div className="max-w-7xl mx-auto mb-16">
-          <Card className="bg-card/80 backdrop-blur-sm border-2 border-border shadow-2xl rounded-3xl overflow-hidden">
+          <Card className="bg-gradient-to-br from-card via-card to-card/95 backdrop-blur-lg border border-border/50 shadow-2xl rounded-3xl overflow-hidden hover:shadow-3xl transition-all duration-500">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Left Side - Company Info & Challenge */}
-              <div className="p-8 lg:p-12 bg-card/90 backdrop-blur-sm">
+              <div className="p-8 lg:p-12 bg-gradient-to-br from-card/95 to-muted/20 border-r border-border/30">
                 <div className="flex items-center mb-8">
-                  <div className={`w-20 h-20 bg-gradient-to-br ${currentCase.bgGradient} rounded-3xl flex items-center justify-center text-3xl border-2 border-primary/30 mr-6 shadow-lg`}>
+                  <div className={`w-20 h-20 bg-gradient-to-br ${currentCase.bgGradient} rounded-3xl flex items-center justify-center text-3xl border border-primary/20 mr-6 shadow-lg`}>
                     {currentCase.image}
                   </div>
                   <div>
@@ -128,45 +128,45 @@ const CaseStudiesSection = () => {
 
                 <div className="flex flex-wrap gap-3 mb-8">
                   {currentCase.tags.map((tag, index) => (
-                    <Badge key={index} variant="secondary" className="bg-primary/10 text-primary border border-primary/20 px-4 py-2 text-sm font-medium">
+                    <Badge key={index} variant="secondary" className="bg-primary/15 text-primary border border-primary/30 px-4 py-2 text-sm font-medium hover:bg-primary/20 transition-colors">
                       {tag}
                     </Badge>
                   ))}
                 </div>
 
-                <div className="space-y-8">
-                  <div className="bg-red-500/10 border-2 border-red-500/20 rounded-2xl p-6">
+                <div className="space-y-6">
+                  <div className="bg-gradient-to-r from-red-500/10 to-red-400/5 border border-red-500/30 rounded-2xl p-6 backdrop-blur-sm">
                     <h4 className="text-xl font-semibold text-foreground mb-4 flex items-center">
                       <Users className="w-6 h-6 text-red-500 mr-3" />
                       The Challenge
                     </h4>
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-base">
                       {currentCase.challenge}
                     </p>
                   </div>
 
-                  <div className="bg-green-500/10 border-2 border-green-500/20 rounded-2xl p-6">
+                  <div className="bg-gradient-to-r from-green-500/10 to-green-400/5 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm">
                     <h4 className="text-xl font-semibold text-foreground mb-4 flex items-center">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                       Our Solution
                     </h4>
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-base">
                       {currentCase.solution}
                     </p>
                   </div>
 
-                  <div className="bg-blue-500/10 border-2 border-blue-500/20 rounded-2xl p-6">
-                    <div className="flex items-center">
+                  <div className="bg-gradient-to-r from-blue-500/10 to-blue-400/5 border border-blue-500/30 rounded-2xl p-6 backdrop-blur-sm">
+                    <div className="flex items-center flex-wrap">
                       <Clock className="w-6 h-6 text-blue-500 mr-3" />
-                      <span className="text-foreground font-semibold text-lg">Implementation Timeline: </span>
-                      <span className="text-primary ml-2 font-bold text-lg">{currentCase.timeline}</span>
+                      <span className="text-foreground font-semibold text-base">Implementation Timeline: </span>
+                      <span className="text-primary ml-2 font-bold text-base">{currentCase.timeline}</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Right Side - Results */}
-              <div className="p-8 lg:p-12 bg-muted/30">
+              <div className="p-8 lg:p-12 bg-gradient-to-br from-muted/30 to-muted/10">
                 <h4 className="text-3xl font-bold text-foreground mb-10 flex items-center">
                   <TrendingUp className="w-8 h-8 text-primary mr-3" />
                   Results Achieved
@@ -174,19 +174,19 @@ const CaseStudiesSection = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
                   {currentCase.results.map((result, index) => (
-                    <div key={index} className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-2xl p-6 shadow-lg hover:shadow-xl hover:border-primary/50 transition-all duration-300">
-                      <div className="text-sm text-muted-foreground mb-3 font-medium uppercase tracking-wide">{result.metric}</div>
-                      <div className="space-y-2">
+                    <div key={index} className="bg-gradient-to-br from-card to-card/90 backdrop-blur-sm border border-border/50 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:border-primary/40 hover:scale-105 transition-all duration-300">
+                      <div className="text-xs text-muted-foreground mb-3 font-medium uppercase tracking-wider">{result.metric}</div>
+                      <div className="space-y-3">
                         <div className="flex items-center justify-between">
-                          <span className="text-red-500 font-medium">Before:</span>
-                          <span className="font-semibold text-foreground">{result.before}</span>
+                          <span className="text-red-500 font-medium text-sm">Before:</span>
+                          <span className="font-semibold text-foreground text-sm">{result.before}</span>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-green-500 font-medium">After:</span>
-                          <span className="font-semibold text-foreground">{result.after}</span>
+                          <span className="text-green-500 font-medium text-sm">After:</span>
+                          <span className="font-semibold text-foreground text-sm">{result.after}</span>
                         </div>
-                        <div className="text-center pt-2 border-t border-border">
-                          <span className="text-2xl font-bold text-primary">{result.improvement}</span>
+                        <div className="text-center pt-3 border-t border-border/50">
+                          <span className="text-xl font-bold text-primary">{result.improvement}</span>
                         </div>
                       </div>
                     </div>
@@ -194,16 +194,16 @@ const CaseStudiesSection = () => {
                 </div>
 
                 {/* Client Testimonial */}
-                <div className="bg-card/80 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-8 shadow-lg">
+                <div className="bg-gradient-to-br from-card to-card/90 backdrop-blur-sm border border-primary/30 rounded-2xl p-8 shadow-lg">
                   <div className="flex items-center mb-6">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <blockquote className="text-foreground text-lg italic mb-6 leading-relaxed">
+                  <blockquote className="text-foreground text-base italic mb-6 leading-relaxed">
                     "{currentCase.testimonial}"
                   </blockquote>
-                  <div className="text-primary font-bold text-lg">
+                  <div className="text-primary font-bold text-base">
                     — {currentCase.clientName}
                   </div>
                 </div>
@@ -213,9 +213,9 @@ const CaseStudiesSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-12 text-center border-2 border-primary/30 shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-blue-500"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-blue-500/5 to-purple-500/5 opacity-50"></div>
+        <div className="relative bg-gradient-to-br from-card via-card to-muted/20 backdrop-blur-lg rounded-3xl p-12 text-center border border-primary/20 shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-blue-500 to-purple-500"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-blue-500/5 opacity-60"></div>
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground group-hover:text-primary transition-colors duration-300">
               Ready to Achieve Similar Results?
@@ -225,16 +225,16 @@ const CaseStudiesSection = () => {
               Let's discuss your specific challenges and create a custom success plan.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
-              <Button className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Button className="bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-600 text-white text-lg px-10 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-semibold">
                 Schedule Strategy Call
                 <ChevronRight className="w-6 h-6 ml-2" />
               </Button>
-              <Button variant="outline" className="bg-card border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-10 py-4 rounded-2xl transition-all duration-300 hover:scale-105">
+              <Button variant="outline" className="bg-card/50 border-2 border-primary/50 text-primary hover:bg-primary hover:text-white hover:border-primary text-lg px-10 py-4 rounded-2xl transition-all duration-300 hover:scale-105 font-semibold backdrop-blur-sm">
                 📄 Download Full Case Studies
               </Button>
             </div>
             <div className="text-center">
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-base font-medium">
                 Get detailed PDF case studies with complete implementation details and ROI analysis
               </p>
             </div>
