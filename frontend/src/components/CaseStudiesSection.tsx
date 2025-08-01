@@ -101,7 +101,7 @@ const CaseStudiesSection = () => {
               className={`px-6 py-3 text-sm font-medium transition-all duration-300 ${
                 activeCase === index 
                   ? "bg-primary text-white shadow-lg shadow-primary/25 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30" 
-                  : "bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-2 border-gray-300 dark:border-gray-600 hover:border-primary hover:bg-primary/10 hover:text-primary"
+                  : "bg-card text-foreground border-2 border-border hover:border-primary hover:bg-primary/10 hover:text-primary"
               }`}
             >
               {study.company}
@@ -111,18 +111,18 @@ const CaseStudiesSection = () => {
 
         {/* Main Case Study Display */}
         <div className="max-w-7xl mx-auto mb-16">
-          <Card className="bg-white dark:bg-card border-2 border-border shadow-2xl rounded-3xl overflow-hidden">
+          <Card className="bg-card/80 backdrop-blur-sm border-2 border-border shadow-2xl rounded-3xl overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Left Side - Company Info & Challenge */}
-              <div className="p-8 lg:p-12 bg-white dark:bg-card">
+              <div className="p-8 lg:p-12 bg-card/90 backdrop-blur-sm">
                 <div className="flex items-center mb-8">
                   <div className={`w-20 h-20 bg-gradient-to-br ${currentCase.bgGradient} rounded-3xl flex items-center justify-center text-3xl border-2 border-primary/30 mr-6 shadow-lg`}>
                     {currentCase.image}
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{currentCase.company}</h3>
+                    <h3 className="text-3xl font-bold text-foreground mb-1">{currentCase.company}</h3>
                     <p className="text-primary font-semibold text-lg">{currentCase.location}</p>
-                    <p className="text-gray-600 dark:text-gray-300">{currentCase.industry}</p>
+                    <p className="text-muted-foreground">{currentCase.industry}</p>
                   </div>
                 </div>
 
@@ -135,30 +135,30 @@ const CaseStudiesSection = () => {
                 </div>
 
                 <div className="space-y-8">
-                  <div className="bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800 rounded-2xl p-6">
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                      <Users className="w-6 h-6 text-red-600 dark:text-red-400 mr-3" />
+                  <div className="bg-red-500/10 border-2 border-red-500/20 rounded-2xl p-6">
+                    <h4 className="text-xl font-semibold text-foreground mb-4 flex items-center">
+                      <Users className="w-6 h-6 text-red-500 mr-3" />
                       The Challenge
                     </h4>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-lg">
                       {currentCase.challenge}
                     </p>
                   </div>
 
-                  <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-200 dark:border-green-800 rounded-2xl p-6">
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                      <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400 mr-3" />
+                  <div className="bg-green-500/10 border-2 border-green-500/20 rounded-2xl p-6">
+                    <h4 className="text-xl font-semibold text-foreground mb-4 flex items-center">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                       Our Solution
                     </h4>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-lg">
                       {currentCase.solution}
                     </p>
                   </div>
 
-                  <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-2xl p-6">
+                  <div className="bg-blue-500/10 border-2 border-blue-500/20 rounded-2xl p-6">
                     <div className="flex items-center">
-                      <Clock className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-3" />
-                      <span className="text-gray-900 dark:text-white font-semibold text-lg">Implementation Timeline: </span>
+                      <Clock className="w-6 h-6 text-blue-500 mr-3" />
+                      <span className="text-foreground font-semibold text-lg">Implementation Timeline: </span>
                       <span className="text-primary ml-2 font-bold text-lg">{currentCase.timeline}</span>
                     </div>
                   </div>
@@ -166,26 +166,26 @@ const CaseStudiesSection = () => {
               </div>
 
               {/* Right Side - Results */}
-              <div className="p-8 lg:p-12 bg-gray-50 dark:bg-gray-900/50">
-                <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 flex items-center">
+              <div className="p-8 lg:p-12 bg-muted/30">
+                <h4 className="text-3xl font-bold text-foreground mb-10 flex items-center">
                   <TrendingUp className="w-8 h-8 text-primary mr-3" />
                   Results Achieved
                 </h4>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
                   {currentCase.results.map((result, index) => (
-                    <div key={index} className="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:border-primary/50 transition-all duration-300">
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mb-3 font-medium uppercase tracking-wide">{result.metric}</div>
+                    <div key={index} className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-2xl p-6 shadow-lg hover:shadow-xl hover:border-primary/50 transition-all duration-300">
+                      <div className="text-sm text-muted-foreground mb-3 font-medium uppercase tracking-wide">{result.metric}</div>
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">
-                          <span className="text-red-600 dark:text-red-400 font-medium">Before:</span>
-                          <span className="font-semibold text-gray-900 dark:text-white">{result.before}</span>
+                          <span className="text-red-500 font-medium">Before:</span>
+                          <span className="font-semibold text-foreground">{result.before}</span>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-green-600 dark:text-green-400 font-medium">After:</span>
-                          <span className="font-semibold text-gray-900 dark:text-white">{result.after}</span>
+                          <span className="text-green-500 font-medium">After:</span>
+                          <span className="font-semibold text-foreground">{result.after}</span>
                         </div>
-                        <div className="text-center pt-2 border-t border-gray-200 dark:border-gray-600">
+                        <div className="text-center pt-2 border-t border-border">
                           <span className="text-2xl font-bold text-primary">{result.improvement}</span>
                         </div>
                       </div>
@@ -194,13 +194,13 @@ const CaseStudiesSection = () => {
                 </div>
 
                 {/* Client Testimonial */}
-                <div className="bg-white dark:bg-gray-800 border-2 border-primary/20 rounded-2xl p-8 shadow-lg">
+                <div className="bg-card/80 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-8 shadow-lg">
                   <div className="flex items-center mb-6">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <blockquote className="text-gray-900 dark:text-white text-lg italic mb-6 leading-relaxed">
+                  <blockquote className="text-foreground text-lg italic mb-6 leading-relaxed">
                     "{currentCase.testimonial}"
                   </blockquote>
                   <div className="text-primary font-bold text-lg">
@@ -213,14 +213,14 @@ const CaseStudiesSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-12 text-center border-2 border-primary/30 shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden">
+        <div className="relative bg-card/80 backdrop-blur-sm rounded-3xl p-12 text-center border-2 border-primary/30 shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-blue-500"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-blue-500/5 to-purple-500/5 opacity-50"></div>
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground group-hover:text-primary transition-colors duration-300">
               Ready to Achieve Similar Results?
             </h2>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-muted-foreground leading-relaxed">
               Join these successful transportation companies and transform your business operations.
               Let's discuss your specific challenges and create a custom success plan.
             </p>
@@ -229,12 +229,12 @@ const CaseStudiesSection = () => {
                 Schedule Strategy Call
                 <ChevronRight className="w-6 h-6 ml-2" />
               </Button>
-              <Button variant="outline" className="bg-white dark:bg-gray-800 border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-10 py-4 rounded-2xl transition-all duration-300 hover:scale-105">
+              <Button variant="outline" className="bg-card border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-10 py-4 rounded-2xl transition-all duration-300 hover:scale-105">
                 📄 Download Full Case Studies
               </Button>
             </div>
             <div className="text-center">
-              <p className="text-gray-600 dark:text-gray-400 text-lg">
+              <p className="text-muted-foreground text-lg">
                 Get detailed PDF case studies with complete implementation details and ROI analysis
               </p>
             </div>
