@@ -16,8 +16,7 @@ const TeamSection = () => {
               <img 
                 src={teamImage} 
                 alt="Development Team"
-                className="w-full h-[500px] object-cover"
-              /></div>
+                className="w-full h-[500px] object-cover"/> </div>
             
              
             
