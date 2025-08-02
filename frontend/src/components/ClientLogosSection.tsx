@@ -161,44 +161,50 @@ const ClientLogosSection = () => {
           ))}
         </div>
 
-        {/* CHANGE: Onboarding Banner and Testimonial now in a 60/40 split grid */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-4 items-center">
-          {/* Onboarding Banner (60% width) */}
-          <div className="lg:col-span-3">
-            <div className="group relative bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-2xl p-6 flex items-center space-x-6 shadow-[0_0_20px_rgba(79,172,254,0.1)] transition-all duration-300 hover:border-cyan-400/50">
-              <div className="relative w-16 h-16 bg-blue-500/10 rounded-xl flex items-center justify-center border border-blue-500/20 flex-shrink-0">
-                <Rocket className="w-8 h-8 text-blue-400" />
-              </div>
-              <div className="relative">
-                <h3 className="text-xl font-bold text-white">
-                  Rapid 24-Hour Onboarding
-                </h3>
-                <p className="text-gray-400 mt-1">
-                  Your dedicated, fully-trained back-office team can be live in
-                  under 24 hours.
-                </p>
+        {/* Onboarding Banner and Testimonial Section */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-20 gap-6 items-stretch">
+            {/* Onboarding Banner (65% width) */}
+            <div className="lg:col-span-13">
+              <div className="group relative bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-2xl p-8 h-full flex items-center shadow-[0_0_20px_rgba(79,172,254,0.1)] transition-all duration-300 hover:border-cyan-400/50">
+                <div className="flex items-center space-x-6 w-full">
+                  <div className="relative w-20 h-20 bg-blue-500/10 rounded-xl flex items-center justify-center border border-blue-500/20 flex-shrink-0">
+                    <Rocket className="w-10 h-10 text-blue-400" />
+                  </div>
+                  <div className="relative flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-3">
+                      Rapid 24-Hour Onboarding
+                    </h3>
+                    <p className="text-gray-400 text-lg leading-relaxed">
+                      Your dedicated, fully-trained back-office team can be live in
+                      under 24 hours. No lengthy setup processes or training delays.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Testimonial (40% width) */}
-          <div className="lg:col-span-2">
-            <div className="relative max-w-md lg:max-w-none mx-auto lg:mx-0">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl rounded-br-md p-4 shadow-lg">
-                <p className="text-white text-base leading-relaxed">
-                  "The 24/7 support has been phenomenal. VAssist Pro transformed
-                  our operation, and the ROI was immediate and substantial."
-                </p>
-              </div>
-              <div className="absolute bottom-0 right-[-10px] w-5 h-5 text-blue-600">
-                <svg viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M0 20 L20 20 L20 0 C15 5, 10 10, 0 20 Z" />
-                </svg>
+            {/* Testimonial (35% width) */}
+            <div className="lg:col-span-7">
+              <div className="h-full flex flex-col justify-center">
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl rounded-br-md p-6 shadow-lg h-full flex items-center">
+                    <p className="text-white text-lg leading-relaxed">
+                      "The 24/7 support has been phenomenal. VAssist Pro transformed
+                      our operation, and the ROI was immediate and substantial."
+                    </p>
+                  </div>
+                  <div className="absolute bottom-0 right-[-10px] w-5 h-5 text-blue-600">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M0 20 L20 20 L20 0 C15 5, 10 10, 0 20 Z" />
+                    </svg>
+                  </div>
+                </div>
+                <footer className="mt-6 not-italic text-base font-semibold text-gray-400 text-right">
+                  — Marcus Thompson, CEO
+                </footer>
               </div>
             </div>
-            <footer className="mt-4 not-italic text-sm font-semibold text-gray-400 text-right">
-              — Marcus Thompson, CEO
-            </footer>
           </div>
         </div>
       </div>
