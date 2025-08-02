@@ -146,68 +146,11 @@ const ClientLogosSection = () => {
 
               {/* Workflow Image */}
               <div className="relative z-10">
-                <svg 
-                  viewBox="0 0 500 300" 
+                <img 
+                  src="/vaboard.png" 
+                  alt="VA Workflow Dashboard"
                   className="w-full h-auto rounded-2xl shadow-2xl"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style={{stopColor:"#1f2a48", stopOpacity:1}} />
-                      <stop offset="50%" style={{stopColor:"#3b82f6", stopOpacity:0.2}} />
-                      <stop offset="100%" style={{stopColor:"#1f2a48", stopOpacity:1}} />
-                    </linearGradient>
-                    <linearGradient id="avatarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style={{stopColor:"#3b82f6", stopOpacity:1}} />
-                      <stop offset="100%" style={{stopColor:"#22d3ee", stopOpacity:1}} />
-                    </linearGradient>
-                    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style={{stopColor:"#3b82f6", stopOpacity:1}} />
-                      <stop offset="100%" style={{stopColor:"#2563eb", stopOpacity:1}} />
-                    </linearGradient>
-                  </defs>
-                  
-                  <rect width="500" height="300" fill="url(#gradient)" rx="20"/>
-                  
-                  {/* Social Media Management */}
-                  <rect x="50" y="40" width="160" height="35" fill="#ffffff" rx="18"/>
-                  <text x="130" y="60" fill="#373737" fontFamily="Arial" fontSize="12" textAnchor="middle">Social Media Management</text>
-                  
-                  {/* Email Marketing */}
-                  <rect x="270" y="60" width="130" height="30" fill="#ffffff" rx="15"/>
-                  <text x="335" y="78" fill="#373737" fontFamily="Arial" fontSize="10" textAnchor="middle">Email Marketing</text>
-                  
-                  {/* Content Creation */}
-                  <rect x="90" y="100" width="120" height="30" fill="#ffffff" rx="15"/>
-                  <text x="150" y="118" fill="#373737" fontFamily="Arial" fontSize="10" textAnchor="middle">Content Creation</text>
-                  
-                  {/* Customer Support */}
-                  <rect x="50" y="160" width="140" height="30" fill="#ffffff" rx="15"/>
-                  <text x="120" y="178" fill="#373737" fontFamily="Arial" fontSize="10" textAnchor="middle">Customer Support</text>
-                  
-                  {/* Data Entry */}
-                  <rect x="130" y="200" width="90" height="30" fill="#ffffff" rx="15"/>
-                  <text x="175" y="218" fill="#373737" fontFamily="Arial" fontSize="10" textAnchor="middle">Data Entry</text>
-                  
-                  {/* Central VA */}
-                  <circle cx="250" cy="150" r="45" fill="url(#avatarGradient)"/>
-                  <text x="250" y="155" fill="#ffffff" fontFamily="Arial" fontSize="20" textAnchor="middle">👩‍💼</text>
-                  
-                  {/* Chat Bubbles */}
-                  <rect x="320" y="40" width="150" height="45" fill="#ffffff" rx="20"/>
-                  <text x="395" y="55" fill="#373737" fontFamily="Arial" fontSize="9" textAnchor="middle">All reservations have been</text>
-                  <text x="395" y="68" fill="#373737" fontFamily="Arial" fontSize="9" textAnchor="middle">put in, QC'd and sent confirmations!!</text>
-                  
-                  <rect x="380" y="90" width="80" height="20" fill="#ff6524" rx="10"/>
-                  <text x="420" y="102" fill="#ffffff" fontFamily="Arial" fontSize="8" textAnchor="middle">Limo Anywhere</text>
-                  
-                  <rect x="300" y="140" width="170" height="45" fill="url(#blueGradient)" rx="20"/>
-                  <text x="385" y="155" fill="#ffffff" fontFamily="Arial" fontSize="9" textAnchor="middle">VA: Completed the social media</text>
-                  <text x="385" y="168" fill="#ffffff" fontFamily="Arial" fontSize="9" textAnchor="middle">posts for this week. Please review!</text>
-                  
-                  <rect x="320" y="210" width="140" height="30" fill="#ffffff" rx="15"/>
-                  <text x="390" y="228" fill="#373737" fontFamily="Arial" fontSize="9" textAnchor="middle">Client: Excellent, thanks!</text>
-                </svg>
+                />
               </div>
             </div>
           </div>
