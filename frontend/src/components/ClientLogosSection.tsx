@@ -163,9 +163,9 @@ const ClientLogosSection = () => {
 
         {/* Onboarding Banner and Testimonial Section */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-20 gap-6 items-stretch">
+          <div className="flex flex-col lg:flex-row gap-6 items-stretch">
             {/* Onboarding Banner (65% width) */}
-            <div className="lg:col-span-13">
+            <div className="lg:w-[65%]">
               <div className="group relative bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-2xl p-8 h-full flex items-center shadow-[0_0_20px_rgba(79,172,254,0.1)] transition-all duration-300 hover:border-cyan-400/50">
                 <div className="flex items-center space-x-6 w-full">
                   <div className="relative w-20 h-20 bg-blue-500/10 rounded-xl flex items-center justify-center border border-blue-500/20 flex-shrink-0">
@@ -185,7 +185,7 @@ const ClientLogosSection = () => {
             </div>
 
             {/* Testimonial (35% width) - iPhone Message Bubble Style */}
-            <div className="lg:col-span-7">
+            <div className="lg:w-[35%]">
               <div className="h-full flex flex-col justify-center">
                 <div className="relative max-w-sm ml-auto">
                   {/* iPhone Message Bubble */}
