@@ -133,6 +133,21 @@ const ClientLogosSection = () => {
       />
 
       <div className="relative z-10 container mx-auto px-4">
+        {/* Trust Statistics at Top */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-12">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              Trusted by Industry Leaders
+            </span>
+          </h2>
+          
+          {/* Trust Statistics Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-12 max-w-4xl mx-auto">
+            {trustStats.map((stat, index) => (
+              <StatItem key={index} stat={stat} />
+            ))}
+          </div>
+        </div>
         {/* Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
 
@@ -147,7 +162,7 @@ const ClientLogosSection = () => {
               {/* Workflow Image */}
               <div className="relative z-10">
                 <img 
-                  src="/vaboard.png" 
+                  src="./vaboard.png" 
                   alt="VA Workflow Dashboard"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
@@ -204,13 +219,6 @@ const ClientLogosSection = () => {
                 <span className="mr-3">See How We Can Help Your Business</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
-            </div>
-
-            {/* Trust Statistics */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-gray-700/50">
-              {trustStats.map((stat, index) => (
-                <StatItem key={index} stat={stat} />
-              ))}
             </div>
           </div>
         </div>
