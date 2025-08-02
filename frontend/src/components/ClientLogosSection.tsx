@@ -146,11 +146,68 @@ const ClientLogosSection = () => {
 
               {/* Workflow Image */}
               <div className="relative z-10">
-                <img 
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDUwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgcng9IjIwIi8+CjwhLS0gU29jaWFsIE1lZGlhIE1hbmFnZW1lbnQgLS0+CjxyZWN0IHg9IjUwIiB5PSI0MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIzNSIgZmlsbD0iI2ZmZmZmZiIgcng9IjE4Ii8+Cjx0ZXh0IHg9IjEzMCIgeT0iNjAiIGZpbGw9IiMzNzM3MzciIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U29jaWFsIE1lZGlhIE1hbmFnZW1lbnQ8L3RleHQ+CjwhLS0gRW1haWwgTWFya2V0aW5nIC0tPgo8cmVjdCB4PSIyNzAiIHk9IjYwIiB3aWR0aD0iMTMwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmZmZmZmIiByeD0iMTUiLz4KPHRleHQgeD0iMzM1IiB5PSI3OCIgZmlsbD0iIzM3MzczNyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FbWFpbCBNYXJrZXRpbmc8L3RleHQ+CjwhLS0gQ29udGVudCBDcmVhdGlvbiAtLT4KPHJlY3QgeD0iOTAiIHk9IjEwMCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiIgcng9IjE1Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTE4IiBmaWxsPSIjMzczNzM3IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNvbnRlbnQgQ3JlYXRpb248L3RleHQ+CjwhLS0gQ3VzdG9tZXIgU3VwcG9ydCAtLT4KPHJlY3QgeD0iNTAiIHk9IjE2MCIgd2lkdGg9IjE0MCIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiIgcng9IjE1Ii8+Cjx0ZXh0IHg9IjEyMCIgeT0iMTc4IiBmaWxsPSIjMzczNzM3IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkN1c3RvbWVyIFN1cHBvcnQ8L3RleHQ+CjwhLS0gRGF0YSBFbnRyeSAtLT4KPHJlY3QgeD0iMTMwIiB5PSIyMDAiIHdpZHRoPSI5MCIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiIgcng9IjE1Ii8+Cjx0ZXh0IHg9IjE3NSIgeT0iMjE4IiBmaWxsPSIjMzczNzM3IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkRhdGEgRW50cnk8L3RleHQ+CjwhLS0gQ2VudHJhbCBWQSAtLT4KPGNpcmNsZSBjeD0iMjUwIiBjeT0iMTUwIiByPSI0NSIgZmlsbD0idXJsKCNhdmF0YXJHcmFkaWVudCkiLz4KPHRleHQgeD0iMjUwIiB5PSIxNTUiIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+8J+RqeKAjfC/kjw8L3RleHQ+CjwhLS0gQ2hhdCBCdWJibGVzIC0tPgo8cmVjdCB4PSIzMjAiIHk9IjQwIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjQ1IiBmaWxsPSIjZmZmZmZmIiByeD0iMjAiLz4KPHRleHQgeD0iMzk1IiB5PSI1NSIgZmlsbD0iIzM3MzczNyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjkiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFsbCByZXNlcnZhdGlvbnMgaGF2ZSBiZWVuPC90ZXh0Pgo8dGV4dCB4PSIzOTUiIHk9IjY4IiBmaWxsPSIjMzczNzM3IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iOSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+cHV0IGluLCBRQydkIGFuZCBzZW50IGNvbmZpcm1hdGlvbnMhITwvdGV4dD4KPHJlY3QgeD0iMzgwIiB5PSI5MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZmY2NTI0IiByeD0iMTAiLz4KPHRleHQgeD0iNDIwIiB5PSIxMDIiIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5MaW1vIEFueXdoZXJlPC90ZXh0Pgo8cmVjdCB4PSIzMDAiIHk9IjE0MCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSI0NSIgZmlsbD0idXJsKCNibHVlR3JhZGllbnQpIiByeD0iMjAiLz4KPHRleHQgeD0iMzg1IiB5PSIxNTUiIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5WQTogQ29tcGxldGVkIHRoZSBzb2NpYWwgbWVkaWE8L3RleHQ+Cjx0ZXh0IHg9IjM4NSIgeT0iMTY4IiBmaWxsPSIjZmZmZmZmIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iOSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+cG9zdHMgZm9yIEhldHUgd2Vlay4gUGxlYXNlIHJldmlldyE8L3RleHQ+CjxyZWN0IHg9IjMyMCIgeT0iMjEwIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmZmZmZmIiByeD0iMTUiLz4KPHR0ZXh0IHg9IjM5MCIgeT0iMjI4IiBmaWxsPSIjMzczNzM3IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iOSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2xpZW50OiBFeGNlbGxlbnQsIHRoYW5rcyE8L3RleHQ+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzFmMmE0ODtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMzYjgyZjY7c3RvcC1vcGFjaXR5OjAuMiIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMWYyYTQ4O3N0b3Atb3BhY2l0eToxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9ImF2YXRhckdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzNiODJmNjtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMjJkM2VlO3N0b3Atb3BhY2l0eToxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9ImJsdWVHcmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMzYjgyZjY7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzI1NjNlYjtzdG9wLW9wYWNpdHk6MSIgLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K"
-                  alt="VA Workflow"
+                <svg 
+                  viewBox="0 0 500 300" 
                   className="w-full h-auto rounded-2xl shadow-2xl"
-                />
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style={{stopColor:"#1f2a48", stopOpacity:1}} />
+                      <stop offset="50%" style={{stopColor:"#3b82f6", stopOpacity:0.2}} />
+                      <stop offset="100%" style={{stopColor:"#1f2a48", stopOpacity:1}} />
+                    </linearGradient>
+                    <linearGradient id="avatarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style={{stopColor:"#3b82f6", stopOpacity:1}} />
+                      <stop offset="100%" style={{stopColor:"#22d3ee", stopOpacity:1}} />
+                    </linearGradient>
+                    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style={{stopColor:"#3b82f6", stopOpacity:1}} />
+                      <stop offset="100%" style={{stopColor:"#2563eb", stopOpacity:1}} />
+                    </linearGradient>
+                  </defs>
+                  
+                  <rect width="500" height="300" fill="url(#gradient)" rx="20"/>
+                  
+                  {/* Social Media Management */}
+                  <rect x="50" y="40" width="160" height="35" fill="#ffffff" rx="18"/>
+                  <text x="130" y="60" fill="#373737" fontFamily="Arial" fontSize="12" textAnchor="middle">Social Media Management</text>
+                  
+                  {/* Email Marketing */}
+                  <rect x="270" y="60" width="130" height="30" fill="#ffffff" rx="15"/>
+                  <text x="335" y="78" fill="#373737" fontFamily="Arial" fontSize="10" textAnchor="middle">Email Marketing</text>
+                  
+                  {/* Content Creation */}
+                  <rect x="90" y="100" width="120" height="30" fill="#ffffff" rx="15"/>
+                  <text x="150" y="118" fill="#373737" fontFamily="Arial" fontSize="10" textAnchor="middle">Content Creation</text>
+                  
+                  {/* Customer Support */}
+                  <rect x="50" y="160" width="140" height="30" fill="#ffffff" rx="15"/>
+                  <text x="120" y="178" fill="#373737" fontFamily="Arial" fontSize="10" textAnchor="middle">Customer Support</text>
+                  
+                  {/* Data Entry */}
+                  <rect x="130" y="200" width="90" height="30" fill="#ffffff" rx="15"/>
+                  <text x="175" y="218" fill="#373737" fontFamily="Arial" fontSize="10" textAnchor="middle">Data Entry</text>
+                  
+                  {/* Central VA */}
+                  <circle cx="250" cy="150" r="45" fill="url(#avatarGradient)"/>
+                  <text x="250" y="155" fill="#ffffff" fontFamily="Arial" fontSize="20" textAnchor="middle">👩‍💼</text>
+                  
+                  {/* Chat Bubbles */}
+                  <rect x="320" y="40" width="150" height="45" fill="#ffffff" rx="20"/>
+                  <text x="395" y="55" fill="#373737" fontFamily="Arial" fontSize="9" textAnchor="middle">All reservations have been</text>
+                  <text x="395" y="68" fill="#373737" fontFamily="Arial" fontSize="9" textAnchor="middle">put in, QC'd and sent confirmations!!</text>
+                  
+                  <rect x="380" y="90" width="80" height="20" fill="#ff6524" rx="10"/>
+                  <text x="420" y="102" fill="#ffffff" fontFamily="Arial" fontSize="8" textAnchor="middle">Limo Anywhere</text>
+                  
+                  <rect x="300" y="140" width="170" height="45" fill="url(#blueGradient)" rx="20"/>
+                  <text x="385" y="155" fill="#ffffff" fontFamily="Arial" fontSize="9" textAnchor="middle">VA: Completed the social media</text>
+                  <text x="385" y="168" fill="#ffffff" fontFamily="Arial" fontSize="9" textAnchor="middle">posts for this week. Please review!</text>
+                  
+                  <rect x="320" y="210" width="140" height="30" fill="#ffffff" rx="15"/>
+                  <text x="390" y="228" fill="#373737" fontFamily="Arial" fontSize="9" textAnchor="middle">Client: Excellent, thanks!</text>
+                </svg>
               </div>
             </div>
           </div>
