@@ -184,23 +184,32 @@ const ClientLogosSection = () => {
               </div>
             </div>
 
-            {/* Testimonial (35% width) */}
+            {/* Testimonial (35% width) - iPhone Message Bubble Style */}
             <div className="lg:col-span-7">
               <div className="h-full flex flex-col justify-center">
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl rounded-br-md p-6 shadow-lg h-full flex items-center">
-                    <p className="text-white text-lg leading-relaxed">
+                <div className="relative max-w-sm ml-auto">
+                  {/* iPhone Message Bubble */}
+                  <div className="relative bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl rounded-br-md p-4 shadow-lg">
+                    <p className="text-white text-base leading-relaxed font-normal">
                       "The 24/7 support has been phenomenal. VAssist Pro transformed
                       our operation, and the ROI was immediate and substantial."
                     </p>
+                    {/* Message Tail */}
+                    <div className="absolute bottom-0 right-[-8px] w-0 h-0 border-l-[16px] border-l-blue-600 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent"></div>
                   </div>
-                  <div className="absolute bottom-0 right-[-10px] w-5 h-5 text-blue-600">
-                    <svg viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M0 20 L20 20 L20 0 C15 5, 10 10, 0 20 Z" />
-                    </svg>
+                  
+                  {/* Message Status Indicators */}
+                  <div className="flex items-center justify-end mt-1 mr-2 space-x-1">
+                    <span className="text-xs text-gray-400">Delivered</span>
+                    <div className="flex space-x-0.5">
+                      <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
+                      <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
+                    </div>
                   </div>
                 </div>
-                <footer className="mt-6 not-italic text-base font-semibold text-gray-400 text-right">
+                
+                {/* Attribution */}
+                <footer className="mt-4 text-sm font-medium text-gray-400 text-right">
                   — Marcus Thompson, CEO
                 </footer>
               </div>
