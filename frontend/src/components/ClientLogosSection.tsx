@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect, useRef } from "react";
-import { Award, Shield, Users, Star, Rocket } from "lucide-react";
+import { Award, Shield, Users, Star, MessageCircle, Calendar, Mail, BarChart3, FileText, Camera, Headphones, Database, Smartphone, CheckCircle, Sparkles } from "lucide-react";
 
 // --- Data ---
 const trustStats = [
@@ -25,6 +26,49 @@ const trustStats = [
   },
 ];
 
+const services = [
+  { name: "Social Media Management", icon: Camera, position: { top: "15%", left: "5%" } },
+  { name: "Content Creation", icon: FileText, position: { top: "35%", left: "8%" } },
+  { name: "Customer Support", icon: Headphones, position: { top: "55%", left: "5%" } },
+  { name: "Data Entry", icon: Database, position: { top: "75%", left: "12%" } },
+  { name: "Email Marketing", icon: Mail, position: { top: "20%", left: "25%" } },
+  { name: "Bookkeeping", icon: BarChart3, position: { top: "85%", left: "35%" } },
+  { name: "Scheduling", icon: Calendar, position: { top: "25%", right: "25%" } },
+];
+
+const chatMessages = [
+  {
+    type: "client",
+    message: "All reservations have been put in, QC'd and sent confirmations!!",
+    position: { top: "8%", right: "15%" },
+    avatar: "👤"
+  },
+  {
+    type: "va",
+    message: "VA: Completed the social media posts for Hetu week. Please review!",
+    position: { top: "35%", right: "8%" },
+    avatar: "👩‍💼"
+  },
+  {
+    type: "client",
+    message: "Client: Looks great! ? Can you also draft an email newsletter for new product launch?",
+    position: { top: "50%", right: "15%" },
+    avatar: "👤"
+  },
+  {
+    type: "va",
+    message: "VA: Yes, working on it now. Will share a draft by end the day.",
+    position: { top: "70%", right: "25%" },
+    avatar: "👩‍💼"
+  },
+  {
+    type: "client",
+    message: "Client: Excellent, thanks!",
+    position: { top: "85%", right: "35%" },
+    avatar: "👤"
+  }
+];
+
 // --- Custom Hook for Number Animation ---
 const useCountUp = (end, duration = 2, inView) => {
   const [count, setCount] = useState(0);
@@ -37,7 +81,7 @@ const useCountUp = (end, duration = 2, inView) => {
     let frame = 0;
     const counter = setInterval(() => {
       frame++;
-      const progress = (frame / totalFrames) ** 2; // Ease-out effect
+      const progress = (frame / totalFrames) ** 2;
 
       if (end.toString().includes(".")) {
         const currentCount = parseFloat((end * progress).toFixed(1));
@@ -59,7 +103,7 @@ const useCountUp = (end, duration = 2, inView) => {
   return count;
 };
 
-// --- Reusable StatItem Component (Cardless Version) ---
+// --- Reusable StatItem Component ---
 const StatItem = ({ stat }) => {
   const itemRef = useRef(null);
   const [inView, setInView] = useState(false);
@@ -99,6 +143,66 @@ const StatItem = ({ stat }) => {
   );
 };
 
+// --- Service Badge Component ---
+const ServiceBadge = ({ service }) => {
+  const IconComponent = service.icon;
+  return (
+    <div 
+      className="absolute bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-gray-200/50 animate-float"
+      style={service.position}
+    >
+      <div className="flex items-center space-x-2">
+        <IconComponent className="w-5 h-5 text-blue-600" />
+        <span className="text-sm font-medium text-gray-800 whitespace-nowrap">
+          {service.name}
+        </span>
+      </div>
+    </div>
+  );
+};
+
+// --- Chat Message Component ---
+const ChatMessage = ({ message, index }) => {
+  const isVA = message.type === "va";
+  const isClient = message.type === "client";
+  
+  return (
+    <div 
+      className="absolute animate-fade-in"
+      style={{
+        ...message.position,
+        animationDelay: `${index * 0.5}s`
+      }}
+    >
+      <div className={`max-w-xs ${isClient ? 'ml-auto' : ''}`}>
+        <div className={`rounded-2xl p-3 shadow-lg ${
+          isVA 
+            ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-br-md' 
+            : 'bg-white text-gray-800 border border-gray-200'
+        }`}>
+          <p className="text-sm leading-relaxed">
+            {message.message}
+          </p>
+          {isVA && (
+            <div className="flex items-center mt-2">
+              <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                <span className="text-xs">👩‍💼</span>
+              </div>
+            </div>
+          )}
+        </div>
+        {isVA && (
+          <div className="absolute bottom-0 right-[-8px] w-4 h-4 text-blue-600">
+            <svg viewBox="0 0 16 16" fill="currentColor">
+              <path d="M0 16 L16 16 L16 0 C12 4, 8 8, 0 16 Z" />
+            </svg>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 // --- Main Section Component ---
 const ClientLogosSection = () => {
   const [backgroundShineStyle, setBackgroundShineStyle] = useState({});
@@ -120,12 +224,12 @@ const ClientLogosSection = () => {
 
   return (
     <section
-      className="relative pt-8 pb-10 bg-gray-900 text-white font-sans overflow-hidden"
+      className="relative pt-16 pb-20 bg-gradient-to-br from-gray-900 via-blue-900/20 to-gray-900 text-white font-sans overflow-hidden"
       onMouseMove={handleSectionMouseMove}
       onMouseLeave={handleSectionMouseLeave}
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(29,78,216,0.08)_0%,_rgba(29,78,216,0)_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.1)_0%,_rgba(59,130,246,0)_70%)]"></div>
       </div>
       <div
         className="absolute inset-0 z-0 pointer-events-none transition-opacity duration-500"
@@ -133,83 +237,100 @@ const ClientLogosSection = () => {
       />
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center mb-10">
+        <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-600/30 border border-blue-200/20 mb-6">
             <Shield className="w-5 h-5 text-blue-400 mr-2" />
-            <span className="text-blue-20 font-semibold">
-              Trusted by Industry Leaders
+            <span className="text-blue-200 font-semibold">
+              Your Virtual Assistant Team in Action
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              Trusted by
+              See How We Work
             </span>
             <span className="block text-gray-100">
-              Transportation Companies Nationwide
+              Behind the Scenes for You
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Join hundreds of luxury transportation companies who trust us with
-            their technology and operations.
+          <p className="text-xl text-gray-400 max-w-4xl mx-auto">
+            From managing your reservations to handling social media, our dedicated team seamlessly integrates 
+            with your business operations - here's a glimpse into their daily workflow.
           </p>
         </div>
 
-        {/* Trust Statistics (Cardless) */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-4xl mx-auto mb-16">
+        {/* Interactive Workflow Visualization */}
+        <div className="relative max-w-6xl mx-auto">
+          {/* Background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-cyan-500/5 to-purple-500/10 rounded-3xl"></div>
+          
+          {/* Central VA Avatar */}
+          <div className="relative z-20 flex justify-center py-20">
+            <div className="relative">
+              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 p-1 animate-pulse-soft">
+                <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
+                  <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center">
+                    <span className="text-4xl">👩‍💼</span>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
+                <div className="bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-lg">
+                  <span className="text-sm font-semibold text-gray-800">Your VA Team</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Service Badges */}
+          {services.map((service, index) => (
+            <ServiceBadge key={index} service={service} />
+          ))}
+
+          {/* Chat Messages */}
+          {chatMessages.map((message, index) => (
+            <ChatMessage key={index} message={message} index={index} />
+          ))}
+
+          {/* Software Icons */}
+          <div className="absolute top-1/4 right-1/3 animate-float" style={{animationDelay: "1s"}}>
+            <div className="bg-orange-500 rounded-lg p-3 shadow-lg">
+              <span className="text-white font-bold text-sm">Limo Anywhere</span>
+            </div>
+          </div>
+
+          <div className="absolute top-2/3 left-1/4 animate-float" style={{animationDelay: "2s"}}>
+            <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg p-3 shadow-lg">
+              <span className="text-white font-bold text-sm">Front</span>
+            </div>
+          </div>
+
+          <div className="absolute bottom-1/4 right-1/4 animate-float" style={{animationDelay: "3s"}}>
+            <div className="bg-green-500 rounded-lg p-3 shadow-lg">
+              <span className="text-white font-bold text-sm">Canva</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust Statistics */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-4xl mx-auto mt-20">
           {trustStats.map((stat, index) => (
             <StatItem key={index} stat={stat} />
           ))}
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-          {/* Onboarding Banner (60% width) */}
-          <div className="lg:col-span-3">
-            <div className="group relative bg-gradient-to-r from-blue-600/20 to-cyan-600/10 border border-blue-500/60 rounded-2xl p-6 flex items-center space-x-6 shadow-[0_0_20px_rgba(79,172,254,0.1)] transition-all duration-300 hover:border-cyan-400/50">
-              <div className="relative w-16 h-16 bg-blue-500/10 rounded-xl flex items-center justify-center border border-blue-500/20 flex-shrink-0">
-                {/* CHANGE: Added group-hover effect to Rocket icon */}
-                <Rocket className="w-8 h-8 text-blue-400 transition-colors duration-300 group-hover:text-cyan-400" />
-              </div>
-              <div className="relative">
-                <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-cyan-400">
-                  Rapid 24-Hour Onboarding
-                </h3>
-                <p className="text-gray-400 mt-1">
-                  Your dedicated, fully-trained back-office team can be live in
-                  under 24 hours.
-                </p>
-              </div>
-            </div>
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-600/20 border border-green-400/30 mb-4">
+            <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+            <span className="text-green-300 font-semibold">Ready to Get Started?</span>
           </div>
-
-          {/* Testimonial (40% width) */}
-          <div className="lg:col-span-2">
-            <div className="relative max-w-md lg:max-w-none mx-auto lg:mx-0">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl rounded-br-md p-4 shadow-lg">
-                <p className="text-white text-base leading-relaxed">
-                  "The 24/7 support has been phenomenal. VAssist Pro transformed
-                  our operation, and the ROI was immediate and substantial."
-                </p>
-                {/* CHANGE: Moved footer inside the bubble */}
-                <footer className="mt-3 not-italic text-sm font-semibold text-blue-200 text-right">
-                  — Marcus Thompson, CEO
-                </footer>
-              </div>
-              <div className="absolute bottom-0 right-[-10px] w-5 h-5 text-blue-600">
-                <svg viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M0 20 L20 20 L20 0 C15 5, 10 10, 0 20 Z" />
-                </svg>
-              </div>
-            </div>
-          </div>
+          <p className="text-lg text-gray-400 mb-6">
+            See how our team can transform your business operations in just 24 hours
+          </p>
         </div>
       </div>
     </section>
   );
 };
 
-// For this example to be runnable, we need a root component.
-const App = () => {
-  return <ClientLogosSection />;
-};
-
-export default App;
+export default ClientLogosSection;
