@@ -162,7 +162,7 @@ const ClientLogosSection = () => {
               {/* Workflow Image */}
               <div className="relative z-10">
                 <img 
-                  src="./vaboard.png" 
+                  src="/vaboard.png" 
                   alt="VA Workflow Dashboard"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
