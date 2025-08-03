@@ -64,17 +64,17 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/95" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/50 via-purple-700/20 via-black/40 to-blue-600/60"/>
       </div>
 
       {/* Floating Elements - Mobile Safe */}
-      <div className="absolute top-10 left-4 md:left-10 w-12 md:w-16 h-12 md:h-16 bg-primary/20 rounded-full animate-float animate-pulse-soft z-10" />
+      <div className="absolute top-10 left-4 md:left-10 w-12 md:w-16 h-12 md:h-16 bg-blue-500/20 rounded-full animate-float animate-pulse-soft z-10" />
       <div
-        className="absolute bottom-32 right-4 md:right-16 w-10 md:w-12 h-10 md:h-12 bg-primary/30 rounded-full animate-bounce-soft z-10"
+        className="absolute bottom-32 right-4 md:right-16 w-10 md:w-12 h-10 md:h-12 bg-purple-500/20 rounded-full animate-bounce-soft z-10"
         style={{ animationDelay: "2s" }}
       />
       <div
-        className="absolute top-1/2 right-8 md:right-32 w-6 md:w-8 h-6 md:h-8 bg-primary/40 rounded-full animate-float animate-glow z-10"
+        className="absolute top-1/2 right-8 md:right-32 w-6 md:w-8 h-6 md:h-8 bg-purple-500/20 rounded-full animate-float animate-glow z-10"
         style={{ animationDelay: "4s" }}
       />
       <div
