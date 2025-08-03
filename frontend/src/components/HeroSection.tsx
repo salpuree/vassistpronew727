@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import {
@@ -6,8 +7,35 @@ import {
   Zap,
   Globe,
 } from "lucide-react";
-import TypewriterEffect from "./TypewriterEffect"; // Restored import for your separate component
-import heroImage from "../assets/hero-luxury-transport.jpg"; // Restored original image import
+import TypewriterEffect from "./TypewriterEffect";
+import heroImage from "../assets/hero-luxury-transport.jpg";
+
+// Icon Components
+const CheckCircleIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+    <polyline points="22 4 12 14.01 9 11.01"/>
+  </svg>
+);
+
+const AwardIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="8" r="6" />
+    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+  </svg>
+);
+
+const ShieldIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+  </svg>
+);
+
+const StarIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+  </svg>
+);
 
 // Main HeroSection Component
 const HeroSection = () => {
@@ -29,21 +57,28 @@ const HeroSection = () => {
     { name: "Prestige Transport Co.", logo: "👑" },
   ];
 
+  // Stats data array
+  const stats = [
+    { icon: <CheckCircleIcon />, value: "Proven", label: "Reliability" },
+    { icon: <AwardIcon />, value: "15+", label: "Years Experience" },
+    { icon: <ShieldIcon />, value: "100%", label: "Discretion Assured" },
+    { icon: <StarIcon />, value: "5-Star", label: "Service Standard" },
+  ];
+
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden pt-20 pb-32">
       {/* Background Image with a subtle overlay */}
       <div className="absolute inset-0 z-0">
-        {/* Restored original image variable */}
         <img
           src={heroImage}
           alt="Luxury Transportation"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
-        {/* The overlay darkens the image slightly to ensure text is readable */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/80 to-background/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/95" />
       </div>
 
-      {/* Decorative floating elements for visual interest */}
+      {/* Floating Elements - Mobile Safe */}
       <div className="absolute top-10 left-4 md:left-10 w-12 md:w-16 h-12 md:h-16 bg-blue-500/20 rounded-full animate-float animate-pulse-soft z-10" />
       <div
         className="absolute bottom-32 right-4 md:right-16 w-10 md:w-12 h-10 md:h-12 bg-blue-500/20 rounded-full animate-bounce-soft z-10"
@@ -103,53 +138,20 @@ const HeroSection = () => {
               Learn More
             </Button>
           </div>
-        </div>
-      </div>
-      const CheckCircleIcon = () => (
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-            <polyline points="22 4 12 14.01 9 11.01"/>
-        </svg>
-      );
-      const AwardIcon = () => (
-      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="8" r="6" />
-        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
-      </svg>
-      );
-      const ShieldIcon = () => (
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        </svg>
-      );
-      const StarIcon = () => (
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-        </svg>
-      );
 
-
-      // --- JSX for the Stats Section ---
-
-      // 1. Define the stats data array inside your HeroSection component
-      const stats = [
-        { icon: <CheckCircleIcon />, value: "Proven", label: "Reliability" },
-        { icon: <AwardIcon />, value: "15+", label: "Years Experience" },
-        { icon: <ShieldIcon />, value: "100%", label: "Discretion Assured" },
-        { icon: <StarIcon />, value: "5-Star", label: "Service Standard" },
-      ];
-
-      // 2. Add this JSX div where you want the stats to appear (e.g., after the buttons)
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-      {stats.map((stat, index) => (
-        <div key={index} className="flex flex-col items-center gap-3">
-          <div className="text-[#06B6D4]" style={{ filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.6))' }}>
-            {stat.icon}
+          {/* Stats Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="flex flex-col items-center gap-3">
+                <div className="text-primary" style={{ filter: 'drop-shadow(0 0 8px rgba(192, 192, 192, 0.6))' }}>
+                  {stat.icon}
+                </div>
+                <p className="text-4xl font-bold text-white tracking-tighter">{stat.value}</p>
+                <p className="text-sm font-medium text-white/70 tracking-wider uppercase">{stat.label}</p>
+              </div>
+            ))}
           </div>
-          <p className="text-4xl font-bold text-white tracking-tighter">{stat.value}</p>
-          <p className="text-sm font-medium text-white/70 tracking-wider uppercase">{stat.label}</p>
         </div>
-      ))}
       </div>
 
       {/* Scrolling Client Logos at the bottom */}
