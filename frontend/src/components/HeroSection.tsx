@@ -1,95 +1,63 @@
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   Code,
   Zap,
   Globe,
-  Clock,
-  Users,
-  CheckCircle,
-  Shield,
 } from "lucide-react";
-import heroImage from "../assets/hero-luxury-transport.jpg";
-import TypewriterEffect from "./TypewriterEffect";
+import TypewriterEffect from "./TypewriterEffect"; // Restored import for your separate component
+import heroImage from "../assets/hero-luxury-transport.jpg"; // Restored original image import
+
+// Main HeroSection Component
 const HeroSection = () => {
+  // Refined, benefit-focused words for the typewriter effect.
   const rotatingWords = [
-    "24/7 remote team.",
-    "flawless operations.",
-    "happier clients.",
-    "effortless growth.",
-    "peace of mind.",
-    "reduced overhead.",
-    "success team.",
+    "Flawless Operations.",
+    "Happier Clients.",
+    "Effortless Growth.",
+    "Peace of Mind.",
   ];
+
+  // Client logos for the scrolling marquee at the bottom.
   const clientLogos = [
-    {
-      name: "Elite Transportation Group",
-      logo: "🚗",
-      industry: "Luxury Ground Transportation",
-    },
-    {
-      name: "Metropolitan Limousines",
-      logo: "🏙️",
-      industry: "Corporate Transportation",
-    },
-    {
-      name: "Premier Executive Services",
-      logo: "⭐",
-      industry: "Executive Transportation",
-    },
-    {
-      name: "Luxury Fleet Solutions",
-      logo: "💼",
-      industry: "Fleet Management",
-    },
-    {
-      name: "Black Car Network",
-      logo: "🌟",
-      industry: "Premium Transportation",
-    },
-    {
-      name: "Prestige Transport Co.",
-      logo: "👑",
-      industry: "VIP Services",
-    },
+    { name: "Elite Transportation Group", logo: "🚗" },
+    { name: "Metropolitan Limousines", logo: "🏙️" },
+    { name: "Premier Executive Services", logo: "⭐" },
+    { name: "Luxury Fleet Solutions", logo: "💼" },
+    { name: "Black Car Network", logo: "🌟" },
+    { name: "Prestige Transport Co.", logo: "👑" },
   ];
 
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden pt-20 pb-32">
-      {/* Background Image with Overlay */}
+      {/* Background Image with a subtle overlay */}
       <div className="absolute inset-0 z-0">
+        {/* Restored original image variable */}
         <img
           src={heroImage}
           alt="Luxury Transportation"
           className="w-full h-full object-cover"
-          loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/95" />
+        {/* The overlay darkens the image slightly to ensure text is readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/80 to-background/75" />
       </div>
 
-      {/* Floating Elements - Mobile Safe */}
+      {/* Decorative floating elements for visual interest */}
       <div className="absolute top-10 left-4 md:left-10 w-12 md:w-16 h-12 md:h-16 bg-blue-500/20 rounded-full animate-float animate-pulse-soft z-10" />
       <div
-        className="absolute bottom-32 right-4 md:right-16 w-10 md:w-12 h-10 md:h-12 bg-purple-500/20 rounded-full animate-bounce-soft z-10"
+        className="absolute bottom-32 right-4 md:right-16 w-10 md:w-12 h-10 md:h-12 bg-blue-500/20 rounded-full animate-bounce-soft z-10"
         style={{ animationDelay: "2s" }}
       />
       <div
         className="absolute top-1/2 right-8 md:right-32 w-6 md:w-8 h-6 md:h-8 bg-purple-500/20 rounded-full animate-float animate-glow z-10"
         style={{ animationDelay: "4s" }}
       />
-      <div
-        className="hidden md:block absolute top-1/3 left-1/4 w-6 h-6 bg-blue-500/30 rounded-full animate-pulse-soft z-10"
-        style={{ animationDelay: "1s" }}
-      />
-      <div
-        className="hidden md:block absolute bottom-1/4 left-1/3 w-10 h-10 bg-purple-500/20 rounded-full animate-bounce-soft z-10"
-        style={{ animationDelay: "3s" }}
-      />
 
-      {/* Main Content */}
+      {/* Main Content Container */}
       <div className="relative z-10 container mx-auto px-4 text-center flex-grow flex flex-col justify-center">
         <div className="max-w-5xl mx-auto">
-          {/* Badge */}
+          {/* Top Badge - A strong positioning statement */}
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-8 mt-8 animate-fade-in">
             <Zap className="w-5 h-5 text-primary mr-2" />
             <span className="text-primary font-semibold">
@@ -97,72 +65,97 @@ const HeroSection = () => {
             </span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="mb-3 animate-slide-up">
-            <span className="block text-foreground mb-2">We power your</span>
+          {/* Main Headline - Added font-extrabold and tracking-tighter for impact */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-3 animate-slide-up">
+            <span className="block text-foreground/80 mb-2 font-normal text-4xl md:text-5xl lg:text-6xl">
+              Your Concierge Back Office for
+            </span>
             <TypewriterEffect words={rotatingWords} />
           </h1>
 
-          {/* Subheadline */}
+          {/* Subheadline - Increased font weight for more impact */}
           <p
-            className="text-lg md:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed animate-fade-in"
+            className="text-lg md:text-xl text-muted-foreground font-medium mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
-            A concierge-level back office team for luxury transport operators,
-            travel planners, and high-touch service providers.
-            <br />
-            <span className="text-primary font-semibold">
-              Premium tech solutions
+            A dedicated back office team for luxury transport operators, travel
+            planners, and high-touch service providers. We provide{" "}
+            <span className="text-primary font-bold">
+              premium tech solutions
             </span>{" "}
             and{" "}
-            <span className="text-primary font-semibold">
-              24/7 back-office support
+            <span className="text-primary font-bold">
+              24/7 expert support
             </span>{" "}
-            specialists in{" "}
-            <span className="text-primary font-semibold">Limo Anywhere</span>,{" "}
-            <span className="text-primary font-semibold">GNet, Addons</span>,
-            and comprehensive business operations.
+            that integrates seamlessly with your business operations.
           </p>
 
-          {/* Feature Pills */}
+          {/* CTA Buttons - Increased size for more prominence */}
           <div
-            className="flex flex-wrap justify-center gap-12 mb-4 animate-fade-in"
-            style={{ animationDelay: "0.4s" }}
-          >
-            <div className="flex items-center px-6 py-3 bg-card/30 backdrop-blur-sm rounded-full border border-border/50">
-              <Code className="w-5 h-5 text-primary mr-2" />
-              <span className="text-foreground">Technology Solutions</span>
-            </div>
-            <div className="flex items-center px-6 py-3 bg-card/30 backdrop-blur-sm rounded-full border border-border/50">
-              <Globe className="w-5 h-5 text-primary mr-2" />
-              <span className="text-foreground">24/7 Back-Office Support</span>
-            </div>
-            <div className="flex items-center px-6 py-3 bg-card/30 backdrop-blur-sm rounded-full border border-border/50">
-              <Zap className="w-5 h-5 text-primary mr-2" />
-              <span className="text-foreground">Limo Anywhere & GNet</span>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div
-            className="flex flex-col sm:flex-row gap-12 justify-center mb-4 animate-fade-in"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in"
             style={{ animationDelay: "0.6s" }}
           >
-            <Button size="lg" className="btn-luxury group">
-              Start Your Project
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" className="btn-luxury group h-14 px-10 text-lg">
+              Book a Free Strategy Call
+              <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" className="btn-outline-luxury">
-              View Our Portfolio
+            <Button variant="outline" size="lg" className="btn-outline-luxury h-14 px-10 text-lg">
+              Learn More
             </Button>
           </div>
         </div>
       </div>
+      const CheckCircleIcon = () => (
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      );
+      const AwardIcon = () => (
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="8" r="6" />
+        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+      </svg>
+      );
+      const ShieldIcon = () => (
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+      );
+      const StarIcon = () => (
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
+      );
 
-      {/* Scrolling Client Logos */}
-      <div className="absolute bottom-6 left-0 right-0 z-10 bg-black/20 backdrop-blur-sm border-t border-white/10 py-6 overflow-hidden">
-        <div className="flex items-center space-x-12 animate-[marquee_8s_linear_infinite]">
-          {/* Duplicate the logos array for seamless loop */}
+
+      // --- JSX for the Stats Section ---
+
+      // 1. Define the stats data array inside your HeroSection component
+      const stats = [
+        { icon: <CheckCircleIcon />, value: "Proven", label: "Reliability" },
+        { icon: <AwardIcon />, value: "15+", label: "Years Experience" },
+        { icon: <ShieldIcon />, value: "100%", label: "Discretion Assured" },
+        { icon: <StarIcon />, value: "5-Star", label: "Service Standard" },
+      ];
+
+      // 2. Add this JSX div where you want the stats to appear (e.g., after the buttons)
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+      {stats.map((stat, index) => (
+        <div key={index} className="flex flex-col items-center gap-3">
+          <div className="text-[#06B6D4]" style={{ filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.6))' }}>
+            {stat.icon}
+          </div>
+          <p className="text-4xl font-bold text-white tracking-tighter">{stat.value}</p>
+          <p className="text-sm font-medium text-white/70 tracking-wider uppercase">{stat.label}</p>
+        </div>
+      ))}
+      </div>
+
+      {/* Scrolling Client Logos at the bottom */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/20 backdrop-blur-sm border-t border-white/10 py-6 overflow-hidden">
+        <div className="flex items-center space-x-12 animate-[marquee_20s_linear_infinite]">
+          {/* Duplicate the logos array for a seamless loop */}
           {[...clientLogos, ...clientLogos].map((client, index) => (
             <div
               key={index}
