@@ -9,7 +9,7 @@ interface TypewriterEffectProps {
 
 const TypewriterEffect = ({
   words,
-  typingSpeed = 150,
+  typingSpeed = 250,
   deletingSpeed = 100,
   pauseDuration = 2000,
 }: TypewriterEffectProps) => {
@@ -23,31 +23,43 @@ const TypewriterEffect = ({
 
     const currentWord = words[currentWordIndex];
 
-    const timeout = setTimeout(() => {
-      if (isPaused) {
-        setIsPaused(false);
-        setIsDeleting(true);
-        return;
-      }
+    const timeout = setTimeout(
+      () => {
+        if (isPaused) {
+          setIsPaused(false);
+          setIsDeleting(true);
+          return;
+        }
 
-      if (isDeleting) {
-        if (currentText.length > 0) {
-          setCurrentText(currentText.slice(0, -1));
+        if (isDeleting) {
+          if (currentText.length > 0) {
+            setCurrentText(currentText.slice(0, -1));
+          } else {
+            setIsDeleting(false);
+            setCurrentWordIndex((prev) => (prev + 1) % words.length);
+          }
         } else {
-          setIsDeleting(false);
-          setCurrentWordIndex((prev) => (prev + 1) % words.length);
+          if (currentText.length < currentWord.length) {
+            setCurrentText(currentWord.slice(0, currentText.length + 1));
+          } else {
+            setIsPaused(true);
+          }
         }
-      } else {
-        if (currentText.length < currentWord.length) {
-          setCurrentText(currentWord.slice(0, currentText.length + 1));
-        } else {
-          setIsPaused(true);
-        }
-      }
-    }, isPaused ? pauseDuration : isDeleting ? deletingSpeed : typingSpeed);
+      },
+      isPaused ? pauseDuration : isDeleting ? deletingSpeed : typingSpeed,
+    );
 
     return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, isPaused, currentWordIndex, words, typingSpeed, deletingSpeed, pauseDuration]);
+  }, [
+    currentText,
+    isDeleting,
+    isPaused,
+    currentWordIndex,
+    words,
+    typingSpeed,
+    deletingSpeed,
+    pauseDuration,
+  ]);
 
   const cursorStyle: React.CSSProperties = {
     display: "inline-block",

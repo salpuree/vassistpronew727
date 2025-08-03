@@ -1,5 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Award, Shield, Users, Star, ArrowRight, CheckCircle } from "lucide-react";
+import {
+  Award,
+  Shield,
+  Users,
+  Star,
+  ArrowRight,
+  CheckCircle,
+} from "lucide-react";
 
 // --- Data ---
 const trustStats = [
@@ -140,7 +147,7 @@ const ClientLogosSection = () => {
               Trusted by Industry Leaders
             </span>
           </h2>
-          
+
           {/* Trust Statistics Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-12 max-w-4xl mx-auto">
             {trustStats.map((stat, index) => (
@@ -150,7 +157,6 @@ const ClientLogosSection = () => {
         </div>
         {/* Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
-
           {/* Left Column - Image */}
           <div className="relative">
             <div className="relative bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-purple-500/20 rounded-3xl p-8 lg:p-12 overflow-hidden">
@@ -161,8 +167,8 @@ const ClientLogosSection = () => {
 
               {/* Workflow Image */}
               <div className="relative z-10">
-                <img 
-                  src="/vaboard.png" 
+                <img
+                  src="/vaboard.svg"
                   alt="VA Workflow Dashboard"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
@@ -194,22 +200,31 @@ const ClientLogosSection = () => {
 
             {/* Description */}
             <p className="text-xl text-gray-300 leading-relaxed">
-              From confirming reservations to managing your social media presence, our dedicated virtual assistants work around the clock to keep your business running smoothly. See real conversations and tasks being handled seamlessly in the background.
+              From confirming reservations to managing your social media
+              presence, our dedicated virtual assistants work around the clock
+              to keep your business running smoothly. See real conversations and
+              tasks being handled seamlessly in the background.
             </p>
 
             {/* Key Benefits */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-lg text-gray-200">24/7 operations - never miss an opportunity</span>
+                <span className="text-lg text-gray-200">
+                  24/7 operations - never miss an opportunity
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-lg text-gray-200">Real-time communication with your clients</span>
+                <span className="text-lg text-gray-200">
+                  Real-time communication with your clients
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-lg text-gray-200">Seamless integration with your existing systems</span>
+                <span className="text-lg text-gray-200">
+                  Seamless integration with your existing systems
+                </span>
               </div>
             </div>
 
