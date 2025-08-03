@@ -140,10 +140,10 @@ const HeroSection = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16 mt-16 w-full max-w-6xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="flex flex-col items-center gap-3">
-                <div className="text-primary" style={{ filter: 'drop-shadow(0 0 8px rgba(192, 192, 192, 0.6))' }}>
+                <div style={{ color: '#06B6D4', filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.6))' }}>
                   {stat.icon}
                 </div>
                 <p className="text-4xl font-bold text-white tracking-tighter">{stat.value}</p>
