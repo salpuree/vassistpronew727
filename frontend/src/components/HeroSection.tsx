@@ -64,7 +64,7 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
           loading="lazy"
         />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/50 via-purple-700/20 via-black/40 to-blue-600/60"/>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/95" />
       </div>
 
       {/* Floating Elements - Mobile Safe */}
