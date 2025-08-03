@@ -110,7 +110,7 @@ const HeroSection = () => {
           >
             A concierge-level back office team for luxury transport operators,
             travel planners, and high-touch service providers.
-            <p></p>
+            <br />
             <span className="text-primary font-semibold">
               Premium tech solutions
             </span>{" "}
