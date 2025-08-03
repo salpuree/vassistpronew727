@@ -144,7 +144,7 @@ const ClientLogosSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-12">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              Trusted by Industry Leaders
+              How we work
             </span>
           </h2>
 
