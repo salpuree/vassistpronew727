@@ -51,29 +51,28 @@ const ClientLogosSection = () => {
     <section className="relative py-16 bg-[#0D1B2A] text-white font-sans overflow-hidden">
       <div className="relative z-10 container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
-          {/* Left Column - Your Custom Image */}
+          {/* Left Column - Your Custom Image & CTA Button */}
           <div className="relative">
             <div className="relative bg-black/20 rounded-3xl p-4 border border-white/10 shadow-2xl shadow-black/40">
-              <img
-                src="/vaboard.svg" // Using your specified image path
-                alt="V-Assist Pro Workflow Dashboard"
-                className="w-full h-auto rounded-2xl"
-              />
+              <div className="flex flex-col items-center gap-8">
+                <img
+                  src="/vaboard.svg" // Using your specified image path
+                  alt="V-Assist Pro Workflow Dashboard"
+                  className="w-full h-auto rounded-2xl"
+                />
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all shadow-lg shadow-slate-500/20"
+                >
+                  <span className="inline-flex items-center">
+                    Schedule a Consultation
+                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Button>
+              </div>
             </div>
           </div>
-{/* Moved Button Here */}
-    <div className="pt-8 mt-8 border-t border-white/10 flex" style={{ justifyContent: 'flex-start' }}>
-      <Button
-        size="lg"
-        className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all shadow-lg shadow-slate-500/20"
-      >
-        <span className="inline-flex items-center">
-          Schedule a Consultation
-          <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-        </span>
-      </Button>
-    </div>
-  </div>
+
           {/* Right Column - Content */}
           <div className="space-y-8 text-left">
             <p className="text-sm font-bold uppercase tracking-widest text-[#06B6D4]">
@@ -83,12 +82,12 @@ const ClientLogosSection = () => {
               An Extension of Your Team,
               <span className="block text-white/80">Around the Clock</span>
             </h2>
-            <p className="text-lg text-white/70 mb-12">
+            <p className="text-lg text-white/70">
               Your dedicated back office, seamlessly integrated. We handle the
               complexities of your operations, so you can focus on growth. No
               hiring, no headaches. Just results.
             </p>
-            <div className="space-y-8">
+            <div className="space-y-8 pt-8 border-t border-white/10">
               {/* Core Services */}
               <div>
                 {coreServices.map((feature, index) => (
@@ -125,18 +124,6 @@ const ClientLogosSection = () => {
                     </div>
                  ))}
               </div>
-            </div>
-            
-            <div className="pt-8 mt-8 border-t border-white/10 flex" style={{ justifyContent: 'flex-start' }}>
-              <Button
-                size="lg"
-                className="bg-gradient-to-b from-sl ate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all shadow-lg shadow-slate-500/20"
-              >
-                <span className="inline-flex items-center">
-                  Schedule a Consultation
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Button>
             </div>
           </div>
         </div>
