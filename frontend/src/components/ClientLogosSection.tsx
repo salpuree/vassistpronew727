@@ -60,6 +60,7 @@ const ClientLogosSection = () => {
                 className="w-full h-auto rounded-2xl"
               />
             </div>
+          </div>
 {/* Moved Button Here */}
     <div className="pt-8 mt-8 border-t border-white/10 flex" style={{ justifyContent: 'flex-start' }}>
       <Button
@@ -72,8 +73,7 @@ const ClientLogosSection = () => {
         </span>
       </Button>
     </div>
-  </div>          </div>
-
+  </div>
           {/* Right Column - Content */}
           <div className="space-y-8 text-left">
             <p className="text-sm font-bold uppercase tracking-widest text-[#06B6D4]">
