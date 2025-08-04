@@ -1,5 +1,27 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+
+// --- Professional SVG Icons ---
+// This custom icon creates the platinum circle with a blue checkmark.
+const CheckCircleIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="platinumGradientCheck" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style={{ stopColor: '#E5E7EB', stopOpacity: 1 }} />
+                <stop offset="100%" style={{ stopColor: '#9CA3AF', stopOpacity: 1 }} />
+            </linearGradient>
+        </defs>
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="url(#platinumGradientCheck)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <polyline points="22 4 12 14.01 9 11.01" stroke="#06B6D4" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+);
+
+
+// Main Section Component
 const ClientLogosSection = () => {
-  const features = [
+  // Grouping services for better visual organization
+  const coreServices = [
     {
       title: "24/7 Operations",
       description:
@@ -15,7 +37,10 @@ const ClientLogosSection = () => {
       description:
         "We provide the white-glove service your clients expect. From special requests to proactive updates, we enhance your brand's luxury reputation.",
     },
-    {
+  ];
+
+  const digitalServices = [
+     {
       title: "Digital Presence & Branding",
       description:
         "Establish a powerful online presence with a custom, luxury website designed to attract and convert high-value clientele.",
@@ -39,7 +64,6 @@ const ClientLogosSection = () => {
 
           {/* Right Column - Content */}
           <div className="space-y-8 text-left">
-            {/* EDIT: Changed text color to brand blue */}
             <p className="text-sm font-bold uppercase tracking-widest text-[#06B6D4]">
               How It Works
             </p>
@@ -55,7 +79,7 @@ const ClientLogosSection = () => {
             <div className="space-y-8">
               {/* Core Services */}
               <div>
-                {features.slice(0, 3).map((feature, index) => (
+                {coreServices.map((feature, index) => (
                   <div key={index} className="flex items-start gap-4 mb-6">
                     <div className="flex-shrink-0 mt-1" style={{ filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.4))' }}>
                       <CheckCircleIcon />
@@ -72,11 +96,10 @@ const ClientLogosSection = () => {
 
               {/* Divider and Digital Services Section */}
               <div className="pt-8 border-t border-white/10">
-                 {/* EDIT: Changed text color to brand blue */}
                  <h3 className="text-sm font-bold uppercase tracking-widest text-[#06B6D4] mb-6">
                     Digital & Creative Services
                  </h3>
-                 {features.slice(3).map((feature, index) => (
+                 {digitalServices.map((feature, index) => (
                     <div key={index} className="flex items-start gap-4">
                       <div className="flex-shrink-0 mt-1" style={{ filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.4))' }}>
                         <CheckCircleIcon />
