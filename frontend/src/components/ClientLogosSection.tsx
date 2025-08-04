@@ -52,26 +52,24 @@ const ClientLogosSection = () => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left Column - Dashboard Image & Button */}
-          <div className="flex flex-col gap-8">
-            <div className="flex items-center gap-6">
-              <div className="relative flex-1 bg-black/20 rounded-3xl p-4 border border-white/10 shadow-2xl shadow-black/40">
-                <img
-                  src="/vaboard.svg" // Using your specified image path
-                  alt="V-Assist Pro Workflow Dashboard"
-                  className="w-full h-auto rounded-2xl"
-                />
-              </div>
-              <div className="flex-shrink-0">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all shadow-lg shadow-slate-500/20"
-                >
-                  <span className="inline-flex items-center">
-                    Schedule a Consultation
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Button>
-              </div>
+          <div className="flex flex-col justify-between h-full">
+            <div className="relative bg-black/20 rounded-3xl p-4 border border-white/10 shadow-2xl shadow-black/40">
+              <img
+                src="/vaboard.svg" // Using your specified image path
+                alt="V-Assist Pro Workflow Dashboard"
+                className="w-full h-auto rounded-2xl"
+              />
+            </div>
+            <div className="mt-8 flex justify-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all shadow-lg shadow-slate-500/20"
+              >
+                <span className="inline-flex items-center">
+                  Schedule a Consultation
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Button>
             </div>
           </div>
 
