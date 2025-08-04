@@ -32,17 +32,7 @@ const Index = () => {
         <div className="animate-fade-in">
           <ClientLogosSection />
         </div>
-        
-
-        
-        <section id="case-studies">
-          <div className="animate-fade-in">
-            <CaseStudiesPreviewSection />
-          </div>
-        </section>
-        
-
-        
+      
         <section id="testimonials">
           <div className="animate-fade-in">
             <TestimonialsSection />
