@@ -81,9 +81,7 @@ const ServicesSection = () => {
         <section className="py-24 bg-[#0D1B2A]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow">Our Services</span>
-                    </h2>
+                    
                     <p className="text-lg text-white/70 max-w-3xl mx-auto">
                         In the world of luxury transport, perfection is the only standard. V Assist Pro provides the operational backbone to ensure you meet it, every time. Our skilled remote team handles everything from 24/7 client communications to flawless booking management, freeing you from back-office headaches and empowering you to focus on growth.
                     </p>
