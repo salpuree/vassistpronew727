@@ -113,7 +113,7 @@ const ClientLogosSection = () => {
                     Digital & Creative Services
                  </h3>
                  {digitalServices.map((feature, index) => (
-                    <div key={index} className="flex items-start gap-4 mb-8">
+                    <div key={index} className="flex items-start gap-4">
                       <div className="flex-shrink-0 mt-1" style={{ filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.4))' }}>
                         <CheckCircleIcon />
                       </div>
@@ -125,19 +125,6 @@ const ClientLogosSection = () => {
                       </div>
                     </div>
                  ))}
-
-                 {/* CTA Button positioned at Digital Services level */}
-                 <div className="mt-8">
-                   <Button
-                     size="lg"
-                     className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all shadow-lg shadow-slate-500/20"
-                   >
-                     <span className="inline-flex items-center">
-                       Schedule a Consultation
-                       <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                     </span>
-                   </Button>
-                 </div>
               </div>
             </div>
           </div>
