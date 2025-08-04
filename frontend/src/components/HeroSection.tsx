@@ -132,7 +132,6 @@ const StarIcon = () => (
 
 // Main HeroSection Component
 const HeroSection = () => {
-  // Data for the typewriter effect
   const rotatingWords = [
     "Flawless Operations.",
     "Happier Clients.",
@@ -140,7 +139,6 @@ const HeroSection = () => {
     "Peace of Mind.",
   ];
 
-  // Data for the key metrics/stats section
   const stats = [
     { icon: <UsersIcon />, value: "Proven", label: "Reliability" },
     { icon: <AwardIcon />, value: "15+", label: "Years Experience" },
@@ -148,7 +146,6 @@ const HeroSection = () => {
     { icon: <StarIcon />, value: "5-Star", label: "Service Standard" },
   ];
 
-  // Data for the client logos
   const clientLogos = [
     { name: "Elite Transport" },
     { name: "Metropolitan" },
@@ -160,7 +157,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden pt-20 bg-[#0D1B2A]">
-      {/* Background Image with a balanced overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
@@ -170,100 +166,64 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/75 to-background/80" />
       </div>
 
-      {/* Main Content Container */}
       <div className="relative z-10 container mx-auto px-4 text-center flex-grow flex flex-col justify-center">
         <div className="max-w-5xl mx-auto">
-          {/* Top Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-slate-500/10 border border-slate-500/20 mb-8 mt-8">
-            <Zap className="w-5 h-5 text-primary mr-2" />
-            <span className="text-primary font-semibold">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-slate-800/50 border border-slate-700 mb-8 mt-8">
+            <Zap className="w-5 h-5 text-blue-400 mr-2" />
+            <span className="text-slate-300 font-semibold">
               The Back Office Behind the Best Chauffeur Services, Nationwide.
             </span>
           </div>
 
-          {/* Main Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-3">
             <span className="block text-white/80 mb-2 font-normal text-4xl md:text-5xl lg:text-6xl">
               Your Concierge Back Office for
             </span>
-            {/* EDIT: Applied gradient text style to the typewriter effect */}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-650/20 to-purple-500/50 to-blue-300/30">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow">
               <TypewriterEffect words={rotatingWords} />
             </span>
           </h1>
 
-          {/* Subheadline */}
           <p className="text-lg md:text-xl text-white/70 font-medium mb-8 max-w-3xl mx-auto leading-relaxed">
             A dedicated back office team for luxury transport operators, travel
-            planners, and high-touch service providers. We provide{" "}
-            <span className="text-primary font-bold">
-              premium tech solutions
-            </span>{" "}
-            and{" "}
-            <span className="text-primary font-bold">24/7 expert support</span>{" "}
-            that integrates seamlessly with your business operations.
+            planners, and high-touch service providers.
           </p>
 
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              size="lg"
-              className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all shadow-lg shadow-slate-500/20"
-            >
-              Book a Free Strategy Call
-              <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+            <Button className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all platinum-button-glow">
+              <span className="inline-flex items-center">
+                Book a Free Strategy Call
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </span>
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="bg-transparent border-2 border-white/50 hover:bg-white/10 text-white font-bold h-14 px-10 text-lg rounded-full transition-colors"
-            >
+            <Button className="bg-transparent border-2 border-white/50 hover:bg-white/10 text-white font-bold h-14 px-10 text-lg rounded-full transition-colors">
               Learn More
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Bottom container for stats and marquee */}
       <div className="relative z-10 mt-auto w-full">
-        {/* Key Metrics Section */}
         <div className="container mx-auto px-4 mb-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="flex flex-col items-center gap-3">
-                <div
-                  style={{
-                    filter: "drop-shadow(0 0 8px rgba(192, 192, 192, 0.6))",
-                  }}
-                >
+                <div style={{ filter: "drop-shadow(0 0 8px rgba(192, 192, 192, 0.6))" }}>
                   {stat.icon}
                 </div>
-                <p className="text-4xl font-bold text-white tracking-tighter">
-                  {stat.value}
-                </p>
-                <p className="text-sm font-medium text-white/70 tracking-wider uppercase">
-                  {stat.label}
-                </p>
+                <p className="text-4xl font-bold text-white tracking-tighter">{stat.value}</p>
+                <p className="text-sm font-medium text-white/70 tracking-wider uppercase">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
-
-        {/* Scrolling "Trusted By" marquee */}
         <div className="w-full py-4 bg-black/20 backdrop-blur-sm">
           <div className="container mx-auto px-4 flex items-center">
-            <p className="text-sm font-bold text-white/50 tracking-widest uppercase flex-shrink-0 pr-6">
-              Trusted By:
-            </p>
+            <p className="text-sm font-bold text-white/50 tracking-widest uppercase flex-shrink-0 pr-6">Trusted By:</p>
             <div className="flex-grow overflow-hidden">
               <div className="flex items-center space-x-12 animate-[marquee_30s_linear_infinite]">
                 {[...clientLogos, ...clientLogos].map((client, index) => (
-                  <span
-                    key={index}
-                    className="text-lg font-semibold text-white/50 whitespace-nowrap"
-                  >
-                    {client.name}
-                  </span>
+                  <span key={index} className="text-lg font-semibold text-white/50 whitespace-nowrap">{client.name}</span>
                 ))}
               </div>
             </div>
@@ -275,3 +235,20 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+/*
+  ADD THE FOLLOWING TO YOUR global.css FILE:
+
+  .text-glow { 
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 25px rgba(59, 130, 246, 0.4), 0 0 50px rgba(139, 92, 246, 0.3);
+  }
+
+  .platinum-button-glow {
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.4);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .platinum-button-glow:hover {
+    box-shadow: 0 0 25px rgba(192, 192, 192, 0.6), 0 0 40px rgba(192, 192, 192, 0.2);
+  }
+*/
