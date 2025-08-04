@@ -49,7 +49,7 @@ const ClientLogosSection = () => {
 
   return (
     <section className="relative py-24 bg-[#0D1B2A] text-white font-sans overflow-hidden">
-      <div className="relative z-10 container mx-auto px-2">
+      <div className="relative z-10 container mx-auto px-1">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left Column - Your Custom Image */}
           <div className="relative">
