@@ -34,30 +34,7 @@ const Index = () => {
           <ClientLogosSection />
         </div>
         
-        <section id="services" className="py-16 bg-luxury-gradient">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-8">
-                <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                  <Cog className="w-5 h-5 text-primary mr-2" />
-                  <span className="text-primary font-semibold">Complete Business Solutions</span>
-                </div>
-                <h2 className="mb-4">
-                  <span className="text-gradient">Technology + Operations</span>
-                  <span className="block text-foreground">Your Force Behind the Curtains</span>
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
-                  We provide both cutting-edge technology solutions and comprehensive back-office support services.
-                  From Limo Anywhere integrations to specialized calls and email handling for bookings, quotes, updates, and inquiries.
-                </p>
-                <Link to="/services">
-                  <Button className="btn-luxury">
-                    Explore All Services
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-        </section>
+
         
         <section id="case-studies">
           <div className="animate-fade-in">
@@ -65,31 +42,7 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Service Packages Introduction */}
-        <section id="packages" className="py-8 bg-luxury-gradient">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-4">
-                <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                  <Zap className="w-5 h-5 text-primary mr-2" />
-                  <span className="text-primary font-semibold">Service Packages</span>
-                </div>
-                <h2 className="mb-4">
-                  <span className="text-gradient">Back-Office Support</span>
-                  <span className="block text-foreground">Packages That Scale With You</span>
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
-                  Choose the right level of professional back-office support for your luxury transportation business.
-                  All packages include professional training on your specific procedures and brand standards.
-                </p>
-                <Link to="/service-packages">
-                  <Button className="btn-luxury">
-                    View All Packages
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-        </section>
+
         
         <section id="testimonials">
           <div className="animate-fade-in">
