@@ -163,7 +163,7 @@ const HeroSection = () => {
           alt="Luxury Transportation"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/79 to-background/85" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/75 to-background/80" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center flex-grow flex flex-col justify-center">
@@ -235,20 +235,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-/*
-  ADD THE FOLLOWING TO YOUR global.css FILE:
-
-  .text-glow { 
-    text-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 25px rgba(59, 130, 246, 0.4), 0 0 50px rgba(139, 92, 246, 0.3);
-  }
-
-  .platinum-button-glow {
-    box-shadow: 0 0 15px rgba(192, 192, 192, 0.4);
-    transition: box-shadow 0.3s ease-in-out;
-  }
-
-  .platinum-button-glow:hover {
-    box-shadow: 0 0 25px rgba(192, 192, 192, 0.6), 0 0 40px rgba(192, 192, 192, 0.2);
-  }
-*/
