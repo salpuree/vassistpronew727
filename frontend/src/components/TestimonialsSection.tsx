@@ -134,4 +134,4 @@ const SuccessStoriesSection = () => {
     );
 };
 
-export default SuccessStoriesSection;
+export default TestimonialsSection;
