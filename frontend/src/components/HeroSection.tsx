@@ -187,7 +187,7 @@ const HeroSection = () => {
               Your Concierge Back Office for
             </span>
             {/* EDIT: Applied gradient text style to the typewriter effect */}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-650/50 to-purple-500 to-slate-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-650/20 to-purple-500/50 to-blue-300/30">
               <TypewriterEffect words={rotatingWords} />
             </span>
           </h1>
