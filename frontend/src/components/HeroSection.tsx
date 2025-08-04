@@ -163,7 +163,7 @@ const HeroSection = () => {
           alt="Luxury Transportation"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/75 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/79 to-background/85" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center flex-grow flex flex-col justify-center">
