@@ -184,7 +184,7 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-white/70 font-medium mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/70 font-semibold mb-8 max-w-3xl mx-auto leading-relaxed">
             A dedicated back office team for luxury transport operators, travel
             planners, and high-touch service providers.
           </p>
