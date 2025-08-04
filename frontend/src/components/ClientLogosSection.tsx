@@ -115,11 +115,10 @@ const ClientLogosSection = () => {
               </div>
             </div>
             
-            {/* EDIT: Added flex justify-start to explicitly align the button to the left */}
-            <div className="pt-8 mt-8 border-t border-white/10 flex justify-start">
+            <div className="pt-8 mt-8 border-t border-white/10 flex" style={{ justifyContent: 'flex-start' }}>
               <Button
                 size="lg"
-                className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all shadow-lg shadow-slate-500/20"
+                className="bg-gradient-to-b from-sl ate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all shadow-lg shadow-slate-500/20"
               >
                 <span className="inline-flex items-center">
                   Schedule a Consultation
