@@ -57,7 +57,7 @@ const Footer = () => {
         </svg>
       ),
       label: "Location",
-      value: "New York, NY",
+      value: "7901 4th St N Ste 300, Saint Petersburg, FL 33702",
       href: "#"
     },
     {
