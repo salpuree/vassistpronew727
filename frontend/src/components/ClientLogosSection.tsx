@@ -55,15 +55,17 @@ const ClientLogosSection = () => {
           <div className="flex flex-col justify-between h-full">
             <div className="relative bg-black/20 rounded-3xl p-4 border border-white/10 shadow-2xl shadow-black/40">
               <img
-                src="/vaboard.png" // Using your specified image path
+                src="/vaboard.svg" // Using your specified image path
                 alt="V-Assist Pro Workflow Dashboard"
                 className="w-full h-auto rounded-2xl"
+                style={{ minHeight: '269px', margin: '20px', padding: '4px 0 20px' }}
               />
             </div>
             <div className="mt-8 flex justify-center">
               <Button
                 size="lg"
                 className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all shadow-lg shadow-slate-500/20"
+                style={{ margin: '20px' }}
               >
                 <span className="inline-flex items-center">
                   Schedule a Consultation
@@ -75,7 +77,7 @@ const ClientLogosSection = () => {
 
           {/* Right Column - Content */}
           <div className="space-y-8 text-left">
-            <p className="text-sm font-bold uppercase tracking-widest text-[#06B6D4]">
+            <p className="text-sm font-bold uppercase tracking-widest" style={{ color: '#30587c' }}>
               How It Works
             </p>
             <h2 className="text-4xl lg:text-5xl font-extrabold leading-tight">
