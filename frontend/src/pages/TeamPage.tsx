@@ -157,8 +157,7 @@ const TeamPage = () => {
                         <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-primary rounded-lg flex items-center justify-center shadow-lg">
                           <div className="w-2 h-2 bg-background rounded-full animate-pulse" />
                         </div>
-                      </div>
-
+                    
                       {/* Text content with improved contrast */}
                       <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                         {member.name}
