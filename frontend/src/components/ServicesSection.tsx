@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { ArrowRight, Star, Users, Clock, Award } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 // --- Professional SVG Icons ---
@@ -75,35 +75,6 @@ const InteractiveCard = ({ children, className, delay = 0 }) => {
     );
 };
 
-// --- Hero Stats Component ---
-const HeroStats = () => {
-    const stats = [
-        { icon: Users, value: "500+", label: "Clients Served" },
-        { icon: Clock, value: "24/7", label: "Support Available" },
-        { icon: Award, value: "15+", label: "Years Experience" },
-        { icon: Star, value: "5.0", label: "Client Rating" }
-    ];
-
-    return (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => (
-                <div 
-                    key={index} 
-                    className="text-center p-6 bg-gray-800/40 backdrop-blur-sm rounded-2xl border border-gray-700/30 hover:border-blue-400/30 transition-all duration-300 hover:scale-105"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                >
-                    <div className="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors">
-                        <stat.icon className="w-6 h-6 text-blue-400" />
-                    </div>
-                    <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-1">
-                        {stat.value}
-                    </div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
-                </div>
-            ))}
-        </div>
-    );
-};
 
 // --- Main ServicesSection Component ---
 const ServicesSection = () => {
