@@ -55,7 +55,7 @@ const ClientLogosSection = () => {
           <div className="flex flex-col justify-between h-full">
             <div className="relative bg-black/20 rounded-3xl p-4 border border-white/10 shadow-2xl shadow-black/40">
               <img
-                src="/vaboard.svg" // Using your specified image path
+                src="/vaboard.png" // Using your specified image path
                 alt="V-Assist Pro Workflow Dashboard"
                 className="w-full h-auto rounded-2xl"
               />
