@@ -189,7 +189,8 @@ const TeamPage = () => {
         </section>
       </main>
       <Footer />
-    </div>
+   </div> {/* closes team member grid */}
+</section>
   );
 };
 
