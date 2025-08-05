@@ -71,7 +71,7 @@ const TeamSection = () => {
 
       <div className="relative z-10 container mx-auto px-4">
         {/* Team Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl" style={{ margin: '20px auto 0' }}>
           
           {/* Team Image */}
           <div className="relative group">
