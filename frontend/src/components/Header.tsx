@@ -141,12 +141,10 @@ const Header = () => {
 
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-6">
-            <Button 
-              as={Link}
-              to="/contact-us"
-              className="btn-luxury"
-            >
-              Get Started
+            <Button asChild className="btn-luxury">
+              <Link to="/contact-us">
+                Get Started
+              </Link>
             </Button>
           </div>
 
