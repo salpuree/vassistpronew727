@@ -1,7 +1,7 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import PageHeroSection from "@/components/PageHeroSection";
-import TeamSection from "@/components/TeamSection";
+import Header from "/components/Header";
+import Footer from "/components/Footer";
+import PageHeroSection from "/components/PageHeroSection";
+import TeamSection from "/components/TeamSection";
 import { Users, Linkedin, Github, Mail } from "lucide-react";
 
 const TeamPage = () => {
