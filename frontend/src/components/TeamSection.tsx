@@ -2,7 +2,7 @@ import { Users, Award, Clock, Globe, Linkedin, Github, Mail } from "lucide-react
 import { Button } from "@/components/ui/button";
 import teamImage from "@/assets/team-development.jpg";
 import { Link } from "react-router-dom";
-);
+
 const CheckCircleIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs><linearGradient id="platinumGradientCheck" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style={{ stopColor: '#E5E7EB', stopOpacity: 1 }} /><stop offset="100%" style={{ stopColor: '#9CA3AF', stopOpacity: 1 }} /></linearGradient></defs>
