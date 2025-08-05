@@ -145,34 +145,13 @@ const ServicesSection = () => {
             <div className="absolute top-1/2 right-8 md:right-32 w-6 md:w-8 h-6 md:h-8 bg-blue-400/40 rounded-full animate-float animate-glow" style={{animationDelay: "4s"}} />
 
             <div className="relative z-10 container mx-auto px-4">
-                {/* Enhanced Hero Content */}
+                {/* Stats and CTA Section */}
                 <div className="text-center mb-20 max-w-6xl mx-auto">
-                    {/* Service badge */}
-                    <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8 animate-fade-in">
-                        <Award className="w-5 h-5 text-blue-400 mr-2" />
-                        <span className="text-blue-400 font-semibold">Premium Services</span>
-                    </div>
-
-                    {/* Main headline with enhanced styling */}
-                    <h1 className="text-4xl md:text-6xl font-bold mb-8 animate-slide-up">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 text-glow">
-                            Our Services
-                        </span>
-                    </h1>
-                    
-                    {/* Enhanced description */}
-                    <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12 animate-fade-in" style={{animationDelay: "0.2s"}}>
-                        Complete technology solutions and comprehensive back-office support services for luxury transportation companies. 
-                        <span className="block mt-4 text-lg text-gray-400">
-                            From Limo Anywhere integrations to 24/7 call answering - we handle it all so you can focus on growth.
-                        </span>
-                    </p>
-
                     {/* Hero Stats */}
                     <HeroStats />
 
                     {/* CTA Button */}
-                    <div className="mb-16 animate-fade-in" style={{animationDelay: "0.4s"}}>
+                    <div className="mb-16 animate-fade-in" style={{animationDelay: "0.2s"}}>
                         <Button className="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium px-8 py-4 text-lg shadow-lg hover:shadow-cyan-500/40 group">
                             Get Started Today
                             <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
