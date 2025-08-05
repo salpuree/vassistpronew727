@@ -196,5 +196,12 @@ const TeamPage = () => {
 </section>
   );
 };
+  </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 
 export default TeamPage;
