@@ -28,10 +28,9 @@ const InteractiveCard = ({ children, className }) => {
         const { left, top, width, height } = card.getBoundingClientRect();
         const x = e.clientX - left;
         const y = e.clientY - top;
-        const rotateX = ((y - height / 2) / (height / 2)) * -5; // Reduced rotation for subtlety
+        const rotateX = ((y - height / 2) / (height / 2)) * -5;
         const rotateY = ((x - width / 2) / (width / 2)) * 5;
         setStyle({ transform: `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`, transition: "transform 0.1s ease-out" });
-        // EDIT: Reduced the radius of the shine effect from 40% to 20%
         setShineStyle({ background: `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, 0.08), transparent 20%)` });
     };
 
@@ -78,15 +77,8 @@ const ServicesSection = () => {
     ];
 
     return (
-        <section className="py-14 bg-[#0D1B2A]">
+        <section className="py-24 bg-[#0D1B2A] overflow-hidden">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    
-                    <p className="text-lg text-white/70 max-w-3xl mx-auto">
-                        In the world of luxury transport, perfection is the only standard. V Assist Pro provides the operational backbone to ensure you meet it, every time. Our skilled remote team handles everything from 24/7 client communications to flawless booking management, freeing you from back-office headaches and empowering you to focus on growth.
-                    </p>
-                </div>
-
                 <div className="space-y-16 max-w-6xl mx-auto">
                     {serviceCategories.map((category, index) => (
                         <InteractiveCard key={index}>
