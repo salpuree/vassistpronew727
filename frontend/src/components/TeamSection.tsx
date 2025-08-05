@@ -2,7 +2,13 @@ import { Users, Award, Clock, Globe, Linkedin, Github, Mail } from "lucide-react
 import { Button } from "@/components/ui/button";
 import teamImage from "@/assets/team-development.jpg";
 import { Link } from "react-router-dom";
-
+);
+const CheckCircleIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="platinumGradientCheck" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style={{ stopColor: '#E5E7EB', stopOpacity: 1 }} /><stop offset="100%" style={{ stopColor: '#9CA3AF', stopOpacity: 1 }} /></linearGradient></defs>
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="url(#platinumGradientCheck)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /><polyline points="22 4 12 14.01 9 11.01" stroke="#06B6D4" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+);
 const TeamSection = () => {
   return (
     <section className="py-12">
