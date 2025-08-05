@@ -31,7 +31,7 @@ const InteractiveCard = ({ children, className }) => {
         const rotateX = ((y - height / 2) / (height / 2)) * -5;
         const rotateY = ((x - width / 2) / (width / 2)) * 5;
         setStyle({ transform: `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`, transition: "transform 0.1s ease-out" });
-        setShineStyle({ background: `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, 0.08), transparent 20%)` });
+        setShineStyle({ background: `radial-gradient(circle 150px at ${x}px ${y}px, rgba(255, 255, 255, 0.08), transparent)` });
     };
 
     const handleMouseLeave = () => {
@@ -41,8 +41,8 @@ const InteractiveCard = ({ children, className }) => {
 
     return (
         <div ref={cardRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={`relative group transition-all duration-300 ${className}`}>
-            <div className="absolute -inset-px bg-gradient-to-r from-slate-500/50 to-slate-400/50 rounded-3xl blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
-            <div style={style} className="relative w-full h-full bg-[#172A3A]/50 border border-white/20 rounded-3xl p-8 transition-all duration-300 overflow-hidden">
+            {/* EDIT: Replaced the backdrop glow with a box-shadow on the main card */}
+            <div style={style} className="relative w-full h-full bg-[#172A3A]/50 border border-white/20 rounded-3xl p-8 transition-all duration-300 overflow-hidden group-hover:shadow-platinum">
                 <div className="absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100" style={shineStyle} />
                 <div className="relative z-10 h-full flex flex-col">{children}</div>
             </div>
@@ -121,3 +121,11 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+
+/*
+  ADD THE FOLLOWING TO YOUR global.css FILE FOR THE HOVER GLOW:
+
+  .shadow-platinum {
+    box-shadow: 0 0 25px rgba(192, 192, 192, 0.4), 0 0 40px rgba(192, 192, 192, 0.2);
+  }
+*/
