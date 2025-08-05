@@ -82,7 +82,7 @@ const SuccessStoriesSection = () => {
                     {caseStudies.map((study, index) => (
                         <InteractiveCard key={index}>
                             <div className="mb-4"><h3 className="text-xl font-bold text-white">{study.company}</h3></div>
-                            <div className="flex-grow space-y-4 mb-6 border-t border-b border-white/10 py-4 transition-colors duration-300 group-hover:border-white/30">
+                            <div className="flex-grow space-y-4 mb-6 border-t border-b border-white/10 py-2 transition-colors duration-300 group-hover:border-white/30">
                                 <div><h4 className="font-semibold text-sm text-white/70 mb-1">The Challenge</h4><p className="text-white/60">{study.challenge}</p></div>
                                 <div><h4 className="font-semibold text-sm text-white/70 mb-1">Our Solution</h4><p className="text-white/60">{study.solution}</p></div>
                             </div>
