@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import ClientLogosSection from "@/components/ClientLogosSection";
-import CaseStudiesPreviewSection from "@/components/CaseStudiesPreviewSection";
 import TeamSection from "@/components/TeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
@@ -33,17 +32,7 @@ const Index = () => {
         <div className="animate-fade-in">
           <ClientLogosSection />
         </div>
-        
-
-        
-        <section id="case-studies">
-          <div className="animate-fade-in">
-            <CaseStudiesPreviewSection />
-          </div>
-        </section>
-        
-
-        
+      
         <section id="testimonials">
           <div className="animate-fade-in">
             <TestimonialsSection />

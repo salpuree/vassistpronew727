@@ -1,7 +1,7 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import PageHeroSection from "@/components/PageHeroSection";
-import TeamSection from "@/components/TeamSection";
+import Header from "/components/Header";
+import Footer from "/components/Footer";
+import PageHeroSection from "/components/PageHeroSection";
+import TeamSection from "/components/TeamSection";
 import { Users, Linkedin, Github, Mail } from "lucide-react";
 
 const TeamPage = () => {
@@ -149,11 +149,20 @@ const TeamPage = () => {
                   className="group cursor-pointer"
                   style={{animationDelay: `${index * 0.1}s`}}
                 >
+<<<<<<< HEAD
                   <div className="relative">
                     <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-40"></div>
                     <div className="relative bg-gray-800/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-blue-400/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10">
                       {/* Animated background gradient */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${member.bgColor} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+=======
+                  </div>
+  </div>
+))}
+                  <div className="relative bg-card/40 backdrop-blur-xl border border-border/20 rounded-3xl p-8 hover:border-primary/30 transition-all duration-500 hover:bg-card/60 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10">
+                    {/* Animated background gradient */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${member.bgColor} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+>>>>>>> fb807eb3b3fbe8e03ab1b4aa4629a2d7322255e6
 
                       {/* Content */}
                       <div className="relative z-10 text-center">
@@ -197,14 +206,24 @@ const TeamPage = () => {
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
           </div>
         </section>
       </main>
       <Footer />
+   </div> {/* closes team member grid */}
+</section>
+  );
+};
+  </div>
+        ))}
+      </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default TeamPage;
+=======
+
+export default TeamPage;
+>>>>>>> fb807eb3b3fbe8e03ab1b4aa4629a2d7322255e6
