@@ -31,7 +31,7 @@ const InteractiveCard = ({ children, className }) => {
         const rotateX = ((y - height / 2) / (height / 2)) * -5;
         const rotateY = ((x - width / 2) / (width / 2)) * 5;
         setStyle({ transform: `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`, transition: "transform 0.1s ease-out" });
-        setShineStyle({ background: `radial-gradient(circle 150px at ${x}px ${y}px, rgba(255, 255, 255, 0.08), transparent)` });
+        setShineStyle({ background: `radial-gradient(circle 150px at ${x}px ${y}px, rgba(255, 255, 255, 0.08), transparent 80%)` });
     };
 
     const handleMouseLeave = () => {
@@ -41,8 +41,8 @@ const InteractiveCard = ({ children, className }) => {
 
     return (
         <div ref={cardRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={`relative group transition-all duration-300 ${className}`}>
-            {/* EDIT: Replaced the backdrop glow with a box-shadow on the main card */}
-            <div style={style} className="relative w-full h-full bg-[#172A3A]/50 border border-white/20 rounded-3xl p-8 transition-all duration-300 overflow-hidden group-hover:shadow-platinum">
+            {/* EDIT: Changed background to a darker shade of blue */}
+            <div style={style} className="relative w-full h-full bg-[#0D1B2A]/70 border border-white/20 rounded-3xl p-8 transition-all duration-300 overflow-hidden group-hover:shadow-platinum">
                 <div className="absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100" style={shineStyle} />
                 <div className="relative z-10 h-full flex flex-col">{children}</div>
             </div>
@@ -80,14 +80,14 @@ const ServicesSection = () => {
         <section className="py-24 bg-[#0D1B2A] overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+                    <h2 className="text-4xl md:text-4xl font-extrabold mb-4">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow">Our Services</span>
                     </h2>
                     <p className="text-lg text-white/70 max-w-3xl mx-auto">
                         In the world of luxury transport, perfection is the only standard. V Assist Pro provides the operational backbone to ensure you meet it, every time. Our skilled remote team handles everything from 24/7 client communications to flawless booking management, freeing you from back-office headaches and empowering you to focus on growth.
                     </p>
                 </div>
-                <div className="space-y-16 max-w-5xl mx-auto">
+                <div className="space-y-16 max-w-4xl mx-auto">
                     {serviceCategories.map((category, index) => (
                         <InteractiveCard key={index}>
                             <div className="text-left mb-6">
