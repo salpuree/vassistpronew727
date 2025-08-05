@@ -145,19 +145,6 @@ const ServicesSection = () => {
             <div className="absolute top-1/2 right-8 md:right-32 w-6 md:w-8 h-6 md:h-8 bg-blue-400/40 rounded-full animate-float animate-glow" style={{animationDelay: "4s"}} />
 
             <div className="relative z-10 container mx-auto px-4">
-                {/* Stats and CTA Section */}
-                <div className="text-center mb-20 max-w-6xl mx-auto">
-                    {/* Hero Stats */}
-                    <HeroStats />
-
-                    {/* CTA Button */}
-                    <div className="mb-16 animate-fade-in" style={{animationDelay: "0.2s"}}>
-                        <Button className="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium px-8 py-4 text-lg shadow-lg hover:shadow-cyan-500/40 group">
-                            Get Started Today
-                            <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                        </Button>
-                    </div>
-                </div>
 
                 {/* Service Categories */}
                 <div className="space-y-12 max-w-6xl mx-auto">
@@ -179,9 +166,10 @@ const ServicesSection = () => {
                             {/* Services Grid */}
                             <div className="border-t border-gray-700/50 pt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                                 {category.services.map((service, i) => (
-                                    <div 
-                                        key={i} 
-                                        className="group/service bg-gray-800/30 rounded-2xl p-6 hover:bg-gray-800/50 transition-all duration-300 hover:scale-[1.02] border border-gray-700/30 hover:border-blue-400/30"
+                                    <div
+                                        key={i}
+                                        className="group/service bg-gray-800/30 rounded-2xl p-6 hover:bg-gray-800/50 transition-all duration-300 hover:scale-[1.02] hover:border-blue-400/30"
+                                        style={{ border: '0.5px solid rgba(55, 65, 81, 0.3)' }}
                                     >
                                         {/* Service Header */}
                                         <div className="flex items-center mb-4">
