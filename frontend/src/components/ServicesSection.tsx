@@ -78,7 +78,7 @@ const ServicesSection = () => {
     ];
 
     return (
-        <section className="py-24 bg-[#0D1B2A]">
+        <section className="py-14 bg-[#0D1B2A]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     
