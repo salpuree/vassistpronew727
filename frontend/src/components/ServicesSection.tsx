@@ -77,23 +77,24 @@ const ServicesSection = () => {
     ];
 
     return (
-        <section className="py-10 bg-[#0D1B2A] overflow-hidden">
+        <section className="py-24 bg-[#0D1B2A] overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-            
-                       
+                    <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow">Our Services</span>
+                    </h2>
                     <p className="text-lg text-white/70 max-w-3xl mx-auto">
                         In the world of luxury transport, perfection is the only standard. V Assist Pro provides the operational backbone to ensure you meet it, every time. Our skilled remote team handles everything from 24/7 client communications to flawless booking management, freeing you from back-office headaches and empowering you to focus on growth.
                     </p>
                 </div>
-                <div className="space-y-16 max-w-6xl mx-auto">
+                <div className="space-y-16 max-w-5xl mx-auto">
                     {serviceCategories.map((category, index) => (
                         <InteractiveCard key={index}>
-                            <div className="text-left mb-8">
+                            <div className="text-left mb-6">
                                 <h3 className="text-2xl font-bold text-white">{category.title}</h3>
                                 <p className="text-white/60">{category.description}</p>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="border-t border-white/10 pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {category.services.map((service, i) => (
                                     <div key={i}>
                                         <div className="flex items-center mb-3">
