@@ -141,8 +141,7 @@ const TeamPage = () => {
                   style={{animationDelay: `${index * 0.1}s`}}
                 >
                   </div>
-  </div>
-))}
+
                   <div className="relative bg-card/40 backdrop-blur-xl border border-border/20 rounded-3xl p-8 hover:border-primary/30 transition-all duration-500 hover:bg-card/60 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10">
                     {/* Animated background gradient */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${member.bgColor} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
