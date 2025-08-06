@@ -138,6 +138,20 @@ const CaseStudiesSection = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             See how luxury transportation companies across the nation have transformed their operations and achieved remarkable growth with our strategic partnership.
           </p>
+
+          {/* Confidentiality Disclaimer */}
+          <div className="mt-8 max-w-4xl mx-auto">
+            <div className="bg-muted/20 border border-muted-foreground/20 rounded-2xl p-6 backdrop-blur-sm">
+              <div className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+                <div className="text-muted-foreground text-sm leading-relaxed">
+                  <strong className="text-foreground">Confidentiality Notice:</strong> All company names and specific identifying details have been changed to protect client confidentiality in accordance with our non-disclosure agreements and our unwavering commitment to client privacy. The results and metrics shown are authentic and represent actual achievements from our client partnerships.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Case Study Navigation */}
