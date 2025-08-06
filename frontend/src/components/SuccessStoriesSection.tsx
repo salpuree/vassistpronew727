@@ -29,9 +29,9 @@ const InteractiveCard = ({ children, className }) => {
         const y = e.clientY - top;
         const rotateX = ((y - height / 2) / (height / 2)) * -3;
         const rotateY = ((x - width / 2) / (width / 2)) * 3;
-        setStyle({ 
-            transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`, 
-            transition: "transform 0.1s ease-out" 
+        setStyle({
+            transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`,
+            transition: "transform 0.1s ease-out"
         });
         setShineStyle({ 
             background: `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, 0.1), transparent 40%)` 
@@ -47,12 +47,12 @@ const InteractiveCard = ({ children, className }) => {
     };
 
     return (
-        <div ref={cardRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={`relative group transition-all duration-300 ${className}`}>
+        <div ref={cardRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={`relative group transition-all duration-300 overflow-hidden ${className}`}>
             {/* Enhanced glow effect */}
             <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-40"></div>
             
             {/* Main card */}
-            <div style={style} className="relative w-full h-full bg-gray-800/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 transition-all duration-500 overflow-hidden hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10">
+            <div style={style} className="relative w-full h-full bg-gray-800/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 transition-all duration-500 overflow-hidden hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10 transform-gpu">
                 <div className="absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100" style={shineStyle} />
                 <div className="relative z-10 h-full flex flex-col">{children}</div>
             </div>
@@ -227,8 +227,8 @@ const SuccessStoriesSection = () => {
                         </p>
                     </div>
 
-                    <div 
-                        className="relative max-w-4xl mx-auto"
+                    <div
+                        className="relative max-w-4xl mx-auto overflow-hidden"
                         onMouseEnter={stopInterval}
                         onMouseLeave={startInterval}
                     >
