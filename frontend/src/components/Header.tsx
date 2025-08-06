@@ -1,20 +1,12 @@
 import { useState, useEffect } from "react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -25,20 +17,6 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleDropdownMouseEnter = () => {
-    if (dropdownTimeoutRef.current) {
-      clearTimeout(dropdownTimeoutRef.current);
-      dropdownTimeoutRef.current = null;
-    }
-    setIsDropdownOpen(true);
-  };
-
-  const handleDropdownMouseLeave = () => {
-    dropdownTimeoutRef.current = setTimeout(() => {
-      setIsDropdownOpen(false);
-      dropdownTimeoutRef.current = null;
-    }, 300);
-  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
