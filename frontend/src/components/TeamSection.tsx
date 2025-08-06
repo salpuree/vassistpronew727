@@ -38,7 +38,7 @@ const TeamSection = () => {
     const rotateY = ((x - width / 2) / (width / 2)) * 3;
 
     setCardStyle({
-      transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+      transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`,
       transition: "transform 0.1s ease-out",
     });
 
@@ -49,7 +49,7 @@ const TeamSection = () => {
 
   const handleCardMouseLeave = () => {
     setCardStyle({
-      transform: "perspective(1000px) rotateX(0) rotateY(0)",
+      transform: "perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)",
       transition: "transform 0.6s ease-in-out",
     });
     setShineStyle({});
@@ -71,7 +71,7 @@ const TeamSection = () => {
 
       <div className="relative z-10 container mx-auto px-4">
         {/* Team Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl" style={{ margin: '20px auto 0' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl overflow-hidden" style={{ margin: '20px auto 0' }}>
           
           {/* Team Image */}
           <div className="relative group">
