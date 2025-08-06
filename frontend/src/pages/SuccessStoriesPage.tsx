@@ -13,7 +13,7 @@ const SuccessStoriesPage = () => {
             title="Success Stories"
             description="Real results from real transportation companies with authentic client testimonials. See the measurable impact we've delivered for luxury transportation businesses nationwide."
             imageUrl="/Case-Studies.jpeg"
-            breadcrumb="Success Stories & Reviews"
+            breadcrumb="Success Stories"
           />
 
           {/* Case Studies Section with integrated testimonials */}
