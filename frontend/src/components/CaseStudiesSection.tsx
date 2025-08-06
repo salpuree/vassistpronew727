@@ -1,9 +1,58 @@
-
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { TrendingUp, Clock, DollarSign, Users, Phone, Mail, ChevronRight, Star, Award, CheckCircle } from "lucide-react";
+
+// --- Interactive Card Component with 3D Tilt & Shine ---
+const InteractiveCard = ({ children, className = "" }) => {
+  const cardRef = useRef(null);
+  const [style, setStyle] = useState({});
+  const [shineStyle, setShineStyle] = useState({});
+
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const { left, top, width, height } = card.getBoundingClientRect();
+    const x = e.clientX - left;
+    const y = e.clientY - top;
+    const rotateX = ((y - height / 2) / (height / 2)) * -3;
+    const rotateY = ((x - width / 2) / (width / 2)) * 3;
+    setStyle({
+      transform: `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`,
+      transition: "transform 0.1s ease-out"
+    });
+    setShineStyle({
+      background: `radial-gradient(circle 200px at ${x}px ${y}px, rgba(255, 255, 255, 0.08), transparent 70%)`
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setStyle({
+      transform: "perspective(1500px) rotateX(0) rotateY(0) scale3d(1, 1, 1)",
+      transition: "transform 0.6s ease-in-out"
+    });
+    setShineStyle({});
+  };
+
+  return (
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className={`relative group transition-all duration-300 ${className}`}
+    >
+      <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-primary/20 to-blue-500/20 opacity-0 blur-sm transition-all duration-300 group-hover:opacity-50"></div>
+      <div style={style} className="relative w-full h-full transition-all duration-300 overflow-hidden rounded-3xl">
+        <div
+          className="absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100 rounded-3xl"
+          style={shineStyle}
+        />
+        <div className="relative z-10 h-full w-full">{children}</div>
+      </div>
+    </div>
+  );
+};
 
 const CaseStudiesSection = () => {
   const [activeCase, setActiveCase] = useState(0);
