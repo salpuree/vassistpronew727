@@ -55,7 +55,7 @@ const ClientLogosSection = () => {
           <div className="flex flex-col justify-between h-full">
             <div className="relative bg-black/20 rounded-3xl p-4 border border-white/10 shadow-2xl shadow-black/40">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F489119e2c69c42a5b0f1e2f32846041e%2F2151480b000e496780ec0dc7b783159f"
+                src="https://cdn.builder.io/api/v1/image/assets%2F489119e2c69c42a5b0f1e2f32846041e%2Fd632023355e544f9a384931dde9bd782"
                 alt="V-Assist Pro Workflow Dashboard"
                 className="w-full h-auto rounded-2xl min-h-[200px]"
               />
