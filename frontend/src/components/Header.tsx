@@ -106,7 +106,7 @@ const Header = () => {
               to="/success-stories"
               className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
-              Success Stories & Reviews
+              Success Stories
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
             <Link
@@ -194,7 +194,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
-                Success Stories & Reviews
+                Success Stories
               </Link>
               <Link
                 to="/faqs"
