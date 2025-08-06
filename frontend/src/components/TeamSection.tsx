@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -18,6 +18,40 @@ const CheckCircleIcon = () => (
     </svg>
 );
 
+// --- Interactive Image Card Component with 3D Tilt ---
+const InteractiveImageCard = ({ children, className }) => {
+    const cardRef = useRef(null);
+    const [style, setStyle] = useState({});
+    const [shineStyle, setShineStyle] = useState({});
+
+    const handleMouseMove = (e) => {
+        const card = cardRef.current;
+        if (!card) return;
+        const { left, top, width, height } = card.getBoundingClientRect();
+        const x = e.clientX - left;
+        const y = e.clientY - top;
+        const rotateX = ((y - height / 2) / (height / 2)) * -6;
+        const rotateY = ((x - width / 2) / (width / 2)) * 6;
+        setStyle({ transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`, transition: "transform 0.1s ease-out" });
+        setShineStyle({ background: `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, 0.1), transparent 40%)` });
+    };
+
+    const handleMouseLeave = () => {
+        setStyle({ transform: "perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)", transition: "transform 0.6s ease-in-out" });
+        setShineStyle({});
+    };
+
+    return (
+        <div ref={cardRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={`relative group transition-all duration-300 ${className}`}>
+            <div className="absolute -inset-px bg-gradient-to-r from-slate-500/50 to-slate-400/50 rounded-3xl blur-lg opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+            <div style={style} className="relative w-full h-full rounded-3xl transition-all duration-300 overflow-hidden shadow-2xl shadow-black/40">
+                <div className="absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100 rounded-3xl" style={shineStyle} />
+                <div className="relative z-10 h-full flex flex-col">{children}</div>
+            </div>
+        </div>
+    );
+};
+
 // --- Main TeamSection Component ---
 const TeamSection = () => {
   const teamFeatures = [
@@ -28,18 +62,18 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#172A3A]">
+    <section className="py-24 bg-[#0D1B2A]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40">
-              <img 
-                src={teamImage} 
-                alt="Development Team" 
-                className="w-full h-full object-cover" 
+            <InteractiveImageCard className="w-full h-[500px]">
+              <img
+                src={teamImage}
+                alt="Development Team"
+                className="w-full h-full object-cover rounded-3xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-3xl"></div>
+            </InteractiveImageCard>
           </div>
           <div>
             <h3 className="text-4xl font-extrabold text-white mb-6">
