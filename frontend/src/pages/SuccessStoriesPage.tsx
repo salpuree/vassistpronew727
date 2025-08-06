@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import PageHeroSection from "@/components/PageHeroSection";
 
 const SuccessStoriesPage = () => {
@@ -12,17 +11,14 @@ const SuccessStoriesPage = () => {
         <div className="animate-fade-in">
           <PageHeroSection
             title="Success Stories & Reviews"
-            description="Real results from real transportation companies and authentic reviews from our satisfied clients. See how we've helped luxury transportation businesses achieve remarkable growth and operational excellence."
+            description="Real results from real transportation companies with authentic client testimonials. See the measurable impact we've delivered for luxury transportation businesses nationwide."
             imageUrl="/Case-Studies.jpeg"
             breadcrumb="Success Stories & Reviews"
           />
-          
-          {/* Case Studies Section */}
-          <CaseStudiesSection />
-          
-          {/* Client Reviews Section */}
+
+          {/* Case Studies Section with integrated testimonials */}
           <div id="testimonials">
-            <TestimonialsSection />
+            <CaseStudiesSection />
           </div>
         </div>
       </main>
