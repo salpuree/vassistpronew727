@@ -2,8 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import ClientLogosSection from "@/components/ClientLogosSection";
+import SuccessStoriesSection from "@/components/SuccessStoriesSection";
 import TeamSection from "@/components/TeamSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import { Cog, Zap, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -32,10 +32,10 @@ const Index = () => {
         <div className="animate-fade-in">
           <ClientLogosSection />
         </div>
-      
-        <section id="testimonials">
+
+        <section id="case-studies">
           <div className="animate-fade-in">
-            <TestimonialsSection />
+            <SuccessStoriesSection />
           </div>
         </section>
         
