@@ -224,22 +224,24 @@ const CaseStudiesSection = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
                   {currentCase.results.map((result, index) => (
-                    <div key={index} className="bg-gradient-to-br from-card to-card/90 backdrop-blur-sm border border-border/50 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:border-primary/40 hover:scale-105 transition-all duration-300">
-                      <div className="text-xs text-muted-foreground mb-3 font-medium uppercase tracking-wider">{result.metric}</div>
-                      <div className="space-y-3">
-                        <div className="flex items-center justify-between">
-                          <span className="text-red-500 font-medium text-sm">Before:</span>
-                          <span className="font-semibold text-foreground text-sm">{result.before}</span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-green-500 font-medium text-sm">After:</span>
-                          <span className="font-semibold text-foreground text-sm">{result.after}</span>
-                        </div>
-                        <div className="text-center pt-3 border-t border-border/50">
-                          <span className="text-xl font-bold text-primary">{result.improvement}</span>
+                    <InteractiveCard key={index} className="h-full">
+                      <div className="bg-gradient-to-br from-card to-card/90 backdrop-blur-sm border border-border/50 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all duration-300 h-full">
+                        <div className="text-xs text-muted-foreground mb-3 font-medium uppercase tracking-wider">{result.metric}</div>
+                        <div className="space-y-3">
+                          <div className="flex items-center justify-between">
+                            <span className="text-red-500 font-medium text-sm">Before:</span>
+                            <span className="font-semibold text-foreground text-sm">{result.before}</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-green-500 font-medium text-sm">After:</span>
+                            <span className="font-semibold text-foreground text-sm">{result.after}</span>
+                          </div>
+                          <div className="text-center pt-3 border-t border-border/50">
+                            <span className="text-xl font-bold text-primary">{result.improvement}</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </InteractiveCard>
                   ))}
                 </div>
 
@@ -281,7 +283,7 @@ const CaseStudiesSection = () => {
                 <ChevronRight className="w-6 h-6 ml-2" />
               </Button>
               <Button variant="outline" className="bg-card/50 border-2 border-primary/50 text-primary hover:bg-primary hover:text-white hover:border-primary text-lg px-10 py-4 rounded-2xl transition-all duration-300 hover:scale-105 font-semibold backdrop-blur-sm">
-                📄 Download Full Case Studies
+                ��� Download Full Case Studies
               </Button>
             </div>
             <div className="text-center">
