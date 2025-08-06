@@ -160,8 +160,9 @@ const CaseStudiesSection = () => {
 
         {/* Main Case Study Display */}
         <div className="max-w-7xl mx-auto mb-16">
-          <Card className="bg-gradient-to-br from-card via-card to-card/95 backdrop-blur-lg border border-border/50 shadow-2xl rounded-3xl overflow-hidden hover:shadow-3xl transition-all duration-500">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          <InteractiveCard>
+            <Card className="bg-gradient-to-br from-card via-card to-card/95 backdrop-blur-lg border border-border/50 shadow-2xl rounded-3xl overflow-hidden hover:shadow-3xl transition-all duration-500">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Left Side - Company Info & Challenge */}
               <div className="p-8 lg:p-12 bg-gradient-to-br from-card/95 to-muted/20 border-r border-border/30">
                 <div className="flex items-center mb-8">
@@ -256,9 +257,10 @@ const CaseStudiesSection = () => {
                     — {currentCase.clientName}
                   </div>
                 </div>
+                </div>
               </div>
-            </div>
-          </Card>
+            </Card>
+          </InteractiveCard>
         </div>
 
         {/* CTA Section */}
