@@ -44,8 +44,8 @@ const App = () => (
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/service-packages" element={<ServicePackagesPage />} />
           <Route path="/team" element={<TeamPage />} />
-          <Route path="/roi-calculator" element={<ROICalculatorPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/success-stories" element={<SuccessStoriesPage />} />
+          <Route path="/case-studies" element={<SuccessStoriesPage />} />
           <Route path="/faqs" element={<FAQPage />} />
           <Route path="/about-us/industry-expertise" element={<IndustryExpertisePage />} />
           <Route path="/about-us/trust-recognition" element={<SocialProofPage />} />
