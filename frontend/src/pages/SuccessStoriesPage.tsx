@@ -10,7 +10,7 @@ const SuccessStoriesPage = () => {
       <main className="pt-20">
         <div className="animate-fade-in">
           <PageHeroSection
-            title="Success Stories & Reviews"
+            title="Success Stories"
             description="Real results from real transportation companies with authentic client testimonials. See the measurable impact we've delivered for luxury transportation businesses nationwide."
             imageUrl="/Case-Studies.jpeg"
             breadcrumb="Success Stories & Reviews"
