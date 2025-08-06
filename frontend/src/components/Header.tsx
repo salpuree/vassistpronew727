@@ -103,24 +103,10 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             <Link
-              to="/case-studies"
+              to="/success-stories"
               className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
             >
-              Case Studies
-              <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-            </Link>
-            <Link
-              to="/roi-calculator"
-              className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
-            >
-              ROI Calculator
-              <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-            </Link>
-            <Link
-              to="/#testimonials"
-              className="relative px-4 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium rounded-xl hover:bg-primary/10 group"
-            >
-              Reviews
+              Success Stories & Reviews
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
             <Link
@@ -204,25 +190,11 @@ const Header = () => {
                 </div>
               </div>
               <Link
-                to="/case-studies"
+                to="/success-stories"
                 onClick={() => setIsMenuOpen(false)}
                 className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
-                Case Studies
-              </Link>
-              <Link
-                to="/roi-calculator"
-                onClick={() => setIsMenuOpen(false)}
-                className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
-              >
-                ROI Calculator
-              </Link>
-              <Link
-                to="/#testimonials"
-                onClick={() => setIsMenuOpen(false)}
-                className="text-left text-foreground hover:text-primary transition-colors duration-300 font-medium"
-              >
-                Reviews
+                Success Stories & Reviews
               </Link>
               <Link
                 to="/faqs"
