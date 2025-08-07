@@ -1,37 +1,39 @@
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  Award,
+  Heart,
   Clock,
   Users,
-  TrendingUp
+  TrendingUp,
+  Shield,
+  CheckCircle
 } from "lucide-react";
 
 const CollapsibleSocialProof = () => {
 
   const trustIndicators = [
     {
-      metric: "99.9%",
-      label: "Uptime Guarantee",
+      metric: "24/7",
+      label: "Support Available",
       icon: Clock,
-      description: "Proven reliability"
+      description: "Always here to help"
     },
     {
-      metric: "< 2 min",
+      metric: "< 1 hour",
       label: "Response Time",
       icon: TrendingUp,
-      description: "Lightning-fast support"
+      description: "Quick support"
     },
     {
-      metric: "15+",
+      metric: "5+",
       label: "Years Experience",
-      icon: Award,
-      description: "Industry expertise"
+      icon: Heart,
+      description: "Growing expertise"
     },
     {
-      metric: "500+",
-      label: "Active Clients",
+      metric: "50+",
+      label: "Happy Clients",
       icon: Users,
-      description: "Trusted by leaders"
+      description: "Building trust daily"
     }
   ];
 
@@ -42,15 +44,15 @@ const CollapsibleSocialProof = () => {
         {/* Preview Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
-            <Award className="w-5 h-5 text-primary mr-2" />
-            <span className="text-primary font-semibold">Trust & Recognition</span>
+            <Heart className="w-5 h-5 text-primary mr-2" />
+            <span className="text-primary font-semibold">Why Choose Us</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Industry Recognition</span>
-            <span className="block text-foreground">& Trusted Partnerships</span>
+            <span className="text-gradient">Reliable Service</span>
+            <span className="block text-foreground">& Personal Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Our commitment to excellence is recognized by industry leaders and trusted by hundreds of transportation companies.
+            We're a growing team dedicated to providing excellent virtual assistance services to transportation companies. Our focus is on building lasting relationships and delivering results.
           </p>
         </div>
 
