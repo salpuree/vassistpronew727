@@ -24,24 +24,40 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    try {
-      // Create form data for Netlify Forms
-      const formDataToSend = new FormData();
-      formDataToSend.append('form-name', 'contact');
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('email', formData.email);
-      formDataToSend.append('company', formData.company);
-      formDataToSend.append('phone', formData.phone);
-      formDataToSend.append('service', formData.service);
-      formDataToSend.append('budget', formData.budget);
-      formDataToSend.append('timeline', formData.timeline);
-      formDataToSend.append('message', formData.message);
-      formDataToSend.append('recipients', 'info@virtualassistancepro.com,team@virtualassistancepro.com');
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.company || !formData.service || !formData.budget || !formData.timeline || !formData.message) {
+      toast({
+        title: "Missing Required Fields",
+        description: "Please fill in all required fields marked with *",
+        variant: "destructive"
+      });
+      return;
+    }
 
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formDataToSend as any).toString()
+    try {
+      // Encode form data properly for Netlify
+      const encode = (data: Record<string, string>) => {
+        return Object.keys(data)
+          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+          .join("&");
+      };
+
+      const formDataToSend = {
+        "form-name": "contact",
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        phone: formData.phone,
+        service: formData.service,
+        budget: formData.budget,
+        timeline: formData.timeline,
+        message: formData.message
+      };
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(formDataToSend)
       });
 
       if (response.ok) {
@@ -60,9 +76,10 @@ const ContactSection = () => {
           message: ""
         });
       } else {
-        throw new Error('Form submission failed');
+        throw new Error(`Form submission failed with status: ${response.status}`);
       }
     } catch (error) {
+      console.error('Form submission error:', error);
       toast({
         title: "Error Sending Message",
         description: "Please try again or contact us directly at info@virtualassistancepro.com",
@@ -280,9 +297,11 @@ const ContactSection = () => {
                 <p className="text-foreground/80 mb-6 font-medium leading-relaxed">
                   Book a free consultation to discuss your transportation technology needs.
                 </p>
-                <Button className="btn-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
-                  Schedule Call
-                </Button>
+                <a href="tel:+19416234590">
+                  <Button className="btn-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
+                    Schedule Call
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -303,9 +322,11 @@ const ContactSection = () => {
                 <p className="text-foreground/80 mb-6 font-medium leading-relaxed">
                   Need immediate help with your existing systems? We're here 24/7.
                 </p>
-                <Button variant="outline" className="btn-outline-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
-                  Get Support
-                </Button>
+                <a href="mailto:info@virtualassistancepro.com?subject=Emergency Support Request">
+                  <Button variant="outline" className="btn-outline-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
+                    Get Support
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

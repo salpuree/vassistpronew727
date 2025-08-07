@@ -243,13 +243,17 @@ const FAQSection = () => {
                 for your luxury transportation business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="btn-luxury text-lg px-8 py-3">
-                  Schedule Free Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-                <Button variant="outline" className="btn-outline-luxury text-lg px-8 py-3">
-                  Download FAQ Guide
-                </Button>
+                <a href="/contact-us">
+                  <Button className="btn-luxury text-lg px-8 py-3">
+                    Schedule Free Consultation
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </a>
+                <a href="mailto:info@virtualassistancepro.com?subject=FAQ Guide Request">
+                  <Button variant="outline" className="btn-outline-luxury text-lg px-8 py-3">
+                    Download FAQ Guide
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

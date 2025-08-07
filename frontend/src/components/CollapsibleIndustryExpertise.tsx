@@ -14,7 +14,7 @@ const CollapsibleIndustryExpertise = () => {
     title: "Transportation Industry Focus",
     summary: "We specialize in supporting transportation businesses with dedicated virtual assistance services tailored to your industry needs.",
     keyStats: [
-      { metric: "5+", label: "Years Experience", icon: BookOpen },
+      { metric: "15+", label: "Years Experience", icon: BookOpen },
       { metric: "50+", label: "Happy Clients", icon: Users },
       { metric: "24/7", label: "Support Available", icon: FileText },
       { metric: "100%", label: "Satisfaction Focus", icon: CheckCircle }
@@ -23,7 +23,7 @@ const CollapsibleIndustryExpertise = () => {
 
 
   return (
-    <section className="py-16 bg-luxury-gradient">
+    <section className="py-5 bg-luxury-gradient">
       <div className="container mx-auto px-4">
         {/* Preview Section */}
         <div className="text-center mb-12">
@@ -44,7 +44,7 @@ const CollapsibleIndustryExpertise = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
                   <stat.icon className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-gradient mb-1">{stat.metric}</div>
+                <div className="text-2xl md:text-3xl font-bold text-gradient mb-1"><p>{stat.metric}</p></div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </CardContent>
             </Card>

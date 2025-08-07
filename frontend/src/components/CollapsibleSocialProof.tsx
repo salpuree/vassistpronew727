@@ -24,7 +24,7 @@ const CollapsibleSocialProof = () => {
       description: "Quick support"
     },
     {
-      metric: "5+",
+      metric: "15+",
       label: "Years Experience",
       icon: Heart,
       description: "Growing expertise"
@@ -39,7 +39,7 @@ const CollapsibleSocialProof = () => {
 
 
   return (
-    <section className="py-16">
+    <section className="py-5">
       <div className="container mx-auto px-4">
         {/* Preview Section */}
         <div className="text-center mb-12">

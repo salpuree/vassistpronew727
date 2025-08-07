@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
+import { useToast } from "@/hooks/use-toast";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
   ArrowRight,
   Linkedin,
   Twitter,
@@ -12,6 +14,40 @@ import {
 } from "lucide-react";
 
 const Footer = () => {
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const formData = new FormData();
+      formData.append('form-name', 'newsletter');
+      formData.append('email', email);
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Successfully subscribed!",
+          description: "You'll receive our latest updates and insights.",
+        });
+        setEmail("");
+      } else {
+        throw new Error('Subscription failed');
+      }
+    } catch (error) {
+      toast({
+        title: "Subscription failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    }
+  };
   const quickLinks = [
     { name: "Services", href: "#services" },
     { name: "Packages", href: "#packages" },
@@ -191,19 +227,22 @@ const Footer = () => {
               <p className="text-slate-400 mb-6 text-sm leading-relaxed">
                 Get the latest insights on luxury transportation technology and back-office solutions.
               </p>
-              <div className="space-y-3">
+              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
                 <input
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                  required
                 />
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium text-sm flex items-center justify-center">
+                <button type="submit" className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium text-sm flex items-center justify-center">
                   Subscribe
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
-              </div>
+              </form>
             </div>
           </div>
 

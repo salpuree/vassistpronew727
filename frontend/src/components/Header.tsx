@@ -82,13 +82,11 @@ const Header = () => {
 
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-6">
-            <Button 
-              as={Link}
-              to="/contact-us"
-              className="btn-luxury"
-            >
-              Get Started
-            </Button>
+            <Link to="/contact-us">
+              <Button className="btn-luxury">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -156,9 +154,7 @@ const Header = () => {
                   info@virtualassistancepro.com
                 </a>
                 <Link to="/contact-us" onClick={() => setIsMenuOpen(false)}>
-                  <Button 
-                  className="btn-luxury w-full"
-                  >
+                  <Button className="btn-luxury w-full">
                     Get Started
                   </Button>
                 </Link>
