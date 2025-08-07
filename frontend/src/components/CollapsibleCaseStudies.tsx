@@ -178,10 +178,12 @@ const CollapsibleCaseStudies = () => {
             <p className="text-gray-600 mb-6">
               Schedule a free consultation to discuss how we can transform your transportation business.
             </p>
-            <Button className="btn-luxury group-hover:scale-105 transition-transform duration-300">
-              Schedule Strategy Call
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+            <a href="/contact-us">
+              <Button className="btn-luxury group-hover:scale-105 transition-transform duration-300">
+                Schedule Strategy Call
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
