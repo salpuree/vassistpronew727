@@ -3,23 +3,20 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   build: {
     outDir: 'build'
   },
-
-  // Server configuration
   server: {
     port: 3000,
-    host: '0.0.0.0', // Explicitly bind to all interfaces
-    allowedHosts: true
+    host: '0.0.0.0', // Bind to all interfaces (needed for Netlify or external access)
   },
   plugins: [
     react(),
-  ].filter(Boolean),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+});
