@@ -21,53 +21,6 @@ const CollapsibleIndustryExpertise = () => {
     ]
   };
 
-  const expertiseAreas = [
-    {
-      icon: Shield,
-      title: "DOT Compliance & Regulations",
-      description: "Complete understanding of Department of Transportation requirements and safety standards.",
-      highlights: ["DOT registration", "Insurance requirements", "Safety ratings", "Driver qualifications"]
-    },
-    {
-      icon: FileText,
-      title: "Licensing & Permits",
-      description: "Navigate complex licensing requirements across different states and municipalities.",
-      highlights: ["Interstate authority", "City permits", "Airport access", "Multi-state compliance"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Market Intelligence",
-      description: "Deep insights into luxury transportation market trends and competitive positioning.",
-      highlights: ["Market analysis", "Pricing strategies", "Demand patterns", "Revenue optimization"]
-    },
-    {
-      icon: Users,
-      title: "Customer Experience Standards",
-      description: "Luxury service protocols that meet high-end clientele expectations.",
-      highlights: ["White-glove service", "VIP procedures", "Quality standards", "Client relations"]
-    }
-  ];
-
-  const industryInsights = [
-    {
-      title: "2025 DOT Safety Requirements",
-      summary: "New safety protocols affecting luxury transportation operators.",
-      impact: "High",
-      category: "Regulatory"
-    },
-    {
-      title: "Corporate Travel Recovery Patterns", 
-      summary: "Analysis of corporate transportation demand recovery trends.",
-      impact: "High",
-      category: "Market Trends"
-    },
-    {
-      title: "Mobile-First Booking Evolution",
-      summary: "85% of bookings now originate from mobile devices.",
-      impact: "Medium", 
-      category: "Technology"
-    }
-  ];
 
   return (
     <section className="py-16 bg-luxury-gradient">
