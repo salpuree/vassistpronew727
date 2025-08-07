@@ -14,6 +14,8 @@ import ServicesPage from "./pages/ServicesPage";
 import ServicePackagesPage from "./pages/ServicePackagesPage";
 import TeamPage from "./pages/TeamPage";
 import ContactUsPage from "./pages/ContactUsPage";
+import ROICalculatorPage from "./pages/ROICalculatorPage";
+import SocialProofPage from "./pages/SocialProofPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
