@@ -284,7 +284,7 @@ const HowWeWorkSection = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Calendar className="w-8 h-8 text-primary" />
                 </div>
-                <div className="text-3xl font-bold text-gradient mb-2">6 Weeks</div>
+                <div className="text-3xl font-bold text-gradient mb-2">24 Hours</div>
                 <div className="text-muted-foreground">Full Implementation</div>
               </div>
               <div className="text-center">
