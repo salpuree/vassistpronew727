@@ -227,19 +227,22 @@ const Footer = () => {
               <p className="text-slate-400 mb-6 text-sm leading-relaxed">
                 Get the latest insights on luxury transportation technology and back-office solutions.
               </p>
-              <div className="space-y-3">
+              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
                 <input
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                  required
                 />
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium text-sm flex items-center justify-center">
+                <button type="submit" className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium text-sm flex items-center justify-center">
                   Subscribe
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
-              </div>
+              </form>
             </div>
           </div>
 
