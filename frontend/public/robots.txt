@@ -1,14 +1,62 @@
+# Virtual Assistance Pro - SEO Optimized Robots.txt
+
+# Allow all major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Allow social media crawlers
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Allow general crawlers
 User-agent: *
 Allow: /
+
+# Block access to admin areas (if any exist in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.well-known/
+Disallow: /api/
+
+# Block access to build artifacts and source files
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.ts$
+Disallow: /*.tsx$
+
+# Sitemap location
+Sitemap: https://virtual-assistance-pro.netlify.app/sitemap.xml
+
+# Host directive (preferred domain)
+Host: virtual-assistance-pro.netlify.app
