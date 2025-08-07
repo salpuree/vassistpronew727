@@ -134,10 +134,10 @@ const StarIcon = () => (
 const HeroSection = () => {
   // Data for the typewriter effect
   const rotatingWords = [
-    "Flawless Concierge Operations.",
-    "Happier VIP Clients.",
-    "Effortless Luxury Growth.",
-    "White-Glove Peace of Mind.",
+    "Flawless Operations.",
+    "Happier Clients.",
+    "Effortless Growth.",
+    "Peace of Mind.",
   ];
 
   // Data for the key metrics/stats section
@@ -179,14 +179,14 @@ const HeroSection = () => {
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-slate-800/50 border border-slate-700 mb-8 mt-8">
             <Zap className="w-5 h-5 text-blue-400 mr-2" />
             <span className="text-slate-300 font-semibold">
-              The Back Office Behind the Best Chauffeur & Concierge Services, Nationwide.
+              The Back Office Behind the Best Chauffeur Services, Nationwide.
             </span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-3">
             <span className="block text-white/80 mb-2 font-normal text-4xl md:text-5xl lg:text-6xl">
-              Premium Concierge Virtual Assistant & Back Office Solutions for Luxury Transport
+              Premium Virtual Assistant & Back Office Solutions for Luxury Transport
             </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow">
               <TypewriterEffect words={rotatingWords} />
@@ -195,7 +195,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-white/70 font-medium mb-8 max-w-3xl mx-auto leading-relaxed">
-            Expert concierge virtual assistants providing 24/7 back office support, premium customer service, booking management, and white-glove administrative solutions for chauffeur services, luxury transport operators, and high-end concierge companies nationwide.
+            Expert virtual assistants providing 24/7 back office support, premium customer service, booking management, and white-glove administrative solutions for chauffeur services, luxury transport operators, and concierge companies nationwide.
           </p>
 
           {/* CTA Buttons */}
@@ -206,7 +206,7 @@ const HeroSection = () => {
                 aria-label="Book a free strategy consultation call"
               >
                 <span className="inline-flex items-center">
-                  Book a Free Concierge Consultation
+                  Book a Free Strategy Call
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </span>
               </Button>
