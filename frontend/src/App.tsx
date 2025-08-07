@@ -59,18 +59,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         
-        {/* Live Chat Placeholder */}
-        <div className="fixed bottom-6 right-6 z-50">
-          <Button 
-            className="w-14 h-14 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-            onClick={() => {
-              // Placeholder action - could open chat widget or redirect to contact
-              console.log("Live chat clicked - integrate with chat service");
-            }}
-          >
-            <MessageSquare className="w-6 h-6 text-primary-foreground" />
-          </Button>
-        </div>
+        <LiveChatButton />
         </div>
       </BrowserRouter>
     </TooltipProvider>
