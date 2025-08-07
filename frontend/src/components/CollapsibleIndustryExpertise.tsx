@@ -14,7 +14,7 @@ const CollapsibleIndustryExpertise = () => {
     title: "Transportation Industry Focus",
     summary: "We specialize in supporting transportation businesses with dedicated virtual assistance services tailored to your industry needs.",
     keyStats: [
-      { metric: "5+", label: "Years Experience", icon: BookOpen },
+      { metric: "15+", label: "Years Experience", icon: BookOpen },
       { metric: "50+", label: "Happy Clients", icon: Users },
       { metric: "24/7", label: "Support Available", icon: FileText },
       { metric: "100%", label: "Satisfaction Focus", icon: CheckCircle }
