@@ -14,6 +14,40 @@ import {
 } from "lucide-react";
 
 const Footer = () => {
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const formData = new FormData();
+      formData.append('form-name', 'newsletter');
+      formData.append('email', email);
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Successfully subscribed!",
+          description: "You'll receive our latest updates and insights.",
+        });
+        setEmail("");
+      } else {
+        throw new Error('Subscription failed');
+      }
+    } catch (error) {
+      toast({
+        title: "Subscription failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    }
+  };
   const quickLinks = [
     { name: "Services", href: "#services" },
     { name: "Packages", href: "#packages" },
