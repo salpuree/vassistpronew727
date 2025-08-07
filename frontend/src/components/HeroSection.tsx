@@ -206,7 +206,7 @@ const HeroSection = () => {
                 aria-label="Book a free strategy consultation call"
               >
                 <span className="inline-flex items-center">
-                  Book a Free Strategy Call
+                  Book a Free Concierge Consultation
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </span>
               </Button>
