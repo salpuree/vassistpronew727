@@ -322,9 +322,11 @@ const ContactSection = () => {
                 <p className="text-foreground/80 mb-6 font-medium leading-relaxed">
                   Need immediate help with your existing systems? We're here 24/7.
                 </p>
-                <Button variant="outline" className="btn-outline-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
-                  Get Support
-                </Button>
+                <a href="mailto:info@virtualassistancepro.com?subject=Emergency Support Request">
+                  <Button variant="outline" className="btn-outline-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
+                    Get Support
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
