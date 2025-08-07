@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://virtual-assistance-pro.netlify.app/hero-luxury-transport.jpg</image:loc>
+      <image:title>Virtual Assistance Pro - Premium Back Office Solutions</image:title>
+      <image:caption>Professional virtual assistance for luxury transport and chauffeur services</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/services</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Service Packages Page -->
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/service-packages</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- About Us Page -->
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/about-us</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Team Page -->
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/team</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://virtual-assistance-pro.netlify.app/assets/team-development.jpg</image:loc>
+      <image:title>Virtual Assistance Pro Team</image:title>
+      <image:caption>Our professional team of virtual assistants and back office specialists</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Success Stories / Case Studies -->
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/success-stories</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/case-studies</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- FAQs Page -->
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/faqs</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- ROI Calculator -->
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/roi-calculator</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Social Proof Page -->
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/social-proof</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact Us Page -->
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/contact-us</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Legacy Routes for SEO -->
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/about-us/industry-expertise</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/about-us/trust-recognition</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://virtual-assistance-pro.netlify.app/about-us/our-process</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>

@@ -159,13 +159,15 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden pt-20 bg-[#0D1B2A]">
+    <section className="relative min-h-screen flex flex-col overflow-hidden pt-20 bg-[#0D1B2A]" aria-label="Hero section">
       {/* Background Image with a balanced overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Luxury Transportation"
+          alt="Professional virtual assistant working on luxury transportation and chauffeur service back office operations"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/75 to-background/80" />
       </div>
@@ -184,7 +186,7 @@ const HeroSection = () => {
           {/* Main Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-3">
             <span className="block text-white/80 mb-2 font-normal text-4xl md:text-5xl lg:text-6xl">
-              Your Concierge Back Office for
+              Premium Virtual Assistant & Back Office Solutions for Luxury Transport
             </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow">
               <TypewriterEffect words={rotatingWords} />
@@ -193,16 +195,18 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-white/70 font-medium mb-8 max-w-3xl mx-auto leading-relaxed">
-            A dedicated back office team for luxury transport operators, travel
-            planners, and high-touch service providers.
+            Expert virtual assistants providing 24/7 back office support, customer service, booking management, and administrative solutions for chauffeur services, luxury transport operators, and premium travel planners nationwide.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all platinum-button-glow">
+            <Button
+              className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all platinum-button-glow"
+              aria-label="Book a free strategy consultation call"
+            >
               <span className="inline-flex items-center">
                 Book a Free Strategy Call
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </span>
             </Button>
           </div>
@@ -212,11 +216,12 @@ const HeroSection = () => {
       {/* Bottom container for stats and marquee */}
       <div className="relative z-10 mt-auto w-full">
         {/* Key Metrics Section */}
-        <div className="container mx-auto px-4 mb-8">
+        <section className="container mx-auto px-4 mb-8" aria-label="Company statistics and achievements">
+          <h2 className="sr-only">Our Track Record and Achievements</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="flex flex-col items-center gap-3">
-                <div className="platinum-glow">{stat.icon}</div>
+              <div key={index} className="flex flex-col items-center gap-3" role="img" aria-label={`${stat.value} ${stat.label}`}>
+                <div className="platinum-glow" aria-hidden="true">{stat.icon}</div>
                 <p className="text-4xl font-bold text-white tracking-tighter">
                   {stat.value}
                 </p>
@@ -226,15 +231,15 @@ const HeroSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Scrolling "Trusted By" marquee */}
-        <div className="w-full py-4 bg-black/20 backdrop-blur-sm">
+        <section className="w-full py-4 bg-black/20 backdrop-blur-sm" aria-label="Client testimonials and trust indicators">
           <div className="container mx-auto px-4 flex items-center">
-            <p className="text-sm font-bold text-white/50 tracking-widest uppercase flex-shrink-0 pr-6">
-              Trusted By:
-            </p>
-            <div className="flex-grow overflow-hidden">
+            <h3 className="text-sm font-bold text-white/50 tracking-widest uppercase flex-shrink-0 pr-6">
+              Trusted By Industry Leaders:
+            </h3>
+            <div className="flex-grow overflow-hidden" role="marquee" aria-label="Scrolling list of trusted clients">
               <div className="flex items-center space-x-12 animate-[marquee_30s_linear_infinite]">
                 {[...clientLogos, ...clientLogos].map((client, index) => (
                   <span
@@ -247,7 +252,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </section>
   );
