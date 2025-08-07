@@ -25,7 +25,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
+      <main role="main">
         <div className="animate-fade-in">
           <HeroSection />
         </div>
@@ -33,19 +33,19 @@ const Index = () => {
           <ClientLogosSection />
         </div>
       
-        <section id="testimonials">
+        <section id="testimonials" aria-label="Client testimonials and reviews">
           <div className="animate-fade-in">
             <TestimonialsSection />
           </div>
         </section>
         
         {/* Team Introduction */}
-        <section id="team" className="py-8 bg-luxury-gradient">
+        <section id="team" className="py-8 bg-luxury-gradient" aria-label="Meet our professional virtual assistant team">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
                 <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                  <Users className="w-5 h-5 text-primary mr-2" />
-                  <span className="text-primary font-semibold">Our Team</span>
+                  <Users className="w-5 h-5 text-primary mr-2" aria-hidden="true" />
+                  <span className="text-primary font-semibold">Our Expert Team</span>
                 </div>
                 <h2 className="mb-4">
                   <span className="text-gradient">Expert Team</span>
