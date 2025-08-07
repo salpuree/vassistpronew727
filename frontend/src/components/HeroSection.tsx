@@ -134,10 +134,10 @@ const StarIcon = () => (
 const HeroSection = () => {
   // Data for the typewriter effect
   const rotatingWords = [
-    "Flawless Operations.",
-    "Happier Clients.",
-    "Effortless Growth.",
-    "Peace of Mind.",
+    "Flawless Concierge Operations.",
+    "Happier VIP Clients.",
+    "Effortless Luxury Growth.",
+    "White-Glove Peace of Mind.",
   ];
 
   // Data for the key metrics/stats section
