@@ -145,7 +145,7 @@ const HowWeWorkSection = () => {
             <span className="block text-foreground">Your Transportation Business</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our systematic 6-week implementation process ensures seamless integration and immediate results. 
+            Our systematic 24-hour implementation process ensures seamless integration and immediate results. 
             Here's exactly how we become your strategic partner for business excellence.
           </p>
         </div>
