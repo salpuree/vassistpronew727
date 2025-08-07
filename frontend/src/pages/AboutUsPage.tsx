@@ -16,7 +16,7 @@ const AboutUsPage = () => {
           imageUrl="/industy-expertise.png"
           breadcrumb="About Us"
         />
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center pt-5">
           <span className="text-gradient">Growing Together</span>
           <span className="block text-foreground">with Transportation Businesses</span>
         </h2>
