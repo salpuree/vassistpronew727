@@ -17,6 +17,8 @@ import ContactUsPage from "./pages/ContactUsPage";
 import ROICalculatorPage from "./pages/ROICalculatorPage";
 import SocialProofPage from "./pages/SocialProofPage";
 import NotFound from "./pages/NotFound";
+import PerformanceOptimizer from "./components/PerformanceOptimizer";
+import SEOHead from "./components/SEOHead";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +53,8 @@ const LiveChatButton = () => {
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <SEOHead />
+      <PerformanceOptimizer />
       <Toaster />
       <Sonner />
       <BrowserRouter>
