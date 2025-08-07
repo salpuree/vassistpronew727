@@ -65,7 +65,7 @@ const CaseStudiesSection = () => {
       industry: "Luxury Ground Transportation",
       challenge: "Manual booking processes causing 30% missed opportunities and customer service bottlenecks",
       solution: "Complete Limo Anywhere integration + 24/7 back-office support implementation",
-      timeline: "6 weeks",
+      timeline: "24 hours",
       results: [
         { metric: "Booking Conversion", before: "60%", after: "94%", improvement: "+57%" },
         { metric: "Response Time", before: "4+ hours", after: "< 15 minutes", improvement: "94% faster" },
