@@ -30,38 +30,38 @@ const CollapsibleHowWeWork = () => {
   const fullProcess = [
     {
       phase: "Discovery & Planning",
-      duration: "Week 1",
+      duration: "Hours 1-4",
       icon: Settings,
       title: "Understanding Your Business",
-      description: "Comprehensive assessment and custom solution design",
+      description: "Quick assessment and solution design",
       activities: [
-        "Business assessment and analysis",
-        "System evaluation and planning", 
-        "Custom solution blueprint creation"
+        "Business needs assessment",
+        "System evaluation",
+        "Solution planning"
       ]
     },
     {
       phase: "Setup & Integration",
-      duration: "Weeks 2-4", 
+      duration: "Hours 5-16",
       icon: Rocket,
       title: "System Implementation",
-      description: "Technical integration and team training",
+      description: "Rapid integration and setup",
       activities: [
-        "Limo Anywhere/GNet integration",
-        "Team training on procedures",
-        "Quality assurance testing"
+        "System integration setup",
+        "Basic configuration",
+        "Initial testing"
       ]
     },
     {
-      phase: "Launch & Optimization",
-      duration: "Weeks 5-6",
+      phase: "Launch & Handover",
+      duration: "Hours 17-24",
       icon: Monitor,
-      title: "Go-Live Support", 
-      description: "Seamless transition with dedicated support",
+      title: "Go-Live Support",
+      description: "Final testing and handover",
       activities: [
-        "Soft launch with monitoring",
-        "Performance optimization",
-        "Full operations handover"
+        "Final system testing",
+        "Documentation handover",
+        "Go-live support"
       ]
     }
   ];
