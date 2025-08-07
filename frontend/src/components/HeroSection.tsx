@@ -195,7 +195,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-white/70 font-medium mb-8 max-w-3xl mx-auto leading-relaxed">
-            Expert virtual assistants providing 24/7 back office support, customer service, booking management, and administrative solutions for chauffeur services, luxury transport operators, and premium travel planners nationwide.
+            Expert concierge virtual assistants providing 24/7 back office support, premium customer service, booking management, and white-glove administrative solutions for chauffeur services, luxury transport operators, and high-end concierge companies nationwide.
           </p>
 
           {/* CTA Buttons */}
