@@ -85,10 +85,6 @@ const CollapsibleIndustryExpertise = () => {
             <BookOpen className="w-5 h-5 text-primary mr-2" />
             <span className="text-primary font-semibold">Industry Expertise</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">{previewData.title.split(' ').slice(0, 3).join(' ')}</span>
-            <span className="block text-foreground">{previewData.title.split(' ').slice(3).join(' ')}</span>
-          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             {previewData.summary}
           </p>
