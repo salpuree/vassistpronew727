@@ -115,7 +115,11 @@ const ContactSection = () => {
                 </p>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                  </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="name" className="text-foreground">Full Name *</Label>
