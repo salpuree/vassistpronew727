@@ -9,7 +9,7 @@ import teamImage from "@/assets/team-development.jpg";
 
 const TeamPage = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       <main className="pt-20">
         <CustomHeroSection />
@@ -24,11 +24,11 @@ const TeamPage = () => {
 
 const CustomHeroSection = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gray-900">
+    <section className="relative min-h-[70vh] flex items-center justify-center bg-gray-900">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F60f9495b73d54a43adb3daa33a4216c8%2Fdcbe4ad77b374f4dbf2576285451e475?format=webp&width=800"
+          src="/src/assets/hero-luxury-transport.jpg"
           alt="Team Background"
           className="w-full h-full object-cover"
           loading="lazy"
@@ -114,8 +114,22 @@ const TeamMembersSection = () => {
   ];
 
   return (
-    <section className="py-5 bg-gray-900">
+    <section className="py-16 bg-gray-900">
       <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+            <Users className="w-5 h-5 text-blue-400 mr-2" />
+            <span className="text-blue-400 font-semibold">Key Team Members</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Meet Some of Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Expert Team</span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            These are just a few of our dedicated professionals. Our full team includes specialists in technology, operations, customer service, and business development.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {teamMembers.map((member, index) => (
             <TeamMemberCard key={index} member={member} />
