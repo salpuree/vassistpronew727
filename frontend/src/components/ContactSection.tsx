@@ -275,30 +275,6 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Bottom Trust Indicators */}
-        <div className="mt-20 text-center">
-          <div className="relative white-section-style p-12 w-full hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:border-primary/40 group cursor-pointer overflow-hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
-            <div className="absolute top-4 right-4 w-8 h-8 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-primary transition-colors duration-300 relative z-10">
-              Why Transportation Companies Choose Us
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <div className="text-3xl font-bold text-gradient mb-2">&lt; 15min</div>
-                <div className="text-gray-600">Response Time</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-gradient mb-2">100%</div>
-                <div className="text-gray-600">Project Success Rate</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-gradient mb-2">15+</div>
-                <div className="text-gray-600">Years Experience</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
