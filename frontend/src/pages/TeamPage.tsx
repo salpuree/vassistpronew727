@@ -12,12 +12,7 @@ const TeamPage = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <PageHeroSection
-          title="Meet Our Team"
-          description="The dedicated professionals behind your success. Our specialized team combines technical expertise with operational excellence for luxury transportation."
-          imageUrl="/src/assets/hero-luxury-transport.jpg"
-          breadcrumb="Our Team"
-        />
+        <CustomHeroSection />
         <TeamMembersSection />
         <WhyChooseTeamSection />
       </main>
@@ -26,6 +21,61 @@ const TeamPage = () => {
   );
 };
 
+
+const CustomHeroSection = () => {
+  return (
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gray-900">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F60f9495b73d54a43adb3daa33a4216c8%2Fdcbe4ad77b374f4dbf2576285451e475?format=webp&width=800"
+          alt="Team Background"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/90" />
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-8 w-16 h-16 bg-blue-500/20 rounded-full animate-float blur-sm" />
+      <div className="absolute bottom-32 right-16 w-12 h-12 bg-cyan-400/30 rounded-full animate-bounce" style={{animationDelay: "2s"}} />
+      <div className="absolute top-1/2 right-32 w-8 h-8 bg-blue-400/40 rounded-full animate-float" style={{animationDelay: "4s"}} />
+      <div className="absolute top-1/3 left-1/4 w-6 h-6 bg-cyan-300/30 rounded-full animate-pulse" style={{animationDelay: "1s"}} />
+
+      {/* Main Content */}
+      <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto">
+          {/* Breadcrumb */}
+          <div className="mb-8 animate-fade-in">
+            <Link
+              to="/"
+              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
+            >
+              <span className="mr-2">←</span>
+              Back to Home
+            </Link>
+            <span className="text-gray-400 mx-3">/</span>
+            <span className="text-gray-300 text-sm">Our Team</span>
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 animate-slide-up">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-blue-500">
+              Our Expert Team
+            </span>
+          </h1>
+
+          {/* Description */}
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: "0.2s"}}>
+            Meet the dedicated professionals who make your success possible.
+            Our specialized team combines technical expertise with operational
+            excellence for luxury transportation.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const TeamMembersSection = () => {
   const teamMembers = [
@@ -39,7 +89,7 @@ const TeamMembersSection = () => {
     },
     {
       name: "Linda T.",
-      title: "Chief Operations Director", 
+      title: "Chief Operations Director",
       subtitle: "Business Operations Excellence",
       description: "Linda manages the operations. Personally oversees all client relationships and ensures 24/7 operational excellence. The strategic mind behind our seamless service delivery.",
       avatar: "👑",
@@ -55,7 +105,7 @@ const TeamMembersSection = () => {
     },
     {
       name: "Emaan A.",
-      title: "Client Onboarding Executive", 
+      title: "Client Onboarding Executive",
       subtitle: "Client Success",
       description: "Ensures smooth client onboarding and maintains exceptional client relationships.",
       avatar: "😊",
@@ -64,7 +114,7 @@ const TeamMembersSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-5 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {teamMembers.map((member, index) => (
