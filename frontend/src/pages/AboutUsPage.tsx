@@ -12,13 +12,13 @@ const AboutUsPage = () => {
       <main className="pt-20">
         <PageHeroSection
           title="About Us"
-          description="15+ years of transportation industry expertise, trusted by hundreds of companies nationwide. Discover our proven process, industry knowledge, and commitment to excellence."
+          description="A dedicated team of virtual assistants specializing in transportation industry support. We're committed to helping your business grow with reliable, personalized service."
           imageUrl="/industy-expertise.png"
           breadcrumb="About Us"
         />
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-          <span className="text-gradient">15+ Years of</span>
-          <span className="block text-foreground">Transportation Industry Knowledge</span>
+          <span className="text-gradient">Growing Together</span>
+          <span className="block text-foreground">with Transportation Businesses</span>
         </h2>
         <div className="animate-fade-in">
           {/* Industry Expertise Section */}
