@@ -179,7 +179,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-slate-800/50 border border-slate-700 mb-8 mt-8">
             <Zap className="w-5 h-5 text-blue-400 mr-2" />
             <span className="text-slate-300 font-semibold">
-              The Back Office Behind the Best Chauffeur Services, Nationwide.
+              The Back Office Behind the Best Chauffeur & Concierge Services, Nationwide.
             </span>
           </div>
 
