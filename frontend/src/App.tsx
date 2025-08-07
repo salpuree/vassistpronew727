@@ -48,6 +48,8 @@ const App = () => (
           <Route path="/case-studies" element={<SuccessStoriesPage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/faqs" element={<FAQPage />} />
+          <Route path="/roi-calculator" element={<ROICalculatorPage />} />
+          <Route path="/social-proof" element={<SocialProofPage />} />
           {/* Legacy routes for backward compatibility */}
           <Route path="/about-us/industry-expertise" element={<AboutUsPage />} />
           <Route path="/about-us/trust-recognition" element={<AboutUsPage />} />
