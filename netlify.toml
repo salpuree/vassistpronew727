@@ -26,3 +26,26 @@
   for = "/static/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Form handling configuration
+[forms]
+  [forms.contact]
+    to = ["info@virtualassistancepro.com", "team@virtualassistancepro.com"]
+    subject = "New Contact Form Submission from Virtual Assistance Pro Website"
+    template = """
+New contact form submission:
+
+Name: {{ name }}
+Email: {{ email }}
+Company: {{ company }}
+Phone: {{ phone }}
+Service Needed: {{ service }}
+Budget: {{ budget }}
+Timeline: {{ timeline }}
+
+Message:
+{{ message }}
+
+---
+Submitted from: {{ site_name }} at {{ site_url }}
+"""
