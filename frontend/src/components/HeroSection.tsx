@@ -186,7 +186,7 @@ const HeroSection = () => {
           {/* Main Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-3">
             <span className="block text-white/80 mb-2 font-normal text-4xl md:text-5xl lg:text-6xl">
-              Premium Virtual Assistant & Back Office Solutions for Luxury Transport
+              Premium Concierge Virtual Assistant & Back Office Solutions for Luxury Transport
             </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow">
               <TypewriterEffect words={rotatingWords} />
