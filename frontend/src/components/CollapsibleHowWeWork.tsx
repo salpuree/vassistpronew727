@@ -67,7 +67,7 @@ const CollapsibleHowWeWork = () => {
   ];
 
   return (
-    <section className="py-12">
+    <section className="py-5">
       <div className="container mx-auto px-4">
         {/* Preview Section */}
         <div className="text-center mb-12">
