@@ -47,7 +47,7 @@ const ContactSection = () => {
       if (response.ok) {
         toast({
           title: "Message Sent Successfully!",
-          description: "We'll get back to you within 24 hours to discuss your project.",
+          description: "We'll get back to you within 12 hours to discuss your project.",
         });
         setFormData({
           name: "",
@@ -83,18 +83,18 @@ const ContactSection = () => {
       icon: Mail,
       title: "Email Us",
       details: "info@virtualassistancepro.com",
-      description: "Get a response within 2 hours"
+      description: "Get a response within 1 hour"
     },
     {
       icon: Phone,
       title: "Call Us",
       details: "+1 (941) 623-4590",
-      description: "Mon-Fri 8AM-8PM EST"
+      description: "Open 24/7"
     },
     {
       icon: Clock,
       title: "Response Time",
-      details: "< 2 Hours",
+      details: "< 1 Hour",
       description: "Fast, professional responses"
     }
   ];
@@ -111,7 +111,7 @@ const ContactSection = () => {
                   Tell Us About Your Project
                 </CardTitle>
                 <p className="text-muted-foreground">
-                  Fill out the form below and we'll get back to you with a detailed proposal within 24 hours.
+                  Fill out the form below and we'll get back to you with a detailed proposal within 12 hours.
                 </p>
               </CardHeader>
               <CardContent>
