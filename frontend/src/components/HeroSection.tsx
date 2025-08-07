@@ -167,7 +167,7 @@ const HeroSection = () => {
           alt="Professional virtual assistant working on luxury transportation and chauffeur service back office operations"
           className="w-full h-full object-cover"
           loading="eager"
-          fetchPriority="high"
+          fetchpriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/75 to-background/80" />
       </div>
