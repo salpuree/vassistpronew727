@@ -24,7 +24,7 @@ const CollapsibleSocialProof = () => {
       description: "Quick support"
     },
     {
-      metric: "5+",
+      metric: "15+",
       label: "Years Experience",
       icon: Heart,
       description: "Growing expertise"
