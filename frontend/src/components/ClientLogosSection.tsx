@@ -102,13 +102,15 @@ const ClientLogosSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left Column - Dashboard Image & Button */}
           <div className="flex flex-col justify-between h-full">
-            <div className="relative bg-black/20 rounded-3xl p-4 border border-white/10 shadow-2xl shadow-black/40">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F489119e2c69c42a5b0f1e2f32846041e%2Fd632023355e544f9a384931dde9bd782"
-                alt="V-Assist Pro Workflow Dashboard"
-                className="w-full h-auto rounded-2xl min-h-[200px]"
-              />
-            </div>
+            <InteractiveCard>
+              <div className="relative bg-black/20 rounded-3xl p-4 border border-white/10 shadow-2xl shadow-black/40">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F489119e2c69c42a5b0f1e2f32846041e%2Fd632023355e544f9a384931dde9bd782"
+                  alt="V-Assist Pro Workflow Dashboard"
+                  className="w-full h-auto rounded-2xl min-h-[200px]"
+                />
+              </div>
+            </InteractiveCard>
             <div className="mt-8 flex justify-center">
               <Button
                 size="lg"
