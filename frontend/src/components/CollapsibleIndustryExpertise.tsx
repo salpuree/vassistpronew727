@@ -11,13 +11,13 @@ import {
 const CollapsibleIndustryExpertise = () => {
 
   const previewData = {
-    title: "15+ Years of Transportation Industry Knowledge",
-    summary: "Deep industry expertise helping you navigate regulations, optimize operations, and stay ahead of market trends.",
+    title: "Transportation Industry Focus",
+    summary: "We specialize in supporting transportation businesses with dedicated virtual assistance services tailored to your industry needs.",
     keyStats: [
-      { metric: "15+", label: "Years Experience", icon: BookOpen },
-      { metric: "500+", label: "Companies Served", icon: Users },
-      { metric: "50", label: "States Covered", icon: FileText },
-      { metric: "100%", label: "Compliance Rate", icon: CheckCircle }
+      { metric: "5+", label: "Years Experience", icon: BookOpen },
+      { metric: "50+", label: "Happy Clients", icon: Users },
+      { metric: "24/7", label: "Support Available", icon: FileText },
+      { metric: "100%", label: "Satisfaction Focus", icon: CheckCircle }
     ]
   };
 
@@ -29,7 +29,7 @@ const CollapsibleIndustryExpertise = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <BookOpen className="w-5 h-5 text-primary mr-2" />
-            <span className="text-primary font-semibold">Industry Expertise</span>
+            <span className="text-primary font-semibold">Our Focus</span>
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             {previewData.summary}
