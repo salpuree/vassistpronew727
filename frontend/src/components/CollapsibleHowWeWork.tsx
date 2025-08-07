@@ -18,10 +18,10 @@ const CollapsibleHowWeWork = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const previewData = {
-    title: "Our Proven 6-Week Process",
-    summary: "Systematic implementation ensuring seamless integration and immediate results for your transportation business.",
+    title: "Our Proven 24-Hour Process",
+    summary: "Rapid implementation ensuring seamless integration and immediate results for your transportation business.",
     keyPoints: [
-      { icon: Clock, title: "6 Week Implementation", desc: "Complete setup in 6 weeks" },
+      { icon: Clock, title: "24 Hour Implementation", desc: "Complete setup in 24 hours" },
       { icon: CheckCircle, title: "100% Success Rate", desc: "Guaranteed results" },
       { icon: Settings, title: "Custom Integration", desc: "Tailored to your business" }
     ]
