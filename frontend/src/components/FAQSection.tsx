@@ -32,42 +32,16 @@ const FAQSection = () => {
       icon: Settings,
       questions: [
         {
-          question: "How quickly can you implement your services for our transportation company?",
-          answer: "Our standard implementation takes 4-6 weeks for complete technology integration and back-office support setup. For urgent needs, we offer expedited implementation in as little as 2 weeks. This includes Limo Anywhere/GNet integration, team training on your procedures, and full operational handover with dedicated support."
+          question: "What do you need from us to get started?",
+          answer: "Just your platform details (Limo Anywhere, GNet, etc.), SOPs, service standards, contact info, and access credentials. We'll guide you through the onboarding process."
         },
         {
-          question: "What information do you need from us to get started?",
-          answer: "We'll need your current system details (Limo Anywhere, GNet, or other platforms), business procedures, service standards, contact information, and access credentials for integration. Our onboarding team will guide you through a comprehensive discovery process to ensure we understand your unique business requirements."
+          question: "How fast can you start working with our transportation company?",
+          answer: "We can fully onboard you in 24 hours. This includes Limo Anywhere or GNet integration, training our team on your procedures, and a complete operational handoff."
         },
         {
-          question: "Do you work with companies outside of luxury transportation?",
-          answer: "While we specialize in luxury transportation and have deep expertise in this industry, we do work with related service businesses like corporate transportation, medical transport, and high-end logistics companies. Our specialized knowledge of transportation regulations and customer service standards transfers well to similar industries."
-        },
-        {
-          question: "Can you handle seasonal fluctuations in our business?",
-          answer: "Absolutely. We understand the seasonal nature of luxury transportation and can scale our support up or down based on your needs. Whether it's prom season, wedding season, or holiday corporate events, we adjust our capacity to match your demand without you having to manage additional staff."
-        }
-      ]
-    },
-    {
-      category: "Pricing & Packages",
-      icon: DollarSign,
-      questions: [
-        {
-          question: "Why don't you list specific prices on your website?",
-          answer: "Every transportation company has unique needs, call volumes, and service requirements. We provide custom pricing based on your specific situation to ensure you get the best value. Our pricing considers factors like call volume, service hours, integration complexity, and special requirements. Most clients find our custom approach saves them money compared to one-size-fits-all pricing."
-        },
-        {
-          question: "What's typically included in your pricing?",
-          answer: "All packages include dedicated account management, team training on your procedures, integration setup, ongoing support, performance reporting, and quality monitoring. Technology integrations, custom workflows, and specialized training may have one-time setup fees, but ongoing operations are typically billed monthly."
-        },
-        {
-          question: "Are there any long-term contracts required?",
-          answer: "We offer flexible contract terms starting with 3-month agreements for new clients to ensure mutual satisfaction. Most established clients prefer annual agreements for better pricing and priority support. We believe in earning your business through excellent service, not locking you into lengthy contracts."
-        },
-        {
-          question: "How do costs compare to hiring in-house staff?",
-          answer: "Most clients save 40-60% compared to hiring equivalent in-house staff when you factor in salaries, benefits, training, management overhead, and coverage for sick days/vacations. Plus, you get immediate expertise without the time and cost of hiring and training staff who may not have transportation industry experience."
+          question: "Do you only support luxury transportation companies?",
+          answer: "Luxury transportation is our core focus, but we also support industries like healthcare, handling patient appointment bookings with the same professionalism."
         }
       ]
     },
@@ -76,64 +50,60 @@ const FAQSection = () => {
       icon: Settings,
       questions: [
         {
-          question: "Which transportation software systems do you integrate with?",
-          answer: "We specialize in Limo Anywhere and GNet systems with certified expertise in both platforms. We also integrate with most major transportation software including GroundSpan, Chauffeur, TaxiCaller, and custom-built systems. If you use a different platform, we'll work with their technical team to establish integration."
+          question: "Which software platforms do you integrate with?",
+          answer: "We specialize in Limo Anywhere and GNet for dispatching, and support Gmail, Outlook, Helpwise, and Front for email handling. We also work with Slack for team communication, and Dialpad, Vonage, and RingCentral for call management. These are just a few examples. If your platform has an API, we can integrate with it."
         },
         {
-          question: "What if our current system isn't working properly?",
-          answer: "System optimization is one of our specialties. We can diagnose issues with your current Limo Anywhere, GNet, or other platform setup and implement fixes. Many clients come to us with underperforming systems that we've been able to optimize for significantly better performance and user experience."
+          question: "Do you offer technical support and system optimization?",
+          answer: "Yes. We monitor, troubleshoot, and optimize your systems while coordinating directly with your software vendors. No need for in-house IT."
         },
         {
-          question: "Do you provide ongoing technical support for our systems?",
-          answer: "Yes, technical support is included in all our packages. We monitor your systems, perform regular updates, troubleshoot issues, and coordinate with software vendors when needed. You get dedicated technical support without needing an in-house IT person familiar with transportation software."
-        },
-        {
-          question: "Can you help us migrate from one system to another?",
-          answer: "Absolutely. We've handled numerous system migrations including data transfer, workflow recreation, and staff training on new platforms. We ensure zero downtime during transitions and can run parallel systems during testing phases to ensure everything works perfectly before full cutover."
+          question: "Can you help restructure our current systems for better efficiency and quality control?",
+          answer: "Yes. We can help restructure your company by aligning with your preferred email handling tools, team communication apps, and setting up quality assurance monitoring to ensure every interaction is handled correctly."
         }
       ]
     },
     {
-      category: "Service & Support",
+      category: "Service Features & Quality",
       icon: Users,
       questions: [
         {
-          question: "How do you train your team on our specific business procedures?",
-          answer: "We start with a comprehensive onboarding process where our team learns your booking procedures, pricing structures, service standards, and customer communication style. We create custom scripts and procedures specific to your business, conduct role-playing sessions, and have your team review and approve our approach before going live."
+          question: "Do you offer quality control services?",
+          answer: "Yes. If needed, we can provide dedicated quality control as part of your plan. Every reservation, call, and email can be monitored and reviewed each time it's handled. You can decide the level of QC during the onboarding or planning phase."
         },
         {
-          question: "What happens if there's an issue with call quality or service?",
-          answer: "All calls are monitored and scored for quality. If there's ever an issue, we address it immediately with retraining, process adjustments, or team changes as needed. We maintain detailed performance metrics and conduct regular quality reviews to ensure consistently excellent service that represents your brand properly."
+          question: "Can I customize the greeting script for agents?",
+          answer: "Yes. You can fully customize greetings, tone, and instructions to match your brand voice and client experience."
         },
         {
-          question: "How do you handle after-hours and emergency calls?",
-          answer: "Our 24/7 packages include full after-hours coverage with the same high standards as business hours. We have protocols for emergency situations, vehicle breakdowns, flight delays, and other urgent matters. Emergency calls are escalated to supervisors and can be forwarded to you immediately if needed."
+          question: "Can I listen to call recordings?",
+          answer: "Yes. All inbound and outbound calls are recorded and made available to you for training, QA, or resolving disputes."
         },
         {
-          question: "Can clients tell that they're speaking with a virtual assistant?",
-          answer: "No. Our team is trained to represent your company as if they're in-house employees. We use your company name, follow your procedures, and maintain your brand standards. Most clients' customers never realize they're speaking with our team rather than direct employees."
+          question: "How do you handle seasonal spikes or emergencies?",
+          answer: "Your engagement manager will plan ahead for peak seasons like proms, weddings, or holidays. For 24/7 coverage, we offer backup agent add-ons to keep things running smoothly."
         }
       ]
     },
     {
-      category: "Security & Compliance",
-      icon: Shield,
+      category: "Pricing & Billing",
+      icon: DollarSign,
       questions: [
         {
-          question: "How do you protect our customer data and business information?",
-          answer: "We maintain SOC 2 Type II compliance with bank-level security measures including 256-bit SSL encryption, secure data centers, multi-factor authentication, and comprehensive access controls. All team members sign strict confidentiality agreements and undergo background checks."
+          question: "How do your prices compare to hiring in-house?",
+          answer: "Most clients save 40 to 60 percent compared to hiring internal staff. You avoid the overhead of recruitment, training, benefits, and management while getting trained experts right away."
         },
         {
-          question: "What happens to our data if we stop using your services?",
-          answer: "You retain full ownership of all your data. Upon service termination, we provide complete data export in standard formats and securely delete all information from our systems within 30 days. We never hold your data hostage and ensure smooth transitions if you decide to change providers."
+          question: "What's included in your service packages?",
+          answer: "Every plan includes a dedicated account manager, integration setup, team training, quality monitoring, performance reporting, and ongoing support. Custom workflows and 24/7 backup coverage are optional."
         },
         {
-          question: "Are you compliant with transportation industry regulations?",
-          answer: "Yes, we understand DOT requirements, insurance regulations, and state licensing requirements that affect luxury transportation companies. Our team is trained on privacy requirements for corporate clients and VIP handling procedures that meet luxury service standards."
+          question: "What payment methods do you accept?",
+          answer: "We accept all major credit cards including Amex, Visa, and MasterCard via a secure payment link."
         },
         {
-          question: "Do you have business insurance and liability coverage?",
-          answer: "We carry comprehensive business liability insurance, professional indemnity coverage, and cyber liability insurance. We can provide certificates of insurance and include your company as an additional insured if required for your business arrangements."
+          question: "How does your billing work?",
+          answer: "All billing is prepaid."
         }
       ]
     }
