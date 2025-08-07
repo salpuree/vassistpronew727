@@ -27,7 +27,7 @@ const CollapsibleFAQ = () => {
   const previewFAQs = [
     {
       question: "How quickly can you implement your services?",
-      answer: "Our standard implementation takes 4-6 weeks for complete setup, with expedited 2-week options available for urgent needs."
+      answer: "Our standard implementation takes 4-24 hours for complete setup, with expedited 2-week options available for urgent needs."
     },
     {
       question: "Why don't you list specific prices?",

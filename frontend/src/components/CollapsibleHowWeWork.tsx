@@ -18,10 +18,10 @@ const CollapsibleHowWeWork = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const previewData = {
-    title: "Our Proven 6-Week Process",
-    summary: "Systematic implementation ensuring seamless integration and immediate results for your transportation business.",
+    title: "Our Proven 24-Hour Process",
+    summary: "Rapid implementation ensuring seamless integration and immediate results for your transportation business.",
     keyPoints: [
-      { icon: Clock, title: "6 Week Implementation", desc: "Complete setup in 6 weeks" },
+      { icon: Clock, title: "24 Hour Implementation", desc: "Complete setup in 24 hours" },
       { icon: CheckCircle, title: "100% Success Rate", desc: "Guaranteed results" },
       { icon: Settings, title: "Custom Integration", desc: "Tailored to your business" }
     ]
@@ -30,38 +30,38 @@ const CollapsibleHowWeWork = () => {
   const fullProcess = [
     {
       phase: "Discovery & Planning",
-      duration: "Week 1",
+      duration: "Hours 1-4",
       icon: Settings,
       title: "Understanding Your Business",
-      description: "Comprehensive assessment and custom solution design",
+      description: "Quick assessment and solution design",
       activities: [
-        "Business assessment and analysis",
-        "System evaluation and planning", 
-        "Custom solution blueprint creation"
+        "Business needs assessment",
+        "System evaluation",
+        "Solution planning"
       ]
     },
     {
       phase: "Setup & Integration",
-      duration: "Weeks 2-4", 
+      duration: "Hours 5-16",
       icon: Rocket,
       title: "System Implementation",
-      description: "Technical integration and team training",
+      description: "Rapid integration and setup",
       activities: [
-        "Limo Anywhere/GNet integration",
-        "Team training on procedures",
-        "Quality assurance testing"
+        "System integration setup",
+        "Basic configuration",
+        "Initial testing"
       ]
     },
     {
-      phase: "Launch & Optimization",
-      duration: "Weeks 5-6",
+      phase: "Launch & Handover",
+      duration: "Hours 17-24",
       icon: Monitor,
-      title: "Go-Live Support", 
-      description: "Seamless transition with dedicated support",
+      title: "Go-Live Support",
+      description: "Final testing and handover",
       activities: [
-        "Soft launch with monitoring",
-        "Performance optimization",
-        "Full operations handover"
+        "Final system testing",
+        "Documentation handover",
+        "Go-live support"
       ]
     }
   ];
@@ -162,7 +162,7 @@ const CollapsibleHowWeWork = () => {
             <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-gradient mb-2">6 Weeks</div>
+                  <div className="text-3xl font-bold text-gradient mb-2">24 Hours</div>
                   <div className="text-muted-foreground">Full Implementation</div>
                 </div>
                 <div>
@@ -178,23 +178,6 @@ const CollapsibleHowWeWork = () => {
           </div>
         )}
 
-        {/* CTA */}
-        <div className="text-center mt-8">
-          <div className="relative bg-white border border-border/50 rounded-3xl p-8 w-full shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:border-primary/40 group cursor-pointer overflow-hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-blue-500 group-hover:w-2 transition-all duration-300"></div>
-            <div className="absolute top-4 right-4 w-6 h-6 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300 relative z-10">
-              Ready to Start Your Transformation?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Schedule a discovery call to discuss your specific needs and timeline.
-            </p>
-            <Button className="btn-luxury group-hover:scale-105 transition-transform duration-300">
-              Schedule Discovery Call
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );

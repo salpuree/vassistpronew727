@@ -21,22 +21,54 @@ const ContactSection = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours to discuss your project.",
-    });
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      service: "",
-      budget: "",
-      timeline: "",
-      message: ""
-    });
+
+    try {
+      // Create form data for Netlify Forms
+      const formDataToSend = new FormData();
+      formDataToSend.append('form-name', 'contact');
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('company', formData.company);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('service', formData.service);
+      formDataToSend.append('budget', formData.budget);
+      formDataToSend.append('timeline', formData.timeline);
+      formDataToSend.append('message', formData.message);
+      formDataToSend.append('recipients', 'info@virtualassistancepro.com,team@virtualassistancepro.com');
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formDataToSend as any).toString()
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "We'll get back to you within 24 hours to discuss your project.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          service: "",
+          budget: "",
+          timeline: "",
+          message: ""
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      toast({
+        title: "Error Sending Message",
+        description: "Please try again or contact us directly at info@virtualassistancepro.com",
+        variant: "destructive"
+      });
+    }
   };
 
   const handleChange = (field: string, value: string) => {
@@ -83,7 +115,11 @@ const ContactSection = () => {
                 </p>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                  </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="name" className="text-foreground">Full Name *</Label>
