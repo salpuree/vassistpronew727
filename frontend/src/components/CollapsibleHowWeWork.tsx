@@ -162,7 +162,7 @@ const CollapsibleHowWeWork = () => {
             <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-gradient mb-2">6 Weeks</div>
+                  <div className="text-3xl font-bold text-gradient mb-2">24 Hours</div>
                   <div className="text-muted-foreground">Full Implementation</div>
                 </div>
                 <div>
