@@ -39,7 +39,7 @@ const CollapsibleSocialProof = () => {
 
 
   return (
-    <section className="py-16">
+    <section className="py-5">
       <div className="container mx-auto px-4">
         {/* Preview Section */}
         <div className="text-center mb-12">
