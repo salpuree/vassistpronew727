@@ -16,6 +16,10 @@ const AboutUsPage = () => {
           imageUrl="/industy-expertise.png"
           breadcrumb="About Us"
         />
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
+          <span className="text-gradient">15+ Years of</span>
+          <span className="block text-foreground">Transportation Industry Knowledge</span>
+        </h2>
         <div className="animate-fade-in">
           {/* Industry Expertise Section */}
           <div id="industry-expertise">
