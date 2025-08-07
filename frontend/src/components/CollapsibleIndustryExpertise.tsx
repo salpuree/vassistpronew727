@@ -44,7 +44,7 @@ const CollapsibleIndustryExpertise = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
                   <stat.icon className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-gradient mb-1">{stat.metric}</div>
+                <div className="text-2xl md:text-3xl font-bold text-gradient mb-1"><p>{stat.metric}</p></div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </CardContent>
             </Card>
