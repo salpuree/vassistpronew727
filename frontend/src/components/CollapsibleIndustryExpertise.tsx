@@ -105,26 +105,6 @@ const CollapsibleIndustryExpertise = () => {
           ))}
         </div>
 
-        {/* Expand/Collapse Button */}
-        <div className="text-center mb-8">
-          <Button
-            onClick={() => setIsExpanded(!isExpanded)}
-            variant="outline"
-            className="btn-outline-luxury group"
-          >
-            {isExpanded ? (
-              <>
-                <ChevronUp className="w-5 h-5 mr-2" />
-                Show Less Details
-              </>
-            ) : (
-              <>
-                <ChevronDown className="w-5 h-5 mr-2" />
-                View Detailed Expertise
-              </>
-            )}
-          </Button>
-        </div>
 
 
       </div>
