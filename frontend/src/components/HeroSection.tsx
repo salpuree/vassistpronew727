@@ -239,7 +239,7 @@ const HeroSection = () => {
         <section className="w-full py-4 bg-black/20 backdrop-blur-sm" aria-label="Client testimonials and trust indicators">
           <div className="container mx-auto px-4 flex items-center">
             <h3 className="text-sm font-bold text-white/50 tracking-widest uppercase flex-shrink-0 pr-6">
-              Trusted By Industry Leaders:
+              Trusted By Luxury Service Leaders:
             </h3>
             <div className="flex-grow overflow-hidden" role="marquee" aria-label="Scrolling list of trusted clients">
               <div className="flex items-center space-x-12 animate-[marquee_30s_linear_infinite]">
