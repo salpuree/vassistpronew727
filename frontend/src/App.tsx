@@ -23,12 +23,29 @@ const queryClient = new QueryClient();
 // Component to handle scroll to top on route change
 const ScrollToTop = () => {
   const location = useLocation();
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
-  
+
   return null;
+};
+
+// Live Chat Button Component
+const LiveChatButton = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="fixed bottom-6 right-6 z-50">
+      <Button
+        className="w-14 h-14 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        onClick={() => navigate('/contact-us')}
+        title="Contact Us"
+      >
+        <MessageSquare className="w-6 h-6 text-primary-foreground" />
+      </Button>
+    </div>
+  );
 };
 
 const App = () => (
