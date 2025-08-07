@@ -1,23 +1,12 @@
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { 
-  Award, 
-  ChevronDown, 
-  ChevronUp,
-  Shield,
-  Star,
-  CheckCircle,
+import {
+  Award,
   Clock,
   Users,
-  TrendingUp,
-  Globe,
-  ArrowRight
+  TrendingUp
 } from "lucide-react";
 
 const CollapsibleSocialProof = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
 
   const trustIndicators = [
     {
