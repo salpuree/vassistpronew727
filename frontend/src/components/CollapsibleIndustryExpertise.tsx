@@ -1,21 +1,14 @@
-import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { 
-  BookOpen, 
-  ChevronDown, 
-  ChevronUp, 
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  BookOpen,
   Shield,
   FileText,
   TrendingUp,
   Users,
-  CheckCircle,
-  ArrowRight
+  CheckCircle
 } from "lucide-react";
 
 const CollapsibleIndustryExpertise = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
 
   const previewData = {
     title: "15+ Years of Transportation Industry Knowledge",
