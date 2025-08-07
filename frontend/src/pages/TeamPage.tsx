@@ -59,14 +59,14 @@ const CustomHeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 animate-slide-up">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-blue-500">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-blue-500 leading-tight">
               Our Expert Team
             </span>
           </h1>
 
           {/* Description */}
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: "0.2s"}}>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Meet the dedicated professionals who make your success possible.
             Our specialized team combines technical expertise with operational
             excellence for luxury transportation.
