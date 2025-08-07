@@ -6,17 +6,27 @@ import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-ro
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
-import Index from "./pages/Index";
-import SuccessStoriesPage from "./pages/SuccessStoriesPage";
-import AboutUsPage from "./pages/AboutUsPage";
-import FAQPage from "./pages/FAQPage";
-import ServicesPage from "./pages/ServicesPage";
-import ServicePackagesPage from "./pages/ServicePackagesPage";
-import TeamPage from "./pages/TeamPage";
-import ContactUsPage from "./pages/ContactUsPage";
-import ROICalculatorPage from "./pages/ROICalculatorPage";
-import SocialProofPage from "./pages/SocialProofPage";
-import NotFound from "./pages/NotFound";
+import { Suspense, lazy } from "react";
+
+// Dynamic imports for code splitting
+const Index = lazy(() => import("./pages/Index"));
+const SuccessStoriesPage = lazy(() => import("./pages/SuccessStoriesPage"));
+const AboutUsPage = lazy(() => import("./pages/AboutUsPage"));
+const FAQPage = lazy(() => import("./pages/FAQPage"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage"));
+const ServicePackagesPage = lazy(() => import("./pages/ServicePackagesPage"));
+const TeamPage = lazy(() => import("./pages/TeamPage"));
+const ContactUsPage = lazy(() => import("./pages/ContactUsPage"));
+const ROICalculatorPage = lazy(() => import("./pages/ROICalculatorPage"));
+const SocialProofPage = lazy(() => import("./pages/SocialProofPage"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen bg-background">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+  </div>
+);
 import PerformanceOptimizer from "./components/PerformanceOptimizer";
 import SEOHead from "./components/SEOHead";
 
@@ -60,6 +70,7 @@ const App = () => (
       <BrowserRouter>
         <div className="overflow-x-hidden">
         <ScrollToTop />
+        <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<ServicesPage />} />
@@ -79,7 +90,8 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        
+        </Suspense>
+
         <LiveChatButton />
         </div>
       </BrowserRouter>
