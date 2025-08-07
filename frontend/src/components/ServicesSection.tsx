@@ -58,12 +58,12 @@ const InteractiveCard = ({ children, className, delay = 0 }) => {
             style={{ animationDelay: `${delay}ms` }}
         >
             {/* Enhanced glow effect */}
-            <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-40"></div>
+            <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 blur-sm transition-all duration-300 group-hover:opacity-30"></div>
             
             {/* Main card */}
             <div 
                 style={style} 
-                className="relative w-full h-full bg-gray-800/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 transition-all duration-500 overflow-hidden hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10"
+                className="relative w-full h-full bg-gray-800/80 border border-gray-700/50 rounded-3xl p-8 transition-all duration-500 overflow-hidden hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10"
             >
                 <div 
                     className="absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100 rounded-3xl" 

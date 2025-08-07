@@ -247,7 +247,10 @@ const CollapsibleROICalculator = () => {
             <p className="text-gray-600 mb-6">
               Schedule a consultation to get a personalized ROI analysis for your specific business.
             </p>
-            <Button className="btn-luxury group-hover:scale-105 transition-transform duration-300">
+            <Button
+              className="btn-luxury group-hover:scale-105 transition-transform duration-300"
+              onClick={() => window.location.href = '/contact-us'}
+            >
               Get Custom ROI Analysis
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>

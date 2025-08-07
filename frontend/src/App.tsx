@@ -7,12 +7,9 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
 import Index from "./pages/Index";
-import ROICalculatorPage from "./pages/ROICalculatorPage";
-import CaseStudiesPage from "./pages/CaseStudiesPage";
+import SuccessStoriesPage from "./pages/SuccessStoriesPage";
+import AboutUsPage from "./pages/AboutUsPage";
 import FAQPage from "./pages/FAQPage";
-import IndustryExpertisePage from "./pages/IndustryExpertisePage";
-import SocialProofPage from "./pages/SocialProofPage";
-import HowWeWorkPage from "./pages/HowWeWorkPage";
 import ServicesPage from "./pages/ServicesPage";
 import ServicePackagesPage from "./pages/ServicePackagesPage";
 import TeamPage from "./pages/TeamPage";
@@ -45,12 +42,14 @@ const App = () => (
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/service-packages" element={<ServicePackagesPage />} />
           <Route path="/team" element={<TeamPage />} />
-          <Route path="/roi-calculator" element={<ROICalculatorPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/success-stories" element={<SuccessStoriesPage />} />
+          <Route path="/case-studies" element={<SuccessStoriesPage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/faqs" element={<FAQPage />} />
-          <Route path="/about-us/industry-expertise" element={<IndustryExpertisePage />} />
-          <Route path="/about-us/trust-recognition" element={<SocialProofPage />} />
-          <Route path="/about-us/our-process" element={<HowWeWorkPage />} />
+          {/* Legacy routes for backward compatibility */}
+          <Route path="/about-us/industry-expertise" element={<AboutUsPage />} />
+          <Route path="/about-us/trust-recognition" element={<AboutUsPage />} />
+          <Route path="/about-us/our-process" element={<AboutUsPage />} />
           <Route path="/contact-us" element={<ContactUsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

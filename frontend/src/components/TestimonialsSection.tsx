@@ -71,7 +71,7 @@ const SuccessStoriesSection = () => {
     const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
     return (
-        <section className="py-24 bg-[#0D1B2A]">
+        <section className="py-5 bg-[#0D1B2A]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <p className="text-sm font-bold uppercase tracking-widest text-[#C0C0C0] mb-4">Success Stories</p>
@@ -103,7 +103,7 @@ const SuccessStoriesSection = () => {
                     ))}
                 </div>
 
-                <div className="mt-16 pt-16 border-t border-white/10">
+                <div className="mt-5 pt-16 border-t border-white/10">
                     <div className="relative max-w-5xl mx-auto">
                         <div className="overflow-hidden">
                             <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>

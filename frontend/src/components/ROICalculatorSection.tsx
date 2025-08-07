@@ -345,7 +345,10 @@ const ROICalculatorSection = () => {
               Schedule a consultation to get a personalized ROI analysis for your specific business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-luxury text-lg px-8 py-3">
+              <Button
+                className="btn-luxury text-lg px-8 py-3"
+                onClick={() => window.location.href = '/contact-us'}
+              >
                 Get Custom ROI Analysis
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>

@@ -1,9 +1,58 @@
-
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { TrendingUp, Clock, DollarSign, Users, Phone, Mail, ChevronRight, Star, Award, CheckCircle } from "lucide-react";
+
+// --- Interactive Card Component with 3D Tilt & Shine ---
+const InteractiveCard = ({ children, className = "" }) => {
+  const cardRef = useRef(null);
+  const [style, setStyle] = useState({});
+  const [shineStyle, setShineStyle] = useState({});
+
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const { left, top, width, height } = card.getBoundingClientRect();
+    const x = e.clientX - left;
+    const y = e.clientY - top;
+    const rotateX = ((y - height / 2) / (height / 2)) * -3;
+    const rotateY = ((x - width / 2) / (width / 2)) * 3;
+    setStyle({
+      transform: `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`,
+      transition: "transform 0.1s ease-out"
+    });
+    setShineStyle({
+      background: `radial-gradient(circle 200px at ${x}px ${y}px, rgba(255, 255, 255, 0.08), transparent 70%)`
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setStyle({
+      transform: "perspective(1500px) rotateX(0) rotateY(0) scale3d(1, 1, 1)",
+      transition: "transform 0.6s ease-in-out"
+    });
+    setShineStyle({});
+  };
+
+  return (
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className={`relative group transition-all duration-300 ${className}`}
+    >
+      <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-primary/20 to-blue-500/20 opacity-0 blur-sm transition-all duration-300 group-hover:opacity-50"></div>
+      <div style={style} className="relative w-full h-full transition-all duration-300 overflow-hidden rounded-3xl">
+        <div
+          className="absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100 rounded-3xl"
+          style={shineStyle}
+        />
+        <div className="relative z-10 h-full w-full">{children}</div>
+      </div>
+    </div>
+  );
+};
 
 const CaseStudiesSection = () => {
   const [activeCase, setActiveCase] = useState(0);
@@ -89,6 +138,20 @@ const CaseStudiesSection = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             See how luxury transportation companies across the nation have transformed their operations and achieved remarkable growth with our strategic partnership.
           </p>
+
+          {/* Confidentiality Disclaimer */}
+          <div className="mt-8 max-w-4xl mx-auto">
+            <div className="bg-muted/20 border border-muted-foreground/20 rounded-2xl p-6 backdrop-blur-sm">
+              <div className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                </div>
+                <div className="text-muted-foreground text-sm leading-relaxed">
+                  <strong className="text-foreground">Confidentiality Notice:</strong> All company names and specific identifying details have been changed to protect client confidentiality in accordance with our non-disclosure agreements and our unwavering commitment to client privacy. The results and metrics shown are authentic and represent actual achievements from our client partnerships.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Case Study Navigation */}
@@ -111,8 +174,9 @@ const CaseStudiesSection = () => {
 
         {/* Main Case Study Display */}
         <div className="max-w-7xl mx-auto mb-16">
-          <Card className="bg-gradient-to-br from-card via-card to-card/95 backdrop-blur-lg border border-border/50 shadow-2xl rounded-3xl overflow-hidden hover:shadow-3xl transition-all duration-500">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          <InteractiveCard>
+            <Card className="bg-gradient-to-br from-card via-card to-card/95 backdrop-blur-lg border border-border/50 shadow-2xl rounded-3xl overflow-hidden hover:shadow-3xl transition-all duration-500">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Left Side - Company Info & Challenge */}
               <div className="p-8 lg:p-12 bg-gradient-to-br from-card/95 to-muted/20 border-r border-border/30">
                 <div className="flex items-center mb-8">
@@ -174,22 +238,24 @@ const CaseStudiesSection = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
                   {currentCase.results.map((result, index) => (
-                    <div key={index} className="bg-gradient-to-br from-card to-card/90 backdrop-blur-sm border border-border/50 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:border-primary/40 hover:scale-105 transition-all duration-300">
-                      <div className="text-xs text-muted-foreground mb-3 font-medium uppercase tracking-wider">{result.metric}</div>
-                      <div className="space-y-3">
-                        <div className="flex items-center justify-between">
-                          <span className="text-red-500 font-medium text-sm">Before:</span>
-                          <span className="font-semibold text-foreground text-sm">{result.before}</span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-green-500 font-medium text-sm">After:</span>
-                          <span className="font-semibold text-foreground text-sm">{result.after}</span>
-                        </div>
-                        <div className="text-center pt-3 border-t border-border/50">
-                          <span className="text-xl font-bold text-primary">{result.improvement}</span>
+                    <InteractiveCard key={index} className="h-full">
+                      <div className="bg-gradient-to-br from-card to-card/90 backdrop-blur-sm border border-border/50 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all duration-300 h-full">
+                        <div className="text-xs text-muted-foreground mb-3 font-medium uppercase tracking-wider">{result.metric}</div>
+                        <div className="space-y-3">
+                          <div className="flex items-center justify-between">
+                            <span className="text-red-500 font-medium text-sm">Before:</span>
+                            <span className="font-semibold text-foreground text-sm">{result.before}</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-green-500 font-medium text-sm">After:</span>
+                            <span className="font-semibold text-foreground text-sm">{result.after}</span>
+                          </div>
+                          <div className="text-center pt-3 border-t border-border/50">
+                            <span className="text-xl font-bold text-primary">{result.improvement}</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </InteractiveCard>
                   ))}
                 </div>
 
@@ -207,9 +273,10 @@ const CaseStudiesSection = () => {
                     — {currentCase.clientName}
                   </div>
                 </div>
+                </div>
               </div>
-            </div>
-          </Card>
+            </Card>
+          </InteractiveCard>
         </div>
 
         {/* CTA Section */}
@@ -230,7 +297,7 @@ const CaseStudiesSection = () => {
                 <ChevronRight className="w-6 h-6 ml-2" />
               </Button>
               <Button variant="outline" className="bg-card/50 border-2 border-primary/50 text-primary hover:bg-primary hover:text-white hover:border-primary text-lg px-10 py-4 rounded-2xl transition-all duration-300 hover:scale-105 font-semibold backdrop-blur-sm">
-                📄 Download Full Case Studies
+                ��� Download Full Case Studies
               </Button>
             </div>
             <div className="text-center">

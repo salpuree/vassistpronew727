@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -17,6 +17,55 @@ const CheckCircleIcon = () => (
     </svg>
 );
 
+// --- Interactive Card Component with 3D Tilt & Shine ---
+const InteractiveCard = ({ children, className = "" }) => {
+  const cardRef = useRef(null);
+  const [style, setStyle] = useState({});
+  const [shineStyle, setShineStyle] = useState({});
+
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const { left, top, width, height } = card.getBoundingClientRect();
+    const x = e.clientX - left;
+    const y = e.clientY - top;
+    const rotateX = ((y - height / 2) / (height / 2)) * -4;
+    const rotateY = ((x - width / 2) / (width / 2)) * 4;
+    setStyle({
+      transform: `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`,
+      transition: "transform 0.1s ease-out"
+    });
+    setShineStyle({
+      background: `radial-gradient(circle 200px at ${x}px ${y}px, rgba(255, 255, 255, 0.08), transparent 70%)`
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setStyle({
+      transform: "perspective(1500px) rotateX(0) rotateY(0) scale3d(1, 1, 1)",
+      transition: "transform 0.6s ease-in-out"
+    });
+    setShineStyle({});
+  };
+
+  return (
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className={`relative group transition-all duration-300 ${className}`}
+    >
+      <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-blue-500/20 to-cyan-400/20 opacity-0 blur-sm transition-all duration-300 group-hover:opacity-50"></div>
+      <div style={style} className="relative w-full h-full transition-all duration-300 overflow-hidden rounded-3xl">
+        <div
+          className="absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100 rounded-3xl"
+          style={shineStyle}
+        />
+        <div className="relative z-10 h-full w-full">{children}</div>
+      </div>
+    </div>
+  );
+};
 
 // Main Section Component
 const ClientLogosSection = () => {
@@ -53,13 +102,15 @@ const ClientLogosSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left Column - Dashboard Image & Button */}
           <div className="flex flex-col justify-between h-full">
-            <div className="relative bg-black/20 rounded-3xl p-4 border border-white/10 shadow-2xl shadow-black/40">
-              <img
-                src="/vaboard.png" // Using your specified image path
-                alt="V-Assist Pro Workflow Dashboard"
-                className="w-full h-auto rounded-2xl"
-              />
-            </div>
+            <InteractiveCard>
+              <div className="relative bg-black/20 rounded-3xl p-4 border border-white/10 shadow-2xl shadow-black/40">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F489119e2c69c42a5b0f1e2f32846041e%2Fd632023355e544f9a384931dde9bd782"
+                  alt="V-Assist Pro Workflow Dashboard"
+                  className="w-full h-auto rounded-2xl min-h-[200px]"
+                />
+              </div>
+            </InteractiveCard>
             <div className="mt-8 flex justify-center">
               <Button
                 size="lg"
