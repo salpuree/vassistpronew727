@@ -200,15 +200,17 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all platinum-button-glow"
-              aria-label="Book a free strategy consultation call"
-            >
-              <span className="inline-flex items-center">
-                Book a Free Strategy Call
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-              </span>
-            </Button>
+            <a href="/contact-us">
+              <Button
+                className="bg-gradient-to-b from-slate-200 to-slate-400 hover:from-slate-100 hover:to-slate-300 text-black font-bold h-14 px-10 text-lg rounded-full group transition-all platinum-button-glow"
+                aria-label="Book a free strategy consultation call"
+              >
+                <span className="inline-flex items-center">
+                  Book a Free Strategy Call
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                </span>
+              </Button>
+            </a>
           </div>
         </div>
       </div>
