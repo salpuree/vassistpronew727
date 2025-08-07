@@ -297,9 +297,11 @@ const ContactSection = () => {
                 <p className="text-foreground/80 mb-6 font-medium leading-relaxed">
                   Book a free consultation to discuss your transportation technology needs.
                 </p>
-                <Button className="btn-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
-                  Schedule Call
-                </Button>
+                <a href="tel:+19416234590">
+                  <Button className="btn-luxury w-full text-lg py-3 hover:scale-105 transition-transform duration-300">
+                    Schedule Call
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
