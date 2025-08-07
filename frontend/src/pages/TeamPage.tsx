@@ -81,20 +81,12 @@ const CustomHeroSection = () => {
 const TeamMembersSection = () => {
   const teamMembers = [
     {
-      name: "Noor M.",
-      title: "Social Media & Marketing",
-      subtitle: "Digital Marketing Expert",
-      description: "Manages our social media presence and digital marketing strategies for luxury transportation.",
-      avatar: "👩‍💼",
-      bgColor: "from-purple-500/20 to-blue-500/20"
-    },
-    {
-      name: "Linda T.",
-      title: "Chief Operations Director",
-      subtitle: "Business Operations Excellence",
-      description: "Linda manages the operations. Personally oversees all client relationships and ensures 24/7 operational excellence. The strategic mind behind our seamless service delivery.",
-      avatar: "👑",
-      bgColor: "from-amber-500/20 to-orange-500/20"
+      name: "Emaan A.",
+      title: "Client Onboarding Executive",
+      subtitle: "Client Success",
+      description: "Ensures smooth client onboarding and maintains exceptional client relationships.",
+      avatar: "😊",
+      bgColor: "from-blue-500/20 to-cyan-500/20"
     },
     {
       name: "Gia K.",
@@ -105,12 +97,20 @@ const TeamMembersSection = () => {
       bgColor: "from-pink-500/20 to-purple-500/20"
     },
     {
-      name: "Emaan A.",
-      title: "Client Onboarding Executive",
-      subtitle: "Client Success",
-      description: "Ensures smooth client onboarding and maintains exceptional client relationships.",
-      avatar: "😊",
-      bgColor: "from-blue-500/20 to-cyan-500/20"
+      name: "Linda T.",
+      title: "Chief Operations Director",
+      subtitle: "Business Operations Excellence",
+      description: "Linda manages the operations. Personally oversees all client relationships and ensures 24/7 operational excellence. The strategic mind behind our seamless service delivery.",
+      avatar: "👑",
+      bgColor: "from-yellow-400/20 to-amber-500/20"
+    },
+    {
+      name: "Noor M.",
+      title: "Social Media & Marketing",
+      subtitle: "Digital Marketing Expert",
+      description: "Manages our social media presence and digital marketing strategies for luxury transportation.",
+      avatar: "👩‍💼",
+      bgColor: "from-purple-500/20 to-blue-500/20"
     }
   ];
 
