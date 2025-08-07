@@ -205,9 +205,6 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </span>
             </Button>
-            <Button className="bg-transparent border-2 border-white/50 hover:bg-white/10 text-white font-bold h-14 px-10 text-lg rounded-full transition-colors">
-              Learn More
-            </Button>
           </div>
         </div>
       </div>
