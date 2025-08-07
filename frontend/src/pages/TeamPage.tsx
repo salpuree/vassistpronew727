@@ -1,4 +1,4 @@
-import { Users, Award, Clock, Globe, Linkedin, Github, Mail, CheckCircle } from "lucide-react";
+import { Users, Linkedin, Github, Mail, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import React, { useState, useRef } from "react";
@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHeroSection from "@/components/PageHeroSection";
 import teamImage from "@/assets/team-development.jpg";
+import heroImage from "@/assets/hero-luxury-transport.jpg";
 
 const TeamPage = () => {
   return (
@@ -28,7 +29,7 @@ const CustomHeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/hero-luxury-transport.jpg"
+          src={heroImage}
           alt="Team Background"
           className="w-full h-full object-cover"
           loading="lazy"
